@@ -2,8 +2,8 @@
 # Author: Arnaud Blanchard
 cmake_minimum_required(VERSION 2.6)
 set(CMAKE_MACOSX_RPATH 0) #avoid warning in MACOSX
-get_filename_component(PROJECT_NAME ${CMAKE_CURRENT_SOURCE_DIR} NAME) #The name of the project is the basename of the directory
-project(${PROJECT_NAME})
+#get_filename_component(PROJECT_NAME ${CMAKE_CURRENT_SOURCE_DIR} NAME) #The name of the project is the basename of the directory
+project(nao_blaar)
 
 find_package(blc_image REQUIRED) 
 
