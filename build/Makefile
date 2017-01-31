@@ -115,29 +115,29 @@ nao_blaar/fast:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/build
 .PHONY : nao_blaar/fast
 
-main.o: main.cpp.o
-.PHONY : main.o
+my_optical_flow.o: my_optical_flow.cpp.o
+.PHONY : my_optical_flow.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/main.cpp.o
-.PHONY : main.cpp.o
+my_optical_flow.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/my_optical_flow.cpp.o
+.PHONY : my_optical_flow.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+my_optical_flow.i: my_optical_flow.cpp.i
+.PHONY : my_optical_flow.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/main.cpp.i
-.PHONY : main.cpp.i
+my_optical_flow.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/my_optical_flow.cpp.i
+.PHONY : my_optical_flow.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+my_optical_flow.s: my_optical_flow.cpp.s
+.PHONY : my_optical_flow.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/main.cpp.s
-.PHONY : main.cpp.s
+my_optical_flow.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/my_optical_flow.cpp.s
+.PHONY : my_optical_flow.cpp.s
 
 # Help Target
 help:
@@ -148,9 +148,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... nao_blaar"
 	@echo "... rebuild_cache"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... my_optical_flow.o"
+	@echo "... my_optical_flow.i"
+	@echo "... my_optical_flow.s"
 .PHONY : help
 
 

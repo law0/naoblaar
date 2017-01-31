@@ -238,7 +238,7 @@ void function_optical_flow(int Gpe)
       /* Calcul des Dérivées en X,Y et T */
 
       div_coeff = 1. / 4.;
-      for (j = hauteur - 2; j--;)
+      for (j = hauteur - 2; j--;) //pourrait au moins faire for(j = ...; j!=0; j--) pour la clarté!
       {
          /*	printf("j=%d : \n",j);*/
          q = (j + 1) * largeur + 1;
