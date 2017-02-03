@@ -6,11 +6,12 @@
 #include <stdint.h>
 #include <assert.h>
 #include <time.h>
+#include <math.h>
 
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
 
-#define ITER_NB 50
+#define ITER_NB 1000
 
 // Access red, green, blue, and alpha component values in a 32-bit unsigned RG$
 #define ALPHA(pixel)  ( (pixel)>>24)
@@ -117,13 +118,9 @@ void optical_flow(unsigned int* out, unsigned char* It1, unsigned char* It2, int
 	unsigned int p_1;
 
 
-	//printf("bordel\n");
-
-
 	div_coeff = 1. / 4.;
 	for (p = wh_1; p >= 0 ; p--)
 	{
-//		printf("%d\n", p);
 
 		p1 = p == wh_1 ? p : p + 1;
 		plargeur = p <= wh_1 - largeur ? p + largeur : p;
@@ -162,26 +159,23 @@ void optical_flow(unsigned int* out, unsigned char* It1, unsigned char* It2, int
 			p_largeur_1 = p >= largeur + 1 ? p - largeur -1 : p;
 			p_largeur = p >= largeur ? p - largeur : p;
 			p_1 = p >= 1 ? p - 1 : p;
-//			printf("boucle 2 %d\n",p);
-//			printf("%d %d\n", U[p], V[p]);
 
-			M_u = (U[p_largeur_1] + U[p_largeur + 1] + U[plargeur_1] + U[p1largeur]) * div_coeff + (U[p_largeur] + U[p_1] + U[p1] + U[p_largeur])  * div_coeff2;
-			M_v = (V[p_largeur_1] + V[p_largeur + 1] + V[plargeur_1] + V[p1largeur]) * div_coeff  + (V[p_largeur] + V[p_1] + V[p_1] + V[p_largeur])  * div_coeff2;
+			M_u = (U[p_largeur_1] + U[p_largeur + 1] + U[plargeur_1] + U[p1largeur]) * div_coeff + (U[p_largeur] + U[p_1] + U[p1] + U[plargeur])  * div_coeff2;
+			M_v = (V[p_largeur_1] + V[p_largeur + 1] + V[plargeur_1] + V[p1largeur]) * div_coeff + (V[p_largeur] + V[p_1] + V[p1] + V[plargeur])  * div_coeff2;
 
 			v_Ix = Ix[p];
 			v_Iy = Iy[p];
 			U[p] = M_u - ((v_Ix * (v_Ix * M_u + v_Iy * M_v + Idt[p])) / (alpha + v_Ix * v_Ix + v_Iy * v_Iy));
 			V[p] = M_v - ((v_Iy * (v_Ix * M_u + v_Iy * M_v + Idt[p])) / (alpha + v_Ix * v_Ix + v_Iy * v_Iy));
-
-
 		}
 	}
 
 	for (p = wh_1; p >=0 ; p--)
 	{
-		unsigned char red = (unsigned char)((U[p] * 3.5f) * + 127.f);
-		unsigned char blue = (unsigned char)((V[p] * 3.5f) * + 127.f);
-		out[p] = RGBA(red, 0, blue, 255);
+		unsigned char red = (unsigned char)( ((U[p] < 0.f ? U[p] : 0.f) + (V[p] < 0.f ? V[p] : 0.f)) * -3.5f);
+		unsigned char green = (unsigned char)(fabs(U[p]) * 7.f);
+		unsigned char blue = (unsigned char)(fabs(V[p]) * 7.f);
+		out[p] = RGBA(red, green, blue, 255);
 //		printf("p: %d, %f, %f\n", p, U[p], V[p]);
 //		printf("%d %d\n", red, blue);
 	}
@@ -194,8 +188,8 @@ void optical_flow(unsigned int* out, unsigned char* It1, unsigned char* It2, int
 
 int main(int argc, char **argv)
 {
-	std::string infile("img1.png");
-	std::string infile2("img2.png");
+	std::string infile("img2.png");
+	std::string infile2("img3.png");
 	std::string outfile("img_out.png");
 	sf::Image img1;
 	sf::Image img2;
