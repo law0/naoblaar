@@ -138,6 +138,8 @@ void optical_flow(unsigned int* out, unsigned char* It1, unsigned char* It2, int
 		pt1_bd = (float)(It2[p1largeur]);
 
 
+		//dérivées
+
 		Iy[p] = ((pt_bd + pt_b - pt_c - pt_d) + (pt1_bd + pt1_b - pt1_c - pt1_d)) * div_coeff;
 
 		Ix[p] = ((pt_d + pt_bd - pt_c - pt_b) + (pt1_d + pt1_bd - pt1_c - pt1_b))  * div_coeff;
@@ -160,11 +162,15 @@ void optical_flow(unsigned int* out, unsigned char* It1, unsigned char* It2, int
 			p_largeur = p >= largeur ? p - largeur : p;
 			p_1 = p >= 1 ? p - 1 : p;
 
+
+			// Moyennes (U horizontal, V vertical)
 			M_u = (U[p_largeur_1] + U[p_largeur + 1] + U[plargeur_1] + U[p1largeur]) * div_coeff + (U[p_largeur] + U[p_1] + U[p1] + U[plargeur])  * div_coeff2;
 			M_v = (V[p_largeur_1] + V[p_largeur + 1] + V[plargeur_1] + V[p1largeur]) * div_coeff + (V[p_largeur] + V[p_1] + V[p1] + V[plargeur])  * div_coeff2;
 
 			v_Ix = Ix[p];
 			v_Iy = Iy[p];
+
+			//Vecteur vitesses
 			U[p] = M_u - ((v_Ix * (v_Ix * M_u + v_Iy * M_v + Idt[p])) / (alpha + v_Ix * v_Ix + v_Iy * v_Iy));
 			V[p] = M_v - ((v_Iy * (v_Ix * M_u + v_Iy * M_v + Idt[p])) / (alpha + v_Ix * v_Ix + v_Iy * v_Iy));
 		}
