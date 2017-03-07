@@ -115,6 +115,30 @@ nao_blaar/fast:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/build
 .PHONY : nao_blaar/fast
 
+mainwindow.o: mainwindow.cpp.o
+.PHONY : mainwindow.o
+
+# target to build an object file
+mainwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/mainwindow.cpp.o
+.PHONY : mainwindow.cpp.o
+
+mainwindow.i: mainwindow.cpp.i
+.PHONY : mainwindow.i
+
+# target to preprocess a source file
+mainwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/mainwindow.cpp.i
+.PHONY : mainwindow.cpp.i
+
+mainwindow.s: mainwindow.cpp.s
+.PHONY : mainwindow.s
+
+# target to generate assembly for a file
+mainwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/mainwindow.cpp.s
+.PHONY : mainwindow.cpp.s
+
 my_optical_flow.o: my_optical_flow.cpp.o
 .PHONY : my_optical_flow.o
 
@@ -139,6 +163,30 @@ my_optical_flow.cpp.s:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/my_optical_flow.cpp.s
 .PHONY : my_optical_flow.cpp.s
 
+utilities.o: utilities.cpp.o
+.PHONY : utilities.o
+
+# target to build an object file
+utilities.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/utilities.cpp.o
+.PHONY : utilities.cpp.o
+
+utilities.i: utilities.cpp.i
+.PHONY : utilities.i
+
+# target to preprocess a source file
+utilities.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/utilities.cpp.i
+.PHONY : utilities.cpp.i
+
+utilities.s: utilities.cpp.s
+.PHONY : utilities.s
+
+# target to generate assembly for a file
+utilities.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/utilities.cpp.s
+.PHONY : utilities.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -148,9 +196,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... nao_blaar"
 	@echo "... rebuild_cache"
+	@echo "... mainwindow.o"
+	@echo "... mainwindow.i"
+	@echo "... mainwindow.s"
 	@echo "... my_optical_flow.o"
 	@echo "... my_optical_flow.i"
 	@echo "... my_optical_flow.s"
+	@echo "... utilities.o"
+	@echo "... utilities.i"
+	@echo "... utilities.s"
 .PHONY : help
 
 

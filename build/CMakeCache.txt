@@ -180,6 +180,32 @@ CMAKE_USE_RELATIVE_PATHS:BOOL=OFF
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Path where debug 3rdpaty OpenCV dependencies are located
+OpenCV_3RDPARTY_LIB_DIR_DBG:PATH=
+
+//Path where release 3rdpaty OpenCV dependencies are located
+OpenCV_3RDPARTY_LIB_DIR_OPT:PATH=
+
+OpenCV_CONFIG_PATH:FILEPATH=/usr/share/OpenCV
+
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/usr/share/OpenCV
+
+//Path where debug OpenCV libraries are located
+OpenCV_LIB_DIR_DBG:PATH=
+
+//Path where release OpenCV libraries are located
+OpenCV_LIB_DIR_OPT:PATH=
+
+//The directory containing a CMake configuration file for Qt5Core.
+Qt5Core_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core
+
+//The directory containing a CMake configuration file for Qt5Gui.
+Qt5Gui_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui
+
+//The directory containing a CMake configuration file for Qt5Widgets.
+Qt5Widgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets
+
 //The directory containing a CMake configuration file for blc_core.
 blc_core_DIR:PATH=/usr/local/share/blc_core
 
@@ -191,6 +217,9 @@ nao_blaar_BINARY_DIR:STATIC=/home/law/Documents/EISTI_stuff/nao_blaar/build
 
 //Value Computed by CMake
 nao_blaar_SOURCE_DIR:STATIC=/home/law/Documents/EISTI_stuff/nao_blaar/src
+
+//The directory containing a CMake configuration file for opencv.
+opencv_DIR:PATH=opencv_DIR-NOTFOUND
 
 //Value Computed by CMake
 src_BINARY_DIR:STATIC=/home/law/Documents/EISTI_stuff/nao_blaar/build
@@ -340,4 +369,14 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 FIND_PACKAGE_MESSAGE_DETAILS_blc_core:INTERNAL=[/usr/local/lib/libblc_core.so][/usr/local/include/blc_core][v()]
 //Details about finding blc_image
 FIND_PACKAGE_MESSAGE_DETAILS_blc_image:INTERNAL=[/usr/local/lib/libblc_image.so][/usr/local/include/blc_image][v()]
+//ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_DBG
+OpenCV_3RDPARTY_LIB_DIR_DBG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_3RDPARTY_LIB_DIR_OPT
+OpenCV_3RDPARTY_LIB_DIR_OPT-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_CONFIG_PATH
+OpenCV_CONFIG_PATH-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_LIB_DIR_DBG
+OpenCV_LIB_DIR_DBG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: OpenCV_LIB_DIR_OPT
+OpenCV_LIB_DIR_OPT-ADVANCED:INTERNAL=1
 

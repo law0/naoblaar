@@ -1,0 +1,7 @@
+-I/usr/include/opencv
+-I/usr/include
+-I/usr/local/include/blc_image
+-I/usr/local/include/blc_core
+-o
+/home/law/Documents/EISTI_stuff/nao_blaar/build/__/__/__/__/__/__/moc_MainWindow.cpp
+/MainWindow.h
