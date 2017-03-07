@@ -115,30 +115,6 @@ nao_blaar/fast:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/build
 .PHONY : nao_blaar/fast
 
-mainwindow.o: mainwindow.cpp.o
-.PHONY : mainwindow.o
-
-# target to build an object file
-mainwindow.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/mainwindow.cpp.o
-.PHONY : mainwindow.cpp.o
-
-mainwindow.i: mainwindow.cpp.i
-.PHONY : mainwindow.i
-
-# target to preprocess a source file
-mainwindow.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/mainwindow.cpp.i
-.PHONY : mainwindow.cpp.i
-
-mainwindow.s: mainwindow.cpp.s
-.PHONY : mainwindow.s
-
-# target to generate assembly for a file
-mainwindow.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/mainwindow.cpp.s
-.PHONY : mainwindow.cpp.s
-
 my_optical_flow.o: my_optical_flow.cpp.o
 .PHONY : my_optical_flow.o
 
@@ -162,6 +138,30 @@ my_optical_flow.s: my_optical_flow.cpp.s
 my_optical_flow.cpp.s:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/my_optical_flow.cpp.s
 .PHONY : my_optical_flow.cpp.s
+
+streamcatcher.o: streamcatcher.cpp.o
+.PHONY : streamcatcher.o
+
+# target to build an object file
+streamcatcher.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/streamcatcher.cpp.o
+.PHONY : streamcatcher.cpp.o
+
+streamcatcher.i: streamcatcher.cpp.i
+.PHONY : streamcatcher.i
+
+# target to preprocess a source file
+streamcatcher.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/streamcatcher.cpp.i
+.PHONY : streamcatcher.cpp.i
+
+streamcatcher.s: streamcatcher.cpp.s
+.PHONY : streamcatcher.s
+
+# target to generate assembly for a file
+streamcatcher.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/streamcatcher.cpp.s
+.PHONY : streamcatcher.cpp.s
 
 utilities.o: utilities.cpp.o
 .PHONY : utilities.o
@@ -196,12 +196,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... nao_blaar"
 	@echo "... rebuild_cache"
-	@echo "... mainwindow.o"
-	@echo "... mainwindow.i"
-	@echo "... mainwindow.s"
 	@echo "... my_optical_flow.o"
 	@echo "... my_optical_flow.i"
 	@echo "... my_optical_flow.s"
+	@echo "... streamcatcher.o"
+	@echo "... streamcatcher.i"
+	@echo "... streamcatcher.s"
 	@echo "... utilities.o"
 	@echo "... utilities.i"
 	@echo "... utilities.s"
