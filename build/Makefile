@@ -163,6 +163,30 @@ moc_mainwindow.cpp.s:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_mainwindow.cpp.s
 .PHONY : moc_mainwindow.cpp.s
 
+moc_videoitem.o: moc_videoitem.cpp.o
+.PHONY : moc_videoitem.o
+
+# target to build an object file
+moc_videoitem.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_videoitem.cpp.o
+.PHONY : moc_videoitem.cpp.o
+
+moc_videoitem.i: moc_videoitem.cpp.i
+.PHONY : moc_videoitem.i
+
+# target to preprocess a source file
+moc_videoitem.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_videoitem.cpp.i
+.PHONY : moc_videoitem.cpp.i
+
+moc_videoitem.s: moc_videoitem.cpp.s
+.PHONY : moc_videoitem.s
+
+# target to generate assembly for a file
+moc_videoitem.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_videoitem.cpp.s
+.PHONY : moc_videoitem.cpp.s
+
 my_optical_flow.o: my_optical_flow.cpp.o
 .PHONY : my_optical_flow.o
 
@@ -274,6 +298,9 @@ help:
 	@echo "... moc_mainwindow.o"
 	@echo "... moc_mainwindow.i"
 	@echo "... moc_mainwindow.s"
+	@echo "... moc_videoitem.o"
+	@echo "... moc_videoitem.i"
+	@echo "... moc_videoitem.s"
 	@echo "... my_optical_flow.o"
 	@echo "... my_optical_flow.i"
 	@echo "... my_optical_flow.s"
