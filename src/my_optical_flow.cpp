@@ -7,21 +7,23 @@
 #include <assert.h>
 #include <time.h>
 #include <math.h>
+#include <chrono>
 
 #include "utilities.h"
+#include "streamcatcher.h"
 
 #define ITER_NB 2
 
 #define MAX_IMAGE_COUNT 7
 
-// static because we don't want other module to see these variables
 extern unsigned int global_WIDTH;
 extern unsigned int global_HEIGHT;
-
+StreamCatcher * streamcatcher;
+unsigned char * global_FRAMEPTR;
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 
-int getNextImage(unsigned char* img)
+/*int getNextImage(unsigned char* img)
 {
         int w = global_WIDTH;
         int h = global_HEIGHT;
@@ -45,13 +47,26 @@ int getNextImage(unsigned char* img)
         getNextImage_Counter++;
 
         return 1;
-}
+}*/
 
+
+int getNextImage(unsigned char* img)
+{
+        int w = global_WIDTH;
+        int h = global_HEIGHT;
+        int size = w * h * 3;
+
+	std::mutex mtx;
+	mtx.lock();
+	char_bgr_to_intensity(img, global_FRAMEPTR, size);
+	mtx.unlock();
+
+        return 1;
+}
 
 
 float_pair optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
 {
-
 
 	int p;
 	int iter;
@@ -75,7 +90,6 @@ float_pair optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
 	float Ix[wh];
 	float Iy[wh];
 	float Idt[wh];
-//	float iv[wh];
 
 	memset(U, 0, wh * sizeof(float));
 	memset(V, 0, wh * sizeof(float));
@@ -101,6 +115,8 @@ float_pair optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
 	float_pair fp = {0.f, 0.f};
 
 	div_coeff = 1. / 4.;
+	auto start = std::chrono::high_resolution_clock::now();
+
 
 	while(valid_img != 0)
 	{
@@ -164,10 +180,10 @@ float_pair optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
 
 		for (p = wh_1; p >=0 ; p--)
 		{
-			unsigned char red = (unsigned char)( ((U[p] < 0.f ? U[p] : 0.f) + (V[p] < 0.f ? V[p] : 0.f)) * -3.5f);
+		/*	unsigned char red = (unsigned char)( ((U[p] < 0.f ? U[p] : 0.f) + (V[p] < 0.f ? V[p] : 0.f)) * -3.5f);
 			unsigned char green = (unsigned char)(fabs(U[p]) * 7.f);
 			unsigned char blue = (unsigned char)(fabs(V[p]) * 7.f);
-			out[p] += RGBA(red, green, blue, 255);
+			out[p] += RGBA(red, green, blue, 255);*/
 			fp.x+= U[p];
 			fp.y+= V[p];
 	//		printf("p: %d, %f, %f\n", p, U[p], V[p]);
@@ -176,13 +192,34 @@ float_pair optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
 
 		memcpy(It1, It2, largeur * hauteur * sizeof(unsigned char));
 		valid_img = getNextImage(It2);
-		printf("            \r");
-		printf("H: %f, V: %f", fp.x, fp.y);
-		fp.x = 0;
-		fp.y = 0;
+		auto finish = std::chrono::high_resolution_clock::now();
+
+		if(std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count() > 100000)
+		{
+			//printf("            \r");
+			//printf("H: %f, V: %f", fp.x, fp.y);
+			if(fp.x > 0)
+				printf("<-- ");
+			else
+				printf("--> ");
+			if(fp.y > 0)
+				printf("V\n");
+			else
+				printf("A\n");
+			fp.x = 0;
+			fp.y = 0;
+
+			start = std::chrono::high_resolution_clock::now();
+
+		}
 	}
 	free(It1);
 	free(It2);
+
+
+
+    // operation to be timed ...
+
 
 	return fp;
 
@@ -190,21 +227,21 @@ float_pair optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
 
 int main(int argc, char **argv)
 {
-	sfml_init_image();
-	int wh = global_WIDTH * global_HEIGHT;
+
+//	QApplication a(argc, argv);
+	streamcatcher = StreamCatcher::getInstance();
+
+	global_WIDTH = streamcatcher->getWidth();
+	global_HEIGHT = streamcatcher->getHeight();
+
 	printf("w: %d, h: %d\n", global_WIDTH, global_HEIGHT);
 
-	size_t img_size = wh * sizeof(unsigned int);
+	global_FRAMEPTR = (unsigned char*) (streamcatcher->getFramePtr());
 
-	unsigned int* out_data = (unsigned int*)malloc(img_size);
-	memset(out_data, 0, img_size);
+	optical_flow(NULL, getNextImage);
 
-	float_pair fp = optical_flow(out_data, getNextImage);
+	StreamCatcher::killInstance();
 
-	sfml_save_image(out_data);
-
-	free(out_data);
-
-	printf("horizontal = %f, vertical = %f\n", fp.x, fp.y);
+//     	return a.exec();
 	return 0;
 }

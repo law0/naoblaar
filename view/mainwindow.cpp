@@ -65,6 +65,10 @@ void MainWindow::getStream()
 
         char* vec = frame->imageData;
             //vec = frame->imageData;
+	for(int i = 0; i < frame->imageSize ; i++)
+	{
+		printf("%d\n", frame->widthStep);
+	}
 
         cvShowImage( "mywindow", frame );
             // Do not release the frame!

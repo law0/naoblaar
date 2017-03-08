@@ -17,7 +17,7 @@ QT_CONFIG -= no-pkg-config
 CONFIG += link_pkgconfig
 PKGCONFIG += opencv
 CONFIG += c++11
-LIBS += -ltbb
+#LIBS += -ltbb
 #
 
 SOURCES += main.cpp\
