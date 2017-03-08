@@ -115,6 +115,78 @@ nao_blaar/fast:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/build
 .PHONY : nao_blaar/fast
 
+mainwindow.o: mainwindow.cpp.o
+.PHONY : mainwindow.o
+
+# target to build an object file
+mainwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/mainwindow.cpp.o
+.PHONY : mainwindow.cpp.o
+
+mainwindow.i: mainwindow.cpp.i
+.PHONY : mainwindow.i
+
+# target to preprocess a source file
+mainwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/mainwindow.cpp.i
+.PHONY : mainwindow.cpp.i
+
+mainwindow.s: mainwindow.cpp.s
+.PHONY : mainwindow.s
+
+# target to generate assembly for a file
+mainwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/mainwindow.cpp.s
+.PHONY : mainwindow.cpp.s
+
+moc_mainwindow.o: moc_mainwindow.cpp.o
+.PHONY : moc_mainwindow.o
+
+# target to build an object file
+moc_mainwindow.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_mainwindow.cpp.o
+.PHONY : moc_mainwindow.cpp.o
+
+moc_mainwindow.i: moc_mainwindow.cpp.i
+.PHONY : moc_mainwindow.i
+
+# target to preprocess a source file
+moc_mainwindow.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_mainwindow.cpp.i
+.PHONY : moc_mainwindow.cpp.i
+
+moc_mainwindow.s: moc_mainwindow.cpp.s
+.PHONY : moc_mainwindow.s
+
+# target to generate assembly for a file
+moc_mainwindow.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_mainwindow.cpp.s
+.PHONY : moc_mainwindow.cpp.s
+
+moc_videoitem.o: moc_videoitem.cpp.o
+.PHONY : moc_videoitem.o
+
+# target to build an object file
+moc_videoitem.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_videoitem.cpp.o
+.PHONY : moc_videoitem.cpp.o
+
+moc_videoitem.i: moc_videoitem.cpp.i
+.PHONY : moc_videoitem.i
+
+# target to preprocess a source file
+moc_videoitem.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_videoitem.cpp.i
+.PHONY : moc_videoitem.cpp.i
+
+moc_videoitem.s: moc_videoitem.cpp.s
+.PHONY : moc_videoitem.s
+
+# target to generate assembly for a file
+moc_videoitem.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_videoitem.cpp.s
+.PHONY : moc_videoitem.cpp.s
+
 my_optical_flow.o: my_optical_flow.cpp.o
 .PHONY : my_optical_flow.o
 
@@ -187,6 +259,30 @@ utilities.cpp.s:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/utilities.cpp.s
 .PHONY : utilities.cpp.s
 
+videoitem.o: videoitem.cpp.o
+.PHONY : videoitem.o
+
+# target to build an object file
+videoitem.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/videoitem.cpp.o
+.PHONY : videoitem.cpp.o
+
+videoitem.i: videoitem.cpp.i
+.PHONY : videoitem.i
+
+# target to preprocess a source file
+videoitem.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/videoitem.cpp.i
+.PHONY : videoitem.cpp.i
+
+videoitem.s: videoitem.cpp.s
+.PHONY : videoitem.s
+
+# target to generate assembly for a file
+videoitem.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/videoitem.cpp.s
+.PHONY : videoitem.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -196,6 +292,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... nao_blaar"
 	@echo "... rebuild_cache"
+	@echo "... mainwindow.o"
+	@echo "... mainwindow.i"
+	@echo "... mainwindow.s"
+	@echo "... moc_mainwindow.o"
+	@echo "... moc_mainwindow.i"
+	@echo "... moc_mainwindow.s"
+	@echo "... moc_videoitem.o"
+	@echo "... moc_videoitem.i"
+	@echo "... moc_videoitem.s"
 	@echo "... my_optical_flow.o"
 	@echo "... my_optical_flow.i"
 	@echo "... my_optical_flow.s"
@@ -205,6 +310,9 @@ help:
 	@echo "... utilities.o"
 	@echo "... utilities.i"
 	@echo "... utilities.s"
+	@echo "... videoitem.o"
+	@echo "... videoitem.i"
+	@echo "... videoitem.s"
 .PHONY : help
 
 

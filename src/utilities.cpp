@@ -35,9 +35,12 @@ void char_bgr_to_intensity(unsigned char* out, unsigned char* img, size_t img_si
 void char_bgr_to_rgba(unsigned char* out, unsigned char* img, size_t img_size)
 {
         unsigned int i, c;
-        for(i = 0, c = 0; i < img_size; i += 3, c++)
+        for(i = 0, c = 0; i < img_size; i += 3, c+=4)
         {
-                out[c] = RGBA(img[i+2], img[i], img[i], 255);
+                out[c] = RED(img[i+2]);
+		out[c+1] = GREEN(img[i+1]);
+		out[c+2] = BLUE(img[i]);
+		out[c+3] = 255;
         }
 }
 

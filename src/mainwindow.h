@@ -18,17 +18,17 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
-public :
-    explicit MainWindow(char* frameptr, QWidget *parent = 0);
-    void getStream();
-    ~MainWindow();
+	public :
+		explicit MainWindow(QWidget *parent = 0);
+		void getStream();
+		~MainWindow();
 
-public slots :
-        void actionButton();
+	public slots :
+        	void actionButton();
+		void quit();
 
-private:
-   	Ui::MainWindow *ui;
-	char* _frameptr;
+	private:
+	   	Ui::MainWindow *ui;
 
 
 };

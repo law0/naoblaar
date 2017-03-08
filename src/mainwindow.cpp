@@ -1,11 +1,12 @@
+#include <mutex>
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "utilities.h"
 
-MainWindow::MainWindow(char* frameptr, QWidget *parent) :
+MainWindow::MainWindow(QWidget *parent) :
 	QMainWindow(parent),
-	ui(new Ui::MainWindow),
-	_frameptr(frameptr)
+	ui(new Ui::MainWindow)
 {
 	setFixedSize(1300, 520);
 
@@ -28,52 +29,32 @@ MainWindow::MainWindow(char* frameptr, QWidget *parent) :
 	QPushButton *pause = new QPushButton("stop", this);
 	pause -> setGeometry(650, 485, 80, 30);
 
-	//connect(play, SIGNAL(clicked()), this, SLOT(actionButton()));
-	//    connect(pause, SIGNAL(clicked()), this, SLOT(quit()));
+	connect(play, SIGNAL(clicked()), this, SLOT(actionButton()));
+	connect(pause, SIGNAL(clicked()), this, SLOT(quit()));
 
 	//printf("salut\n");
 	//this->getStream();
 }
 
-/*void MainWindow::actionButton()
+void MainWindow::actionButton()
 {
     printf("bonjour\n");
     this->getStream();
-}*/
-
-/*void MainWindow::getStream()
-{
-        char* vec = frame->imageData;
-
-}*/
-
-void MainWindow::paintEvent(QPaintEvent* e)
-{
-	QPainter painter(this);
-
-    // When no image is loaded, paint the window with black
-    /*if (!_image)
-    {
-        painter.fillRect(QRectF(QPoint(0, 0), QSize(width(), height())), Qt::black);
-        QWidget::paintEvent(e);
-        return;
-    }*/
-
-	unsigned int size = global_WIDTH * global_HEIGHT;
-
-	unsigned char out[size];
-
-	char_bgr_to_rgba(out, (unsigned char *)_frameptr, size * 3);
-
-	QImage image(out, global_WIDTH, global_HEIGHT, QImage::Format_RGBA8888);
-
-	painter.drawImage(QRectF(QPoint(0, 0), QSize(width(), height())), image, QRectF(QPoint(0, 0), image.size()));
-
-	QWidget::paintEvent(e);
 }
 
+void MainWindow::getStream()
+{
+ //       char* vec = frame->imageData;
+
+}
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+
+void MainWindow::quit()
+{
+	printf("quit\n");
 }

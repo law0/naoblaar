@@ -9,8 +9,13 @@
 #include <math.h>
 #include <chrono>
 
+#include <QGraphicsView>
+#include <QGraphicsScene>
+
 #include "utilities.h"
 #include "streamcatcher.h"
+#include "mainwindow.h"
+#include "videoitem.h"
 
 #define ITER_NB 2
 
@@ -65,7 +70,8 @@ int getNextImage(unsigned char* img)
 }
 
 
-float_pair optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
+//float_pair optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
+void optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
 {
 
 	int p;
@@ -194,7 +200,7 @@ float_pair optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
 		valid_img = getNextImage(It2);
 		auto finish = std::chrono::high_resolution_clock::now();
 
-		if(std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count() > 100000)
+		if(std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count() > 10000000)
 		{
 			//printf("            \r");
 			//printf("H: %f, V: %f", fp.x, fp.y);
@@ -221,27 +227,64 @@ float_pair optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
     // operation to be timed ...
 
 
-	return fp;
+//	return fp;
 
 }
 
 int main(int argc, char **argv)
 {
 
-//	QApplication a(argc, argv);
 	streamcatcher = StreamCatcher::getInstance();
 
+	//global_WIDTH global_HEIGHT and global_FRAMEPTR are set by StreamCatcher
 	global_WIDTH = streamcatcher->getWidth();
 	global_HEIGHT = streamcatcher->getHeight();
 
 	printf("w: %d, h: %d\n", global_WIDTH, global_HEIGHT);
 
+	//global_FRAMEPTR is in BGR format (8 8 8)
 	global_FRAMEPTR = (unsigned char*) (streamcatcher->getFramePtr());
 
-	optical_flow(NULL, getNextImage);
 
-	StreamCatcher::killInstance();
 
-//     	return a.exec();
+
+
+
+
+	QApplication a(argc, argv);
+
+	QGraphicsScene scene;
+
+	QGraphicsView view(&scene);
+
+	MainWindow mw;
+
+	mw.setCentralWidget(&view);
+
+
+
+	VideoItem vi(global_FRAMEPTR);
+
+	scene.addItem(&vi);
+
+	view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+        view.setFixedSize(global_WIDTH + 2, global_HEIGHT + 2);
+
+
+
+
+
+	//optical_flow(NULL, getNextImage);
+
+	mw.show();
+
+
+
+	getchar();
+
+	//StreamCatcher::killInstance();
+
 	return 0;
 }

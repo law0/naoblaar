@@ -6,5 +6,5 @@
 -I/home/law/Documents/EISTI_stuff/nao_blaar/src
 -I/home/law/Documents/EISTI_stuff/nao_blaar/build
 -o
-/home/law/Documents/EISTI_stuff/nao_blaar/build/__/__/__/__/__/__/moc_MainWindow.cpp
-/MainWindow.h
+/home/law/Documents/EISTI_stuff/nao_blaar/build/moc_mainwindow.cpp
+/home/law/Documents/EISTI_stuff/nao_blaar/src/mainwindow.h
