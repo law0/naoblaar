@@ -15,10 +15,10 @@ add_executable(
 	my_optical_flow.cpp 
 	streamcatcher.cpp 
 	utilities.cpp 
-	mainwindow.cpp 
-	moc_mainwindow.cpp 
-	videoitem.cpp 
 	moc_videoitem.cpp
+	moc_mainwindow.cpp 
+	mainwindow.cpp 
+	videoitem.cpp 
 	)
 
 target_link_libraries(${PROJECT_NAME} ${BL_LIBRARIES} z -lsfml-system -lsfml-graphics -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_stitching Qt5::Widgets)

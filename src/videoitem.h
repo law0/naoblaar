@@ -12,9 +12,9 @@
 
 #include "utilities.h"
 
-class VideoItem : public QGraphicsItem
+class VideoItem : public QObject, public QGraphicsItem
 {
-    Q_OBJECT
+	Q_OBJECT
 
 	public :
 		VideoItem(unsigned char* frameptr);
@@ -23,7 +23,11 @@ class VideoItem : public QGraphicsItem
 
 	private:
 		unsigned char* _frameptr;
+		QTimer _timer;
 
+
+	public slots:
+		void force_repaint();
 
 };
 

@@ -231,6 +231,37 @@ void optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
 
 }
 
+void launchView(int argc, char **argv)
+{
+	QApplication a(argc, argv);
+
+	MainWindow mw;
+
+	QGraphicsScene scene;
+
+	QGraphicsView view(&scene);
+
+	mw.setCentralWidget(&view);
+
+
+
+	VideoItem vi(global_FRAMEPTR);
+
+	scene.addItem(&vi);
+
+	view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+        view.setFixedSize(global_WIDTH + 2, global_HEIGHT + 2);
+
+
+	mw.show();
+
+	a.exec();
+
+}
+
+
 int main(int argc, char **argv)
 {
 
@@ -247,44 +278,17 @@ int main(int argc, char **argv)
 
 
 
+	std::thread view_thread(launchView, argc, argv);
 
 
-
-
-	QApplication a(argc, argv);
-
-	QGraphicsScene scene;
-
-	QGraphicsView view(&scene);
-
-	MainWindow mw;
-
-	mw.setCentralWidget(&view);
-
-
-
-	VideoItem vi(global_FRAMEPTR);
-
-	scene.addItem(&vi);
-
-	view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-
-        view.setFixedSize(global_WIDTH + 2, global_HEIGHT + 2);
-
-
-
-
-
-	//optical_flow(NULL, getNextImage);
-
-	mw.show();
-
+	optical_flow(NULL, getNextImage);
 
 
 	getchar();
 
-	//StreamCatcher::killInstance();
+	view_thread.join();
+
+	StreamCatcher::killInstance();
 
 	return 0;
 }

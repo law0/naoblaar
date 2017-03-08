@@ -1,9 +1,12 @@
 #include "videoitem.h"
 
 VideoItem::VideoItem(unsigned char* frameptr) :
-	QGraphicsItem()
+	QGraphicsItem(),
+	_timer()
 {
 	_frameptr = frameptr;
+	connect(&_timer, SIGNAL(timeout()), this, SLOT(force_repaint()));
+	_timer.start(8);
 }
 
 void VideoItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget)
@@ -25,4 +28,9 @@ void VideoItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * optio
 QRectF VideoItem::boundingRect() const
 {
 	return QRectF(this->pos(), QSize(global_WIDTH, global_HEIGHT));
+}
+
+void VideoItem::force_repaint()
+{
+	this->update();
 }
