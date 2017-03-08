@@ -37,9 +37,9 @@ void char_bgr_to_rgba(unsigned char* out, unsigned char* img, size_t img_size)
         unsigned int i, c;
         for(i = 0, c = 0; i < img_size; i += 3, c+=4)
         {
-                out[c] = RED(img[i+2]);
-		out[c+1] = GREEN(img[i+1]);
-		out[c+2] = BLUE(img[i]);
+                out[c] = img[i+2];
+		out[c+1] = img[i+1];
+		out[c+2] = img[i];
 		out[c+3] = 255;
         }
 }
