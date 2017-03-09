@@ -16,6 +16,7 @@
 #include "streamcatcher.h"
 #include "mainwindow.h"
 #include "videoitem.h"
+#include "oscillator.h"
 
 #define ITER_NB 2
 
@@ -26,36 +27,7 @@ extern unsigned int global_HEIGHT;
 StreamCatcher * streamcatcher;
 unsigned char * global_FRAMEPTR;
 
-//----------------------------------------------------------------------------------------------------------------------------------------------------
-
-/*int getNextImage(unsigned char* img)
-{
-        int w = global_WIDTH;
-        int h = global_HEIGHT;
-        int wh = w * h;
-
-        int i = getNextImage_Counter;
-
-//      if(i > MAX_IMAGE_COUNT)
-//      {
-//              return 0;
-//      }
-
-        if(i > MAX_IMAGE_COUNT)
-        {
-                getNextImage_Counter = 0;
-                i = 0;
-        }
-
-        sfml_update_image(img, i, wh);
-
-        getNextImage_Counter++;
-
-        return 1;
-}*/
-
-
-int getNextImage(unsigned char* img)
+int nextImage(unsigned char* img) //Could have used a fonctor instead of using global variables, but these variables are used in other places too
 {
         int w = global_WIDTH;
         int h = global_HEIGHT;
@@ -71,7 +43,7 @@ int getNextImage(unsigned char* img)
 
 
 //float_pair optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
-void optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
+void optical_flow(Oscillator& oscillator, int (*getNextImage)(unsigned char*) = nextImage)
 {
 
 	int p;
@@ -198,26 +170,34 @@ void optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
 
 		memcpy(It1, It2, largeur * hauteur * sizeof(unsigned char));
 		valid_img = getNextImage(It2);
+
+
 		auto finish = std::chrono::high_resolution_clock::now();
 
-		if(std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count() > 10000000)
+		float h = fp.x * 0.001f;
+		float osc = oscillator(h);
+		if(std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count() > 1000000)
 		{
 			//printf("            \r");
 			//printf("H: %f, V: %f", fp.x, fp.y);
-			if(fp.x > 0)
+			/*if(fp.x > 0)
 				printf("<-- ");
 			else
 				printf("--> ");
 			if(fp.y > 0)
 				printf("V\n");
 			else
-				printf("A\n");
-			fp.x = 0;
-			fp.y = 0;
+				printf("A\n");*/
+
+			printf("%f %f\n", osc, h);
 
 			start = std::chrono::high_resolution_clock::now();
 
 		}
+
+		fp.x = 0;
+		fp.y = 0;
+
 	}
 	free(It1);
 	free(It2);
@@ -280,9 +260,9 @@ int main(int argc, char **argv)
 
 	std::thread view_thread(launchView, argc, argv);
 
+	Oscillator oscillator(0.1f, 0.1f);
 
-	optical_flow(NULL, getNextImage);
-
+	optical_flow(oscillator);
 
 	getchar();
 

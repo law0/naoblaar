@@ -13,6 +13,7 @@ include_directories(${BL_INCLUDE_DIRS} ${CMAKE_SOURCE_DIR})
 add_executable(
 	${PROJECT_NAME} 
 	my_optical_flow.cpp 
+	oscillator.cpp
 	streamcatcher.cpp 
 	utilities.cpp 
 	moc_videoitem.cpp

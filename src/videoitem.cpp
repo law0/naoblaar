@@ -6,7 +6,7 @@ VideoItem::VideoItem(unsigned char* frameptr) :
 {
 	_frameptr = frameptr;
 	connect(&_timer, SIGNAL(timeout()), this, SLOT(force_repaint()));
-	_timer.start(8);
+	_timer.start(1);
 }
 
 void VideoItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget)
@@ -22,7 +22,7 @@ void VideoItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * optio
 
         QImage image(out, global_WIDTH, global_HEIGHT, QImage::Format_RGBA8888_Premultiplied);
 
-        painter->drawImage(QRectF(QPoint(0, 0), QSize(global_WIDTH, global_HEIGHT)), image, QRectF(QPoint(0, 0), image.size()));
+        painter->drawImage(QRectF(QPoint(0, 0), QSize(global_WIDTH, global_HEIGHT)), image.mirrored(true, false), QRectF(QPoint(0, 0), image.size()));
 }
 
 QRectF VideoItem::boundingRect() const

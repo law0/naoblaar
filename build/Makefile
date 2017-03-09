@@ -211,6 +211,30 @@ my_optical_flow.cpp.s:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/my_optical_flow.cpp.s
 .PHONY : my_optical_flow.cpp.s
 
+oscillator.o: oscillator.cpp.o
+.PHONY : oscillator.o
+
+# target to build an object file
+oscillator.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/oscillator.cpp.o
+.PHONY : oscillator.cpp.o
+
+oscillator.i: oscillator.cpp.i
+.PHONY : oscillator.i
+
+# target to preprocess a source file
+oscillator.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/oscillator.cpp.i
+.PHONY : oscillator.cpp.i
+
+oscillator.s: oscillator.cpp.s
+.PHONY : oscillator.s
+
+# target to generate assembly for a file
+oscillator.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/oscillator.cpp.s
+.PHONY : oscillator.cpp.s
+
 streamcatcher.o: streamcatcher.cpp.o
 .PHONY : streamcatcher.o
 
@@ -304,6 +328,9 @@ help:
 	@echo "... my_optical_flow.o"
 	@echo "... my_optical_flow.i"
 	@echo "... my_optical_flow.s"
+	@echo "... oscillator.o"
+	@echo "... oscillator.i"
+	@echo "... oscillator.s"
 	@echo "... streamcatcher.o"
 	@echo "... streamcatcher.i"
 	@echo "... streamcatcher.s"
