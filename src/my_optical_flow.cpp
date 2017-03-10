@@ -182,7 +182,9 @@ void optical_flow(int width, int height, Oscillator& oscillator, int (*getNextIm
 
 		auto finish = std::chrono::high_resolution_clock::now();
 
-		float h = fp.x * 0.001f;
+		float h = fp.x * 0.000001f;
+		h = h > 1.f ? 1.f : h;
+		h = h < -1.f ? -1.f : h;
 		float osc = oscillator(h);
 		if(std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count() > 1000000)
 		{
@@ -259,7 +261,7 @@ int main(int argc, char **argv)
 
 	std::thread view_thread(launchView, argc, argv);
 
-	Oscillator oscillator(0.1f, 0.1f);
+	Oscillator oscillator(0.49f, 0.15f);
 
 	optical_flow(width, height, oscillator);
 
