@@ -6,6 +6,7 @@
 #include <highgui.h>
 #include <thread>
 #include <mutex>
+#include "utilities.h"
 
 class StreamCatcher
 {
@@ -18,10 +19,16 @@ class StreamCatcher
 		CvCapture * getCapture();
 		unsigned int getWidth() const;
 		unsigned int getHeight() const;
+		unsigned char* getBGR(unsigned char* img, unsigned int size) const;
+		unsigned char* getRGBA(unsigned char* img, unsigned int size) const;
+		unsigned char* getGRAY(unsigned char* img, unsigned int size) const;
 
 	private:
 		StreamCatcher();
 		static void loop(StreamCatcher *);
+		char get_buffer_selector() const;
+		void set_buffer_selector(char bs);
+		unsigned char* get_bgr_buffer(char bs) const;
 
 		static StreamCatcher * _instance;
 		CvCapture * _capture;
@@ -30,6 +37,10 @@ class StreamCatcher
 		static bool _loop_bool;
 		unsigned int _width;
 		unsigned int _height;
+		unsigned int _size;
+		char _buffer_selector;
+		unsigned char* _bgr_buffer[2];
+
 
 
 };

@@ -3,9 +3,10 @@
 VideoItem::VideoItem(const StreamCatcher* streamcatcher) :
 	QGraphicsItem(),
 	_timer(),
-	_frameptr((unsigned char* const)(streamcatcher->getFramePtr())),
-	_width((const unsigned int)(streamcatcher->getWidth())),
-	_height((const unsigned int)(streamcatcher->getHeight())),
+	_streamcatcher(streamcatcher),
+	_frameptr((unsigned char* const)(_streamcatcher->getFramePtr())),
+	_width((const unsigned int)(_streamcatcher->getWidth())),
+	_height((const unsigned int)(_streamcatcher->getHeight())),
 	_size(_width * _height)
 {
 	connect(&_timer, SIGNAL(timeout()), this, SLOT(force_repaint()));
@@ -16,10 +17,12 @@ void VideoItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * optio
 {
         unsigned char out[_size * 4];
 
-        std::mutex mtx;
+/*        std::mutex mtx;
         mtx.lock();
         char_bgr_to_rgba(out,_frameptr, _size * 3);
-        mtx.unlock();
+        mtx.unlock();*/
+
+	_streamcatcher->getRGBA(out, _size * 4);
 
         QImage image(out, _width, _height, QImage::Format_RGBA8888_Premultiplied);
 

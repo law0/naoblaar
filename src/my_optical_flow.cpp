@@ -22,9 +22,9 @@
 
 #define MAX_IMAGE_COUNT 7
 
-StreamCatcher * global_Streamcatcher; //Singleton
+static StreamCatcher * global_Streamcatcher; //Singleton
 
-int nextImage(unsigned char* img)
+int getNextImage(unsigned char* img)
 {
         int w = global_Streamcatcher->getWidth();
         int h = global_Streamcatcher->getHeight();
@@ -38,6 +38,15 @@ int nextImage(unsigned char* img)
 	mtx.unlock();
 
         return 1;
+}
+
+int nextImage(unsigned char* img)
+{
+	int w = global_Streamcatcher->getWidth();
+	int h = global_Streamcatcher->getHeight();
+
+	global_Streamcatcher->getGRAY(img, w*h);
+	return 1;
 }
 
 

@@ -24,6 +24,7 @@ class VideoItem : public QObject, public QGraphicsItem
 
 	private:
 		QTimer _timer;
+		const StreamCatcher* _streamcatcher;
 		unsigned char* const _frameptr;
 		const unsigned int _width;
 		const unsigned int _height;
