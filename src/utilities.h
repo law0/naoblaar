@@ -21,6 +21,8 @@
 // red, green, blue, and alpha component values.
 #define RGBA(r,g,b,a) ((((a) << 24)) | (((b) << 16)) | (((g) << 8)) | ((r)))
 
+
+
 typedef struct float_pair
 {
         float x;
@@ -32,11 +34,8 @@ typedef struct getNextImage_args
 
 } getNextImage_args;
 
-extern unsigned int global_WIDTH;
-extern unsigned int global_HEIGHT;
-static unsigned int getNextImage_Counter = 0;
-static blc_array current_image;
-static sf::Image sfml_current_image;
+//static blc_array current_image;
+//static sf::Image sfml_current_image;
 
 
 void rgba_to_gray(unsigned int* out, unsigned int* img, size_t img_size);
@@ -44,12 +43,12 @@ void char_bgr_to_intensity(unsigned char* out, unsigned char* img, size_t img_si
 void char_bgr_to_rgba(unsigned char* out, unsigned char* img, size_t img_size);
 void rgba_to_intensity(unsigned char* out, unsigned int* img, size_t img_size);
 void intensity_to_rgba(unsigned int* out, unsigned char* img, size_t img_size);
-inline void sfml_init_image();
+/*inline void sfml_init_image();
 inline void sfml_update_image(unsigned char* img, int i, int wh);
 inline void sfml_save_image(unsigned int* out_data);
 inline void blaar_init_image();
 inline void blaar_update_image(unsigned char* img, int i, int wh);
 inline void blaar_save_image(unsigned int* out_data);
-void round_robin_sum(float x, float y);
+void round_robin_sum(float x, float y);*/
 
 #endif //UTILITIES_H_INCLUDED

@@ -1,7 +1,8 @@
 #include "utilities.h"
 
-unsigned int global_WIDTH;
-unsigned int global_HEIGHT;
+//unsigned int global_WIDTH;
+//unsigned int global_HEIGHT;
+
 
 void rgba_to_gray(unsigned int* out, unsigned int* img, size_t img_size)
 {
@@ -77,6 +78,7 @@ void intensity_to_rgba(unsigned int* out, unsigned char* img, size_t img_size)
         out[0] = RGBA(p, p, p, 255);
 }
 
+/*
 inline void sfml_init_image()
 {
         char input_filename[100];
@@ -138,9 +140,11 @@ inline void blaar_save_image(unsigned int* out_data)
         blc_image_save_png_file(&image_out, "img_out.png");
 }
 
+*/
 
-void round_robin_sum(float x, float y)
+
+/*void round_robin_sum(float x, float y)
 {
 
-}
+}*/
 

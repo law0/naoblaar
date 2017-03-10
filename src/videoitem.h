@@ -10,6 +10,7 @@
 #include <QObject>
 #include <QGraphicsItem>
 
+#include "streamcatcher.h"
 #include "utilities.h"
 
 class VideoItem : public QObject, public QGraphicsItem
@@ -17,13 +18,16 @@ class VideoItem : public QObject, public QGraphicsItem
 	Q_OBJECT
 
 	public :
-		VideoItem(unsigned char* frameptr);
+		VideoItem(const StreamCatcher* streamcatcher);
 		void paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
 		QRectF boundingRect() const;
 
 	private:
-		unsigned char* _frameptr;
 		QTimer _timer;
+		unsigned char* const _frameptr;
+		const unsigned int _width;
+		const unsigned int _height;
+		const unsigned int _size;
 
 
 	public slots:

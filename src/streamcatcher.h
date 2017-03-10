@@ -7,9 +7,6 @@
 #include <thread>
 #include <mutex>
 
-extern unsigned int global_WIDTH;
-extern unsigned int global_HEIGHT;
-
 class StreamCatcher
 {
 

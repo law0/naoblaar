@@ -22,20 +22,19 @@
 
 #define MAX_IMAGE_COUNT 7
 
-extern unsigned int global_WIDTH;
-extern unsigned int global_HEIGHT;
-StreamCatcher * streamcatcher;
-unsigned char * global_FRAMEPTR;
+StreamCatcher * global_Streamcatcher; //Singleton
 
-int nextImage(unsigned char* img) //Could have used a fonctor instead of using global variables, but these variables are used in other places too
+int nextImage(unsigned char* img)
 {
-        int w = global_WIDTH;
-        int h = global_HEIGHT;
+        int w = global_Streamcatcher->getWidth();
+        int h = global_Streamcatcher->getHeight();
         int size = w * h * 3;
+
+	char* frameptr = global_Streamcatcher->getFramePtr();
 
 	std::mutex mtx;
 	mtx.lock();
-	char_bgr_to_intensity(img, global_FRAMEPTR, size);
+	char_bgr_to_intensity(img, (unsigned char*)frameptr, size);
 	mtx.unlock();
 
         return 1;
@@ -43,13 +42,13 @@ int nextImage(unsigned char* img) //Could have used a fonctor instead of using g
 
 
 //float_pair optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
-void optical_flow(Oscillator& oscillator, int (*getNextImage)(unsigned char*) = nextImage)
+void optical_flow(int width, int height, Oscillator& oscillator, int (*getNextImage)(unsigned char*) = nextImage)
 {
 
 	int p;
 	int iter;
-	int largeur = global_WIDTH;
-	int hauteur = global_HEIGHT;
+	int largeur = width;
+	int hauteur = height;
 	int nb_iterations = 1;
 	float alpha = 1.;
 	int wh = largeur * hauteur;
@@ -223,17 +222,14 @@ void launchView(int argc, char **argv)
 
 	mw.setCentralWidget(&view);
 
-
-
-	VideoItem vi(global_FRAMEPTR);
+	VideoItem vi(global_Streamcatcher);
 
 	scene.addItem(&vi);
 
 	view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
-        view.setFixedSize(global_WIDTH + 2, global_HEIGHT + 2);
-
+        view.setFixedSize(global_Streamcatcher->getWidth() + 2, global_Streamcatcher->getHeight() + 2);
 
 	mw.show();
 
@@ -245,24 +241,18 @@ void launchView(int argc, char **argv)
 int main(int argc, char **argv)
 {
 
-	streamcatcher = StreamCatcher::getInstance();
+	global_Streamcatcher = StreamCatcher::getInstance();
 
-	//global_WIDTH global_HEIGHT and global_FRAMEPTR are set by StreamCatcher
-	global_WIDTH = streamcatcher->getWidth();
-	global_HEIGHT = streamcatcher->getHeight();
+	int width = global_Streamcatcher->getWidth();
+	int height = global_Streamcatcher->getHeight();
 
-	printf("w: %d, h: %d\n", global_WIDTH, global_HEIGHT);
-
-	//global_FRAMEPTR is in BGR format (8 8 8)
-	global_FRAMEPTR = (unsigned char*) (streamcatcher->getFramePtr());
-
-
+	printf("w: %d, h: %d\n", width, height);
 
 	std::thread view_thread(launchView, argc, argv);
 
 	Oscillator oscillator(0.1f, 0.1f);
 
-	optical_flow(oscillator);
+	optical_flow(width, height, oscillator);
 
 	getchar();
 
