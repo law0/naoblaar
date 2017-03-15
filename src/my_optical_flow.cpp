@@ -182,11 +182,11 @@ void optical_flow(int width, int height, Oscillator& oscillator, int (*getNextIm
 
 		auto finish = std::chrono::high_resolution_clock::now();
 
-		float h = fp.x * 0.000001f;
-		h = h > 1.f ? 1.f : h;
-		h = h < -1.f ? -1.f : h;
-		float osc = oscillator(h);
-		if(std::chrono::duration_cast<std::chrono::nanoseconds>(finish-start).count() > 1000000)
+		float h = fp.x;
+		/*h = h > 100000.f ? 100000.f : h;
+		h = h < -100000.f ? -100000.f : h;*/
+		h *= 0.000001f;
+		if(std::chrono::duration_cast<std::chrono::nanoseconds>(finish - start).count() > 30000000)
 		{
 			//printf("            \r");
 			//printf("H: %f, V: %f", fp.x, fp.y);
@@ -198,6 +198,8 @@ void optical_flow(int width, int height, Oscillator& oscillator, int (*getNextIm
 				printf("V\n");
 			else
 				printf("A\n");*/
+
+			float osc = oscillator(h);
 
 			printf("%f %f\n", osc, h);
 
@@ -261,7 +263,7 @@ int main(int argc, char **argv)
 
 	std::thread view_thread(launchView, argc, argv);
 
-	Oscillator oscillator(0.49f, 0.15f);
+	Oscillator oscillator(0.07f, 0.15f);
 
 	optical_flow(width, height, oscillator);
 
