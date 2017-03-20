@@ -1,22 +1,15 @@
 #include "plotitem.h"
 
-PlotItem::PlotItem(Oscillator &osc) : _timer(), _vec(201), _osc(osc)
+PlotItem::PlotItem(Oscillator &osc) : _timer(), _vec(201, 0.0), _x(201, 0.0), _osc(osc)
 {
 	setFixedSize(300, 300);
         // create graph and assign data to it:
-	QVector<double> x(501);
-	for(int i = 0; i < 501; ++i)
-	{
-		x[i] = (double)i;
-	}
-
-	for(int i = 0; i <201; ++i)
-	{
-		_vec[i] = 0.0;
-	}
-
         addGraph();
-        graph(0)->setData(x, _vec);
+	for(int i = 0; i < 201; ++i)
+	{
+		_x[i] = i/40.0 - 1;
+	}
+        graph(0)->setData(_x, _vec);
         // give the axes some labels:
         xAxis->setLabel("x");
         yAxis->setLabel("y");
@@ -27,12 +20,16 @@ PlotItem::PlotItem(Oscillator &osc) : _timer(), _vec(201), _osc(osc)
         this->replot();
 
 	 connect(&_timer, SIGNAL(timeout()), this, SLOT(force_repaint()));
-        _timer.start(10);
+        _timer.start(100);
 }
 
 void PlotItem::force_repaint()
 {
+	std::mutex mtx;
 	_vec.removeFirst();
+	mtx.lock();
 	_vec.append(_osc.getVal());
+	mtx.unlock();
+	this->graph(0)->setData(_x, _vec);
 	this->replot();
 }

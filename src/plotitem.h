@@ -1,6 +1,7 @@
 #ifndef PLOTITEM_H_INCLUDED
 #define PLOTITEM_H_INCLUDED
 
+#include <mutex>
 #include "qcustomplot.h"
 #include "oscillator.h"
 
@@ -17,6 +18,7 @@ class PlotItem : public QCustomPlot
 	private :
 		QTimer _timer;
 		QVector<double> _vec;
+		QVector<double> _x;
 		Oscillator& _osc;
 
 };
