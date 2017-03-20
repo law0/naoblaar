@@ -4,7 +4,7 @@
 #include <iostream>
 #include <cv.h>
 #include <highgui.h>
-
+#include <QVector>
 #include <QMainWindow>
 #include <QtWidgets>
 #include <QPushButton>

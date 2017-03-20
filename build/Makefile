@@ -163,6 +163,54 @@ moc_mainwindow.cpp.s:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_mainwindow.cpp.s
 .PHONY : moc_mainwindow.cpp.s
 
+moc_plotitem.o: moc_plotitem.cpp.o
+.PHONY : moc_plotitem.o
+
+# target to build an object file
+moc_plotitem.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_plotitem.cpp.o
+.PHONY : moc_plotitem.cpp.o
+
+moc_plotitem.i: moc_plotitem.cpp.i
+.PHONY : moc_plotitem.i
+
+# target to preprocess a source file
+moc_plotitem.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_plotitem.cpp.i
+.PHONY : moc_plotitem.cpp.i
+
+moc_plotitem.s: moc_plotitem.cpp.s
+.PHONY : moc_plotitem.s
+
+# target to generate assembly for a file
+moc_plotitem.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_plotitem.cpp.s
+.PHONY : moc_plotitem.cpp.s
+
+moc_qcustomplot.o: moc_qcustomplot.cpp.o
+.PHONY : moc_qcustomplot.o
+
+# target to build an object file
+moc_qcustomplot.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_qcustomplot.cpp.o
+.PHONY : moc_qcustomplot.cpp.o
+
+moc_qcustomplot.i: moc_qcustomplot.cpp.i
+.PHONY : moc_qcustomplot.i
+
+# target to preprocess a source file
+moc_qcustomplot.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_qcustomplot.cpp.i
+.PHONY : moc_qcustomplot.cpp.i
+
+moc_qcustomplot.s: moc_qcustomplot.cpp.s
+.PHONY : moc_qcustomplot.s
+
+# target to generate assembly for a file
+moc_qcustomplot.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_qcustomplot.cpp.s
+.PHONY : moc_qcustomplot.cpp.s
+
 moc_videoitem.o: moc_videoitem.cpp.o
 .PHONY : moc_videoitem.o
 
@@ -234,6 +282,54 @@ oscillator.s: oscillator.cpp.s
 oscillator.cpp.s:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/oscillator.cpp.s
 .PHONY : oscillator.cpp.s
+
+plotitem.o: plotitem.cpp.o
+.PHONY : plotitem.o
+
+# target to build an object file
+plotitem.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/plotitem.cpp.o
+.PHONY : plotitem.cpp.o
+
+plotitem.i: plotitem.cpp.i
+.PHONY : plotitem.i
+
+# target to preprocess a source file
+plotitem.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/plotitem.cpp.i
+.PHONY : plotitem.cpp.i
+
+plotitem.s: plotitem.cpp.s
+.PHONY : plotitem.s
+
+# target to generate assembly for a file
+plotitem.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/plotitem.cpp.s
+.PHONY : plotitem.cpp.s
+
+qcustomplot.o: qcustomplot.cpp.o
+.PHONY : qcustomplot.o
+
+# target to build an object file
+qcustomplot.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/qcustomplot.cpp.o
+.PHONY : qcustomplot.cpp.o
+
+qcustomplot.i: qcustomplot.cpp.i
+.PHONY : qcustomplot.i
+
+# target to preprocess a source file
+qcustomplot.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/qcustomplot.cpp.i
+.PHONY : qcustomplot.cpp.i
+
+qcustomplot.s: qcustomplot.cpp.s
+.PHONY : qcustomplot.s
+
+# target to generate assembly for a file
+qcustomplot.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/qcustomplot.cpp.s
+.PHONY : qcustomplot.cpp.s
 
 streamcatcher.o: streamcatcher.cpp.o
 .PHONY : streamcatcher.o
@@ -322,6 +418,12 @@ help:
 	@echo "... moc_mainwindow.o"
 	@echo "... moc_mainwindow.i"
 	@echo "... moc_mainwindow.s"
+	@echo "... moc_plotitem.o"
+	@echo "... moc_plotitem.i"
+	@echo "... moc_plotitem.s"
+	@echo "... moc_qcustomplot.o"
+	@echo "... moc_qcustomplot.i"
+	@echo "... moc_qcustomplot.s"
 	@echo "... moc_videoitem.o"
 	@echo "... moc_videoitem.i"
 	@echo "... moc_videoitem.s"
@@ -331,6 +433,12 @@ help:
 	@echo "... oscillator.o"
 	@echo "... oscillator.i"
 	@echo "... oscillator.s"
+	@echo "... plotitem.o"
+	@echo "... plotitem.i"
+	@echo "... plotitem.s"
+	@echo "... qcustomplot.o"
+	@echo "... qcustomplot.i"
+	@echo "... qcustomplot.s"
 	@echo "... streamcatcher.o"
 	@echo "... streamcatcher.i"
 	@echo "... streamcatcher.s"

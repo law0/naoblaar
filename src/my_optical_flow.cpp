@@ -17,6 +17,7 @@
 #include "mainwindow.h"
 #include "videoitem.h"
 #include "oscillator.h"
+#include "plotitem.h"
 
 #define ITER_NB 2
 
@@ -223,7 +224,7 @@ void optical_flow(int width, int height, Oscillator& oscillator, int (*getNextIm
 
 }
 
-void launchView(int argc, char **argv)
+void launchView(int argc, char **argv, Oscillator* osc)
 {
 	QApplication a(argc, argv);
 
@@ -239,10 +240,18 @@ void launchView(int argc, char **argv)
 
 	scene.addItem(&vi);
 
+	scene.setSceneRect(0, 0, global_Streamcatcher->getWidth() + 320, scene.height());
+
+	PlotItem plotitem(*osc);
+
+	QGraphicsProxyWidget* plotProxy = scene.addWidget(&plotitem);
+
+	plotProxy->setPos(global_Streamcatcher->getWidth() + 2, 0);
+
 	view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
-        view.setFixedSize(global_Streamcatcher->getWidth() + 2, global_Streamcatcher->getHeight() + 2);
+        view.setFixedSize(mw.minimumSize().width() - 2, global_Streamcatcher->getHeight() + 2);
 
 	mw.show();
 
@@ -261,9 +270,9 @@ int main(int argc, char **argv)
 
 	printf("w: %d, h: %d\n", width, height);
 
-	std::thread view_thread(launchView, argc, argv);
-
 	Oscillator oscillator(0.07f, 0.15f);
+
+	std::thread view_thread(launchView, argc, argv, &oscillator);
 
 	optical_flow(width, height, oscillator);
 

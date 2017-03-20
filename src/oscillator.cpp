@@ -10,8 +10,19 @@ Oscillator::Oscillator(float alpha, float beta) : _out1(0.f), _out2(0.f), _alpha
 
 }
 
-float Oscillator::operator()(float _val)
+float Oscillator::getOut() const
 {
+	return _out1;
+}
+
+float Oscillator::getVal() const
+{
+	return _val;
+}
+
+float Oscillator::operator()(float val)
+{
+	_val = val;
 	float tmp_out1 = _out1 - _beta * _out2 + _alpha + 0.2f * _val;
 	_out2  = _out2 >  1.f ? 1.f : _out2;
 	_out2  = _out2 <  0.f ? 0.f : _out2;

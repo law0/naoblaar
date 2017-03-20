@@ -18,8 +18,12 @@ add_executable(
 	utilities.cpp 
 	moc_videoitem.cpp
 	moc_mainwindow.cpp 
+	moc_qcustomplot.cpp
+	moc_plotitem.cpp
 	mainwindow.cpp 
-	videoitem.cpp 
+	videoitem.cpp
+	qcustomplot.cpp
+	plotitem.cpp
 	)
 
 target_link_libraries(${PROJECT_NAME} ${BL_LIBRARIES} z -lsfml-system -lsfml-graphics -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_stitching Qt5::Widgets)
