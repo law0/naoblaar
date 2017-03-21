@@ -283,6 +283,7 @@ void launchView(int argc, char **argv, Oscillator* osc, Oscillator* osc2)
 
 //	scene.setSceneRect(0, 0, global_Streamcatcher->getWidth() + 320, scene.height());
 
+
 	view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
