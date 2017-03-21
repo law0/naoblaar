@@ -1,13 +1,13 @@
 #include "plotitem.h"
 
-PlotItem::PlotItem(Oscillator &osc) : _timer(), _vec(201, 0.0), _x(201, 0.0), _osc(osc)
+PlotItem::PlotItem(Oscillator &osc, int choice) : _choice(choice), _timer(), _vec(201, 0.0), _x(201, 0.0), _osc(osc)
 {
-	setFixedSize(300, 300);
+	setFixedSize(400, 125);
         // create graph and assign data to it:
         addGraph();
 	for(int i = 0; i < 201; ++i)
 	{
-		_x[i] = i/40.0 - 1;
+		_x[i] = i/35.0 - 1;
 	}
         graph(0)->setData(_x, _vec);
         // give the axes some labels:
@@ -27,9 +27,20 @@ void PlotItem::force_repaint()
 {
 	std::mutex mtx;
 	_vec.removeFirst();
-	mtx.lock();
-	_vec.append(_osc.getVal());
-	mtx.unlock();
+	switch(_choice)
+	{
+		case 1 :
+			mtx.lock();
+			_vec.append(_osc.getOut());
+			mtx.unlock();
+			break;
+		case 0 :
+		default :
+			mtx.lock();
+			_vec.append(_osc.getVal());
+			mtx.unlock();
+			break;
+	}
 	this->graph(0)->setData(_x, _vec);
 	this->replot();
 }

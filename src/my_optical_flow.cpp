@@ -52,7 +52,7 @@ int nextImage(unsigned char* img)
 
 
 //float_pair optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
-void optical_flow(int width, int height, Oscillator& oscillator, int (*getNextImage)(unsigned char*) = nextImage)
+void optical_flow(int width, int height, Oscillator& oscillator1, Oscillator& oscillator2, int (*getNextImage)(unsigned char*) = nextImage)
 {
 
 	int p;
@@ -184,9 +184,10 @@ void optical_flow(int width, int height, Oscillator& oscillator, int (*getNextIm
 		auto finish = std::chrono::high_resolution_clock::now();
 
 		float h = fp.x;
-		/*h = h > 100000.f ? 100000.f : h;
-		h = h < -100000.f ? -100000.f : h;*/
 		h *= 0.000001f;
+
+		float v = fp.y;
+		v *= 0.000001f;
 		if(std::chrono::duration_cast<std::chrono::nanoseconds>(finish - start).count() > 30000000)
 		{
 			//printf("            \r");
@@ -200,11 +201,16 @@ void optical_flow(int width, int height, Oscillator& oscillator, int (*getNextIm
 			else
 				printf("A\n");*/
 
-			float osc = oscillator(h);
+			float osc1 = oscillator1(h);
 
-			printf("%f %f\n", osc, h);
+			printf("%f %f\n", osc1, h);
+
+			oscillator2(v);
+
+			//std::this_thread::sleep_for(std::chrono::nanoseconds(10000));
 
 			start = std::chrono::high_resolution_clock::now();
+
 
 		}
 
@@ -224,7 +230,7 @@ void optical_flow(int width, int height, Oscillator& oscillator, int (*getNextIm
 
 }
 
-void launchView(int argc, char **argv, Oscillator* osc)
+void launchView(int argc, char **argv, Oscillator* osc, Oscillator* osc2)
 {
 	QApplication a(argc, argv);
 
@@ -240,18 +246,47 @@ void launchView(int argc, char **argv, Oscillator* osc)
 
 	scene.addItem(&vi);
 
-	scene.setSceneRect(0, 0, global_Streamcatcher->getWidth() + 320, scene.height());
+	PlotItem plotitemX(*osc, 0);
+	PlotItem plotitemY(*osc2, 0);
+	PlotItem plotitemOSCX(*osc, 1);
+	PlotItem plotitemOSCY(*osc2, 1);
 
-	PlotItem plotitem(*osc);
+	QDockWidget* DWplotitemX = new QDockWidget("Horizontal flow");
+	QDockWidget* DWplotitemY = new QDockWidget("Vertical flow");
+	QDockWidget* DWplotitemOSCX = new QDockWidget("Horizontal oscillator");
+	QDockWidget* DWplotitemOSCY = new QDockWidget("Vertical oscillator");
 
-	QGraphicsProxyWidget* plotProxy = scene.addWidget(&plotitem);
+	DWplotitemX->setWidget(&plotitemX);
+	DWplotitemY->setWidget(&plotitemY);
+	DWplotitemOSCX->setWidget(&plotitemOSCX);
+	DWplotitemOSCY->setWidget(&plotitemOSCY);
 
-	plotProxy->setPos(global_Streamcatcher->getWidth() + 2, 0);
+	DWplotitemX->setAllowedAreas(Qt::RightDockWidgetArea);
+	DWplotitemY->setAllowedAreas(Qt::RightDockWidgetArea);
+	DWplotitemOSCX->setAllowedAreas(Qt::RightDockWidgetArea);
+	DWplotitemOSCY->setAllowedAreas(Qt::RightDockWidgetArea);
+
+/*	QGraphicsProxyWidget* plotProxyX = scene.addWidget(&plotitemX);
+	QGraphicsProxyWidget* plotProxyY = scene.addWidget(&plotitemY);
+	QGraphicsProxyWidget* plotProxyOSCX = scene.addWidget(&plotitemOSCX);
+	QGraphicsProxyWidget* plotProxyOSCY = scene.addWidget(&plotitemOSCY);*/
+
+/*	plotProxyX->setPos(global_Streamcatcher->getWidth() + 30, 0);
+	plotProxyOSCX->setPos(global_Streamcatcher->getWidth() + 30, 125);
+	plotProxyY->setPos(global_Streamcatcher->getWidth() + 30, 250);
+	plotProxyOSCY->setPos(global_Streamcatcher->getWidth() + 30, 375);*/
+
+	mw.addDockWidget(Qt::RightDockWidgetArea, DWplotitemX);
+	mw.addDockWidget(Qt::RightDockWidgetArea, DWplotitemOSCX);
+	mw.addDockWidget(Qt::RightDockWidgetArea, DWplotitemY);
+	mw.addDockWidget(Qt::RightDockWidgetArea, DWplotitemOSCY);
+
+//	scene.setSceneRect(0, 0, global_Streamcatcher->getWidth() + 320, scene.height());
 
 	view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
-        view.setFixedSize(mw.minimumSize().width() - 2, global_Streamcatcher->getHeight() + 2);
+        view.setFixedSize(global_Streamcatcher->getWidth() + 2, global_Streamcatcher->getHeight() + 2);
 
 	mw.show();
 
@@ -271,10 +306,11 @@ int main(int argc, char **argv)
 	printf("w: %d, h: %d\n", width, height);
 
 	Oscillator oscillator(0.07f, 0.15f);
+	Oscillator osc2(0.07f, 0.15f);
 
-	std::thread view_thread(launchView, argc, argv, &oscillator);
+	std::thread view_thread(launchView, argc, argv, &oscillator, &osc2);
 
-	optical_flow(width, height, oscillator);
+	optical_flow(width, height, oscillator, osc2);
 
 	getchar();
 
