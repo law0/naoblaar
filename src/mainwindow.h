@@ -10,6 +10,8 @@
 #include <QPushButton>
 #include <QObject>
 
+#include "movie.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -20,15 +22,18 @@ class MainWindow : public QMainWindow
 
 	public :
 		explicit MainWindow(QWidget *parent = 0);
-		void getStream();
+		void addMovie(Movie* movie);
 		~MainWindow();
 
-	public slots :
-        	void actionButton();
-		void quit();
+	private slots :
+        	void movieManagement();
+		void closeExperience();
 
 	private:
 	   	Ui::MainWindow *ui;
+		Movie* _movie;
+		QPushButton* play;
+		bool runningVideo;
 
 
 };

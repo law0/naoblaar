@@ -6,7 +6,8 @@
 
 MainWindow::MainWindow(QWidget *parent) :
 	QMainWindow(parent),
-	ui(new Ui::MainWindow)
+	ui(new Ui::MainWindow),
+	runningVideo(false)
 {
 	setFixedSize(1300, 520);
 
@@ -24,28 +25,47 @@ MainWindow::MainWindow(QWidget *parent) :
 	update();
 
     //
-	QPushButton *play = new QPushButton("play", this);
-	play -> setGeometry(560, 485, 80, 30);
+	play = new QPushButton("Enregistrer", this);
+	play -> setGeometry(540, 485, 100, 30);
+
+	
+
 	QPushButton *pause = new QPushButton("stop", this);
 	pause -> setGeometry(650, 485, 80, 30);
 
-	connect(play, SIGNAL(clicked()), this, SLOT(actionButton()));
-	connect(pause, SIGNAL(clicked()), this, SLOT(quit()));
+	connect(play, SIGNAL(pressed()), this, SLOT(movieManagement()));
+	connect(pause, SIGNAL(pressed()), this, SLOT(closeExperience()));
 
 	//printf("salut\n");
 	//this->getStream();
 }
 
-void MainWindow::actionButton()
+void MainWindow::movieManagement()
 {
-    printf("bonjour\n");
-    this->getStream();
+	if (runningVideo)
+	{
+		_movie->stopCapture();
+		play->setText("Enregistrer");
+		runningVideo = false;
+	}
+	else
+	{
+		_movie->startCapture();
+		play->setText("Pause");
+		runningVideo = true;
+	}
+    	
 }
 
-void MainWindow::getStream()
+void MainWindow::closeExperience()
 {
- //       char* vec = frame->imageData;
+	//printf("salut\n");
+	_movie->stopCapture();
+}
 
+void MainWindow::addMovie(Movie* movie)
+{
+	 _movie = movie;
 }
 
 MainWindow::~MainWindow()
@@ -53,8 +73,3 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-void MainWindow::quit()
-{
-	printf("quit\n");
-}

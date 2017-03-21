@@ -18,6 +18,7 @@
 #include "videoitem.h"
 #include "oscillator.h"
 #include "plotitem.h"
+#include "movie.h"
 
 #define ITER_NB 2
 
@@ -243,6 +244,9 @@ void launchView(int argc, char **argv, Oscillator* osc, Oscillator* osc2)
 	mw.setCentralWidget(&view);
 
 	VideoItem vi(global_Streamcatcher);
+
+	Movie movie(global_Streamcatcher);
+    	mw.addMovie(&movie);
 
 	scene.addItem(&vi);
 

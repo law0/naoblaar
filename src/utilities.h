@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <SFML/System.hpp>
 #include <SFML/Graphics.hpp>
-#include "blc_image.h"
+#include <blc_image/blc_image.h>
 
 #define IMAGE_PREFIX "ballo"
 
