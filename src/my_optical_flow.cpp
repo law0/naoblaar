@@ -205,7 +205,7 @@ void optical_flow(int width, int height, Oscillator& oscillator1, Oscillator& os
 
 			printf("%f %f\n", osc1, h);
 
-			oscillator2(v);
+			oscillator2(-v);
 
 			//std::this_thread::sleep_for(std::chrono::nanoseconds(10000));
 
