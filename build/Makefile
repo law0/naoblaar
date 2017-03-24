@@ -115,6 +115,30 @@ nao_blaar/fast:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/build
 .PHONY : nao_blaar/fast
 
+launchView.o: launchView.cpp.o
+.PHONY : launchView.o
+
+# target to build an object file
+launchView.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/launchView.cpp.o
+.PHONY : launchView.cpp.o
+
+launchView.i: launchView.cpp.i
+.PHONY : launchView.i
+
+# target to preprocess a source file
+launchView.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/launchView.cpp.i
+.PHONY : launchView.cpp.i
+
+launchView.s: launchView.cpp.s
+.PHONY : launchView.s
+
+# target to generate assembly for a file
+launchView.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/launchView.cpp.s
+.PHONY : launchView.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -234,6 +258,30 @@ moc_qcustomplot.s: moc_qcustomplot.cpp.s
 moc_qcustomplot.cpp.s:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_qcustomplot.cpp.s
 .PHONY : moc_qcustomplot.cpp.s
+
+moc_slideritem.o: moc_slideritem.cpp.o
+.PHONY : moc_slideritem.o
+
+# target to build an object file
+moc_slideritem.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_slideritem.cpp.o
+.PHONY : moc_slideritem.cpp.o
+
+moc_slideritem.i: moc_slideritem.cpp.i
+.PHONY : moc_slideritem.i
+
+# target to preprocess a source file
+moc_slideritem.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_slideritem.cpp.i
+.PHONY : moc_slideritem.cpp.i
+
+moc_slideritem.s: moc_slideritem.cpp.s
+.PHONY : moc_slideritem.s
+
+# target to generate assembly for a file
+moc_slideritem.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_slideritem.cpp.s
+.PHONY : moc_slideritem.cpp.s
 
 moc_videoitem.o: moc_videoitem.cpp.o
 .PHONY : moc_videoitem.o
@@ -355,6 +403,30 @@ qcustomplot.cpp.s:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/qcustomplot.cpp.s
 .PHONY : qcustomplot.cpp.s
 
+slideritem.o: slideritem.cpp.o
+.PHONY : slideritem.o
+
+# target to build an object file
+slideritem.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/slideritem.cpp.o
+.PHONY : slideritem.cpp.o
+
+slideritem.i: slideritem.cpp.i
+.PHONY : slideritem.i
+
+# target to preprocess a source file
+slideritem.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/slideritem.cpp.i
+.PHONY : slideritem.cpp.i
+
+slideritem.s: slideritem.cpp.s
+.PHONY : slideritem.s
+
+# target to generate assembly for a file
+slideritem.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/slideritem.cpp.s
+.PHONY : slideritem.cpp.s
+
 streamcatcher.o: streamcatcher.cpp.o
 .PHONY : streamcatcher.o
 
@@ -436,6 +508,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... nao_blaar"
 	@echo "... rebuild_cache"
+	@echo "... launchView.o"
+	@echo "... launchView.i"
+	@echo "... launchView.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -451,6 +526,9 @@ help:
 	@echo "... moc_qcustomplot.o"
 	@echo "... moc_qcustomplot.i"
 	@echo "... moc_qcustomplot.s"
+	@echo "... moc_slideritem.o"
+	@echo "... moc_slideritem.i"
+	@echo "... moc_slideritem.s"
 	@echo "... moc_videoitem.o"
 	@echo "... moc_videoitem.i"
 	@echo "... moc_videoitem.s"
@@ -466,6 +544,9 @@ help:
 	@echo "... qcustomplot.o"
 	@echo "... qcustomplot.i"
 	@echo "... qcustomplot.s"
+	@echo "... slideritem.o"
+	@echo "... slideritem.i"
+	@echo "... slideritem.s"
 	@echo "... streamcatcher.o"
 	@echo "... streamcatcher.i"
 	@echo "... streamcatcher.s"

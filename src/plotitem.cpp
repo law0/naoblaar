@@ -1,22 +1,25 @@
 #include "plotitem.h"
 
-PlotItem::PlotItem(Oscillator &osc, int choice) : _choice(choice), _timer(), _vec(201, 0.0), _x(201, 0.0), _osc(osc)
+//Oscillator::Getter is an enum with values : GetOut, GetVal...
+//choice is : 	Oscillator::GetVal or default for getting osc.getVal()
+//	       	Oscillator::GetOut for getting osc.getOut()
+
+PlotItem::PlotItem(Oscillator &osc, Oscillator::Getter choice) : _choice(choice), _timer(), _vec(201, 0.0), _x(201, 0.0), _osc(osc)
 {
 	setFixedSize(400, 125);
         // create graph and assign data to it:
         addGraph();
 	for(int i = 0; i < 201; ++i)
 	{
-		_x[i] = i/35.0 - 1;
+		_x[i] = i/100.0 - 1;
 	}
         graph(0)->setData(_x, _vec);
         // give the axes some labels:
         xAxis->setLabel("x");
         yAxis->setLabel("y");
         // set axes ranges, so we see all data:
-        xAxis->setRange(0, 5);
+        xAxis->setRange(0, 1);
         yAxis->setRange(-1, 1);
-//	yAxis->setRangeReversed();
         this->replot();
 
 	 connect(&_timer, SIGNAL(timeout()), this, SLOT(force_repaint()));
@@ -29,12 +32,12 @@ void PlotItem::force_repaint()
 	_vec.removeFirst();
 	switch(_choice)
 	{
-		case 1 :
+		case Oscillator::GetOut :
 			mtx.lock();
 			_vec.append(_osc.getOut());
 			mtx.unlock();
 			break;
-		case 0 :
+		case Oscillator::GetVal :
 		default :
 			mtx.lock();
 			_vec.append(_osc.getVal());

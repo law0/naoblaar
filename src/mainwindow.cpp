@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
 	ui(new Ui::MainWindow),
 	runningVideo(false)
 {
-	setFixedSize(1300, 520);
+	setFixedSize(1300, 620);
 
 	//image camera
 	QFrame *webcam = new QFrame(this);

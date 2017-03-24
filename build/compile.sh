@@ -4,6 +4,7 @@ then
 	moc -o ../src/moc_videoitem.cpp ../src/videoitem.h
 	moc -o ../src/moc_qcustomplot.cpp ../src/qcustomplot.h
 	moc -o ../src/moc_plotitem.cpp ../src/plotitem.h
+	moc -o ../src/moc_slideritem.cpp ../src/slideritem.h
 fi
 cmake ../src
 make

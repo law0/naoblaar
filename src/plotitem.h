@@ -10,13 +10,13 @@ class PlotItem : public QCustomPlot
 	Q_OBJECT
 
 	public :
-		PlotItem(Oscillator &osc, int);
+		PlotItem(Oscillator &osc, Oscillator::Getter);
 
 	public slots :
 		void force_repaint();
 
 	private :
-		int _choice;
+		Oscillator::Getter _choice;
 		QTimer _timer;
 		QVector<double> _vec;
 		QVector<double> _x;

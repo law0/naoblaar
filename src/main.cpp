@@ -19,6 +19,7 @@
 #include "oscillator.h"
 #include "plotitem.h"
 #include "movie.h"
+#include "launchView.h"
 
 #define ITER_NB 2
 
@@ -93,9 +94,8 @@ void optical_flow(int width, int height, Oscillator& oscillator1, Oscillator& os
 	unsigned int p_1;
 
 
-	//could be allocated on the stack, but we ve already done that a lot before
-	unsigned char* It1 = (unsigned char*)malloc(sizeof(unsigned char) * wh);
-	unsigned char* It2 = (unsigned char*)malloc(sizeof(unsigned char) * wh);
+	unsigned char It1[wh]; // = (unsigned char*)malloc(sizeof(unsigned char) * wh);
+	unsigned char It2[wh]; // = (unsigned char*)malloc(sizeof(unsigned char) * wh);
 	getNextImage(It1);
 	getNextImage(It2);
 	int valid_img = 1;
@@ -189,7 +189,7 @@ void optical_flow(int width, int height, Oscillator& oscillator1, Oscillator& os
 
 		float v = fp.y;
 		v *= 0.000001f;
-		if(std::chrono::duration_cast<std::chrono::nanoseconds>(finish - start).count() > 30000000)
+		if(std::chrono::duration_cast<std::chrono::nanoseconds>(finish - start).count() > 20000000)
 		{
 			//printf("            \r");
 			//printf("H: %f, V: %f", fp.x, fp.y);
@@ -219,86 +219,8 @@ void optical_flow(int width, int height, Oscillator& oscillator1, Oscillator& os
 		fp.y = 0;
 
 	}
-	free(It1);
-	free(It2);
-
-
-
-    // operation to be timed ...
-
-
-//	return fp;
 
 }
-
-void launchView(int argc, char **argv, Oscillator* osc, Oscillator* osc2)
-{
-	QApplication a(argc, argv);
-
-	MainWindow mw;
-
-	QGraphicsScene scene;
-
-	QGraphicsView view(&scene);
-
-	mw.setCentralWidget(&view);
-
-	VideoItem vi(global_Streamcatcher);
-
-	Movie movie(global_Streamcatcher);
-    	mw.addMovie(&movie);
-
-	scene.addItem(&vi);
-
-	PlotItem plotitemX(*osc, 0);
-	PlotItem plotitemY(*osc2, 0);
-	PlotItem plotitemOSCX(*osc, 1);
-	PlotItem plotitemOSCY(*osc2, 1);
-
-	QDockWidget* DWplotitemX = new QDockWidget("Horizontal flow");
-	QDockWidget* DWplotitemY = new QDockWidget("Vertical flow");
-	QDockWidget* DWplotitemOSCX = new QDockWidget("Horizontal oscillator");
-	QDockWidget* DWplotitemOSCY = new QDockWidget("Vertical oscillator");
-
-	DWplotitemX->setWidget(&plotitemX);
-	DWplotitemY->setWidget(&plotitemY);
-	DWplotitemOSCX->setWidget(&plotitemOSCX);
-	DWplotitemOSCY->setWidget(&plotitemOSCY);
-
-	DWplotitemX->setAllowedAreas(Qt::RightDockWidgetArea);
-	DWplotitemY->setAllowedAreas(Qt::RightDockWidgetArea);
-	DWplotitemOSCX->setAllowedAreas(Qt::RightDockWidgetArea);
-	DWplotitemOSCY->setAllowedAreas(Qt::RightDockWidgetArea);
-
-/*	QGraphicsProxyWidget* plotProxyX = scene.addWidget(&plotitemX);
-	QGraphicsProxyWidget* plotProxyY = scene.addWidget(&plotitemY);
-	QGraphicsProxyWidget* plotProxyOSCX = scene.addWidget(&plotitemOSCX);
-	QGraphicsProxyWidget* plotProxyOSCY = scene.addWidget(&plotitemOSCY);*/
-
-/*	plotProxyX->setPos(global_Streamcatcher->getWidth() + 30, 0);
-	plotProxyOSCX->setPos(global_Streamcatcher->getWidth() + 30, 125);
-	plotProxyY->setPos(global_Streamcatcher->getWidth() + 30, 250);
-	plotProxyOSCY->setPos(global_Streamcatcher->getWidth() + 30, 375);*/
-
-	mw.addDockWidget(Qt::RightDockWidgetArea, DWplotitemX);
-	mw.addDockWidget(Qt::RightDockWidgetArea, DWplotitemOSCX);
-	mw.addDockWidget(Qt::RightDockWidgetArea, DWplotitemY);
-	mw.addDockWidget(Qt::RightDockWidgetArea, DWplotitemOSCY);
-
-//	scene.setSceneRect(0, 0, global_Streamcatcher->getWidth() + 320, scene.height());
-
-
-	view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-        view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-
-        view.setFixedSize(global_Streamcatcher->getWidth() + 2, global_Streamcatcher->getHeight() + 2);
-
-	mw.show();
-
-	a.exec();
-
-}
-
 
 int main(int argc, char **argv)
 {
@@ -313,7 +235,7 @@ int main(int argc, char **argv)
 	Oscillator oscillator(0.07f, 0.15f);
 	Oscillator osc2(0.07f, 0.15f);
 
-	std::thread view_thread(launchView, argc, argv, &oscillator, &osc2);
+	std::thread view_thread(launchView, argc, argv, global_Streamcatcher, &oscillator, &osc2);
 
 	optical_flow(width, height, oscillator, osc2);
 

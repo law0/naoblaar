@@ -13,6 +13,7 @@ include_directories(${BL_INCLUDE_DIRS} ${CMAKE_SOURCE_DIR})
 add_executable(
 	${PROJECT_NAME} 
 	main.cpp 
+	launchView.cpp
 	oscillator.cpp
 	streamcatcher.cpp 
 	utilities.cpp 
@@ -20,11 +21,13 @@ add_executable(
 	moc_mainwindow.cpp 
 	moc_qcustomplot.cpp
 	moc_plotitem.cpp
+	moc_slideritem.cpp
 	mainwindow.cpp 
 	videoitem.cpp
 	qcustomplot.cpp
 	plotitem.cpp
 	movie.cpp
+	slideritem.cpp
 	)
 
 target_link_libraries(${PROJECT_NAME} ${BL_LIBRARIES} z -lsfml-system -lsfml-graphics -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_stitching Qt5::Widgets)
