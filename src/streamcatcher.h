@@ -19,9 +19,9 @@ class StreamCatcher
 		CvCapture * getCapture();
 		unsigned int getWidth() const;
 		unsigned int getHeight() const;
-		unsigned char* getBGR(unsigned char* img, unsigned int size) const;
-		unsigned char* getRGBA(unsigned char* img, unsigned int size) const;
-		unsigned char* getGRAY(unsigned char* img, unsigned int size) const;
+		unsigned char* getBGR(unsigned char* img, unsigned int size) const; //thread safe and always return fast as it is double buffered
+		unsigned char* getRGBA(unsigned char* img, unsigned int size) const; //thread safe and always return fast as it is double buffered
+		unsigned char* getGRAY(unsigned char* img, unsigned int size) const; //thread safe and always return fast as it is double buffered
 
 	private:
 		StreamCatcher();

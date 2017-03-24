@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <thread>
 #include <mutex>
+#include <chrono>
 
 #include "streamcatcher.h"
 
