@@ -3,6 +3,8 @@
 
 #include <QSlider>
 #include <QObject>
+#include <QStyleOptionSlider>
+#include <QToolTip>
 
 #include "oscillator.h"
 

@@ -9,18 +9,34 @@ void SliderItem::updateOscillator()
 {
 	float min = minimum();
 	float range = (float)(maximum() - min);
+	float val = ((float)(this->value()) - min)/ range;
+
+	QStyleOptionSlider opt;
+	initStyleOption(&opt);
+
+	QRect sr = style()->subControlRect(QStyle::CC_Slider, &opt, QStyle::SC_SliderHandle, this);
+	QPoint bottomRightCorner = sr.bottomLeft();
 	switch(_choice)
 	{
 		case Oscillator::SetAlpha :
-			_osc->setAlpha( ((float)(this->value()) - min)/ range ); //alpha between 0.0 and 1.0
+			_osc->setAlpha(val); //alpha between 0.0 and 1.0
+//			printf("a%f\n", val);
+		        QToolTip::showText(mapToGlobal( QPoint( bottomRightCorner.x(), bottomRightCorner.y() ) ), QString::number((double)val), this);
 			break;
 
 		case Oscillator::SetBeta :
-			_osc->setBeta( ((float)(this->value()) - min)/ range * 2.4f + 0.1f); //beta between 0.1 and 2.5
+			val = val * 2.4f + 0.1f;
+//			printf("b%f\n", val);
+			_osc->setBeta(val); //beta between 0.1 and 2.5
+		        QToolTip::showText(mapToGlobal( QPoint( bottomRightCorner.x(), bottomRightCorner.y() ) ), QString::number((double)val), this);
 			break;
 
 		case Oscillator::SetCouple :
-			_osc->setCouple( ((float)(this->value()) - min)/ range * 0.3f); //couple between 0.0 and 0.3
+			val *= 0.3f;
+			_osc->setCouple(val); //couple between 0.0 and 0.3
+//			printf("c%f\n", val);
+		        QToolTip::showText(mapToGlobal( QPoint( bottomRightCorner.x(), bottomRightCorner.y() ) ), QString::number((double)val), this);
+			break;
 
 		default:
 			break;

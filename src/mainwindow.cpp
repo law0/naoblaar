@@ -9,7 +9,7 @@ MainWindow::MainWindow(QWidget *parent) :
 	ui(new Ui::MainWindow),
 	runningVideo(false)
 {
-	setFixedSize(1300, 620);
+//	setFixedSize(1300, 620);
 
 	//image camera
 	QFrame *webcam = new QFrame(this);
@@ -26,12 +26,10 @@ MainWindow::MainWindow(QWidget *parent) :
 
     //
 	play = new QPushButton("Enregistrer", this);
-	play -> setGeometry(540, 485, 100, 30);
-
-	
+	play -> setGeometry(240, 485, 100, 30);
 
 	QPushButton *pause = new QPushButton("stop", this);
-	pause -> setGeometry(650, 485, 80, 30);
+	pause -> setGeometry(345, 485, 80, 30);
 
 	connect(play, SIGNAL(pressed()), this, SLOT(movieManagement()));
 	connect(pause, SIGNAL(pressed()), this, SLOT(closeExperience()));
@@ -54,7 +52,6 @@ void MainWindow::movieManagement()
 		play->setText("Pause");
 		runningVideo = true;
 	}
-    	
 }
 
 void MainWindow::closeExperience()

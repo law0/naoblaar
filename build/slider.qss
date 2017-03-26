@@ -1,0 +1,77 @@
+QSlider::groove {
+  background: #f8f8f8;
+  border: 1px solid #d8d8d8;
+  border-radius: 2px;
+  font-size: 3pt;
+}
+
+QSlider::groove:horizontal {
+  height: 1em;
+}
+
+QSlider::groove:vertical {
+  width: 1em;
+}
+
+QSlider::groove:disabled,
+QSlider::sub-page:disabled {
+  background: #f2f2f2;
+  border: 1px solid transparent;
+  border-radius: 2px;
+}
+
+QSlider::sub-page {
+  background: #82bcff;
+  border: 1px solid #7ea8cc;
+  border-radius: 2px;
+}
+
+QSlider::handle {
+  background: white;
+  border: 1px solid #a2a2a2;
+  border-radius: 3px;
+  font-size: 4pt;
+}
+
+QSlider::handle:horizontal {
+  margin: -5px -1px;
+  width: 4.5em;
+}
+
+QSlider::handle:vertical {
+  margin: -1px -5px;
+  height: 4.5em;
+}
+
+QSlider::handle:focus {
+  background-color: #e0eaff;
+  border-color: #7ea8cc;
+}
+
+QSlider::handle:hover {
+  background-color: #f0f0f0;
+}
+
+QSlider::handle:pressed {
+  background-color: #dcedf5;
+  border-color: #7ea8cc;
+}
+
+QSlider::handle:disabled {
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+}
+
+QDockWidget::title {
+    text-align: left; /* align the text to the left */
+    background: #c0e0ec;
+    padding-left: 5px;
+}
+
+QMainWindow {
+    background-color: #ebf8fd
+}
+
+QMainWindow::title {
+    background: #ebf8fd
+}

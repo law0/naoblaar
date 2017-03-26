@@ -6,7 +6,7 @@
 
 PlotItem::PlotItem(Oscillator &osc, Oscillator::Getter choice) : _choice(choice), _timer(), _vec(201, 0.0), _x(201, 0.0), _osc(osc)
 {
-	setFixedSize(400, 125);
+	setFixedSize(400, 115);
         // create graph and assign data to it:
         addGraph();
 	for(int i = 0; i < 201; ++i)
