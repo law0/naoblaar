@@ -30,33 +30,35 @@ void Movie::capture(const StreamCatcher * stream, bool* running)
     	//running = true;
 
 	const double fps = 60.0;
-	const std::chrono::nanoseconds wait_fps(1000000000 / (int)(fps * 1.22)); //despite error correction we have a 22% error for NO REASON
-	std::chrono::nanoseconds waiting_time(0);
-	std::chrono::nanoseconds error_waiting_time(0);
+	const std::chrono::nanoseconds wait_fps((int)(1000000000 / fps)); //despite error correction we have a 22% error for NO REASON
+	std::chrono::nanoseconds error(0);
 
 	VideoWriter video("out.avi",CV_FOURCC('M','J','P','G'), fps, Size(width, height),true);
     	unsigned char out[size * 3];
-	std::chrono::high_resolution_clock::time_point finish;
-	std::chrono::high_resolution_clock::time_point start;
+	std::chrono::high_resolution_clock::time_point start = std::chrono::high_resolution_clock::now();
+	std::chrono::high_resolution_clock::time_point finish = std::chrono::high_resolution_clock::now();
+	error = std::chrono::duration_cast<std::chrono::nanoseconds>(finish - start);
+	finish = std::chrono::high_resolution_clock::now();
+		std::this_thread::sleep_for(std::chrono::nanoseconds(0));
+		start = finish;
+	start = std::chrono::high_resolution_clock::now();
+	error += std::chrono::duration_cast<std::chrono::nanoseconds>(start - finish); //overtime error of sleep_for, affectation and high_resolution_clock::now() call
 
     	while (*running)
     	{
 
-	       	stream->getBGR(out, size * 3);
+		stream->getBGR(out, size * 3);
 		// out is the data and I need to be good in Mat
 		//Mat(int heigth, int width, int type (char), out, size_t step
 		Mat mat(height, width, CV_8UC3 , out);
 		//we need to substract the error from the wanted waiting time
-		video.write(mat);
 
 		finish = std::chrono::high_resolution_clock::now();
+		std::this_thread::sleep_for(wait_fps - 0.5 * std::chrono::duration_cast<std::chrono::nanoseconds>(finish - start));
+		start = finish;
+		video.write(mat);
 
-			waiting_time = wait_fps - std::chrono::duration_cast<std::chrono::nanoseconds>(finish - start);
-			std::this_thread::sleep_for(waiting_time - error_waiting_time);
 
-		start = std::chrono::high_resolution_clock::now();
-
-		error_waiting_time = std::chrono::duration_cast<std::chrono::nanoseconds>(start - finish) - waiting_time;
     	}
 	video.release();
 

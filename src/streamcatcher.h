@@ -1,6 +1,7 @@
 #ifndef STREAMCATCHER_H_INCLUDED
 #define STREAMCATCHER_H_INCLUDED
 
+#include <unistd.h>
 #include <iostream>
 #include <cv.h>
 #include <highgui.h>
