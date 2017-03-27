@@ -1,6 +1,6 @@
 #include "launchView.h"
 
-void launchView(int argc, char **argv, StreamCatcher* sc, Oscillator* osc, Oscillator* osc2)
+void launchView(int argc, char **argv, bool* isClosed, StreamCatcher* sc, Oscillator* osc, Oscillator* osc2)
 {
 	QApplication a(argc, argv);
 
@@ -12,7 +12,7 @@ void launchView(int argc, char **argv, StreamCatcher* sc, Oscillator* osc, Oscil
 	     file.close();
 	}
 
-	MainWindow mw;
+	MainWindow mw(isClosed);
 
 	QGraphicsScene scene;
 

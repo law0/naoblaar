@@ -4,8 +4,9 @@
 #include "ui_mainwindow.h"
 #include "utilities.h"
 
-MainWindow::MainWindow(QWidget *parent) :
+MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	QMainWindow(parent),
+	_isClosed(isClosed),
 	ui(new Ui::MainWindow),
 	runningVideo(false)
 {
@@ -209,4 +210,13 @@ void MainWindow::addOscillators(Oscillator * osc1, Oscillator * osc2)
                 splitDockWidget(DWcoupleSlider1, DWcoupleSlider2, Qt::Vertical);
                 splitDockWidget(DWalphaSlider1, DWalphaSlider2, Qt::Vertical);
                 splitDockWidget(DWbetaSlider1, DWbetaSlider2, Qt::Vertical);
+}
+
+void MainWindow::closeEvent(QCloseEvent* event)
+{
+	std::mutex mtx;
+	mtx.lock();
+	*_isClosed = true;
+	mtx.unlock();
+	event->accept();
 }

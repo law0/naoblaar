@@ -9,6 +9,7 @@
 #include <QtWidgets>
 #include <QPushButton>
 #include <QObject>
+#include <mutex>
 
 #include "slideritem.h"
 #include "plotitem.h"
@@ -24,9 +25,10 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 	public :
-		explicit MainWindow(QWidget *parent = 0);
+		explicit MainWindow(bool* isClosed, QWidget *parent = 0);
 		void addMovie(Movie* movie);
 		void addOscillators(Oscillator * osc1, Oscillator * osc2);
+		void closeEvent(QCloseEvent* event);
 		~MainWindow();
 
 	private slots :
@@ -34,6 +36,7 @@ class MainWindow : public QMainWindow
 		void closeExperience();
 
 	private:
+		bool* _isClosed;
 	   	Ui::MainWindow *ui;
 		Movie* _movie;
 		QPushButton* play;

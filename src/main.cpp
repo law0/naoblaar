@@ -27,6 +27,7 @@
 #define MAX_IMAGE_COUNT 7
 
 static StreamCatcher * global_Streamcatcher; //Singleton
+bool isClosed;
 
 int getNextImage(unsigned char* img)
 {
@@ -50,7 +51,7 @@ int nextImage(unsigned char* img)
 	int h = global_Streamcatcher->getHeight();
 
 	global_Streamcatcher->getGRAY(img, w*h);
-	return 1;
+	return isClosed ? 0 : 1;
 }
 
 
@@ -225,6 +226,7 @@ void optical_flow(int width, int height, Oscillator& oscillator1, Oscillator& os
 
 int main(int argc, char **argv)
 {
+	isClosed = false;
 
 	global_Streamcatcher = StreamCatcher::getInstance();
 
@@ -236,14 +238,14 @@ int main(int argc, char **argv)
 	Oscillator oscillator(0.07f, 0.15f);
 	Oscillator osc2(0.07f, 0.15f);
 
-	std::thread view_thread(launchView, argc, argv, global_Streamcatcher, &oscillator, &osc2);
+	std::thread view_thread(launchView, argc, argv, &isClosed, global_Streamcatcher, &oscillator, &osc2);
 
 	SharedMemory sm(&oscillator, 2);
 	sm.startShare();
 
 	optical_flow(width, height, oscillator, osc2);
 
-	getchar();
+//	getchar();
 
 	view_thread.join();
 
