@@ -17,6 +17,7 @@ add_executable(
 	oscillator.cpp
 	streamcatcher.cpp 
 	sharedmemory.cpp
+	scriptlauncher.cpp
 	utilities.cpp 
 	moc_videoitem.cpp
 	moc_mainwindow.cpp 

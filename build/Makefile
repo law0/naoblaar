@@ -403,6 +403,30 @@ qcustomplot.cpp.s:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/qcustomplot.cpp.s
 .PHONY : qcustomplot.cpp.s
 
+scriptlauncher.o: scriptlauncher.cpp.o
+.PHONY : scriptlauncher.o
+
+# target to build an object file
+scriptlauncher.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/scriptlauncher.cpp.o
+.PHONY : scriptlauncher.cpp.o
+
+scriptlauncher.i: scriptlauncher.cpp.i
+.PHONY : scriptlauncher.i
+
+# target to preprocess a source file
+scriptlauncher.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/scriptlauncher.cpp.i
+.PHONY : scriptlauncher.cpp.i
+
+scriptlauncher.s: scriptlauncher.cpp.s
+.PHONY : scriptlauncher.s
+
+# target to generate assembly for a file
+scriptlauncher.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/scriptlauncher.cpp.s
+.PHONY : scriptlauncher.cpp.s
+
 sharedmemory.o: sharedmemory.cpp.o
 .PHONY : sharedmemory.o
 
@@ -568,6 +592,9 @@ help:
 	@echo "... qcustomplot.o"
 	@echo "... qcustomplot.i"
 	@echo "... qcustomplot.s"
+	@echo "... scriptlauncher.o"
+	@echo "... scriptlauncher.i"
+	@echo "... scriptlauncher.s"
 	@echo "... sharedmemory.o"
 	@echo "... sharedmemory.i"
 	@echo "... sharedmemory.s"

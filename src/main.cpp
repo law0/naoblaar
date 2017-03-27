@@ -20,7 +20,8 @@
 #include "plotitem.h"
 #include "movie.h"
 #include "launchView.h"
-#include "sharedmemory.h"
+//#include "sharedmemory.h"
+#include "scriptlauncher.h"
 
 #define ITER_NB 2
 
@@ -60,6 +61,7 @@ void optical_flow(int width, int height, Oscillator& oscillator1, Oscillator& os
 {
 
 	int p;
+
 	int iter;
 	int largeur = width;
 	int hauteur = height;
@@ -242,9 +244,17 @@ int main(int argc, char **argv)
 
 	std::thread view_thread(launchView, argc, argv, &isClosed, global_Streamcatcher, &oscillator, &osc2);
 
-	SharedMemory sm(&oscillator, 2);
-	sm.startShare();
+	/*SharedMemory sm(&oscillator, 2);
+	sm.startShare();*/
 
+	ScriptLauncher* scriptLauncher_single = ScriptLauncher::getInstance();
+	scriptLauncher_single->setOscillator(&oscillator);
+	int l = scriptLauncher_single->connect(); //default parameter should fail for the moment
+
+	if( l != 0) //launch has failed. use ! WIFEEXITED(scriptLauncher_single->getStatus()) to check if process is still running
+	{
+		printf("? %s\n", scriptLauncher_single->getError().c_str());
+	}
 	optical_flow(width, height, oscillator, osc2);
 
 //	getchar();
@@ -252,6 +262,8 @@ int main(int argc, char **argv)
 	view_thread.join();
 
 	StreamCatcher::killInstance();
+
+	ScriptLauncher::killInstance(); //equivalent to scriptLauncher_single->disconnect(); delete scriptLauncher_single
 
 	return 0;
 }
