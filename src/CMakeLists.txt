@@ -16,6 +16,7 @@ add_executable(
 	launchView.cpp
 	oscillator.cpp
 	streamcatcher.cpp 
+	sharedmemory.cpp
 	utilities.cpp 
 	moc_videoitem.cpp
 	moc_mainwindow.cpp 

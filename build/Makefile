@@ -403,6 +403,30 @@ qcustomplot.cpp.s:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/qcustomplot.cpp.s
 .PHONY : qcustomplot.cpp.s
 
+sharedmemory.o: sharedmemory.cpp.o
+.PHONY : sharedmemory.o
+
+# target to build an object file
+sharedmemory.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/sharedmemory.cpp.o
+.PHONY : sharedmemory.cpp.o
+
+sharedmemory.i: sharedmemory.cpp.i
+.PHONY : sharedmemory.i
+
+# target to preprocess a source file
+sharedmemory.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/sharedmemory.cpp.i
+.PHONY : sharedmemory.cpp.i
+
+sharedmemory.s: sharedmemory.cpp.s
+.PHONY : sharedmemory.s
+
+# target to generate assembly for a file
+sharedmemory.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/sharedmemory.cpp.s
+.PHONY : sharedmemory.cpp.s
+
 slideritem.o: slideritem.cpp.o
 .PHONY : slideritem.o
 
@@ -544,6 +568,9 @@ help:
 	@echo "... qcustomplot.o"
 	@echo "... qcustomplot.i"
 	@echo "... qcustomplot.s"
+	@echo "... sharedmemory.o"
+	@echo "... sharedmemory.i"
+	@echo "... sharedmemory.s"
 	@echo "... slideritem.o"
 	@echo "... slideritem.i"
 	@echo "... slideritem.s"

@@ -13,7 +13,7 @@ class StreamCatcher
 {
 
 	public :
-		static StreamCatcher* getInstance();
+		static StreamCatcher* getInstance(int device = CV_CAP_ANY);
 		static void killInstance();
 		std::thread * getThread();
 		char* getFramePtr() const;
@@ -25,7 +25,7 @@ class StreamCatcher
 		unsigned char* getGRAY(unsigned char* img, unsigned int size) const; //thread safe and always return fast as it is double buffered
 
 	private:
-		StreamCatcher();
+		StreamCatcher(int device = CV_CAP_ANY);
 		static void loop(StreamCatcher *);
 		char get_buffer_selector() const;
 		void set_buffer_selector(char bs);

@@ -3,8 +3,8 @@
 StreamCatcher* StreamCatcher::_instance = NULL;
 bool StreamCatcher::_loop_bool = false;
 
-StreamCatcher::StreamCatcher() :
-	_capture(cvCaptureFromCAM( CV_CAP_ANY )),
+StreamCatcher::StreamCatcher(int device) :
+	_capture(cvCaptureFromCAM( device )),
 	_loop_thread(NULL),
 	_current_frame(NULL),
 	_buffer_selector(0)
@@ -51,11 +51,11 @@ void StreamCatcher::killInstance()
 	delete _instance;
 }
 
-StreamCatcher* StreamCatcher::getInstance()
+StreamCatcher* StreamCatcher::getInstance(int device)
 {
 	if(_instance == NULL)
 	{
-		_instance = new StreamCatcher();
+		_instance = new StreamCatcher(device);
 	}
 	return _instance;
 }

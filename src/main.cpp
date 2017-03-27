@@ -20,6 +20,7 @@
 #include "plotitem.h"
 #include "movie.h"
 #include "launchView.h"
+#include "sharedmemory.h"
 
 #define ITER_NB 2
 
@@ -237,6 +238,9 @@ int main(int argc, char **argv)
 
 	std::thread view_thread(launchView, argc, argv, global_Streamcatcher, &oscillator, &osc2);
 
+	SharedMemory sm(&osc2, 2);
+	sm.startShare();
+
 	optical_flow(width, height, oscillator, osc2);
 
 	getchar();
@@ -247,3 +251,13 @@ int main(int argc, char **argv)
 
 	return 0;
 }
+
+
+
+
+
+
+
+
+
+
