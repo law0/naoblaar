@@ -10,6 +10,9 @@
 #include <QPushButton>
 #include <QObject>
 
+#include "slideritem.h"
+#include "plotitem.h"
+#include "oscillator.h"
 #include "movie.h"
 
 namespace Ui {
@@ -23,6 +26,7 @@ class MainWindow : public QMainWindow
 	public :
 		explicit MainWindow(QWidget *parent = 0);
 		void addMovie(Movie* movie);
+		void addOscillators(Oscillator * osc1, Oscillator * osc2);
 		~MainWindow();
 
 	private slots :
@@ -34,6 +38,18 @@ class MainWindow : public QMainWindow
 		Movie* _movie;
 		QPushButton* play;
 		bool runningVideo;
+//		Oscillator* _oscH;
+//		Oscillator* _oscV;
+		PlotItem* _plotitemX;
+		PlotItem* _plotitemY;
+		PlotItem* _plotitemOSCX;
+		PlotItem* _plotitemOSCY;
+		SliderItem* _coupleSlider1;
+		SliderItem* _coupleSlider2;
+		SliderItem* _alphaSlider1;
+		SliderItem* _alphaSlider2;
+		SliderItem* _betaSlider1;
+		SliderItem* _betaSlider2;
 
 
 };
