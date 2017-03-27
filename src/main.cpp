@@ -190,7 +190,7 @@ void optical_flow(int width, int height, Oscillator& oscillator1, Oscillator& os
 
 		float v = fp.y;
 		v *= 0.000001f;
-		if(std::chrono::duration_cast<std::chrono::nanoseconds>(finish - start).count() > 20000000)
+		if(std::chrono::duration_cast<std::chrono::nanoseconds>(finish - start).count() > 30000000)
 		{
 			//printf("            \r");
 			//printf("H: %f, V: %f", fp.x, fp.y);
@@ -238,7 +238,7 @@ int main(int argc, char **argv)
 
 	std::thread view_thread(launchView, argc, argv, global_Streamcatcher, &oscillator, &osc2);
 
-	SharedMemory sm(&osc2, 2);
+	SharedMemory sm(&oscillator, 2);
 	sm.startShare();
 
 	optical_flow(width, height, oscillator, osc2);

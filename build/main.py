@@ -111,25 +111,26 @@ class NaoCaller:
 	self.services['motion'].setStiffnesses(names, stiffness)
 
 	
-	self.move('LShoulderPitch', 1.5, 1, False)
-	self.move('LElbowRoll', 0.0, 1, False)
-	self.move('RElbowRoll', 0.0, 1, False)
-	self.move('RElbowYaw', 0.0, 1, False)
-	self.move('RShoulderPitch', 1.5, 1, False)
-	self.move('LShoulderRoll', 0.4, 1, False)
-	self.move('RShoulderRoll', -0.4, 1, False)
+	#self.move('LShoulderPitch', 1.5, 1, False)
+	#self.move('LElbowRoll', 0.0, 1, False)
+	#self.move('RElbowRoll', 0.0, 1, False)
+	#self.move('RElbowYaw', 0.0, 1, False)
+	#self.move('RShoulderPitch', 1.5, 1, False)
+	#self.move('LShoulderRoll', 0.4, 1, False)
+	#self.move('RShoulderRoll', -0.4, 1, False)
 	time.sleep(1)
 
     def listen_shared_memory(self):
 
-        speed = 0.6
+        speed = 0.3
         print "Listening shared memory..."
         while True:
             try:
                 data = np.memmap(self.SHM_MOTORS_FILE, dtype=np.float32, mode='r')
                 for i in xrange(0, 10):
                     #time.sleep(2)
-                    self.move(self.MOTORS_ORDER[i], float(data[i]), speed)
+                    if float(data[i]) != 0 :
+	                    self.move(self.MOTORS_ORDER[i], float(data[i]), speed, True)
                     #print self.MOTORS_ORDER[i]
                     #print float(data[i])
             except IOError:
@@ -144,8 +145,8 @@ class NaoCaller:
             real_position = position
         if self._check_motor(name, real_position):
             self.services['motion'].setAngles(name, real_position, speed)
-        else:
-            print "Invalid move " + name + ": " + str(real_position)
+#        else:
+ #           print "Invalid move " + name + ": " + str(real_position)
 
 if __name__ == '__main__':
     app = qi.Application(sys.argv)
