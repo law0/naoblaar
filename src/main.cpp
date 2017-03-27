@@ -29,7 +29,7 @@
 static StreamCatcher * global_Streamcatcher; //Singleton
 bool isClosed;
 
-int getNextImage(unsigned char* img)
+/*int getNextImage(unsigned char* img)
 {
         int w = global_Streamcatcher->getWidth();
         int h = global_Streamcatcher->getHeight();
@@ -43,7 +43,7 @@ int getNextImage(unsigned char* img)
 	mtx.unlock();
 
         return 1;
-}
+}*/
 
 int nextImage(unsigned char* img)
 {
@@ -204,11 +204,13 @@ void optical_flow(int width, int height, Oscillator& oscillator1, Oscillator& os
 			else
 				printf("A\n");*/
 
-			float osc1 = oscillator1(h);
+			//float osc1 = oscillator1(h);
+
+			oscillator1(h);
 
 			oscillator2(-v);
 
-			printf("%f %f\n", osc1, h);
+			//printf("%f %f\n", osc1, h);
 
 			//std::this_thread::sleep_for(std::chrono::nanoseconds(10000));
 

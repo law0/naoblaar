@@ -220,3 +220,20 @@ void MainWindow::closeEvent(QCloseEvent* event)
 	mtx.unlock();
 	event->accept();
 }
+
+/*void MainWindow::connectToNao()
+{
+
+}
+
+void MainWindow::chooseIpPort()
+{
+
+}
+
+void MainWindow::chooseArticulation()
+{
+
+}*/
+
+

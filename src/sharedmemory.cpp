@@ -56,11 +56,14 @@ void SharedMemory::startShare()
 
 void SharedMemory::share(const Oscillator* osc, float* data, const unsigned int joint, bool* running)
 {
+	std::mutex mtx;
    	while (*running)
     	{
 		if(joint < 10)
 		{
+			mtx.lock();
 			data[joint] = osc->getOut();
+			mtx.unlock();
 		}
     	}
 }

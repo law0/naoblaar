@@ -34,6 +34,7 @@ class MainWindow : public QMainWindow
 	private slots :
         	void movieManagement();
 		void closeExperience();
+		//void connectToNao();
 
 	private:
 		bool* _isClosed;
