@@ -3,13 +3,15 @@
 ScriptLauncher* ScriptLauncher::_instance = NULL;
 
 ScriptLauncher::ScriptLauncher():
-	_osc(NULL),
+	_osc0(NULL),
+	_osc1(NULL),
+	_choosen_osc(NULL),
 	_ip("127.0.0.1"),
-	_port(0),
+	_port(9559),
 	_pid(0),
 	_joint(2),
 	_status(0),
-	_naoqipath("/home/user/pynaoqi-python2.7-2.1.4.13-linux64"),
+	_naoqipath("/home/law/Documents/EISTI_stuff/NAO/pynaoqi-python2.7-2.1.4.13-linux64"),
 	_mainscriptpath("main.py"),
 	_pythonpath("/usr/bin/python"),
 	_error("none"),
@@ -36,7 +38,7 @@ void ScriptLauncher::killInstance()
 int ScriptLauncher::connect()
 {
 
-	if(_osc == NULL)
+	if(_choosen_osc == NULL)
 	{
 		_error = "no oscillator choosen";
 		return -1;
@@ -114,7 +116,7 @@ int ScriptLauncher::connect()
 
 			if(WIFEXITED(s) == false) //if the child (the script) has not terminated immediately
 			{
-				_sm = new SharedMemory(_osc, _joint);
+				_sm = new SharedMemory(_choosen_osc, _joint);
 				_sm->startShare();
 			}
 			else
@@ -131,9 +133,114 @@ int ScriptLauncher::disconnect()
 	return kill(_pid, SIGKILL);
 }
 
-void ScriptLauncher::setOscillator(Oscillator* osc)
+void ScriptLauncher::setIp(std::string ip)
 {
-	_osc = osc;
+	_ip = ip;
+}
+
+std::string ScriptLauncher::getIp() const
+{
+	return _ip;
+}
+
+void ScriptLauncher::setPort(int port)
+{
+	_port = port;
+}
+
+int ScriptLauncher::getPort() const
+{
+	return _port;
+}
+
+void ScriptLauncher::setOscillators(Oscillator* osc0, Oscillator* osc1)
+{
+	_osc0 = osc0;
+	_osc1 = osc1;
+}
+
+void ScriptLauncher::chooseOscillator(int i)
+{
+	switch(i)
+	{
+		case 0:
+			_choosen_osc = _osc0;
+			break;
+		case 1:
+			_choosen_osc = _osc1;
+			break;
+		default:
+			break;
+	}
+}
+
+std::string ScriptLauncher::getChoosenOscillator() const
+{
+	std::string choice = "UNKNOWN";
+	if(_choosen_osc == NULL)
+	{
+		choice = "NONE";
+	}
+	else if(_choosen_osc == _osc0)
+	{
+		choice = "Horizontal";
+	}
+	else if(_choosen_osc == _osc1)
+	{
+		choice = "Vertical";
+	}
+
+	return choice;
+}
+
+void ScriptLauncher::setJoint(int joint)
+{
+	_joint = joint;
+}
+
+int ScriptLauncher::getJoint() const
+{
+	return _joint;
+}
+
+void ScriptLauncher::setNaoqiPath(std::string path)
+{
+	_naoqipath = path;
+}
+
+std::string ScriptLauncher::getNaoqiPath() const
+{
+	return _naoqipath;
+}
+
+void ScriptLauncher::setMainScriptPath(std::string path)
+{
+	_mainscriptpath = path;
+}
+
+std::string ScriptLauncher::getMainScriptPath() const
+{
+	return _mainscriptpath;
+}
+
+void ScriptLauncher::setPythonPath(std::string path)
+{
+	_pythonpath = path;
+}
+
+std::string ScriptLauncher::getPythonPath() const
+{
+	return _pythonpath;
+}
+
+std::string ScriptLauncher::getError() const
+{
+	return _error;
+}
+
+int ScriptLauncher::getPid() const
+{
+	return _pid;
 }
 
 int ScriptLauncher::getStatus() const
@@ -142,32 +249,20 @@ int ScriptLauncher::getStatus() const
 	return _status;
 }
 
-int ScriptLauncher::getPid() const
-{
-	return _pid;
-}
 
-void ScriptLauncher::setNaoqiPath(std::string path)
-{
-	_naoqipath = path;
-}
 
-void ScriptLauncher::setMainScriptPath(std::string path)
-{
-	_mainscriptpath = path;
-}
 
-void ScriptLauncher::setPythonPath(std::string path)
-{
-	_pythonpath = path;
-}
 
-void ScriptLauncher::setJoint(int joint)
-{
-	_joint = joint;
-}
 
-std::string ScriptLauncher::getError() const
-{
-	return _error;
-}
+
+
+
+
+
+
+
+
+
+
+
+

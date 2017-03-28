@@ -9,12 +9,17 @@
 #include <QtWidgets>
 #include <QPushButton>
 #include <QObject>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <signal.h>
 #include <mutex>
 
 #include "slideritem.h"
 #include "plotitem.h"
 #include "oscillator.h"
 #include "movie.h"
+#include "scriptlauncher.h"
 
 namespace Ui {
 class MainWindow;
@@ -28,7 +33,17 @@ class MainWindow : public QMainWindow
 		explicit MainWindow(bool* isClosed, QWidget *parent = 0);
 		void addMovie(Movie* movie);
 		void addOscillators(Oscillator * osc1, Oscillator * osc2);
+		void addScriptLauncher(ScriptLauncher* sl); //constant pointer to ScriptLaucher
 		void closeEvent(QCloseEvent* event);
+
+		int connectToNao();
+		void chooseIpPort(QString ip, int port);
+		void chooseJoint(int joint);
+		void chooseNaoqiPath(QString path);
+		void chooseMainScriptPath(QString path);
+		void choosePythonPath(QString path);
+		void chooseOscillator(int choice);
+
 		~MainWindow();
 
 	private slots :
@@ -42,8 +57,10 @@ class MainWindow : public QMainWindow
 		Movie* _movie;
 		QPushButton* play;
 		bool runningVideo;
-//		Oscillator* _oscH;
-//		Oscillator* _oscV;
+		//Oscillator* _oscH; //la vue ne doit pas contenir les osc, par respect d'archi
+		//Oscillator* _oscV;
+		ScriptLauncher* _sl;
+		QString _last_error;
 		PlotItem* _plotitemX;
 		PlotItem* _plotitemY;
 		PlotItem* _plotitemOSCX;

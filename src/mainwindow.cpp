@@ -8,7 +8,8 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	QMainWindow(parent),
 	_isClosed(isClosed),
 	ui(new Ui::MainWindow),
-	runningVideo(false)
+	runningVideo(false),
+	_sl(NULL)
 {
 //	setFixedSize(1300, 620);
 
@@ -75,7 +76,7 @@ MainWindow::~MainWindow()
 void MainWindow::addOscillators(Oscillator * osc1, Oscillator * osc2)
 {
 
-/*	_oscH = osc1;
+	/*_oscH = osc1; //la vue ne doit pas contenir les oscillateur quand même!
 	_oscV = osc2;*/
 //Dockwidget features
         QDockWidget::DockWidgetFeatures DWflag = QDockWidget::DockWidgetMovable | QDockWidget::DockWidgetFloatable;
@@ -221,19 +222,70 @@ void MainWindow::closeEvent(QCloseEvent* event)
 	event->accept();
 }
 
-/*void MainWindow::connectToNao()
+void MainWindow::addScriptLauncher(ScriptLauncher* sl)
 {
-
+	_sl = sl;
 }
 
-void MainWindow::chooseIpPort()
+int MainWindow::connectToNao()
 {
+	int ret = 0;
+	if(_sl != NULL)
+	{
+		int r = _sl->connect();
+		if(r != 0) //failed by wrong parameter
+		{
+			_last_error = QString::fromStdString(_sl->getError());
+			ret = 1;
+		}
+		else //may not be wrong parameter but may fail for other reason (like Nao is not there)
+		{
+			int s = _sl->getStatus();
+			if(WIFEXITED(s) == true) //if acceptable parameter but exited immediately...
+			{
+				_last_error = QString::fromStdString(_sl->getError());
+				ret = 2;
+			}
+			//else process is still continuing so it's alright
+		}
+	}
+	else
+	{
+		_last_error = "ScriptLauncher ptr is NULL";
+		ret = 3;
+	}
 
+	return ret;
 }
 
-void MainWindow::chooseArticulation()
+void MainWindow::chooseIpPort(QString ip, int port)
 {
+	_sl->setIp(ip.toUtf8().constData());
+	_sl->setPort(port);
+}
 
-}*/
+void MainWindow::chooseJoint(int joint)
+{
+	_sl->setJoint(joint);
+}
 
+void MainWindow::chooseNaoqiPath(QString path)
+{
+	_sl->setNaoqiPath(path.toUtf8().constData());
+}
+
+void MainWindow::chooseMainScriptPath(QString path)
+{
+	_sl->setMainScriptPath(path.toUtf8().constData());
+}
+
+void MainWindow::choosePythonPath(QString path)
+{
+	_sl->setPythonPath(path.toUtf8().constData());
+}
+
+void MainWindow::chooseOscillator(int choice)
+{
+	_sl->chooseOscillator(choice);
+}
 

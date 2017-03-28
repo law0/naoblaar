@@ -1,6 +1,6 @@
 #include "sharedmemory.h"
 
-SharedMemory::SharedMemory(const Oscillator* osc, unsigned int joint_choice) :
+SharedMemory::SharedMemory(const Oscillator* osc, unsigned int joint_choice, std::string path) :
 	_joint(joint_choice),
 	_size(20),
 	_osc(osc),
@@ -9,7 +9,7 @@ SharedMemory::SharedMemory(const Oscillator* osc, unsigned int joint_choice) :
 {
 	int fd;
 
-	if ((fd = open("/run/shm/nao.motors-tf", O_RDWR | O_TRUNC | O_CREAT, (mode_t)0600)) == -1)
+	if ((fd = open(path.c_str(), O_RDWR | O_TRUNC | O_CREAT, (mode_t)0600)) == -1)
 	{
         	perror("open");
 	        exit(1);

@@ -206,13 +206,13 @@ void optical_flow(int width, int height, Oscillator& oscillator1, Oscillator& os
 			else
 				printf("A\n");*/
 
-			//float osc1 = oscillator1(h);
+			float osc1 = oscillator1(h);
 
-			oscillator1(h);
+			//oscillator1(h);
 
-			oscillator2(-v);
+			float osc2 = oscillator2(-v);
 
-			//printf("%f %f\n", osc1, h);
+			printf("%f, %f, %f, %f\n", osc1, h, osc2, -v);
 
 			//std::this_thread::sleep_for(std::chrono::nanoseconds(10000));
 
@@ -248,7 +248,8 @@ int main(int argc, char **argv)
 	sm.startShare();*/
 
 	ScriptLauncher* scriptLauncher_single = ScriptLauncher::getInstance();
-	scriptLauncher_single->setOscillator(&oscillator);
+	scriptLauncher_single->setOscillators(&oscillator, &osc2);
+	scriptLauncher_single->chooseOscillator(0);
 	int l = scriptLauncher_single->connect(); //default parameter should fail for the moment
 
 	if( l != 0) //launch has failed. use ! WIFEEXITED(scriptLauncher_single->getStatus()) to check if process is still running
@@ -259,7 +260,7 @@ int main(int argc, char **argv)
 
 //	getchar();
 
-	view_thread.join();
+	//view_thread.join();
 
 	StreamCatcher::killInstance();
 

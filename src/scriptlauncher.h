@@ -19,18 +19,32 @@ class ScriptLauncher
 		static void killInstance();
 		int connect();
 		int disconnect();
-		int getStatus() const;
+
+		void setIp(std::string ip);
+		void setPort(int port);
 		void setNaoqiPath(std::string);
 		void setMainScriptPath(std::string);
 		void setPythonPath(std::string);
 		void setJoint(int);
-		void setOscillator(Oscillator* osc);
+		void setOscillators(Oscillator* oscH, Oscillator* oscV);
+		void chooseOscillator(int o);
+
+		int getStatus() const;
 		int getPid() const;
+		std::string getIp() const;
+		int getPort() const;
 		std::string getError() const;
+		std::string getNaoqiPath() const;
+		std::string getMainScriptPath() const;
+		std::string getPythonPath() const;
+		std::string getChoosenOscillator() const;
+		int getJoint() const;
 
 	private :
 		ScriptLauncher();
-		Oscillator* _osc;
+		Oscillator* _osc0;
+		Oscillator* _osc1;
+		Oscillator* _choosen_osc;
 		std::string _ip;
 		int _port;
 		int _pid;
