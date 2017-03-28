@@ -14,6 +14,7 @@ ScriptLauncher::ScriptLauncher():
 	_naoqipath("/home/law/Documents/EISTI_stuff/NAO/pynaoqi-python2.7-2.1.4.13-linux64"),
 	_mainscriptpath("main.py"),
 	_pythonpath("/usr/bin/python"),
+	_sharedmemorypath("/run/shm/nao.motors-tf"),
 	_error("none"),
 	_sm(NULL)
 {
@@ -116,7 +117,7 @@ int ScriptLauncher::connect()
 
 			if(WIFEXITED(s) == false) //if the child (the script) has not terminated immediately
 			{
-				_sm = new SharedMemory(_choosen_osc, _joint);
+				_sm = new SharedMemory(_choosen_osc, _joint, _sharedmemorypath);
 				_sm->startShare();
 			}
 			else
@@ -231,6 +232,16 @@ void ScriptLauncher::setPythonPath(std::string path)
 std::string ScriptLauncher::getPythonPath() const
 {
 	return _pythonpath;
+}
+
+void ScriptLauncher::setSharedMemoryPath(std::string path)
+{
+	_sharedmemorypath = path;
+}
+
+std::string ScriptLauncher::getSharedMemoryPath() const
+{
+	return _sharedmemorypath;
 }
 
 std::string ScriptLauncher::getError() const

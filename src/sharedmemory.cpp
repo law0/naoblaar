@@ -2,6 +2,7 @@
 
 SharedMemory::SharedMemory(const Oscillator* osc, unsigned int joint_choice, std::string path) :
 	_joint(joint_choice),
+	_path(path),
 	_size(20),
 	_osc(osc),
 	_loop(NULL),
@@ -9,7 +10,7 @@ SharedMemory::SharedMemory(const Oscillator* osc, unsigned int joint_choice, std
 {
 	int fd;
 
-	if ((fd = open(path.c_str(), O_RDWR | O_TRUNC | O_CREAT, (mode_t)0600)) == -1)
+	if ((fd = open(_path.c_str(), O_RDWR | O_TRUNC | O_CREAT, (mode_t)0600)) == -1)
 	{
         	perror("open");
 	        exit(1);

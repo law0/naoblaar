@@ -28,6 +28,7 @@ class ScriptLauncher
 		void setJoint(int);
 		void setOscillators(Oscillator* oscH, Oscillator* oscV);
 		void chooseOscillator(int o);
+		void setSharedMemoryPath(std::string);
 
 		int getStatus() const;
 		int getPid() const;
@@ -38,6 +39,7 @@ class ScriptLauncher
 		std::string getMainScriptPath() const;
 		std::string getPythonPath() const;
 		std::string getChoosenOscillator() const;
+		std::string getSharedMemoryPath() const;
 		int getJoint() const;
 
 	private :
@@ -53,6 +55,7 @@ class ScriptLauncher
 		std::string _naoqipath;
 		std::string _mainscriptpath;
 		std::string _pythonpath;
+		std::string _sharedmemorypath;
 		std::string _error;
 		int _p[2];
 		SharedMemory* _sm; //avoid instantiating this one immediately

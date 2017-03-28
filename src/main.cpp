@@ -242,20 +242,21 @@ int main(int argc, char **argv)
 	Oscillator oscillator(0.07f, 0.15f);
 	Oscillator osc2(0.07f, 0.15f);
 
-	std::thread view_thread(launchView, argc, argv, &isClosed, global_Streamcatcher, &oscillator, &osc2);
+	ScriptLauncher* sl = ScriptLauncher::getInstance();
+	sl->setOscillators(&oscillator, &osc2);
+	sl->chooseOscillator(0);
+	int l = sl->connect(); //default parameter should fail for the moment
+
+	if( l != 0) //launch has failed. use ! WIFEEXITED(scriptLauncher_single->getStatus()) to check if process is still running
+	{
+		printf("? %s\n", sl->getError().c_str());
+	}
+
+	std::thread view_thread(launchView, argc, argv, &isClosed, global_Streamcatcher, sl, &oscillator, &osc2);
 
 	/*SharedMemory sm(&oscillator, 2);
 	sm.startShare();*/
 
-	ScriptLauncher* scriptLauncher_single = ScriptLauncher::getInstance();
-	scriptLauncher_single->setOscillators(&oscillator, &osc2);
-	scriptLauncher_single->chooseOscillator(0);
-	int l = scriptLauncher_single->connect(); //default parameter should fail for the moment
-
-	if( l != 0) //launch has failed. use ! WIFEEXITED(scriptLauncher_single->getStatus()) to check if process is still running
-	{
-		printf("? %s\n", scriptLauncher_single->getError().c_str());
-	}
 	optical_flow(width, height, oscillator, osc2);
 
 //	getchar();

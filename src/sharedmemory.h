@@ -25,6 +25,7 @@ class SharedMemory
 	private:
 		static void share(const Oscillator* osc, float* data, unsigned int joint, bool* running);
 		unsigned int _joint;
+		std::string _path;
 		const unsigned int _size;
 		float* _data;
 		const Oscillator* _osc;

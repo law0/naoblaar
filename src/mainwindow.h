@@ -4,6 +4,7 @@
 #include <iostream>
 #include <cv.h>
 #include <highgui.h>
+#include <QWizard>
 #include <QVector>
 #include <QMainWindow>
 #include <QtWidgets>
@@ -43,13 +44,14 @@ class MainWindow : public QMainWindow
 		void chooseMainScriptPath(QString path);
 		void choosePythonPath(QString path);
 		void chooseOscillator(int choice);
+		void chooseSharedMemoryPath(QString path);
 
 		~MainWindow();
 
 	private slots :
         	void movieManagement();
 		void closeExperience();
-		//void connectToNao();
+		void configNaoConnection();
 
 	private:
 		bool* _isClosed;
@@ -61,6 +63,11 @@ class MainWindow : public QMainWindow
 		//Oscillator* _oscV;
 		ScriptLauncher* _sl;
 		QString _last_error;
+		QMenu* _config_menu;
+		QAction* _config_menu_action;
+
+		QMenuBar* _menuBar;
+
 		PlotItem* _plotitemX;
 		PlotItem* _plotitemY;
 		PlotItem* _plotitemOSCX;
