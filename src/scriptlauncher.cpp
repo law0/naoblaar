@@ -81,7 +81,7 @@ int ScriptLauncher::connect()
 	_sm = new SharedMemory(_choosen_osc, _joint, _sharedmemorypath);
 
 	pipe2(_p, O_NONBLOCK);
-	_pid = fork();
+	_pid = fork(); //fork to launch script but yet have control on it
 
 	switch(_pid)
 	{
@@ -89,9 +89,9 @@ int ScriptLauncher::connect()
 			_error = "cannot fork";
 			return 7;
 			break; //useless but meh
-		case 0 :
+		case 0 : //launch
 		{ //<-- avoid cross initialization error. google it, it's interesting
-			dup2(_p[1], STDERR_FILENO); //duplicate error
+			dup2(_p[1], STDERR_FILENO); //duplicate stderror on our stdin (which is linked to pipe[1] on this side)
 			close(_p[0]);
 			close(_p[1]);
 			setenv("PYTHONPATH", _naoqipath.c_str(), 1);
@@ -115,14 +115,11 @@ int ScriptLauncher::connect()
 				_error.assign((const char*)buffer);
 			}
 
-			//printf("HERE\n");
 			int s = this->getStatus();
 
 			if(s == 1) //if the child (the script) has not terminated immediately
 			{
-				//printf("THERE?\n");
 				_sm->startShare();
-				//printf("OR THERE?\n");
 			}
 			else
 			{
@@ -135,6 +132,11 @@ int ScriptLauncher::connect()
 
 int ScriptLauncher::disconnect()
 {
+	if(_sm != NULL)
+	{
+		delete _sm; // <-destructor properly unmap and close shared memory don't worry
+		_sm = NULL;
+	}
 	return kill(_pid, SIGKILL);
 }
 
@@ -258,7 +260,7 @@ int ScriptLauncher::getPid() const
 	return _pid;
 }
 
-int ScriptLauncher::getStatus()
+int ScriptLauncher::getStatus() //return 1 if script running 0 otherwise
 {
 	int s = 0;
 	int r = waitpid(_pid, (int*)&s, WNOHANG);

@@ -6,7 +6,8 @@ SharedMemory::SharedMemory(const Oscillator* osc, unsigned int joint_choice, std
 	_size(20),
 	_osc(osc),
 	_loop(NULL),
-	running(false)
+	running(false),
+	_fd((int*)malloc(sizeof(int)))
 {
 	int fd;
 
@@ -38,11 +39,16 @@ SharedMemory::SharedMemory(const Oscillator* osc, unsigned int joint_choice, std
 	        exit(1);
 	}
 
+	*_fd = fd;
+
 }
 
 SharedMemory::~SharedMemory()
 {
 	this->stopShare();
+	munmap(_data, _size);
+	close(*_fd);
+	free(_fd);
 }
 
 void SharedMemory::startShare()
@@ -50,12 +56,12 @@ void SharedMemory::startShare()
 	if (!running)
 	{
 		running = true;
-		_loop = new std::thread(SharedMemory::share, _osc, _data, _joint, &running);
+		_loop = new std::thread(SharedMemory::share, _osc, _fd, _data, _joint, &running);
 	}
 }
 
 
-void SharedMemory::share(const Oscillator* osc, float* data, const unsigned int joint, bool* running)
+void SharedMemory::share(const Oscillator* osc, int* fd, float* data, const unsigned int joint, bool* running)
 {
 	std::mutex mtx;
    	while (*running)
@@ -63,7 +69,9 @@ void SharedMemory::share(const Oscillator* osc, float* data, const unsigned int 
 		if(joint < 10)
 		{
 			mtx.lock();
+			flock(*fd, LOCK_EX);
 			data[joint] = osc->getOut();
+			flock(*fd, LOCK_UN);
 			mtx.unlock();
 		}
     	}

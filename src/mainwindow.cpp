@@ -12,8 +12,8 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	_sl(NULL),
 	_last_error(""),
 	_connection_menu(new QMenu("Connection")),
-	_config_menu_action(new QAction(tr("&Configuration"), this)),
-	_connect_nao_action(new QAction(tr("&Connect"), this))
+	_config_menu_action(new QAction("Configuration", this)),
+	_connect_nao_action(new QAction("Connect", this))
 {
 //	setFixedSize(1300, 620);
 
@@ -240,16 +240,29 @@ void MainWindow::addScriptLauncher(ScriptLauncher* sl)
 
 void MainWindow::connectNao() // this is a slot
 {
-	int r = this->connectToNao();
-	if(r != 0)
+	if(_connect_nao_action->text() == "Connect")
 	{
-		QMessageBox errorBox;
-		errorBox.setText(_last_error);
-		errorBox.exec();
+		int r = this->connectToNao();
+		if(r != 0)
+		{
+			QMessageBox errorBox;
+			errorBox.setText(_last_error);
+			errorBox.exec();
+		}
+		else
+		{
+			_last_error = "";
+			_connect_nao_action->setText("Disconnect");
+		}
+	}
+	else if(_connect_nao_action->text() == "Disconnect")
+	{
+		this->disconnectToNao();
+		_connect_nao_action->setText("Connect");
 	}
 }
 
-int MainWindow::connectToNao()
+int MainWindow::connectToNao() //return 0 if no error
 {
 	int ret = 0;
 	if(_sl != NULL)
@@ -278,6 +291,11 @@ int MainWindow::connectToNao()
 	}
 
 	return ret;
+}
+
+void MainWindow::disconnectToNao()
+{
+	_sl->disconnect();
 }
 
 void MainWindow::chooseIpPort(QString ip, int port)

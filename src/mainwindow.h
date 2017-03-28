@@ -44,7 +44,6 @@ class MainWindow : public QMainWindow
 		void choosePythonPath(QString path);
 		void chooseOscillator(int choice);
 		void chooseSharedMemoryPath(QString path);
-
 		~MainWindow();
 
 	private slots :
@@ -54,8 +53,8 @@ class MainWindow : public QMainWindow
 		void connectNao();
 
 	private:
-
 		int connectToNao();
+		void disconnectToNao();
 
 		bool* _isClosed;
 	   	Ui::MainWindow *ui;
