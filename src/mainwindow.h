@@ -15,6 +15,7 @@
 #include "plotitem.h"
 #include "oscillator.h"
 #include "movie.h"
+#include "savedata.h"
 
 namespace Ui {
 class MainWindow;
@@ -27,6 +28,7 @@ class MainWindow : public QMainWindow
 	public :
 		explicit MainWindow(bool* isClosed, QWidget *parent = 0);
 		void addMovie(Movie* movie);
+		void addSaveData(Savedata * sd);
 		void addOscillators(Oscillator * osc1, Oscillator * osc2);
 		void closeEvent(QCloseEvent* event);
 		~MainWindow();
@@ -34,14 +36,18 @@ class MainWindow : public QMainWindow
 	private slots :
         	void movieManagement();
 		void closeExperience();
+		void dataManagement();
 		//void connectToNao();
 
 	private:
 		bool* _isClosed;
 	   	Ui::MainWindow *ui;
 		Movie* _movie;
+		Savedata * _sd;
 		QPushButton* play;
+		QPushButton* data;
 		bool runningVideo;
+		bool runningData;
 //		Oscillator* _oscH;
 //		Oscillator* _oscV;
 		PlotItem* _plotitemX;

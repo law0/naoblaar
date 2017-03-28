@@ -26,7 +26,7 @@ void launchView(int argc, char **argv, bool* isClosed, StreamCatcher* sc, Oscill
 	//video recorder
 	Movie movie(sc);
 	//save data
-	Savedata sd(osc, osc2);
+	SaveData sd(osc, osc2);
     	mw.addMovie(&movie);
 	mw.addSaveData(&sd);
 

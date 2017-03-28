@@ -8,7 +8,8 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	QMainWindow(parent),
 	_isClosed(isClosed),
 	ui(new Ui::MainWindow),
-	runningVideo(false)
+	runningVideo(false),
+	runningData(false)
 {
 //	setFixedSize(1300, 620);
 
@@ -29,11 +30,11 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	play = new QPushButton("Enregistrer", this);
 	play -> setGeometry(240, 485, 100, 30);
 
-	QPushButton *pause = new QPushButton("stop", this);
-	pause -> setGeometry(345, 485, 80, 30);
+	data = new QPushButton("Data", this);
+	data -> setGeometry(345, 485, 100, 30);
 
 	connect(play, SIGNAL(pressed()), this, SLOT(movieManagement()));
-	connect(pause, SIGNAL(pressed()), this, SLOT(closeExperience()));
+	connect(data, SIGNAL(pressed()), this, SLOT(dataManagement()));
 
 	//printf("salut\n");
 	//this->getStream();
@@ -221,11 +222,29 @@ void MainWindow::closeEvent(QCloseEvent* event)
 	event->accept();
 }
 
-/*void MainWindow::connectToNao()
+void MainWindow::addSaveData(Savedata * sd)
 {
-
+	_sd = sd;
 }
 
+void MainWindow::dataManagement()
+{
+	if (runningData)
+	{
+		_sd->stopSave();
+		data->setText("Data");
+		runningData = false;
+	}
+	else
+	{
+		_sd->startSave();
+		data->setText("Pause");
+		runningData = true;
+	}
+}
+
+
+/*
 void MainWindow::chooseIpPort()
 {
 

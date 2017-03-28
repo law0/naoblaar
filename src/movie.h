@@ -26,7 +26,7 @@ class Movie
 	private:
         	const StreamCatcher* _streamcatcher;
 		std::thread * _loop;
-		bool running;
+		bool _running;
         	const unsigned int _width;
         	const unsigned int _height;
         	const unsigned int _size;
