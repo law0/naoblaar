@@ -17,7 +17,7 @@
 class SharedMemory
 {
 	public :
-        	SharedMemory(const Oscillator* osc, unsigned int joint_choice);
+        	SharedMemory(const Oscillator* osc, unsigned int joint_choice, std::string path = "/run/shm/nao.motors-tf");
 		~SharedMemory();
 		void startShare();
 		void stopShare();

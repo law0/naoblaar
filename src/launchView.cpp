@@ -25,14 +25,16 @@ void launchView(int argc, char **argv, bool* isClosed, StreamCatcher* sc, Oscill
 
 	//video recorder
 	Movie movie(sc);
+
 	//save data
 	Savedata sd(osc, osc2);
-    	mw.addMovie(&movie);
+    	mw.addMovie(&movie); //add Movie object for the button "record"
 	mw.addSaveData(&sd);
+
 
 	scene.addItem(&vi);
 
-	mw.addOscillators(osc, osc2);
+	mw.addOscillators(osc, osc2); //add oscillators has most widget contained in mw needs the oscillators
 
 	mw.setFixedSize(1300, 620);
 
