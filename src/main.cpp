@@ -206,13 +206,16 @@ void optical_flow(int width, int height, Oscillator& oscillator1, Oscillator& os
 			else
 				printf("A\n");*/
 
-			float osc1 = oscillator1(h);
+			//float osc1 =
+
+			oscillator1(h);
 
 			//oscillator1(h);
 
-			float osc2 = oscillator2(-v);
+			//float osc2 =
+			oscillator2(-v);
 
-			printf("%f, %f, %f, %f\n", osc1, h, osc2, -v);
+//			printf("%f, %f, %f, %f\n", osc1, h, osc2, -v);
 
 			//std::this_thread::sleep_for(std::chrono::nanoseconds(10000));
 

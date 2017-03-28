@@ -30,7 +30,7 @@ class ScriptLauncher
 		void chooseOscillator(int o);
 		void setSharedMemoryPath(std::string);
 
-		int getStatus() const;
+		int getStatus();
 		int getPid() const;
 		std::string getIp() const;
 		int getPort() const;

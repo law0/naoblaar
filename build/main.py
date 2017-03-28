@@ -134,7 +134,7 @@ class NaoCaller:
                     #print self.MOTORS_ORDER[i]
                     #print float(data[i])
             except IOError:
-                print self.SHM_MOTORS_FILE + " not found"
+                print self.SHM_MOTORS_FILE + " -not found"
                 time.sleep(0.05)
 
     def move(self, name, position, speed, normalize=True):

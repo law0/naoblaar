@@ -78,8 +78,9 @@ int ScriptLauncher::connect()
 		return 6;
 	}
 
+	_sm = new SharedMemory(_choosen_osc, _joint, _sharedmemorypath);
 
-	pipe(_p);
+	pipe2(_p, O_NONBLOCK);
 	_pid = fork();
 
 	switch(_pid)
@@ -102,23 +103,26 @@ int ScriptLauncher::connect()
 			}
 			break;
 		}
+
 		default :
 			char buffer[4096];
 			memset(buffer, '\0', 4096);
 			close(_p[1]);
-			sleep(1);
+			usleep(500000);
 			int bytes = read(_p[0], buffer, 4096);
 			if(bytes > 0) //if an error has been return immediately
 			{
 				_error.assign((const char*)buffer);
 			}
 
+			//printf("HERE\n");
 			int s = this->getStatus();
 
-			if(WIFEXITED(s) == false) //if the child (the script) has not terminated immediately
+			if(s == 1) //if the child (the script) has not terminated immediately
 			{
-				_sm = new SharedMemory(_choosen_osc, _joint, _sharedmemorypath);
+				//printf("THERE?\n");
 				_sm->startShare();
+				//printf("OR THERE?\n");
 			}
 			else
 			{
@@ -254,9 +258,18 @@ int ScriptLauncher::getPid() const
 	return _pid;
 }
 
-int ScriptLauncher::getStatus() const
+int ScriptLauncher::getStatus()
 {
-	waitpid(_pid, (int*)&_status, WNOHANG);
+	int s = 0;
+	int r = waitpid(_pid, (int*)&s, WNOHANG);
+	if(r == 0) //not changed state yet = running
+	{
+		_status = 1;
+	}
+	else //changed state or error
+	{
+		_status = 0;
+	}
 	return _status;
 }
 

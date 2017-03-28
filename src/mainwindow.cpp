@@ -11,8 +11,9 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	runningVideo(false),
 	_sl(NULL),
 	_last_error(""),
-	_config_menu(new QMenu("Configuration")),
-	_config_menu_action(new QAction(tr("&euh... Configuration?"), this))
+	_connection_menu(new QMenu("Connection")),
+	_config_menu_action(new QAction(tr("&Configuration"), this)),
+	_connect_nao_action(new QAction(tr("&Connect"), this))
 {
 //	setFixedSize(1300, 620);
 
@@ -31,20 +32,21 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 
     //
 	play = new QPushButton("Enregistrer", this);
-	play -> setGeometry(240, 485, 100, 30);
+	play -> setGeometry(240, 505, 100, 30);
 
 	QPushButton *pause = new QPushButton("stop", this);
-	pause -> setGeometry(345, 485, 80, 30);
+	pause -> setGeometry(345, 505, 80, 30);
 
 	connect(play, SIGNAL(pressed()), this, SLOT(movieManagement()));
 	connect(pause, SIGNAL(pressed()), this, SLOT(closeExperience()));
 
-	_menuBar = this->menuBar();
-	_config_menu->addAction(_config_menu_action);
-	_menuBar->addMenu(_config_menu);
-
+	_menuBar = this->menuBar(); //create menu bar
+	_connection_menu->addAction(_config_menu_action); //add action link to configNaoConnection to connection menu
+	_connection_menu->addAction(_connect_nao_action); //add action connection to connection Menu
+	_menuBar->addMenu(_connection_menu); //add connection menu to menu bar
 
 	connect(_config_menu_action, SIGNAL(triggered()), this, SLOT(configNaoConnection()));
+	connect(_connect_nao_action, SIGNAL(triggered()), this, SLOT(connectNao()));
 	//printf("salut\n");
 	//this->getStream();
 
@@ -236,6 +238,17 @@ void MainWindow::addScriptLauncher(ScriptLauncher* sl)
 	_sl = sl;
 }
 
+void MainWindow::connectNao() // this is a slot
+{
+	int r = this->connectToNao();
+	if(r != 0)
+	{
+		QMessageBox errorBox;
+		errorBox.setText(_last_error);
+		errorBox.exec();
+	}
+}
+
 int MainWindow::connectToNao()
 {
 	int ret = 0;
@@ -250,7 +263,7 @@ int MainWindow::connectToNao()
 		else //may not be wrong parameter but may fail for other reason (like Nao is not there)
 		{
 			int s = _sl->getStatus();
-			if(WIFEXITED(s) == true) //if acceptable parameter but exited immediately...
+			if(s != 1) //if acceptable parameter but exited immediately...
 			{
 				_last_error = QString::fromStdString(_sl->getError());
 				ret = 2;
@@ -339,8 +352,11 @@ void MainWindow::configNaoConnection()
 
 		QLineEdit* oscillator_line = new QLineEdit(QString::fromStdString(_sl->getChoosenOscillator()));
 		QLineEdit* joint_line = new QLineEdit(QString::number(_sl->getJoint()));
+		joint_line->setInputMask("9");
 		QLineEdit* ip_line = new QLineEdit(QString::fromStdString(_sl->getIp()));
+		ip_line->setInputMask("000.000.000.000;_");
 		QLineEdit* port_line = new QLineEdit(QString::number(_sl->getPort()));
+		port_line->setInputMask("D0000;_");
 		QLineEdit* naoqi_line = new QLineEdit(QString::fromStdString(_sl->getNaoqiPath()));
 		QLineEdit* mainscript_line = new QLineEdit(QString::fromStdString(_sl->getMainScriptPath()));
 		QLineEdit* python_line = new QLineEdit(QString::fromStdString(_sl->getPythonPath()));

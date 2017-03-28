@@ -37,7 +37,6 @@ class MainWindow : public QMainWindow
 		void addScriptLauncher(ScriptLauncher* sl); //constant pointer to ScriptLaucher
 		void closeEvent(QCloseEvent* event);
 
-		int connectToNao();
 		void chooseIpPort(QString ip, int port);
 		void chooseJoint(int joint);
 		void chooseNaoqiPath(QString path);
@@ -52,8 +51,12 @@ class MainWindow : public QMainWindow
         	void movieManagement();
 		void closeExperience();
 		void configNaoConnection();
+		void connectNao();
 
 	private:
+
+		int connectToNao();
+
 		bool* _isClosed;
 	   	Ui::MainWindow *ui;
 		Movie* _movie;
@@ -63,8 +66,9 @@ class MainWindow : public QMainWindow
 		//Oscillator* _oscV;
 		ScriptLauncher* _sl;
 		QString _last_error;
-		QMenu* _config_menu;
+		QMenu* _connection_menu;
 		QAction* _config_menu_action;
+		QAction* _connect_nao_action;
 
 		QMenuBar* _menuBar;
 

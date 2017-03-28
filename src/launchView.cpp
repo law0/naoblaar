@@ -34,7 +34,7 @@ void launchView(int argc, char **argv, bool* isClosed, StreamCatcher* sc, Script
 
 	mw.addOscillators(osc, osc2); //add oscillators has most widget contained in mw needs the oscillators
 
-	mw.setFixedSize(1300, 620);
+	mw.setFixedSize(1300, 670);
 
 	view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
