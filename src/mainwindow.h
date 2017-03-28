@@ -10,17 +10,14 @@
 #include <QtWidgets>
 #include <QPushButton>
 #include <QObject>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <signal.h>
 #include <mutex>
 
+#include "scriptlauncher.h"
 #include "slideritem.h"
 #include "plotitem.h"
 #include "oscillator.h"
 #include "movie.h"
-#include "scriptlauncher.h"
+#include "savedata.h"
 
 namespace Ui {
 class MainWindow;
@@ -33,8 +30,9 @@ class MainWindow : public QMainWindow
 	public :
 		explicit MainWindow(bool* isClosed, QWidget *parent = 0);
 		void addMovie(Movie* movie);
+		void addSaveData(Savedata * sd);
+		void addScriptLauncher(ScriptLauncher* sl);
 		void addOscillators(Oscillator * osc1, Oscillator * osc2);
-		void addScriptLauncher(ScriptLauncher* sl); //constant pointer to ScriptLaucher
 		void closeEvent(QCloseEvent* event);
 
 		void chooseIpPort(QString ip, int port);
@@ -52,6 +50,9 @@ class MainWindow : public QMainWindow
 		void configNaoConnection();
 		void connectNao();
 
+		void dataManagement();
+		//void connectToNao();
+
 	private:
 		int connectToNao();
 		void disconnectToNao();
@@ -59,7 +60,9 @@ class MainWindow : public QMainWindow
 		bool* _isClosed;
 	   	Ui::MainWindow *ui;
 		Movie* _movie;
+		Savedata * _sd;
 		QPushButton* play;
+		QPushButton* data;
 		bool runningVideo;
 		//Oscillator* _oscH; //la vue ne doit pas contenir les osc, par respect d'archi
 		//Oscillator* _oscV;
@@ -71,6 +74,9 @@ class MainWindow : public QMainWindow
 
 		QMenuBar* _menuBar;
 
+		bool runningData;
+//		Oscillator* _oscH;
+//		Oscillator* _oscV;
 		PlotItem* _plotitemX;
 		PlotItem* _plotitemY;
 		PlotItem* _plotitemOSCX;

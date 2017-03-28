@@ -3,7 +3,7 @@
 Movie::Movie(const StreamCatcher* sc) :
     _streamcatcher(sc),
 	_loop(NULL),
-    running(false),
+    _running(false),
     _width((const unsigned int)(_streamcatcher->getWidth())),
     _height((const unsigned int)(_streamcatcher->getHeight())),
     _size(_width * _height)
@@ -13,15 +13,15 @@ Movie::Movie(const StreamCatcher* sc) :
 
 void Movie::startCapture()
 {
-	if (!running)
+	if (!_running)
 	{
-		running = true;
-		_loop = new std::thread(Movie::capture, _streamcatcher, &running);
+		_running = true;
+		_loop = new std::thread(Movie::capture, _streamcatcher, &_running);
 	}
 }
 
 
-void Movie::capture(const StreamCatcher * stream, bool* running)
+void Movie::capture(const StreamCatcher * stream, bool* _running)
 {
 	const unsigned int width = stream->getWidth();
 	const unsigned int height = stream->getHeight();
@@ -44,7 +44,7 @@ void Movie::capture(const StreamCatcher * stream, bool* running)
 	start = std::chrono::high_resolution_clock::now();
 	error += std::chrono::duration_cast<std::chrono::nanoseconds>(start - finish); //overtime error of sleep_for, affectation and high_resolution_clock::now() call
 
-    	while (*running)
+    	while (*_running)
     	{
 
 		stream->getBGR(out, size * 3);
@@ -66,9 +66,9 @@ void Movie::capture(const StreamCatcher * stream, bool* running)
 
 void Movie::stopCapture()
 {
-	if (running)
+	if (_running)
 	{
-		running = false;
+		_running = false;
 	}
     //printf("salut");
 }

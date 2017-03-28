@@ -28,7 +28,12 @@ void launchView(int argc, char **argv, bool* isClosed, StreamCatcher* sc, Script
 
 	//video recorder
 	Movie movie(sc);
+
+	//save data
+	Savedata sd(osc, osc2);
     	mw.addMovie(&movie); //add Movie object for the button "record"
+	mw.addSaveData(&sd);
+
 
 	scene.addItem(&vi);
 

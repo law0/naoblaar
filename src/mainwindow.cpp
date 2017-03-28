@@ -13,7 +13,8 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	_last_error(""),
 	_connection_menu(new QMenu("Connection")),
 	_config_menu_action(new QAction("Configuration", this)),
-	_connect_nao_action(new QAction("Connect", this))
+	_connect_nao_action(new QAction("Connect", this)),
+	runningData(false)
 {
 //	setFixedSize(1300, 620);
 
@@ -37,8 +38,11 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	QPushButton *pause = new QPushButton("stop", this);
 	pause -> setGeometry(345, 505, 80, 30);
 
+	data = new QPushButton("Data", this);
+	data -> setGeometry(345, 505, 100, 30);
+
 	connect(play, SIGNAL(pressed()), this, SLOT(movieManagement()));
-	connect(pause, SIGNAL(pressed()), this, SLOT(closeExperience()));
+	connect(data, SIGNAL(pressed()), this, SLOT(dataManagement()));
 
 	_menuBar = this->menuBar(); //create menu bar
 	_connection_menu->addAction(_config_menu_action); //add action link to configNaoConnection to connection menu
@@ -87,7 +91,7 @@ MainWindow::~MainWindow()
 void MainWindow::addOscillators(Oscillator * osc1, Oscillator * osc2)
 {
 
-	/*_oscH = osc1; //la vue ne doit pas contenir les oscillateur quand même!
+/*	_oscH = osc1;
 	_oscV = osc2;*/
 //Dockwidget features
         QDockWidget::DockWidgetFeatures DWflag = QDockWidget::DockWidgetMovable | QDockWidget::DockWidgetFloatable;
@@ -233,6 +237,11 @@ void MainWindow::closeEvent(QCloseEvent* event)
 	event->accept();
 }
 
+void MainWindow::addSaveData(Savedata * sd)
+{
+	_sd = sd;
+}
+
 void MainWindow::addScriptLauncher(ScriptLauncher* sl)
 {
 	_sl = sl;
@@ -298,6 +307,23 @@ void MainWindow::disconnectToNao()
 	_sl->disconnect();
 }
 
+void MainWindow::dataManagement()
+{
+	if (runningData)
+	{
+		_sd->stopSave();
+		data->setText("Data");
+		runningData = false;
+	}
+	else
+	{
+		_sd->startSave();
+		data->setText("Pause");
+		runningData = true;
+	}
+}
+
+
 void MainWindow::chooseIpPort(QString ip, int port)
 {
 	if(_sl != NULL)
@@ -321,6 +347,7 @@ void MainWindow::chooseNaoqiPath(QString path)
 	{
 		_sl->setNaoqiPath(path.toUtf8().constData());
 	}
+
 }
 
 void MainWindow::chooseMainScriptPath(QString path)

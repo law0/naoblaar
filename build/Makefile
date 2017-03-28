@@ -403,6 +403,30 @@ qcustomplot.cpp.s:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/qcustomplot.cpp.s
 .PHONY : qcustomplot.cpp.s
 
+savedata.o: savedata.cpp.o
+.PHONY : savedata.o
+
+# target to build an object file
+savedata.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/savedata.cpp.o
+.PHONY : savedata.cpp.o
+
+savedata.i: savedata.cpp.i
+.PHONY : savedata.i
+
+# target to preprocess a source file
+savedata.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/savedata.cpp.i
+.PHONY : savedata.cpp.i
+
+savedata.s: savedata.cpp.s
+.PHONY : savedata.s
+
+# target to generate assembly for a file
+savedata.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/savedata.cpp.s
+.PHONY : savedata.cpp.s
+
 scriptlauncher.o: scriptlauncher.cpp.o
 .PHONY : scriptlauncher.o
 
@@ -592,6 +616,9 @@ help:
 	@echo "... qcustomplot.o"
 	@echo "... qcustomplot.i"
 	@echo "... qcustomplot.s"
+	@echo "... savedata.o"
+	@echo "... savedata.i"
+	@echo "... savedata.s"
 	@echo "... scriptlauncher.o"
 	@echo "... scriptlauncher.i"
 	@echo "... scriptlauncher.s"
