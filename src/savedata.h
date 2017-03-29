@@ -16,6 +16,7 @@ class Savedata
 {
 	public :
         	Savedata(const Oscillator* osc1, const Oscillator* osc2);
+		~Savedata();
 		void startSave();
 		static void save(const Oscillator* oscH, const Oscillator* oscV, bool* _running);
 		void stopSave();

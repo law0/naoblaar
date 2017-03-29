@@ -24,7 +24,9 @@ add_executable(
 	moc_qcustomplot.cpp
 	moc_plotitem.cpp
 	moc_slideritem.cpp
+	moc_filelinebutton.cpp
 	mainwindow.cpp 
+	filelinebutton.cpp
 	videoitem.cpp
 	qcustomplot.cpp
 	plotitem.cpp

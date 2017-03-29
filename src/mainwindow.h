@@ -13,6 +13,7 @@
 #include <mutex>
 
 #include "scriptlauncher.h"
+#include "filelinebutton.h"
 #include "slideritem.h"
 #include "plotitem.h"
 #include "oscillator.h"
@@ -49,7 +50,6 @@ class MainWindow : public QMainWindow
 		void closeExperience();
 		void configNaoConnection();
 		void connectNao();
-
 		void dataManagement();
 		//void connectToNao();
 

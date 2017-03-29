@@ -69,6 +69,13 @@ void Movie::stopCapture()
 	if (_running)
 	{
 		_running = false;
+		_loop->join();
+		delete _loop;
 	}
     //printf("salut");
+}
+
+Movie::~Movie()
+{
+	this->stopCapture();
 }

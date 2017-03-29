@@ -19,6 +19,7 @@ class Movie
 {
 	public :
         	Movie(const StreamCatcher* streamcatcher);
+		~Movie();
 		void startCapture();
 		static void capture(const StreamCatcher * stream, bool* running);
 		void stopCapture();

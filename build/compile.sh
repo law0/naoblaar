@@ -5,6 +5,7 @@ then
 	moc -o ../src/moc_qcustomplot.cpp ../src/qcustomplot.h
 	moc -o ../src/moc_plotitem.cpp ../src/plotitem.h
 	moc -o ../src/moc_slideritem.cpp ../src/slideritem.h
+	moc -o ../src/moc_filelinebutton.cpp ../src/filelinebutton.h
 fi
 cmake ../src
 make

@@ -407,14 +407,29 @@ void MainWindow::configNaoConnection()
 		QLineEdit* python_line = new QLineEdit(QString::fromStdString(_sl->getPythonPath()));
 		QLineEdit* shm_line = new QLineEdit(QString::fromStdString(_sl->getSharedMemoryPath()));
 
+		QPushButton* naoqi_button = new QPushButton("Explore");
+		QPushButton* mainscript_button = new QPushButton("Explore");
+		QPushButton* python_button = new QPushButton("Explore");
+		QPushButton* shm_button = new QPushButton("Explore");
+
+		FileLineButton* naoqi_filelinebutton = new FileLineButton(naoqi_line, naoqi_button, QFileDialog::Directory);
+		FileLineButton* mainscript_filelinebutton = new FileLineButton(mainscript_line, mainscript_button);
+		FileLineButton* python_filelinebutton = new FileLineButton(python_line, python_button);
+		FileLineButton* shm_filelinebutton = new FileLineButton(shm_line, shm_button);
+
+		naoqi_filelinebutton->setFixedWidth(600);
+		mainscript_filelinebutton->setFixedWidth(600);
+		python_filelinebutton->setFixedWidth(600);
+		shm_filelinebutton->setFixedWidth(600);
+
 		formLayout->addRow("Oscillator to connect to", oscillator_line);
 		formLayout->addRow("Joint (0 to 9)", joint_line);
 		formLayout->addRow("IP", ip_line);
 		formLayout->addRow("PORT", port_line);
-		formLayout->addRow("(Advanced) path to naoqi", naoqi_line);
-		formLayout->addRow("(Advanced) path to main.py", mainscript_line);
-		formLayout->addRow("(Advanced) path to python", python_line);
-		formLayout->addRow("(Advanced) Shared memory file", shm_line);
+		formLayout->addRow("(Advanced) path to naoqi", naoqi_filelinebutton);
+		formLayout->addRow("(Advanced) path to main.py", mainscript_filelinebutton);
+		formLayout->addRow("(Advanced) path to python", python_filelinebutton);
+		formLayout->addRow("(Advanced) Shared memory file", shm_filelinebutton);
 
 		page->setLayout(formLayout);
 
@@ -443,3 +458,4 @@ void MainWindow::configNaoConnection()
 		}
 	}
 }
+
