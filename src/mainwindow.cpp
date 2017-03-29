@@ -14,6 +14,7 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	_connection_menu(new QMenu("Connection")),
 	_config_menu_action(new QAction("Configuration", this)),
 	_connect_nao_action(new QAction("Connect", this)),
+	_save_config_action(new QAction("Save configuration", this)),
 	runningData(false)
 {
 //	setFixedSize(1300, 620);
@@ -46,11 +47,13 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 
 	_menuBar = this->menuBar(); //create menu bar
 	_connection_menu->addAction(_config_menu_action); //add action link to configNaoConnection to connection menu
+	_connection_menu->addAction(_save_config_action);
 	_connection_menu->addAction(_connect_nao_action); //add action connection to connection Menu
 	_menuBar->addMenu(_connection_menu); //add connection menu to menu bar
 
 	connect(_config_menu_action, SIGNAL(triggered()), this, SLOT(configNaoConnection()));
 	connect(_connect_nao_action, SIGNAL(triggered()), this, SLOT(connectNao()));
+	connect(_save_config_action, SIGNAL(triggered()), this, SLOT(saveConfig()));
 	//printf("salut\n");
 	//this->getStream();
 
@@ -459,3 +462,7 @@ void MainWindow::configNaoConnection()
 	}
 }
 
+void MainWindow::saveConfig()
+{
+	_sl->saveConfigToFile("config.benlaw");
+}

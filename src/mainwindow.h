@@ -51,6 +51,7 @@ class MainWindow : public QMainWindow
 		void configNaoConnection();
 		void connectNao();
 		void dataManagement();
+		void saveConfig();
 		//void connectToNao();
 
 	private:
@@ -71,6 +72,7 @@ class MainWindow : public QMainWindow
 		QMenu* _connection_menu;
 		QAction* _config_menu_action;
 		QAction* _connect_nao_action;
+		QAction* _save_config_action;
 
 		QMenuBar* _menuBar;
 

@@ -275,9 +275,96 @@ int ScriptLauncher::getStatus() //return 1 if script running 0 otherwise
 	return _status;
 }
 
+void ScriptLauncher::loadConfigFromFile(std::string name)
+{
+        FILE *file = fopen (name.c_str(), "r");
 
+        if (file != NULL)
+        {
+                char line[4096];
 
+                while(fgets(line, sizeof(line), file) != NULL)
+                {
+                        char *cfline;
+			char key[20];
+			char value[4076];
 
+			memset(key, '\0', 20);
+			memset(value, '\0', 4076);
+
+                        cfline = strstr((char *)line,"=");
+			memcpy(key, line, (int)(cfline - line));
+                        cfline = cfline + strlen("=");
+			memcpy(value, cfline, strlen(cfline));
+
+			if(value[strlen(value) - 1] == '\n')
+			{
+				value[strlen(value) -1] = '\0';
+			}
+
+                        if (strncmp(key, "IP", 20) == 0)
+			{
+				setIp(std::string(value));
+			}
+			else if (strncmp(key, "PORT", 20) == 0)
+			{
+				setPort(std::stoi(std::string(value)));
+			}
+			else if(strncmp(key, "JOINT", 20) == 0)
+			{
+				setJoint(std::stoi(std::string(value)));
+			}
+			else if(strncmp(key, "NAOQIPATH", 20) == 0)
+			{
+				setNaoqiPath(std::string(value));
+			}
+			else if(strncmp(key, "MAINSCRIPTPATH", 20) == 0)
+			{
+				setMainScriptPath(std::string(value));
+			}
+			else if(strncmp(key, "PYTHONPATH", 20) == 0)
+			{
+				setPythonPath(std::string(value));
+			}
+			else if(strncmp(key, "SHAREDMEMORYPATH", 20) == 0)
+			{
+				setSharedMemoryPath(std::string(value));
+			}
+			else if(strncmp(key, "OSCILLATOR", 20) == 0)
+			{
+				if(strncmp(value, "Horizontal", 20) == 0 || strncmp(value, "horizontal", 20) == 0)
+				{
+					chooseOscillator(0);
+				}
+				else if(strncmp(value, "Vertical", 20) == 0 || strncmp(value, "vertical", 20) == 0)
+				{
+					chooseOscillator(1);
+				}
+			}
+
+                } // End while
+                fclose(file);
+        } // End if file
+
+}
+
+void ScriptLauncher::saveConfigToFile(std::string name)
+{
+        FILE *file = fopen (name.c_str(), "w");
+
+	if(file != NULL)
+	{
+		fprintf(file, "IP=%s\n", getIp().c_str());
+		fprintf(file, "PORT=%s\n", std::to_string(getPort()).c_str());
+		fprintf(file, "JOINT=%s\n", std::to_string(getJoint()).c_str());
+		fprintf(file, "NAOQIPATH=%s\n", getNaoqiPath().c_str());
+		fprintf(file, "MAINSCRIPTPATH=%s\n", getMainScriptPath().c_str());
+		fprintf(file, "PYTHONPATH=%s\n", getPythonPath().c_str());
+		fprintf(file, "SHAREDMEMORYPATH=%s\n", getSharedMemoryPath().c_str());
+		fprintf(file, "OSCILLATOR=%s\n", getChoosenOscillator().c_str());
+		fclose(file);
+	}
+}
 
 
 

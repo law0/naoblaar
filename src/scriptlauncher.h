@@ -42,6 +42,9 @@ class ScriptLauncher
 		std::string getSharedMemoryPath() const;
 		int getJoint() const;
 
+		void loadConfigFromFile(std::string);
+		void saveConfigToFile(std::string);
+
 	private :
 		ScriptLauncher();
 		Oscillator* _osc0;
