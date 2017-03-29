@@ -45,17 +45,20 @@ class MainWindow : public QMainWindow
 		~MainWindow();
 
 	private slots :
-        	void movieManagement();
 		void closeExperience();
 		void configNaoConnection();
 		void connectNao();
 
-		void dataManagement();
+		void dataClick();
+		void bothClick();
+		void movieClick();
 		//void connectToNao();
 
 	private:
 		int connectToNao();
 		void disconnectToNao();
+		void dataManagement();
+		void movieManagement();
 
 		bool* _isClosed;
 	   	Ui::MainWindow *ui;
@@ -63,6 +66,9 @@ class MainWindow : public QMainWindow
 		Savedata * _sd;
 		QPushButton* play;
 		QPushButton* data;
+		QPushButton* both;
+		QLineEdit* _title;
+		QLineEdit* _repository;
 		bool runningVideo;
 		//Oscillator* _oscH; //la vue ne doit pas contenir les osc, par respect d'archi
 		//Oscillator* _oscV;
@@ -75,6 +81,7 @@ class MainWindow : public QMainWindow
 		QMenuBar* _menuBar;
 
 		bool runningData;
+		bool runningBoth;
 //		Oscillator* _oscH;
 //		Oscillator* _oscV;
 		PlotItem* _plotitemX;

@@ -14,7 +14,8 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	_connection_menu(new QMenu("Connection")),
 	_config_menu_action(new QAction("Configuration", this)),
 	_connect_nao_action(new QAction("Connect", this)),
-	runningData(false)
+	runningData(false),
+	runningBoth(false)
 {
 //	setFixedSize(1300, 620);
 
@@ -32,17 +33,40 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	update();
 
     //
-	play = new QPushButton("Enregistrer", this);
-	play -> setGeometry(240, 505, 100, 30);
 
-	QPushButton *pause = new QPushButton("stop", this);
-	pause -> setGeometry(345, 505, 80, 30);
+	QGroupBox *groupSingle = new QGroupBox("Seul", this);
+	groupSingle -> setGeometry(530, 470, 120, 95);
+
+	play = new QPushButton("Enregistrer", this);
+	play -> setGeometry(540, 485, 100, 30);
+
+	//QPushButton *pause = new QPushButton("stop", this);
+	//pause -> setGeometry(345, 505, 80, 30);
 
 	data = new QPushButton("Data", this);
-	data -> setGeometry(345, 505, 100, 30);
+	data -> setGeometry(540, 520, 100, 30);
 
-	connect(play, SIGNAL(pressed()), this, SLOT(movieManagement()));
-	connect(data, SIGNAL(pressed()), this, SLOT(dataManagement()));
+	QGroupBox *groupTogether = new QGroupBox("Ensemble", this);
+	groupTogether -> setGeometry(660, 470, 120, 95);
+
+	both = new QPushButton("Enregistrer", this);
+	both -> setGeometry(670, 480, 100, 30);
+
+	QLabel *labelRepository = new QLabel("Emplacement :", this);
+	labelRepository -> setGeometry(10, 485, 100, 30);
+
+	_repository = new QLineEdit(this);
+	_repository -> setGeometry(110, 485, 300, 30);
+
+	QLabel *labelTitle = new QLabel("Titre :", this);
+	labelTitle -> setGeometry(10, 520, 100, 30);
+	
+	_title = new QLineEdit(this);
+	_title -> setGeometry(110, 520, 200, 30);
+
+	connect(play, SIGNAL(pressed()), this, SLOT(movieClick()));
+	connect(data, SIGNAL(pressed()), this, SLOT(dataClick()));
+	connect(both, SIGNAL(pressed()), this, SLOT(bothClick()));
 
 	_menuBar = this->menuBar(); //create menu bar
 	_connection_menu->addAction(_config_menu_action); //add action link to configNaoConnection to connection menu
@@ -61,15 +85,97 @@ void MainWindow::movieManagement()
 	if (runningVideo)
 	{
 		_movie->stopCapture();
-		play->setText("Enregistrer");
 		runningVideo = false;
 	}
 	else
 	{
+		string place;
+		if (!_repository->text().isEmpty())
+		{
+			place = "";
+		}
+		else
+		{
+			place = _repository->text().toStdString();
+		}
 		_movie->startCapture();
-		play->setText("Pause");
 		runningVideo = true;
 	}
+}
+
+void MainWindow::dataManagement()
+{
+	if (runningData)
+	{
+		_sd->stopSave();
+		runningData = false;
+	}
+	else
+	{
+		string place;
+		if (!_repository->text().isEmpty())
+		{
+			place = "";
+		}
+		else
+		{
+			place = _repository->text().toStdString();
+		}
+		_sd->startSave(place, _title->text().toStdString());
+		runningData = true;
+	}
+}
+
+void MainWindow::dataClick()
+{
+	if (runningData)
+	{		//stop to save
+		//data->setDefault(true);
+		both->blockSignals(false);
+		data->setText("Enregistrer");
+	}
+	else		//start to save
+	{
+		both->blockSignals(true);
+		data->setText("Pause");
+	}
+	dataManagement();
+}
+
+void MainWindow::movieClick()
+{
+	if (runningData)
+	{		//stop to save
+		both->blockSignals(false);
+		play->setText("Enregistrer");
+	}
+	else		//start to save
+	{
+		both->blockSignals(true);
+		play->setText("Pause");
+	}
+	movieManagement();
+}
+
+void MainWindow::bothClick()
+{
+	if (runningBoth)
+	{		//stop to save
+		play->blockSignals(false);
+		data->blockSignals(false);
+		both->setDefault(false);
+		both->setText("Enregistrer");
+		runningBoth = false;
+	}
+	else		//start to save
+	{
+		play->blockSignals(true);
+		data->blockSignals(true);
+		both->setText("Pause");
+		runningBoth = true;
+	}
+	dataManagement();
+	movieManagement();
 }
 
 void MainWindow::closeExperience()
@@ -306,23 +412,6 @@ void MainWindow::disconnectToNao()
 {
 	_sl->disconnect();
 }
-
-void MainWindow::dataManagement()
-{
-	if (runningData)
-	{
-		_sd->stopSave();
-		data->setText("Data");
-		runningData = false;
-	}
-	else
-	{
-		_sd->startSave();
-		data->setText("Pause");
-		runningData = true;
-	}
-}
-
 
 void MainWindow::chooseIpPort(QString ip, int port)
 {

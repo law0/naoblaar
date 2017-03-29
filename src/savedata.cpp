@@ -9,29 +9,57 @@ Savedata::Savedata(const Oscillator* osc1, const Oscillator* osc2) :
 
 }
 
-void Savedata::startSave()
+void Savedata::startSave(string place, string title)
 {
 	if (!_running)
 	{
 		_running = true;
-		_loop = new std::thread(Savedata::save, _oscH, _oscV, &_running);
+		_loop = new std::thread(Savedata::save, _oscH, _oscV, &_running, place, title);
 	}
 }
 
 
-void Savedata::save(const Oscillator* oscH, const Oscillator* oscV, bool* _running)
+void Savedata::save(const Oscillator* oscH, const Oscillator* oscV, bool* _running, string place, string name)
 {
-	string name("test");
-	string end(".csv");
-	string title = name + end;
-	int i = 1;
-	while (FILE *file = fopen(title.c_str(), "r"))
+	//string name("test");
+	if (name == "")
 	{
-		fclose(file);
-		title = name + to_string(i) + end;
+		name = "test";
+	}
+	string endD(".csv");
+	string endM(".avi");
+	string titleD = place + name + endD;
+	string titleM = place + name + endM;
+	int i = 1;
+	FILE * data = fopen(titleD.c_str(), "r");
+	FILE * movie = fopen(titleM.c_str(), "r");
+	while ((data = fopen(titleD.c_str(), "r")) || (movie = fopen(titleM.c_str(), "r")))
+	{
+		if (data != NULL)
+		{
+			fclose(data);
+		}
+		if (movie != NULL)
+		{
+			fclose(movie);
+		}
+
+		titleD = place + name + to_string(i) + endD;
+		titleM = place + name + to_string(i) + endM;
 		i++;
 	}
-	ofstream myfile(title, ios::app);
+
+	if (data != NULL)
+	{
+		fclose(data);
+	}
+	if (movie != NULL)
+	{
+		fclose(movie);
+	}
+
+
+	ofstream myfile(titleD, ios::app);
   	//myfile.open() ;
 
 	if (!myfile.is_open())
