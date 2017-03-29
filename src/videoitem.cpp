@@ -4,7 +4,7 @@ VideoItem::VideoItem(const StreamCatcher* streamcatcher) :
 	QGraphicsItem(),
 	_timer(),
 	_streamcatcher(streamcatcher),
-	_frameptr((unsigned char* const)(_streamcatcher->getFramePtr())),
+//	_frameptr((unsigned char* const)(_streamcatcher->getFramePtr())),
 	_width((const unsigned int)(_streamcatcher->getWidth())),
 	_height((const unsigned int)(_streamcatcher->getHeight())),
 	_size(_width * _height)
