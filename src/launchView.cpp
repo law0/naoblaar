@@ -1,6 +1,6 @@
 #include "launchView.h"
 
-void launchView(int argc, char **argv, bool* isClosed, StreamCatcher* sc, Oscillator* osc, Oscillator* osc2)
+void launchView(int argc, char **argv, bool* isClosed, StreamCatcher* sc, ScriptLauncher* sl, Oscillator* osc, Oscillator* osc2)
 {
 	QApplication a(argc, argv);
 
@@ -20,6 +20,9 @@ void launchView(int argc, char **argv, bool* isClosed, StreamCatcher* sc, Oscill
 
 	mw.setCentralWidget(&view);
 
+	//scriptLauncher (join with menu to be launch via menu)
+	mw.addScriptLauncher(sl);
+
 	//video on screen
 	VideoItem vi(sc);
 
@@ -36,7 +39,7 @@ void launchView(int argc, char **argv, bool* isClosed, StreamCatcher* sc, Oscill
 
 	mw.addOscillators(osc, osc2); //add oscillators has most widget contained in mw needs the oscillators
 
-	mw.setFixedSize(1300, 620);
+	mw.setFixedSize(1300, 670);
 
 	view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);

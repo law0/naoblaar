@@ -9,6 +9,11 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	_isClosed(isClosed),
 	ui(new Ui::MainWindow),
 	runningVideo(false),
+	_sl(NULL),
+	_last_error(""),
+	_connection_menu(new QMenu("Connection")),
+	_config_menu_action(new QAction("Configuration", this)),
+	_connect_nao_action(new QAction("Connect", this)),
 	runningData(false)
 {
 //	setFixedSize(1300, 620);
@@ -28,14 +33,24 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 
     //
 	play = new QPushButton("Enregistrer", this);
-	play -> setGeometry(240, 485, 100, 30);
+	play -> setGeometry(240, 505, 100, 30);
+
+	QPushButton *pause = new QPushButton("stop", this);
+	pause -> setGeometry(345, 505, 80, 30);
 
 	data = new QPushButton("Data", this);
-	data -> setGeometry(345, 485, 100, 30);
+	data -> setGeometry(345, 505, 100, 30);
 
 	connect(play, SIGNAL(pressed()), this, SLOT(movieManagement()));
 	connect(data, SIGNAL(pressed()), this, SLOT(dataManagement()));
 
+	_menuBar = this->menuBar(); //create menu bar
+	_connection_menu->addAction(_config_menu_action); //add action link to configNaoConnection to connection menu
+	_connection_menu->addAction(_connect_nao_action); //add action connection to connection Menu
+	_menuBar->addMenu(_connection_menu); //add connection menu to menu bar
+
+	connect(_config_menu_action, SIGNAL(triggered()), this, SLOT(configNaoConnection()));
+	connect(_connect_nao_action, SIGNAL(triggered()), this, SLOT(connectNao()));
 	//printf("salut\n");
 	//this->getStream();
 
@@ -227,6 +242,71 @@ void MainWindow::addSaveData(Savedata * sd)
 	_sd = sd;
 }
 
+void MainWindow::addScriptLauncher(ScriptLauncher* sl)
+{
+	_sl = sl;
+}
+
+void MainWindow::connectNao() // this is a slot
+{
+	if(_connect_nao_action->text() == "Connect")
+	{
+		int r = this->connectToNao();
+		if(r != 0)
+		{
+			QMessageBox errorBox;
+			errorBox.setText(_last_error);
+			errorBox.exec();
+		}
+		else
+		{
+			_last_error = "";
+			_connect_nao_action->setText("Disconnect");
+		}
+	}
+	else if(_connect_nao_action->text() == "Disconnect")
+	{
+		this->disconnectToNao();
+		_connect_nao_action->setText("Connect");
+	}
+}
+
+int MainWindow::connectToNao() //return 0 if no error
+{
+	int ret = 0;
+	if(_sl != NULL)
+	{
+		int r = _sl->connect();
+		if(r != 0) //failed by wrong parameter
+		{
+			_last_error = QString::fromStdString(_sl->getError());
+			ret = 1;
+		}
+		else //may not be wrong parameter but may fail for other reason (like Nao is not there)
+		{
+			int s = _sl->getStatus();
+			if(s != 1) //if acceptable parameter but exited immediately...
+			{
+				_last_error = QString::fromStdString(_sl->getError());
+				ret = 2;
+			}
+			//else process is still continuing so it's alright
+		}
+	}
+	else
+	{
+		_last_error = "ScriptLauncher ptr is NULL";
+		ret = 3;
+	}
+
+	return ret;
+}
+
+void MainWindow::disconnectToNao()
+{
+	_sl->disconnect();
+}
+
 void MainWindow::dataManagement()
 {
 	if (runningData)
@@ -244,15 +324,122 @@ void MainWindow::dataManagement()
 }
 
 
-/*
-void MainWindow::chooseIpPort()
+void MainWindow::chooseIpPort(QString ip, int port)
 {
+	if(_sl != NULL)
+	{
+		_sl->setIp(ip.toUtf8().constData());
+		_sl->setPort(port);
+	}
+}
+
+void MainWindow::chooseJoint(int joint)
+{
+	if(_sl != NULL)
+	{
+		_sl->setJoint(joint);
+	}
+}
+
+void MainWindow::chooseNaoqiPath(QString path)
+{
+	if(_sl != NULL)
+	{
+		_sl->setNaoqiPath(path.toUtf8().constData());
+	}
 
 }
 
-void MainWindow::chooseArticulation()
+void MainWindow::chooseMainScriptPath(QString path)
 {
+	if(_sl != NULL)
+	{
+		_sl->setMainScriptPath(path.toUtf8().constData());
+	}
+}
 
-}*/
+void MainWindow::choosePythonPath(QString path)
+{
+	if(_sl != NULL)
+	{
+		_sl->setPythonPath(path.toUtf8().constData());
+	}
+}
 
+void MainWindow::chooseOscillator(int choice)
+{
+	if(_sl != NULL)
+	{
+		_sl->chooseOscillator(choice);
+	}
+}
 
+void MainWindow::chooseSharedMemoryPath(QString path)
+{
+	if(_sl != NULL)
+	{
+		_sl->setSharedMemoryPath(path.toUtf8().constData());
+	}
+}
+
+void MainWindow::configNaoConnection()
+{
+	if(_sl == NULL)
+	{
+		;
+	}
+	else
+	{
+		QWizardPage *page = new QWizardPage;
+		page->setTitle("Configuration");
+
+		QFormLayout* formLayout = new QFormLayout;
+
+		QLineEdit* oscillator_line = new QLineEdit(QString::fromStdString(_sl->getChoosenOscillator()));
+		QLineEdit* joint_line = new QLineEdit(QString::number(_sl->getJoint()));
+		joint_line->setInputMask("9");
+		QLineEdit* ip_line = new QLineEdit(QString::fromStdString(_sl->getIp()));
+		ip_line->setInputMask("000.000.000.000;_");
+		QLineEdit* port_line = new QLineEdit(QString::number(_sl->getPort()));
+		port_line->setInputMask("D0000;_");
+		QLineEdit* naoqi_line = new QLineEdit(QString::fromStdString(_sl->getNaoqiPath()));
+		QLineEdit* mainscript_line = new QLineEdit(QString::fromStdString(_sl->getMainScriptPath()));
+		QLineEdit* python_line = new QLineEdit(QString::fromStdString(_sl->getPythonPath()));
+		QLineEdit* shm_line = new QLineEdit(QString::fromStdString(_sl->getSharedMemoryPath()));
+
+		formLayout->addRow("Oscillator to connect to", oscillator_line);
+		formLayout->addRow("Joint (0 to 9)", joint_line);
+		formLayout->addRow("IP", ip_line);
+		formLayout->addRow("PORT", port_line);
+		formLayout->addRow("(Advanced) path to naoqi", naoqi_line);
+		formLayout->addRow("(Advanced) path to main.py", mainscript_line);
+		formLayout->addRow("(Advanced) path to python", python_line);
+		formLayout->addRow("(Advanced) Shared memory file", shm_line);
+
+		page->setLayout(formLayout);
+
+		QWizard wizard;
+		wizard.addPage(page);
+		int r = wizard.exec(); //blocking on purpose
+
+		if(r == 1) //accepted
+		{
+			if(oscillator_line->text() == "horizontal" || oscillator_line->text() == "Horizontal")
+			{
+				_sl->chooseOscillator(0);
+			}
+			else if(oscillator_line->text() == "vertical" || oscillator_line->text() == "Vertical")
+			{
+				_sl->chooseOscillator(1);
+			}
+
+			_sl->setJoint(joint_line->text().toInt());
+			_sl->setIp(ip_line->text().toUtf8().constData());
+			_sl->setPort(port_line->text().toInt());
+			_sl->setNaoqiPath(naoqi_line->text().toUtf8().constData());
+			_sl->setMainScriptPath(mainscript_line->text().toUtf8().constData());
+			_sl->setPythonPath(python_line->text().toUtf8().constData());
+			_sl->setSharedMemoryPath(shm_line->text().toUtf8().constData());
+		}
+	}
+}

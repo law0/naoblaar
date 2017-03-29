@@ -1,3 +1,5 @@
 build/CMakeFiles/**
 !build/CMakeFiles/.gitkeep
 build/*.avi
+build/test*.csv
+doc/*.dot

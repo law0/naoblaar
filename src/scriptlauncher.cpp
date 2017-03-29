@@ -14,6 +14,7 @@ ScriptLauncher::ScriptLauncher():
 	_naoqipath("/home/law/Documents/EISTI_stuff/NAO/pynaoqi-python2.7-2.1.4.13-linux64"),
 	_mainscriptpath("main.py"),
 	_pythonpath("/usr/bin/python"),
+	_sharedmemorypath("/run/shm/nao.motors-tf"),
 	_error("none"),
 	_sm(NULL)
 {
@@ -77,9 +78,10 @@ int ScriptLauncher::connect()
 		return 6;
 	}
 
+	_sm = new SharedMemory(_choosen_osc, _joint, _sharedmemorypath);
 
-	pipe(_p);
-	_pid = fork();
+	pipe2(_p, O_NONBLOCK);
+	_pid = fork(); //fork to launch script but yet have control on it
 
 	switch(_pid)
 	{
@@ -87,9 +89,9 @@ int ScriptLauncher::connect()
 			_error = "cannot fork";
 			return 7;
 			break; //useless but meh
-		case 0 :
+		case 0 : //launch
 		{ //<-- avoid cross initialization error. google it, it's interesting
-			dup2(_p[1], STDERR_FILENO); //duplicate error
+			dup2(_p[1], STDERR_FILENO); //duplicate stderror on our stdin (which is linked to pipe[1] on this side)
 			close(_p[0]);
 			close(_p[1]);
 			setenv("PYTHONPATH", _naoqipath.c_str(), 1);
@@ -101,11 +103,12 @@ int ScriptLauncher::connect()
 			}
 			break;
 		}
+
 		default :
 			char buffer[4096];
 			memset(buffer, '\0', 4096);
 			close(_p[1]);
-			sleep(1);
+			usleep(500000);
 			int bytes = read(_p[0], buffer, 4096);
 			if(bytes > 0) //if an error has been return immediately
 			{
@@ -114,9 +117,8 @@ int ScriptLauncher::connect()
 
 			int s = this->getStatus();
 
-			if(WIFEXITED(s) == false) //if the child (the script) has not terminated immediately
+			if(s == 1) //if the child (the script) has not terminated immediately
 			{
-				_sm = new SharedMemory(_choosen_osc, _joint);
 				_sm->startShare();
 			}
 			else
@@ -130,6 +132,11 @@ int ScriptLauncher::connect()
 
 int ScriptLauncher::disconnect()
 {
+	if(_sm != NULL)
+	{
+		delete _sm; // <-destructor properly unmap and close shared memory don't worry
+		_sm = NULL;
+	}
 	return kill(_pid, SIGKILL);
 }
 
@@ -233,6 +240,16 @@ std::string ScriptLauncher::getPythonPath() const
 	return _pythonpath;
 }
 
+void ScriptLauncher::setSharedMemoryPath(std::string path)
+{
+	_sharedmemorypath = path;
+}
+
+std::string ScriptLauncher::getSharedMemoryPath() const
+{
+	return _sharedmemorypath;
+}
+
 std::string ScriptLauncher::getError() const
 {
 	return _error;
@@ -243,9 +260,18 @@ int ScriptLauncher::getPid() const
 	return _pid;
 }
 
-int ScriptLauncher::getStatus() const
+int ScriptLauncher::getStatus() //return 1 if script running 0 otherwise
 {
-	waitpid(_pid, (int*)&_status, WNOHANG);
+	int s = 0;
+	int r = waitpid(_pid, (int*)&s, WNOHANG);
+	if(r == 0) //not changed state yet = running
+	{
+		_status = 1;
+	}
+	else //changed state or error
+	{
+		_status = 0;
+	}
 	return _status;
 }
 

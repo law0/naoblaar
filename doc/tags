@@ -1,0 +1,2772 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AnchorIndex	qcustomplot.h	6229;"	g	class:QCPItemRect	access:protected
+AnchorIndex	qcustomplot.h	6316;"	g	class:QCPItemText	access:protected
+AnchorIndex	qcustomplot.h	6388;"	g	class:QCPItemEllipse	access:protected
+AnchorIndex	qcustomplot.h	6451;"	g	class:QCPItemPixmap	access:protected
+AnchorIndex	qcustomplot.h	6611;"	g	class:QCPItemBracket	access:protected
+AntialiasedElement	qcustomplot.h	212;"	g	namespace:QCP
+AxisType	qcustomplot.h	1943;"	g	class:QCPAxis	access:public
+BracketStyle	qcustomplot.h	4491;"	g	class:QCPSelectionDecoratorBracket	access:public
+BracketStyle	qcustomplot.h	6580;"	g	class:QCPItemBracket	access:public
+CachedLabel	qcustomplot.h	2228;"	s	class:QCPAxisPainterPrivate	access:protected
+ChartStyle	qcustomplot.h	5845;"	g	class:QCPFinancial	access:public
+ColorInterpolation	qcustomplot.h	4406;"	g	class:QCPColorGradient	access:public
+DateStrategy	qcustomplot.h	1599;"	g	class:QCPAxisTickerDateTime	access:protected
+EndingStyle	qcustomplot.h	1463;"	g	class:QCPLineEnding	access:public
+ErrorType	qcustomplot.h	5969;"	g	class:QCPErrorBars	access:public
+ExportPen	qcustomplot.h	173;"	g	namespace:QCP
+FillOrder	qcustomplot.h	1323;"	g	class:QCPLayoutGrid	access:public
+FractionStyle	qcustomplot.h	1756;"	g	class:QCPAxisTickerPi	access:public
+GetAlpha	oscillator.h	25;"	e	enum:Oscillator::Getter
+GetBeta	oscillator.h	25;"	e	enum:Oscillator::Getter
+GetCouple	oscillator.h	25;"	e	enum:Oscillator::Getter
+GetOut	oscillator.h	25;"	e	enum:Oscillator::Getter
+GetVal	oscillator.h	25;"	e	enum:Oscillator::Getter
+Getter	oscillator.h	25;"	g	class:Oscillator	access:public
+GradientPreset	qcustomplot.h	4415;"	g	class:QCPColorGradient	access:public
+InsetPlacement	qcustomplot.h	1399;"	g	class:QCPLayoutInset	access:public
+Interaction	qcustomplot.h	249;"	g	namespace:QCP
+LabelSide	qcustomplot.h	1956;"	g	class:QCPAxis	access:public
+LayerInsertMode	qcustomplot.h	3573;"	g	class:QCustomPlot	access:public
+LayerMode	qcustomplot.h	641;"	g	class:QCPLayer	access:public
+LineStyle	qcustomplot.h	5136;"	g	class:QCPGraph	access:public
+LineStyle	qcustomplot.h	5273;"	g	class:QCPCurve	access:public
+MainWindow	mainwindow.h	23;"	x
+MainWindow	mainwindow.h	26;"	c	inherits:QMainWindow
+MainWindow	mainwindow.h	31;"	p	class:MainWindow	access:public
+MainWindow	ui_mainwindow.h	76;"	c	namespace:Ui	inherits:Ui_MainWindow
+MarginSide	qcustomplot.h	194;"	g	namespace:QCP
+Movie	movie.h	18;"	c
+Movie	movie.h	21;"	p	class:Movie	access:public
+Oscillator	oscillator.h	12;"	p	class:Oscillator	access:public
+Oscillator	oscillator.h	13;"	p	class:Oscillator	access:public
+Oscillator	oscillator.h	6;"	c
+PainterMode	qcustomplot.h	462;"	g	class:QCPPainter	access:public
+PlotItem	plotitem.h	13;"	p	class:PlotItem	access:public
+PlotItem	plotitem.h	8;"	c	inherits:QCustomPlot
+PlottingHint	qcustomplot.h	233;"	g	namespace:QCP
+PositionType	qcustomplot.h	3415;"	g	class:QCPItemPosition	access:public
+QCPAbstractItem	qcustomplot.h	102;"	x
+QCPAbstractItem	qcustomplot.h	3475;"	c	inherits:QCPLayerable
+QCPAbstractItem	qcustomplot.h	3485;"	p	class:QCPAbstractItem	access:public
+QCPAbstractItem	qcustomplot.h	3807;"	x
+QCPAbstractLegendItem	qcustomplot.h	107;"	x
+QCPAbstractLegendItem	qcustomplot.h	4676;"	c	inherits:QCPLayoutElement
+QCPAbstractLegendItem	qcustomplot.h	4689;"	p	class:QCPAbstractLegendItem	access:public
+QCPAbstractLegendItem	qcustomplot.h	4883;"	x
+QCPAbstractPaintBuffer	qcustomplot.h	513;"	c
+QCPAbstractPaintBuffer	qcustomplot.h	516;"	p	class:QCPAbstractPaintBuffer	access:public
+QCPAbstractPlottable	qcustomplot.h	100;"	x
+QCPAbstractPlottable	qcustomplot.h	3252;"	x
+QCPAbstractPlottable	qcustomplot.h	3257;"	c	inherits:QCPLayerable
+QCPAbstractPlottable	qcustomplot.h	3273;"	p	class:QCPAbstractPlottable	access:public
+QCPAbstractPlottable	qcustomplot.h	3805;"	x
+QCPAbstractPlottable1D	qcustomplot.h	3835;"	c	inherits:QCPAbstractPlottable,QCPPlottableInterface1D
+QCPAbstractPlottable1D	qcustomplot.h	3840;"	p	class:QCPAbstractPlottable1D	access:public
+QCPAxis	qcustomplot.h	1886;"	x
+QCPAxis	qcustomplot.h	1890;"	c	inherits:QCPLayerable
+QCPAxis	qcustomplot.h	1981;"	p	class:QCPAxis	access:public
+QCPAxis	qcustomplot.h	3356;"	x
+QCPAxis	qcustomplot.h	3802;"	x
+QCPAxis	qcustomplot.h	97;"	x
+QCPAxisPainterPrivate	qcustomplot.h	2187;"	c
+QCPAxisPainterPrivate	qcustomplot.h	2190;"	p	class:QCPAxisPainterPrivate	access:public
+QCPAxisPainterPrivate	qcustomplot.h	99;"	x
+QCPAxisRect	qcustomplot.h	2177;"	x
+QCPAxisRect	qcustomplot.h	3804;"	x
+QCPAxisRect	qcustomplot.h	4549;"	c	inherits:QCPLayoutElement
+QCPAxisRect	qcustomplot.h	4560;"	p	class:QCPAxisRect	access:public
+QCPAxisRect	qcustomplot.h	761;"	x
+QCPAxisRect	qcustomplot.h	98;"	x
+QCPAxisTicker	qcustomplot.h	1512;"	c
+QCPAxisTicker	qcustomplot.h	1528;"	p	class:QCPAxisTicker	access:public
+QCPAxisTickerDateTime	qcustomplot.h	1573;"	c	inherits:QCPAxisTicker
+QCPAxisTickerDateTime	qcustomplot.h	1576;"	p	class:QCPAxisTickerDateTime	access:public
+QCPAxisTickerFixed	qcustomplot.h	1666;"	c	inherits:QCPAxisTicker
+QCPAxisTickerFixed	qcustomplot.h	1682;"	p	class:QCPAxisTickerFixed	access:public
+QCPAxisTickerLog	qcustomplot.h	1806;"	c	inherits:QCPAxisTicker
+QCPAxisTickerLog	qcustomplot.h	1809;"	p	class:QCPAxisTickerLog	access:public
+QCPAxisTickerPi	qcustomplot.h	1747;"	c	inherits:QCPAxisTicker
+QCPAxisTickerPi	qcustomplot.h	1762;"	p	class:QCPAxisTickerPi	access:public
+QCPAxisTickerText	qcustomplot.h	1708;"	c	inherits:QCPAxisTicker
+QCPAxisTickerText	qcustomplot.h	1711;"	p	class:QCPAxisTickerText	access:public
+QCPAxisTickerTime	qcustomplot.h	1614;"	c	inherits:QCPAxisTicker
+QCPAxisTickerTime	qcustomplot.h	1631;"	p	class:QCPAxisTickerTime	access:public
+QCPBars	qcustomplot.h	111;"	x
+QCPBars	qcustomplot.h	5402;"	x
+QCPBars	qcustomplot.h	5438;"	c	inherits:QCPAbstractPlottable1D
+QCPBars	qcustomplot.h	5463;"	p	class:QCPBars	access:public
+QCPBarsData	qcustomplot.h	5407;"	c
+QCPBarsData	qcustomplot.h	5410;"	p	class:QCPBarsData	access:public
+QCPBarsData	qcustomplot.h	5411;"	p	class:QCPBarsData	access:public
+QCPBarsDataContainer	qcustomplot.h	5436;"	t
+QCPBarsGroup	qcustomplot.h	5342;"	c	inherits:QObject
+QCPBarsGroup	qcustomplot.h	5362;"	p	class:QCPBarsGroup	access:public
+QCPBarsGroup	qcustomplot.h	5520;"	x
+QCPColorGradient	qcustomplot.h	4397;"	c
+QCPColorGradient	qcustomplot.h	4430;"	p	class:QCPColorGradient	access:public
+QCPColorGradient	qcustomplot.h	4431;"	p	class:QCPColorGradient	access:public
+QCPColorMap	qcustomplot.h	109;"	x
+QCPColorMap	qcustomplot.h	5700;"	x
+QCPColorMap	qcustomplot.h	5704;"	c	inherits:QCPAbstractPlottable
+QCPColorMap	qcustomplot.h	5716;"	p	class:QCPColorMap	access:public
+QCPColorMapData	qcustomplot.h	5647;"	c
+QCPColorMapData	qcustomplot.h	5650;"	p	class:QCPColorMapData	access:public
+QCPColorMapData	qcustomplot.h	5652;"	p	class:QCPColorMapData	access:public
+QCPColorScale	qcustomplot.h	110;"	x
+QCPColorScale	qcustomplot.h	5002;"	x
+QCPColorScale	qcustomplot.h	5006;"	c	inherits:QCPLayoutElement
+QCPColorScale	qcustomplot.h	5020;"	p	class:QCPColorScale	access:public
+QCPColorScaleAxisRectPrivate	qcustomplot.h	4982;"	c	inherits:QCPAxisRect
+QCPColorScaleAxisRectPrivate	qcustomplot.h	4986;"	p	class:QCPColorScaleAxisRectPrivate	access:public
+QCPColorScaleAxisRectPrivate	qcustomplot.h	5079;"	x
+QCPCurve	qcustomplot.h	5259;"	c	inherits:QCPAbstractPlottable1D
+QCPCurve	qcustomplot.h	5278;"	p	class:QCPCurve	access:public
+QCPCurveData	qcustomplot.h	5227;"	c
+QCPCurveData	qcustomplot.h	5230;"	p	class:QCPCurveData	access:public
+QCPCurveData	qcustomplot.h	5231;"	p	class:QCPCurveData	access:public
+QCPCurveDataContainer	qcustomplot.h	5257;"	t
+QCPDataContainer	qcustomplot.h	2375;"	c
+QCPDataContainer	qcustomplot.h	2381;"	p	class:QCPDataContainer	access:public
+QCPDataRange	qcustomplot.h	888;"	c
+QCPDataRange	qcustomplot.h	891;"	p	class:QCPDataRange	access:public
+QCPDataRange	qcustomplot.h	892;"	p	class:QCPDataRange	access:public
+QCPDataSelection	qcustomplot.h	925;"	c
+QCPDataSelection	qcustomplot.h	928;"	p	class:QCPDataSelection	access:public
+QCPDataSelection	qcustomplot.h	929;"	p	class:QCPDataSelection	access:public
+QCPErrorBars	qcustomplot.h	5951;"	c	inherits:QCPAbstractPlottable,QCPPlottableInterface1D
+QCPErrorBars	qcustomplot.h	5974;"	p	class:QCPErrorBars	access:public
+QCPErrorBarsData	qcustomplot.h	5922;"	c
+QCPErrorBarsData	qcustomplot.h	5925;"	p	class:QCPErrorBarsData	access:public
+QCPErrorBarsData	qcustomplot.h	5926;"	p	class:QCPErrorBarsData	access:public
+QCPErrorBarsData	qcustomplot.h	5927;"	p	class:QCPErrorBarsData	access:public
+QCPErrorBarsDataContainer	qcustomplot.h	5949;"	t
+QCPFinancial	qcustomplot.h	5814;"	c	inherits:QCPAbstractPlottable1D
+QCPFinancial	qcustomplot.h	5850;"	p	class:QCPFinancial	access:public
+QCPFinancialData	qcustomplot.h	5783;"	c
+QCPFinancialData	qcustomplot.h	5786;"	p	class:QCPFinancialData	access:public
+QCPFinancialData	qcustomplot.h	5787;"	p	class:QCPFinancialData	access:public
+QCPFinancialDataContainer	qcustomplot.h	5812;"	t
+QCPGraph	qcustomplot.h	101;"	x
+QCPGraph	qcustomplot.h	3806;"	x
+QCPGraph	qcustomplot.h	5120;"	c	inherits:QCPAbstractPlottable1D
+QCPGraph	qcustomplot.h	5146;"	p	class:QCPGraph	access:public
+QCPGraphData	qcustomplot.h	5089;"	c
+QCPGraphData	qcustomplot.h	5092;"	p	class:QCPGraphData	access:public
+QCPGraphData	qcustomplot.h	5093;"	p	class:QCPGraphData	access:public
+QCPGraphDataContainer	qcustomplot.h	5118;"	t
+QCPGrid	qcustomplot.h	1839;"	c	inherits:QCPLayerable
+QCPGrid	qcustomplot.h	1851;"	p	class:QCPGrid	access:public
+QCPGrid	qcustomplot.h	2176;"	x
+QCPItemAnchor	qcustomplot.h	3367;"	c
+QCPItemAnchor	qcustomplot.h	3371;"	p	class:QCPItemAnchor	access:public
+QCPItemAnchor	qcustomplot.h	3543;"	x
+QCPItemBracket	qcustomplot.h	6564;"	c	inherits:QCPAbstractItem
+QCPItemBracket	qcustomplot.h	6587;"	p	class:QCPItemBracket	access:public
+QCPItemCurve	qcustomplot.h	6140;"	c	inherits:QCPAbstractItem
+QCPItemCurve	qcustomplot.h	6150;"	p	class:QCPItemCurve	access:public
+QCPItemEllipse	qcustomplot.h	6347;"	c	inherits:QCPAbstractItem
+QCPItemEllipse	qcustomplot.h	6357;"	p	class:QCPItemEllipse	access:public
+QCPItemLine	qcustomplot.h	6090;"	c	inherits:QCPAbstractItem
+QCPItemLine	qcustomplot.h	6100;"	p	class:QCPItemLine	access:public
+QCPItemPixmap	qcustomplot.h	6409;"	c	inherits:QCPAbstractItem
+QCPItemPixmap	qcustomplot.h	6421;"	p	class:QCPItemPixmap	access:public
+QCPItemPosition	qcustomplot.h	105;"	x
+QCPItemPosition	qcustomplot.h	3400;"	x
+QCPItemPosition	qcustomplot.h	3405;"	c	inherits:QCPItemAnchor
+QCPItemPosition	qcustomplot.h	3426;"	p	class:QCPItemPosition	access:public
+QCPItemRect	qcustomplot.h	6191;"	c	inherits:QCPAbstractItem
+QCPItemRect	qcustomplot.h	6201;"	p	class:QCPItemRect	access:public
+QCPItemStraightLine	qcustomplot.h	6047;"	c	inherits:QCPAbstractItem
+QCPItemStraightLine	qcustomplot.h	6055;"	p	class:QCPItemStraightLine	access:public
+QCPItemText	qcustomplot.h	6250;"	c	inherits:QCPAbstractItem
+QCPItemText	qcustomplot.h	6269;"	p	class:QCPItemText	access:public
+QCPItemTracer	qcustomplot.h	6478;"	c	inherits:QCPAbstractItem
+QCPItemTracer	qcustomplot.h	6506;"	p	class:QCPItemTracer	access:public
+QCPLayer	qcustomplot.h	106;"	x
+QCPLayer	qcustomplot.h	3803;"	x
+QCPLayer	qcustomplot.h	621;"	c	inherits:QObject
+QCPLayer	qcustomplot.h	646;"	p	class:QCPLayer	access:public
+QCPLayer	qcustomplot.h	760;"	x
+QCPLayerable	qcustomplot.h	686;"	x
+QCPLayerable	qcustomplot.h	690;"	c	inherits:QObject
+QCPLayerable	qcustomplot.h	701;"	p	class:QCPLayerable	access:public
+QCPLayerable	qcustomplot.h	94;"	x
+QCPLayout	qcustomplot.h	1257;"	x
+QCPLayout	qcustomplot.h	1263;"	c	inherits:QCPLayoutElement
+QCPLayout	qcustomplot.h	1267;"	p	class:QCPLayout	access:public
+QCPLayout	qcustomplot.h	96;"	x
+QCPLayoutElement	qcustomplot.h	1173;"	x
+QCPLayoutElement	qcustomplot.h	1177;"	c	inherits:QCPLayerable
+QCPLayoutElement	qcustomplot.h	1200;"	p	class:QCPLayoutElement	access:public
+QCPLayoutElement	qcustomplot.h	1297;"	x
+QCPLayoutElement	qcustomplot.h	95;"	x
+QCPLayoutGrid	qcustomplot.h	1301;"	c	inherits:QCPLayout
+QCPLayoutGrid	qcustomplot.h	1328;"	p	class:QCPLayoutGrid	access:public
+QCPLayoutInset	qcustomplot.h	1392;"	c	inherits:QCPLayout
+QCPLayoutInset	qcustomplot.h	1404;"	p	class:QCPLayoutInset	access:public
+QCPLegend	qcustomplot.h	104;"	x
+QCPLegend	qcustomplot.h	3801;"	x
+QCPLegend	qcustomplot.h	4736;"	x
+QCPLegend	qcustomplot.h	4764;"	c	inherits:QCPLayoutGrid
+QCPLegend	qcustomplot.h	4797;"	p	class:QCPLegend	access:public
+QCPLegend	qcustomplot.h	5217;"	x
+QCPLegend	qcustomplot.h	5332;"	x
+QCPLegend	qcustomplot.h	5519;"	x
+QCPLegend	qcustomplot.h	5638;"	x
+QCPLegend	qcustomplot.h	5774;"	x
+QCPLegend	qcustomplot.h	5912;"	x
+QCPLegend	qcustomplot.h	6038;"	x
+QCPLineEnding	qcustomplot.h	1448;"	c
+QCPLineEnding	qcustomplot.h	1476;"	p	class:QCPLineEnding	access:public
+QCPLineEnding	qcustomplot.h	1477;"	p	class:QCPLineEnding	access:public
+QCPMarginGroup	qcustomplot.h	1146;"	c	inherits:QObject
+QCPMarginGroup	qcustomplot.h	1150;"	p	class:QCPMarginGroup	access:public
+QCPMarginGroup	qcustomplot.h	1258;"	x
+QCPPaintBufferGlFbo	qcustomplot.h	592;"	c	inherits:QCPAbstractPaintBuffer
+QCPPaintBufferGlFbo	qcustomplot.h	595;"	p	class:QCPPaintBufferGlFbo	access:public
+QCPPaintBufferGlPbuffer	qcustomplot.h	569;"	c	inherits:QCPAbstractPaintBuffer
+QCPPaintBufferGlPbuffer	qcustomplot.h	572;"	p	class:QCPPaintBufferGlPbuffer	access:public
+QCPPaintBufferPixmap	qcustomplot.h	548;"	c	inherits:QCPAbstractPaintBuffer
+QCPPaintBufferPixmap	qcustomplot.h	551;"	p	class:QCPPaintBufferPixmap	access:public
+QCPPainter	qcustomplot.h	454;"	c	inherits:QPainter
+QCPPainter	qcustomplot.h	471;"	p	class:QCPPainter	access:public
+QCPPainter	qcustomplot.h	472;"	p	class:QCPPainter	access:public
+QCPPainter	qcustomplot.h	92;"	x
+QCPPlottableInterface1D	qcustomplot.h	103;"	x
+QCPPlottableInterface1D	qcustomplot.h	3818;"	c
+QCPPlottableLegendItem	qcustomplot.h	3357;"	x
+QCPPlottableLegendItem	qcustomplot.h	4740;"	c	inherits:QCPAbstractLegendItem
+QCPPlottableLegendItem	qcustomplot.h	4744;"	p	class:QCPPlottableLegendItem	access:public
+QCPRange	qcustomplot.h	770;"	c
+QCPRange	qcustomplot.h	775;"	p	class:QCPRange	access:public
+QCPRange	qcustomplot.h	776;"	p	class:QCPRange	access:public
+QCPScatterStyle	qcustomplot.h	2259;"	c
+QCPScatterStyle	qcustomplot.h	2310;"	p	class:QCPScatterStyle	access:public
+QCPScatterStyle	qcustomplot.h	2311;"	p	class:QCPScatterStyle	access:public
+QCPScatterStyle	qcustomplot.h	2312;"	p	class:QCPScatterStyle	access:public
+QCPScatterStyle	qcustomplot.h	2313;"	p	class:QCPScatterStyle	access:public
+QCPScatterStyle	qcustomplot.h	2314;"	p	class:QCPScatterStyle	access:public
+QCPScatterStyle	qcustomplot.h	2315;"	p	class:QCPScatterStyle	access:public
+QCPScatterStyle	qcustomplot.h	2316;"	p	class:QCPScatterStyle	access:public
+QCPSelectionDecorator	qcustomplot.h	3210;"	c
+QCPSelectionDecorator	qcustomplot.h	3214;"	p	class:QCPSelectionDecorator	access:public
+QCPSelectionDecoratorBracket	qcustomplot.h	4480;"	c	inherits:QCPSelectionDecorator
+QCPSelectionDecoratorBracket	qcustomplot.h	4499;"	p	class:QCPSelectionDecoratorBracket	access:public
+QCPSelectionRect	qcustomplot.h	108;"	x
+QCPSelectionRect	qcustomplot.h	1092;"	c	inherits:QCPLayerable
+QCPSelectionRect	qcustomplot.h	1096;"	p	class:QCPSelectionRect	access:public
+QCPStatisticalBox	qcustomplot.h	5569;"	c	inherits:QCPAbstractPlottable1D
+QCPStatisticalBox	qcustomplot.h	5582;"	p	class:QCPStatisticalBox	access:public
+QCPStatisticalBoxData	qcustomplot.h	5530;"	c
+QCPStatisticalBoxData	qcustomplot.h	5533;"	p	class:QCPStatisticalBoxData	access:public
+QCPStatisticalBoxData	qcustomplot.h	5534;"	p	class:QCPStatisticalBoxData	access:public
+QCPStatisticalBoxDataContainer	qcustomplot.h	5567;"	t
+QCPTextElement	qcustomplot.h	4894;"	c	inherits:QCPLayoutElement
+QCPTextElement	qcustomplot.h	4907;"	p	class:QCPTextElement	access:public
+QCPTextElement	qcustomplot.h	4908;"	p	class:QCPTextElement	access:public
+QCPTextElement	qcustomplot.h	4909;"	p	class:QCPTextElement	access:public
+QCPTextElement	qcustomplot.h	4910;"	p	class:QCPTextElement	access:public
+QCPTextElement	qcustomplot.h	4911;"	p	class:QCPTextElement	access:public
+QCPVector2D	qcustomplot.h	380;"	c
+QCPVector2D	qcustomplot.h	383;"	p	class:QCPVector2D	access:public
+QCPVector2D	qcustomplot.h	384;"	p	class:QCPVector2D	access:public
+QCPVector2D	qcustomplot.h	385;"	p	class:QCPVector2D	access:public
+QCPVector2D	qcustomplot.h	386;"	p	class:QCPVector2D	access:public
+QCustomPlot	qcustomplot.h	1137;"	x
+QCustomPlot	qcustomplot.h	1256;"	x
+QCustomPlot	qcustomplot.h	2175;"	x
+QCustomPlot	qcustomplot.h	3355;"	x
+QCustomPlot	qcustomplot.h	3542;"	x
+QCustomPlot	qcustomplot.h	3552;"	c	inherits:QWidget
+QCustomPlot	qcustomplot.h	3590;"	p	class:QCustomPlot	access:public
+QCustomPlot	qcustomplot.h	4666;"	x
+QCustomPlot	qcustomplot.h	4882;"	x
+QCustomPlot	qcustomplot.h	5216;"	x
+QCustomPlot	qcustomplot.h	5331;"	x
+QCustomPlot	qcustomplot.h	5518;"	x
+QCustomPlot	qcustomplot.h	5637;"	x
+QCustomPlot	qcustomplot.h	5773;"	x
+QCustomPlot	qcustomplot.h	5911;"	x
+QCustomPlot	qcustomplot.h	6037;"	x
+QCustomPlot	qcustomplot.h	685;"	x
+QCustomPlot	qcustomplot.h	759;"	x
+QCustomPlot	qcustomplot.h	93;"	x
+Q_DECL_OVERRIDE	qcustomplot.h	1134;"	m	class:QCPSelectionRect	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1135;"	m	class:QCPSelectionRect	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1233;"	m	class:QCPLayoutElement	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1251;"	m	class:QCPLayoutElement	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1270;"	m	class:QCPLayout	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1271;"	m	class:QCPLayout	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1352;"	m	class:QCPLayoutGrid	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1354;"	m	class:QCPLayoutGrid	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1355;"	m	class:QCPLayoutGrid	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1356;"	m	class:QCPLayoutGrid	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1357;"	m	class:QCPLayoutGrid	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1358;"	m	class:QCPLayoutGrid	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1359;"	m	class:QCPLayoutGrid	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1360;"	m	class:QCPLayoutGrid	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1418;"	m	class:QCPLayoutInset	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1419;"	m	class:QCPLayoutInset	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1420;"	m	class:QCPLayoutInset	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1421;"	m	class:QCPLayoutInset	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1422;"	m	class:QCPLayoutInset	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1424;"	m	class:QCPLayoutInset	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	1602;"	m	class:QCPAxisTickerDateTime	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1603;"	m	class:QCPAxisTickerDateTime	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1604;"	m	class:QCPAxisTickerDateTime	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1605;"	m	class:QCPAxisTickerDateTime	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1651;"	m	class:QCPAxisTickerTime	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1652;"	m	class:QCPAxisTickerTime	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1653;"	m	class:QCPAxisTickerTime	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1698;"	m	class:QCPAxisTickerFixed	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1734;"	m	class:QCPAxisTickerText	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1735;"	m	class:QCPAxisTickerText	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1736;"	m	class:QCPAxisTickerText	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1737;"	m	class:QCPAxisTickerText	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1787;"	m	class:QCPAxisTickerPi	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1788;"	m	class:QCPAxisTickerPi	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1789;"	m	class:QCPAxisTickerPi	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1828;"	m	class:QCPAxisTickerLog	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1829;"	m	class:QCPAxisTickerLog	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1830;"	m	class:QCPAxisTickerLog	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1879;"	m	class:QCPGrid	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	1880;"	m	class:QCPGrid	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	2076;"	m	class:QCPAxis	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	2155;"	m	class:QCPAxis	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	2156;"	m	class:QCPAxis	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	2157;"	m	class:QCPAxis	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	2159;"	m	class:QCPAxis	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	2160;"	m	class:QCPAxis	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3337;"	m	class:QCPAbstractPlottable	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3338;"	m	class:QCPAbstractPlottable	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3339;"	m	class:QCPAbstractPlottable	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3340;"	m	class:QCPAbstractPlottable	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3342;"	m	class:QCPAbstractPlottable	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3343;"	m	class:QCPAbstractPlottable	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3501;"	m	class:QCPAbstractItem	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	3523;"	m	class:QCPAbstractItem	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3524;"	m	class:QCPAbstractItem	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3525;"	m	class:QCPAbstractItem	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3526;"	m	class:QCPAbstractItem	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3528;"	m	class:QCPAbstractItem	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3529;"	m	class:QCPAbstractItem	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3768;"	m	class:QCustomPlot	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3769;"	m	class:QCustomPlot	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3770;"	m	class:QCustomPlot	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3771;"	m	class:QCustomPlot	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3772;"	m	class:QCustomPlot	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3773;"	m	class:QCustomPlot	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3774;"	m	class:QCustomPlot	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3775;"	m	class:QCustomPlot	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	3776;"	m	class:QCustomPlot	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4625;"	m	class:QCPAxisRect	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	4626;"	m	class:QCPAxisRect	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	4649;"	m	class:QCPAxisRect	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4650;"	m	class:QCPAxisRect	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4651;"	m	class:QCPAxisRect	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4652;"	m	class:QCPAxisRect	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4654;"	m	class:QCPAxisRect	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4655;"	m	class:QCPAxisRect	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4656;"	m	class:QCPAxisRect	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4657;"	m	class:QCPAxisRect	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4709;"	m	class:QCPAbstractLegendItem	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	4725;"	m	class:QCPAbstractLegendItem	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4726;"	m	class:QCPAbstractLegendItem	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4727;"	m	class:QCPAbstractLegendItem	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4728;"	m	class:QCPAbstractLegendItem	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4730;"	m	class:QCPAbstractLegendItem	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4731;"	m	class:QCPAbstractLegendItem	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4754;"	m	class:QCPPlottableLegendItem	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4755;"	m	class:QCPPlottableLegendItem	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4834;"	m	class:QCPLegend	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	4867;"	m	class:QCPLegend	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4868;"	m	class:QCPLegend	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4869;"	m	class:QCPLegend	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4870;"	m	class:QCPLegend	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4872;"	m	class:QCPLegend	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4873;"	m	class:QCPLegend	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4934;"	m	class:QCPTextElement	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	4935;"	m	class:QCPTextElement	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	4936;"	m	class:QCPTextElement	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	4937;"	m	class:QCPTextElement	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	4957;"	m	class:QCPTextElement	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4958;"	m	class:QCPTextElement	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4959;"	m	class:QCPTextElement	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4960;"	m	class:QCPTextElement	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4962;"	m	class:QCPTextElement	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	4963;"	m	class:QCPTextElement	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	5049;"	m	class:QCPColorScale	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5069;"	m	class:QCPColorScale	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	5071;"	m	class:QCPColorScale	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	5072;"	m	class:QCPColorScale	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	5073;"	m	class:QCPColorScale	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	5074;"	m	class:QCPColorScale	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	5171;"	m	class:QCPGraph	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5172;"	m	class:QCPGraph	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5173;"	m	class:QCPGraph	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5184;"	m	class:QCPGraph	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	5185;"	m	class:QCPGraph	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	5302;"	m	class:QCPCurve	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5303;"	m	class:QCPCurve	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5304;"	m	class:QCPCurve	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5313;"	m	class:QCPCurve	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	5314;"	m	class:QCPCurve	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	5492;"	m	class:QCPBars	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5493;"	m	class:QCPBars	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5494;"	m	class:QCPBars	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5495;"	m	class:QCPBars	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5496;"	m	class:QCPBars	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5508;"	m	class:QCPBars	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	5509;"	m	class:QCPBars	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	555;"	m	class:QCPPaintBufferPixmap	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	556;"	m	class:QCPPaintBufferPixmap	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	557;"	m	class:QCPPaintBufferPixmap	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5610;"	m	class:QCPStatisticalBox	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5611;"	m	class:QCPStatisticalBox	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5612;"	m	class:QCPStatisticalBox	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5613;"	m	class:QCPStatisticalBox	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5625;"	m	class:QCPStatisticalBox	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	5626;"	m	class:QCPStatisticalBox	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	564;"	m	class:QCPPaintBufferPixmap	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	5742;"	m	class:QCPColorMap	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5743;"	m	class:QCPColorMap	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5744;"	m	class:QCPColorMap	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	576;"	m	class:QCPPaintBufferGlPbuffer	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5770;"	m	class:QCPColorMap	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	5771;"	m	class:QCPColorMap	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	577;"	m	class:QCPPaintBufferGlPbuffer	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	578;"	m	class:QCPPaintBufferGlPbuffer	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	586;"	m	class:QCPPaintBufferGlPbuffer	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	5881;"	m	class:QCPFinancial	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5882;"	m	class:QCPFinancial	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5883;"	m	class:QCPFinancial	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5884;"	m	class:QCPFinancial	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	5899;"	m	class:QCPFinancial	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	5900;"	m	class:QCPFinancial	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	599;"	m	class:QCPPaintBufferGlFbo	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	600;"	m	class:QCPPaintBufferGlFbo	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	6011;"	m	class:QCPErrorBars	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	601;"	m	class:QCPPaintBufferGlFbo	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	6023;"	m	class:QCPErrorBars	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6024;"	m	class:QCPErrorBars	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6025;"	m	class:QCPErrorBars	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6026;"	m	class:QCPErrorBars	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	602;"	m	class:QCPPaintBufferGlFbo	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	6067;"	m	class:QCPItemStraightLine	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	6077;"	m	class:QCPItemStraightLine	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6116;"	m	class:QCPItemLine	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	611;"	m	class:QCPPaintBufferGlFbo	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6127;"	m	class:QCPItemLine	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6166;"	m	class:QCPItemCurve	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	6179;"	m	class:QCPItemCurve	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6217;"	m	class:QCPItemRect	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	6236;"	m	class:QCPItemRect	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6237;"	m	class:QCPItemRect	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6303;"	m	class:QCPItemText	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	6330;"	m	class:QCPItemText	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6331;"	m	class:QCPItemText	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6373;"	m	class:QCPItemEllipse	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	6395;"	m	class:QCPItemEllipse	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6396;"	m	class:QCPItemEllipse	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6439;"	m	class:QCPItemPixmap	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	6463;"	m	class:QCPItemPixmap	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6464;"	m	class:QCPItemPixmap	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6532;"	m	class:QCPItemTracer	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	6550;"	m	class:QCPItemTracer	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6603;"	m	class:QCPItemBracket	access:public
+Q_DECL_OVERRIDE	qcustomplot.h	6617;"	m	class:QCPItemBracket	access:protected
+Q_DECL_OVERRIDE	qcustomplot.h	6618;"	m	class:QCPItemBracket	access:protected
+RefreshPriority	qcustomplot.h	3583;"	g	class:QCustomPlot	access:public
+ResolutionUnit	qcustomplot.h	163;"	g	namespace:QCP
+Savedata	savedata.h	15;"	c
+Savedata	savedata.h	18;"	p	class:Savedata	access:public
+ScaleStrategy	qcustomplot.h	1676;"	g	class:QCPAxisTickerFixed	access:public
+ScaleType	qcustomplot.h	1964;"	g	class:QCPAxis	access:public
+ScatterProperty	qcustomplot.h	2271;"	g	class:QCPScatterStyle	access:public
+ScatterShape	qcustomplot.h	2289;"	g	class:QCPScatterStyle	access:public
+ScriptLauncher	scriptlauncher.h	14;"	c
+ScriptLauncher	scriptlauncher.h	46;"	p	class:ScriptLauncher	access:private
+SelectablePart	qcustomplot.h	1972;"	g	class:QCPAxis	access:public
+SelectablePart	qcustomplot.h	4789;"	g	class:QCPLegend	access:public
+SelectionRectMode	qcustomplot.h	265;"	g	namespace:QCP
+SelectionType	qcustomplot.h	289;"	g	namespace:QCP
+SetAlpha	oscillator.h	26;"	e	enum:Oscillator::Setter
+SetBeta	oscillator.h	26;"	e	enum:Oscillator::Setter
+SetCouple	oscillator.h	26;"	e	enum:Oscillator::Setter
+SetVal	oscillator.h	26;"	e	enum:Oscillator::Setter
+Setter	oscillator.h	26;"	g	class:Oscillator	access:public
+SharedMemory	sharedmemory.h	18;"	c
+SharedMemory	sharedmemory.h	21;"	p	class:SharedMemory	access:public
+SignDomain	qcustomplot.h	184;"	g	namespace:QCP
+SliderItem	slideritem.h	11;"	c	inherits:QSlider
+SliderItem	slideritem.h	17;"	p	class:SliderItem	access:public
+SpacingType	qcustomplot.h	5356;"	g	class:QCPBarsGroup	access:public
+StreamCatcher	streamcatcher.h	12;"	c
+StreamCatcher	streamcatcher.h	28;"	p	class:StreamCatcher	access:private
+TickLabelData	qcustomplot.h	2233;"	s	class:QCPAxisPainterPrivate	access:protected
+TickStepStrategy	qcustomplot.h	1521;"	g	class:QCPAxisTicker	access:public
+TimeUnit	qcustomplot.h	1623;"	g	class:QCPAxisTickerTime	access:public
+TracerStyle	qcustomplot.h	6498;"	g	class:QCPItemTracer	access:public
+Ui_MainWindow	ui_mainwindow.h	26;"	c
+UpdatePhase	qcustomplot.h	1194;"	g	class:QCPLayoutElement	access:public
+VideoItem	videoitem.h	16;"	c	inherits:QObject,QGraphicsItem
+VideoItem	videoitem.h	21;"	p	class:VideoItem	access:public
+WidthType	qcustomplot.h	5457;"	g	class:QCPBars	access:public
+WidthType	qcustomplot.h	5834;"	g	class:QCPFinancial	access:public
+_alpha	oscillator.h	31;"	m	class:Oscillator	access:private
+_alphaSlider1	mainwindow.h	86;"	m	class:MainWindow	access:private
+_alphaSlider2	mainwindow.h	87;"	m	class:MainWindow	access:private
+_beta	oscillator.h	32;"	m	class:Oscillator	access:private
+_betaSlider1	mainwindow.h	88;"	m	class:MainWindow	access:private
+_betaSlider2	mainwindow.h	89;"	m	class:MainWindow	access:private
+_bgr_buffer	streamcatcher.h	43;"	m	class:StreamCatcher	access:private
+_buffer_selector	streamcatcher.h	42;"	m	class:StreamCatcher	access:private
+_capture	streamcatcher.h	35;"	m	class:StreamCatcher	access:private
+_choice	plotitem.h	19;"	m	class:PlotItem	access:private
+_choice	slideritem.h	21;"	m	class:SliderItem	access:private
+_choosen_osc	scriptlauncher.h	49;"	m	class:ScriptLauncher	access:private
+_config_menu_action	mainwindow.h	72;"	m	class:MainWindow	access:private
+_connect_nao_action	mainwindow.h	73;"	m	class:MainWindow	access:private
+_connection_menu	mainwindow.h	71;"	m	class:MainWindow	access:private
+_couple	oscillator.h	34;"	m	class:Oscillator	access:private
+_coupleSlider1	mainwindow.h	84;"	m	class:MainWindow	access:private
+_coupleSlider2	mainwindow.h	85;"	m	class:MainWindow	access:private
+_current_frame	streamcatcher.h	37;"	m	class:StreamCatcher	access:private
+_data	sharedmemory.h	31;"	m	class:SharedMemory	access:private
+_error	scriptlauncher.h	59;"	m	class:ScriptLauncher	access:private
+_fd	sharedmemory.h	35;"	m	class:SharedMemory	access:private
+_height	movie.h	31;"	m	class:Movie	access:private
+_height	streamcatcher.h	40;"	m	class:StreamCatcher	access:private
+_height	videoitem.h	30;"	m	class:VideoItem	access:private
+_instance	scriptlauncher.cpp	3;"	m	class:ScriptLauncher	file:
+_instance	scriptlauncher.h	62;"	m	class:ScriptLauncher	access:private
+_instance	streamcatcher.cpp	3;"	m	class:StreamCatcher	file:
+_instance	streamcatcher.h	34;"	m	class:StreamCatcher	access:private
+_ip	scriptlauncher.h	50;"	m	class:ScriptLauncher	access:private
+_isClosed	mainwindow.h	60;"	m	class:MainWindow	access:private
+_joint	scriptlauncher.h	53;"	m	class:ScriptLauncher	access:private
+_joint	sharedmemory.h	28;"	m	class:SharedMemory	access:private
+_last_error	mainwindow.h	70;"	m	class:MainWindow	access:private
+_loop	movie.h	28;"	m	class:Movie	access:private
+_loop	savedata.h	26;"	m	class:Savedata	access:private
+_loop	sharedmemory.h	33;"	m	class:SharedMemory	access:private
+_loop_bool	streamcatcher.cpp	4;"	m	class:StreamCatcher	file:
+_loop_bool	streamcatcher.h	38;"	m	class:StreamCatcher	access:private
+_loop_thread	streamcatcher.h	36;"	m	class:StreamCatcher	access:private
+_mainscriptpath	scriptlauncher.h	56;"	m	class:ScriptLauncher	access:private
+_menuBar	mainwindow.h	75;"	m	class:MainWindow	access:private
+_movie	mainwindow.h	62;"	m	class:MainWindow	access:private
+_naoqipath	scriptlauncher.h	55;"	m	class:ScriptLauncher	access:private
+_osc	plotitem.h	23;"	m	class:PlotItem	access:private
+_osc	sharedmemory.h	32;"	m	class:SharedMemory	access:private
+_osc	slideritem.h	20;"	m	class:SliderItem	access:private
+_osc0	scriptlauncher.h	47;"	m	class:ScriptLauncher	access:private
+_osc1	scriptlauncher.h	48;"	m	class:ScriptLauncher	access:private
+_oscH	savedata.h	24;"	m	class:Savedata	access:private
+_oscV	savedata.h	25;"	m	class:Savedata	access:private
+_out1	oscillator.h	29;"	m	class:Oscillator	access:private
+_out2	oscillator.h	30;"	m	class:Oscillator	access:private
+_p	scriptlauncher.h	60;"	m	class:ScriptLauncher	access:private
+_path	sharedmemory.h	29;"	m	class:SharedMemory	access:private
+_pid	scriptlauncher.h	52;"	m	class:ScriptLauncher	access:private
+_plotitemOSCX	mainwindow.h	82;"	m	class:MainWindow	access:private
+_plotitemOSCY	mainwindow.h	83;"	m	class:MainWindow	access:private
+_plotitemX	mainwindow.h	80;"	m	class:MainWindow	access:private
+_plotitemY	mainwindow.h	81;"	m	class:MainWindow	access:private
+_port	scriptlauncher.h	51;"	m	class:ScriptLauncher	access:private
+_pythonpath	scriptlauncher.h	57;"	m	class:ScriptLauncher	access:private
+_running	movie.h	29;"	m	class:Movie	access:private
+_running	savedata.h	27;"	m	class:Savedata	access:private
+_sd	mainwindow.h	63;"	m	class:MainWindow	access:private
+_sharedmemorypath	scriptlauncher.h	58;"	m	class:ScriptLauncher	access:private
+_size	movie.h	32;"	m	class:Movie	access:private
+_size	sharedmemory.h	30;"	m	class:SharedMemory	access:private
+_size	streamcatcher.h	41;"	m	class:StreamCatcher	access:private
+_size	videoitem.h	31;"	m	class:VideoItem	access:private
+_sl	mainwindow.h	69;"	m	class:MainWindow	access:private
+_sm	scriptlauncher.h	61;"	m	class:ScriptLauncher	access:private
+_status	scriptlauncher.h	54;"	m	class:ScriptLauncher	access:private
+_streamcatcher	movie.h	27;"	m	class:Movie	access:private
+_streamcatcher	videoitem.h	27;"	m	class:VideoItem	access:private
+_timer	plotitem.h	20;"	m	class:PlotItem	access:private
+_timer	videoitem.h	26;"	m	class:VideoItem	access:private
+_val	oscillator.h	33;"	m	class:Oscillator	access:private
+_vec	plotitem.h	21;"	m	class:PlotItem	access:private
+_width	movie.h	30;"	m	class:Movie	access:private
+_width	streamcatcher.h	39;"	m	class:StreamCatcher	access:private
+_width	videoitem.h	29;"	m	class:VideoItem	access:private
+_x	plotitem.h	22;"	m	class:PlotItem	access:private
+abbreviateDecimalPowers	qcustomplot.h	2220;"	m	class:QCPAxisPainterPrivate	access:public
+accepted	qcustomplot.h	1117;"	p	class:QCPSelectionRect	access:public
+add	qcustomplot.h	2394;"	p	class:QCPDataContainer	access:public
+add	qcustomplot.h	2395;"	p	class:QCPDataContainer	access:public
+add	qcustomplot.h	2396;"	p	class:QCPDataContainer	access:public
+addAxes	qcustomplot.h	4599;"	p	class:QCPAxisRect	access:public
+addAxis	qcustomplot.h	4598;"	p	class:QCPAxisRect	access:public
+addChild	qcustomplot.h	1167;"	p	class:QCPMarginGroup	access:protected
+addChild	qcustomplot.h	679;"	p	class:QCPLayer	access:protected
+addChildX	qcustomplot.h	3392;"	p	class:QCPItemAnchor	access:protected
+addChildY	qcustomplot.h	3394;"	p	class:QCPItemAnchor	access:protected
+addData	qcustomplot.h	5167;"	p	class:QCPGraph	access:public
+addData	qcustomplot.h	5168;"	p	class:QCPGraph	access:public
+addData	qcustomplot.h	5296;"	p	class:QCPCurve	access:public
+addData	qcustomplot.h	5297;"	p	class:QCPCurve	access:public
+addData	qcustomplot.h	5298;"	p	class:QCPCurve	access:public
+addData	qcustomplot.h	5299;"	p	class:QCPCurve	access:public
+addData	qcustomplot.h	5486;"	p	class:QCPBars	access:public
+addData	qcustomplot.h	5487;"	p	class:QCPBars	access:public
+addData	qcustomplot.h	5606;"	p	class:QCPStatisticalBox	access:public
+addData	qcustomplot.h	5607;"	p	class:QCPStatisticalBox	access:public
+addData	qcustomplot.h	5877;"	p	class:QCPFinancial	access:public
+addData	qcustomplot.h	5878;"	p	class:QCPFinancial	access:public
+addData	qcustomplot.h	5993;"	p	class:QCPErrorBars	access:public
+addData	qcustomplot.h	5994;"	p	class:QCPErrorBars	access:public
+addData	qcustomplot.h	5995;"	p	class:QCPErrorBars	access:public
+addData	qcustomplot.h	5996;"	p	class:QCPErrorBars	access:public
+addDataRange	qcustomplot.h	954;"	p	class:QCPDataSelection	access:public
+addElement	qcustomplot.h	1364;"	p	class:QCPLayoutGrid	access:public
+addElement	qcustomplot.h	1365;"	p	class:QCPLayoutGrid	access:public
+addElement	qcustomplot.h	1427;"	p	class:QCPLayoutInset	access:public
+addElement	qcustomplot.h	1428;"	p	class:QCPLayoutInset	access:public
+addFillBasePoints	qcustomplot.h	5205;"	p	class:QCPGraph	access:protected
+addGraph	qcustomplot.h	3651;"	p	class:QCustomPlot	access:public
+addItem	qcustomplot.h	4842;"	p	class:QCPLegend	access:public
+addLayer	qcustomplot.h	3676;"	p	class:QCustomPlot	access:public
+addMovie	mainwindow.h	32;"	p	class:MainWindow	access:public
+addOscillators	mainwindow.h	35;"	p	class:MainWindow	access:public
+addSaveData	mainwindow.h	33;"	p	class:MainWindow	access:public
+addScriptLauncher	mainwindow.h	34;"	p	class:MainWindow	access:public
+addTick	qcustomplot.h	1724;"	p	class:QCPAxisTickerText	access:public
+addTicks	qcustomplot.h	1725;"	p	class:QCPAxisTickerText	access:public
+addTicks	qcustomplot.h	1726;"	p	class:QCPAxisTickerText	access:public
+addToLegend	qcustomplot.h	3315;"	p	class:QCPAbstractPlottable	access:public
+addToLegend	qcustomplot.h	3316;"	p	class:QCPAbstractPlottable	access:public
+adoptElement	qcustomplot.h	1291;"	p	class:QCPLayout	access:protected
+aeAll	qcustomplot.h	223;"	e	enum:QCP::AntialiasedElement
+aeAxes	qcustomplot.h	212;"	e	enum:QCP::AntialiasedElement
+aeFills	qcustomplot.h	220;"	e	enum:QCP::AntialiasedElement
+aeGrid	qcustomplot.h	213;"	e	enum:QCP::AntialiasedElement
+aeItems	qcustomplot.h	218;"	e	enum:QCP::AntialiasedElement
+aeLegend	qcustomplot.h	215;"	e	enum:QCP::AntialiasedElement
+aeLegendItems	qcustomplot.h	216;"	e	enum:QCP::AntialiasedElement
+aeNone	qcustomplot.h	224;"	e	enum:QCP::AntialiasedElement
+aeOther	qcustomplot.h	222;"	e	enum:QCP::AntialiasedElement
+aePlottables	qcustomplot.h	217;"	e	enum:QCP::AntialiasedElement
+aeScatters	qcustomplot.h	219;"	e	enum:QCP::AntialiasedElement
+aeSubGrid	qcustomplot.h	214;"	e	enum:QCP::AntialiasedElement
+aeZeroLine	qcustomplot.h	221;"	e	enum:QCP::AntialiasedElement
+afterReplot	qcustomplot.h	3722;"	p	class:QCustomPlot	access:public
+aiBottom	qcustomplot.h	6229;"	e	enum:QCPItemRect::AnchorIndex
+aiBottom	qcustomplot.h	6316;"	e	enum:QCPItemText::AnchorIndex
+aiBottom	qcustomplot.h	6388;"	e	enum:QCPItemEllipse::AnchorIndex
+aiBottom	qcustomplot.h	6451;"	e	enum:QCPItemPixmap::AnchorIndex
+aiBottomLeft	qcustomplot.h	6229;"	e	enum:QCPItemRect::AnchorIndex
+aiBottomLeft	qcustomplot.h	6316;"	e	enum:QCPItemText::AnchorIndex
+aiBottomLeft	qcustomplot.h	6451;"	e	enum:QCPItemPixmap::AnchorIndex
+aiBottomLeftRim	qcustomplot.h	6388;"	e	enum:QCPItemEllipse::AnchorIndex
+aiBottomRight	qcustomplot.h	6316;"	e	enum:QCPItemText::AnchorIndex
+aiBottomRightRim	qcustomplot.h	6388;"	e	enum:QCPItemEllipse::AnchorIndex
+aiCenter	qcustomplot.h	6388;"	e	enum:QCPItemEllipse::AnchorIndex
+aiCenter	qcustomplot.h	6611;"	e	enum:QCPItemBracket::AnchorIndex
+aiLeft	qcustomplot.h	6229;"	e	enum:QCPItemRect::AnchorIndex
+aiLeft	qcustomplot.h	6316;"	e	enum:QCPItemText::AnchorIndex
+aiLeft	qcustomplot.h	6388;"	e	enum:QCPItemEllipse::AnchorIndex
+aiLeft	qcustomplot.h	6451;"	e	enum:QCPItemPixmap::AnchorIndex
+aiRight	qcustomplot.h	6229;"	e	enum:QCPItemRect::AnchorIndex
+aiRight	qcustomplot.h	6316;"	e	enum:QCPItemText::AnchorIndex
+aiRight	qcustomplot.h	6388;"	e	enum:QCPItemEllipse::AnchorIndex
+aiRight	qcustomplot.h	6451;"	e	enum:QCPItemPixmap::AnchorIndex
+aiTop	qcustomplot.h	6229;"	e	enum:QCPItemRect::AnchorIndex
+aiTop	qcustomplot.h	6316;"	e	enum:QCPItemText::AnchorIndex
+aiTop	qcustomplot.h	6388;"	e	enum:QCPItemEllipse::AnchorIndex
+aiTop	qcustomplot.h	6451;"	e	enum:QCPItemPixmap::AnchorIndex
+aiTopLeft	qcustomplot.h	6316;"	e	enum:QCPItemText::AnchorIndex
+aiTopLeftRim	qcustomplot.h	6388;"	e	enum:QCPItemEllipse::AnchorIndex
+aiTopRight	qcustomplot.h	6229;"	e	enum:QCPItemRect::AnchorIndex
+aiTopRight	qcustomplot.h	6316;"	e	enum:QCPItemText::AnchorIndex
+aiTopRight	qcustomplot.h	6451;"	e	enum:QCPItemPixmap::AnchorIndex
+aiTopRightRim	qcustomplot.h	6388;"	e	enum:QCPItemEllipse::AnchorIndex
+alpha	qcustomplot.h	5663;"	p	class:QCPColorMapData	access:public
+anchor	qcustomplot.h	3507;"	p	class:QCPAbstractItem	access:public
+anchorPixelPosition	qcustomplot.h	3532;"	p	class:QCPAbstractItem	access:protected	implementation:virtual
+append	qcustomplot.h	5380;"	p	class:QCPBarsGroup	access:public
+applyAntialiasingHint	qcustomplot.h	754;"	p	class:QCPLayerable	access:protected
+applyBrush	qcustomplot.h	3231;"	p	class:QCPSelectionDecorator	access:public
+applyDefaultAntialiasingHint	qcustomplot.h	738;"	p	class:QCPLayerable	access:protected	implementation:pure virtual
+applyFillAntialiasingHint	qcustomplot.h	3349;"	p	class:QCPAbstractPlottable	access:protected
+applyPen	qcustomplot.h	3230;"	p	class:QCPSelectionDecorator	access:public
+applyScattersAntialiasingHint	qcustomplot.h	3350;"	p	class:QCPAbstractPlottable	access:protected
+applyTo	qcustomplot.h	2339;"	p	class:QCPScatterStyle	access:public
+atBottom	qcustomplot.h	1946;"	e	enum:QCPAxis::AxisType
+atLeft	qcustomplot.h	1943;"	e	enum:QCPAxis::AxisType
+atRight	qcustomplot.h	1944;"	e	enum:QCPAxis::AxisType
+atTop	qcustomplot.h	1945;"	e	enum:QCPAxis::AxisType
+axes	qcustomplot.h	4596;"	p	class:QCPAxisRect	access:public
+axes	qcustomplot.h	4597;"	p	class:QCPAxisRect	access:public
+axis	qcustomplot.h	4595;"	p	class:QCPAxisRect	access:public
+axisClick	qcustomplot.h	3715;"	p	class:QCustomPlot	access:public
+axisCount	qcustomplot.h	4594;"	p	class:QCPAxisRect	access:public
+axisDoubleClick	qcustomplot.h	3716;"	p	class:QCustomPlot	access:public
+axisRect	qcustomplot.h	2218;"	m	class:QCPAxisPainterPrivate	access:public
+axisRect	qcustomplot.h	3441;"	p	class:QCPItemPosition	access:public
+axisRect	qcustomplot.h	3682;"	p	class:QCustomPlot	access:public
+axisRectAt	qcustomplot.h	3685;"	p	class:QCustomPlot	access:public
+axisRectCount	qcustomplot.h	3681;"	p	class:QCustomPlot	access:public
+axisRects	qcustomplot.h	3683;"	p	class:QCustomPlot	access:public
+axisRemoved	qcustomplot.h	3781;"	p	class:QCustomPlot	access:protected	implementation:virtual
+axisSelectableChanged	qcustomplot.h	5001;"	p	class:QCPColorScaleAxisRectPrivate	access:protected
+axisSelectionChanged	qcustomplot.h	5000;"	p	class:QCPColorScaleAxisRectPrivate	access:protected
+bars	qcustomplot.h	5375;"	p	class:QCPBarsGroup	access:public
+baseBounds	qcustomplot.h	2236;"	m	struct:QCPAxisPainterPrivate::TickLabelData	access:public
+baseFont	qcustomplot.h	2237;"	m	struct:QCPAxisPainterPrivate::TickLabelData	access:public
+basePart	qcustomplot.h	2235;"	m	struct:QCPAxisPainterPrivate::TickLabelData	access:public
+basePen	qcustomplot.h	2203;"	m	class:QCPAxisPainterPrivate	access:public
+beforeReplot	qcustomplot.h	3721;"	p	class:QCustomPlot	access:public
+begin	qcustomplot.h	484;"	p	class:QCPPainter	access:public
+bottom	qcustomplot.h	6224;"	m	class:QCPItemRect	access:public
+bottom	qcustomplot.h	6311;"	m	class:QCPItemText	access:public
+bottom	qcustomplot.h	6382;"	m	class:QCPItemEllipse	access:public
+bottom	qcustomplot.h	6446;"	m	class:QCPItemPixmap	access:public
+bottomLeft	qcustomplot.h	6225;"	m	class:QCPItemRect	access:public
+bottomLeft	qcustomplot.h	6312;"	m	class:QCPItemText	access:public
+bottomLeft	qcustomplot.h	6447;"	m	class:QCPItemPixmap	access:public
+bottomLeftRim	qcustomplot.h	6383;"	m	class:QCPItemEllipse	access:public
+bottomRight	qcustomplot.h	6220;"	m	class:QCPItemRect	access:public
+bottomRight	qcustomplot.h	6310;"	m	class:QCPItemText	access:public
+bottomRight	qcustomplot.h	6376;"	m	class:QCPItemEllipse	access:public
+bottomRight	qcustomplot.h	6442;"	m	class:QCPItemPixmap	access:public
+bottomRightRim	qcustomplot.h	6381;"	m	class:QCPItemEllipse	access:public
+bounded	qcustomplot.h	799;"	p	class:QCPRange	access:public
+bounded	qcustomplot.h	910;"	p	class:QCPDataRange	access:public
+boundingDistance	qcustomplot.h	1492;"	p	class:QCPLineEnding	access:public
+boundingRect	videoitem.h	23;"	p	class:VideoItem	access:public
+bsCalligraphic	qcustomplot.h	6583;"	e	enum:QCPItemBracket::BracketStyle
+bsCurly	qcustomplot.h	6582;"	e	enum:QCPItemBracket::BracketStyle
+bsEllipse	qcustomplot.h	4493;"	e	enum:QCPSelectionDecoratorBracket::BracketStyle
+bsHalfEllipse	qcustomplot.h	4492;"	e	enum:QCPSelectionDecoratorBracket::BracketStyle
+bsPlus	qcustomplot.h	4494;"	e	enum:QCPSelectionDecoratorBracket::BracketStyle
+bsRound	qcustomplot.h	6581;"	e	enum:QCPItemBracket::BracketStyle
+bsSquare	qcustomplot.h	6580;"	e	enum:QCPItemBracket::BracketStyle
+bsSquareBracket	qcustomplot.h	4491;"	e	enum:QCPSelectionDecoratorBracket::BracketStyle
+bsUserStyle	qcustomplot.h	4495;"	e	enum:QCPSelectionDecoratorBracket::BracketStyle
+calculateAutoMargin	qcustomplot.h	1245;"	p	class:QCPLayoutElement	access:protected	implementation:virtual
+calculateMargin	qcustomplot.h	2152;"	p	class:QCPAxis	access:protected	implementation:virtual
+cancel	qcustomplot.h	1111;"	p	class:QCPSelectionRect	access:public
+canceled	qcustomplot.h	1116;"	p	class:QCPSelectionRect	access:public
+candlestickSelectTest	qcustomplot.h	5907;"	p	class:QCPFinancial	access:protected
+capture	movie.h	23;"	p	class:Movie	access:public
+cell	qcustomplot.h	5662;"	p	class:QCPColorMapData	access:public
+cellToCoord	qcustomplot.h	5684;"	p	class:QCPColorMapData	access:public
+center	qcustomplot.h	6385;"	m	class:QCPItemEllipse	access:public
+center	qcustomplot.h	6607;"	m	class:QCPItemBracket	access:public
+centralWidget	ui_mainwindow.h	29;"	m	class:Ui_MainWindow	access:public
+changed	qcustomplot.h	1115;"	p	class:QCPSelectionRect	access:public
+char_bgr_to_intensity	utilities.h	42;"	p
+char_bgr_to_rgba	utilities.h	43;"	p
+chooseIpPort	mainwindow.h	38;"	p	class:MainWindow	access:public
+chooseJoint	mainwindow.h	39;"	p	class:MainWindow	access:public
+chooseMainScriptPath	mainwindow.h	41;"	p	class:MainWindow	access:public
+chooseNaoqiPath	mainwindow.h	40;"	p	class:MainWindow	access:public
+chooseOscillator	mainwindow.h	43;"	p	class:MainWindow	access:public
+chooseOscillator	scriptlauncher.h	30;"	p	class:ScriptLauncher	access:public
+choosePythonPath	mainwindow.h	42;"	p	class:MainWindow	access:public
+chooseSharedMemoryPath	mainwindow.h	44;"	p	class:MainWindow	access:public
+ciHSV	qcustomplot.h	4407;"	e	enum:QCPColorGradient::ColorInterpolation
+ciRGB	qcustomplot.h	4406;"	e	enum:QCPColorGradient::ColorInterpolation
+cleanMantissa	qcustomplot.h	1562;"	p	class:QCPAxisTicker	access:protected
+clear	qcustomplot.h	1156;"	p	class:QCPMarginGroup	access:public
+clear	qcustomplot.h	1283;"	p	class:QCPLayout	access:public
+clear	qcustomplot.h	1723;"	p	class:QCPAxisTickerText	access:public
+clear	qcustomplot.h	2401;"	p	class:QCPDataContainer	access:public
+clear	qcustomplot.h	533;"	p	class:QCPAbstractPaintBuffer	access:public	implementation:pure virtual
+clear	qcustomplot.h	5378;"	p	class:QCPBarsGroup	access:public
+clear	qcustomplot.h	5678;"	p	class:QCPColorMapData	access:public
+clear	qcustomplot.h	955;"	p	class:QCPDataSelection	access:public
+clearAlpha	qcustomplot.h	5679;"	p	class:QCPColorMapData	access:public
+clearCache	qcustomplot.h	2195;"	p	class:QCPAxisPainterPrivate	access:public
+clearColorStops	qcustomplot.h	4453;"	p	class:QCPColorGradient	access:public
+clearGraphs	qcustomplot.h	3654;"	p	class:QCustomPlot	access:public
+clearItems	qcustomplot.h	3663;"	p	class:QCustomPlot	access:public
+clearItems	qcustomplot.h	4845;"	p	class:QCPLegend	access:public
+clearPlottables	qcustomplot.h	3642;"	p	class:QCustomPlot	access:public
+clicked	qcustomplot.h	4942;"	p	class:QCPTextElement	access:public
+clipAxisRect	qcustomplot.h	3490;"	p	class:QCPAbstractItem	access:public
+clipRect	qcustomplot.h	737;"	p	class:QCPLayerable	access:protected	implementation:virtual
+close	qcustomplot.h	5798;"	m	class:QCPFinancialData	access:public
+closeEvent	mainwindow.h	36;"	p	class:MainWindow	access:public
+closeExperience	mainwindow.h	49;"	p	class:MainWindow	access:private
+color	qcustomplot.h	4451;"	p	class:QCPColorGradient	access:public
+colorMaps	qcustomplot.h	5045;"	p	class:QCPColorScale	access:public
+colorize	qcustomplot.h	4449;"	p	class:QCPColorGradient	access:public
+colorize	qcustomplot.h	4450;"	p	class:QCPColorGradient	access:public
+commonMargin	qcustomplot.h	1164;"	p	class:QCPMarginGroup	access:protected	implementation:virtual
+configNaoConnection	mainwindow.h	50;"	p	class:MainWindow	access:private
+connect	scriptlauncher.h	20;"	p	class:ScriptLauncher	access:public
+connectBars	qcustomplot.h	5516;"	p	class:QCPBars	access:protected
+connectNao	mainwindow.h	51;"	p	class:MainWindow	access:private
+connectToNao	mainwindow.h	57;"	p	class:MainWindow	access:private
+const_iterator	qcustomplot.h	2378;"	t	class:QCPDataContainer	access:public
+contains	qcustomplot.h	915;"	p	class:QCPDataRange	access:public
+contains	qcustomplot.h	959;"	p	class:QCPDataSelection	access:public
+coordToCell	qcustomplot.h	5683;"	p	class:QCPColorMapData	access:public
+coordToPixel	qcustomplot.h	2087;"	p	class:QCPAxis	access:public
+coordsToPixels	qcustomplot.h	3308;"	p	class:QCPAbstractPlottable	access:public
+coordsToPixels	qcustomplot.h	3309;"	p	class:QCPAbstractPlottable	access:public
+copyFrom	qcustomplot.h	3235;"	p	class:QCPSelectionDecorator	access:public	implementation:virtual
+createAlpha	qcustomplot.h	5698;"	p	class:QCPColorMapData	access:protected
+createAnchor	qcustomplot.h	3537;"	p	class:QCPAbstractItem	access:protected
+createLabelVector	qcustomplot.h	1556;"	p	class:QCPAxisTicker	access:protected	implementation:virtual
+createPaintBuffer	qcustomplot.h	3796;"	p	class:QCustomPlot	access:protected
+createPosition	qcustomplot.h	3536;"	p	class:QCPAbstractItem	access:protected
+createSubTickVector	qcustomplot.h	1555;"	p	class:QCPAxisTicker	access:protected	implementation:virtual
+createTickVector	qcustomplot.h	1554;"	p	class:QCPAxisTicker	access:protected	implementation:virtual
+csCandlestick	qcustomplot.h	5846;"	e	enum:QCPFinancial::ChartStyle
+csOhlc	qcustomplot.h	5845;"	e	enum:QCPFinancial::ChartStyle
+currentLayer	qcustomplot.h	3672;"	p	class:QCustomPlot	access:public
+data	mainwindow.h	65;"	m	class:MainWindow	access:private
+data	moc_mainwindow.cpp	22;"	m	struct:qt_meta_stringdata_MainWindow_t	file:	access:public
+data	moc_plotitem.cpp	22;"	m	struct:qt_meta_stringdata_PlotItem_t	file:	access:public
+data	moc_qcustomplot.cpp	1033;"	m	struct:qt_meta_stringdata_QCPLayout_t	file:	access:public
+data	moc_qcustomplot.cpp	1100;"	m	struct:qt_meta_stringdata_QCPLayoutGrid_t	file:	access:public
+data	moc_qcustomplot.cpp	1252;"	m	struct:qt_meta_stringdata_QCPLayoutInset_t	file:	access:public
+data	moc_qcustomplot.cpp	1330;"	m	struct:qt_meta_stringdata_QCPLineEnding_t	file:	access:public
+data	moc_qcustomplot.cpp	1397;"	m	struct:qt_meta_stringdata_QCPAxisTicker_t	file:	access:public
+data	moc_qcustomplot.cpp	1446;"	m	struct:qt_meta_stringdata_QCPAxisTickerTime_t	file:	access:public
+data	moc_qcustomplot.cpp	1501;"	m	struct:qt_meta_stringdata_QCPAxisTickerFixed_t	file:	access:public
+data	moc_qcustomplot.cpp	1552;"	m	struct:qt_meta_stringdata_QCPAxisTickerPi_t	file:	access:public
+data	moc_qcustomplot.cpp	1604;"	m	struct:qt_meta_stringdata_QCPGrid_t	file:	access:public
+data	moc_qcustomplot.cpp	1731;"	m	struct:qt_meta_stringdata_QCPAxis_t	file:	access:public
+data	moc_qcustomplot.cpp	2288;"	m	struct:qt_meta_stringdata_QCPScatterStyle_t	file:	access:public
+data	moc_qcustomplot.cpp	2397;"	m	struct:qt_meta_stringdata_QCPSelectionDecorator_t	file:	access:public
+data	moc_qcustomplot.cpp	239;"	m	struct:qt_meta_stringdata_QCPPainter_t	file:	access:public
+data	moc_qcustomplot.cpp	2435;"	m	struct:qt_meta_stringdata_QCPAbstractPlottable_t	file:	access:public
+data	moc_qcustomplot.cpp	25;"	m	struct:qt_meta_stringdata_QCP_t	file:	access:public
+data	moc_qcustomplot.cpp	2730;"	m	struct:qt_meta_stringdata_QCPItemAnchor_t	file:	access:public
+data	moc_qcustomplot.cpp	2768;"	m	struct:qt_meta_stringdata_QCPItemPosition_t	file:	access:public
+data	moc_qcustomplot.cpp	2822;"	m	struct:qt_meta_stringdata_QCPAbstractItem_t	file:	access:public
+data	moc_qcustomplot.cpp	299;"	m	struct:qt_meta_stringdata_QCPLayer_t	file:	access:public
+data	moc_qcustomplot.cpp	3020;"	m	struct:qt_meta_stringdata_QCustomPlot_t	file:	access:public
+data	moc_qcustomplot.cpp	3629;"	m	struct:qt_meta_stringdata_QCPColorGradient_t	file:	access:public
+data	moc_qcustomplot.cpp	3707;"	m	struct:qt_meta_stringdata_QCPSelectionDecoratorBracket_t	file:	access:public
+data	moc_qcustomplot.cpp	3763;"	m	struct:qt_meta_stringdata_QCPAxisRect_t	file:	access:public
+data	moc_qcustomplot.cpp	3888;"	m	struct:qt_meta_stringdata_QCPAbstractLegendItem_t	file:	access:public
+data	moc_qcustomplot.cpp	4101;"	m	struct:qt_meta_stringdata_QCPPlottableLegendItem_t	file:	access:public
+data	moc_qcustomplot.cpp	4168;"	m	struct:qt_meta_stringdata_QCPLegend_t	file:	access:public
+data	moc_qcustomplot.cpp	442;"	m	struct:qt_meta_stringdata_QCPLayerable_t	file:	access:public
+data	moc_qcustomplot.cpp	4434;"	m	struct:qt_meta_stringdata_QCPTextElement_t	file:	access:public
+data	moc_qcustomplot.cpp	4676;"	m	struct:qt_meta_stringdata_QCPColorScaleAxisRectPrivate_t	file:	access:public
+data	moc_qcustomplot.cpp	4773;"	m	struct:qt_meta_stringdata_QCPColorScale_t	file:	access:public
+data	moc_qcustomplot.cpp	5047;"	m	struct:qt_meta_stringdata_QCPGraph_t	file:	access:public
+data	moc_qcustomplot.cpp	5197;"	m	struct:qt_meta_stringdata_QCPCurve_t	file:	access:public
+data	moc_qcustomplot.cpp	5323;"	m	struct:qt_meta_stringdata_QCPBarsGroup_t	file:	access:public
+data	moc_qcustomplot.cpp	5446;"	m	struct:qt_meta_stringdata_QCPBars_t	file:	access:public
+data	moc_qcustomplot.cpp	5598;"	m	struct:qt_meta_stringdata_QCPStatisticalBox_t	file:	access:public
+data	moc_qcustomplot.cpp	5730;"	m	struct:qt_meta_stringdata_QCPColorMap_t	file:	access:public
+data	moc_qcustomplot.cpp	6009;"	m	struct:qt_meta_stringdata_QCPFinancial_t	file:	access:public
+data	moc_qcustomplot.cpp	6164;"	m	struct:qt_meta_stringdata_QCPErrorBars_t	file:	access:public
+data	moc_qcustomplot.cpp	6308;"	m	struct:qt_meta_stringdata_QCPItemStraightLine_t	file:	access:public
+data	moc_qcustomplot.cpp	6417;"	m	struct:qt_meta_stringdata_QCPItemLine_t	file:	access:public
+data	moc_qcustomplot.cpp	648;"	m	struct:qt_meta_stringdata_QCPSelectionRect_t	file:	access:public
+data	moc_qcustomplot.cpp	6536;"	m	struct:qt_meta_stringdata_QCPItemCurve_t	file:	access:public
+data	moc_qcustomplot.cpp	6655;"	m	struct:qt_meta_stringdata_QCPItemRect_t	file:	access:public
+data	moc_qcustomplot.cpp	6773;"	m	struct:qt_meta_stringdata_QCPItemText_t	file:	access:public
+data	moc_qcustomplot.cpp	6932;"	m	struct:qt_meta_stringdata_QCPItemEllipse_t	file:	access:public
+data	moc_qcustomplot.cpp	7050;"	m	struct:qt_meta_stringdata_QCPItemPixmap_t	file:	access:public
+data	moc_qcustomplot.cpp	7177;"	m	struct:qt_meta_stringdata_QCPItemTracer_t	file:	access:public
+data	moc_qcustomplot.cpp	7340;"	m	struct:qt_meta_stringdata_QCPItemBracket_t	file:	access:public
+data	moc_qcustomplot.cpp	816;"	m	struct:qt_meta_stringdata_QCPMarginGroup_t	file:	access:public
+data	moc_qcustomplot.cpp	883;"	m	struct:qt_meta_stringdata_QCPLayoutElement_t	file:	access:public
+data	moc_slideritem.cpp	22;"	m	struct:qt_meta_stringdata_SliderItem_t	file:	access:public
+data	moc_videoitem.cpp	22;"	m	struct:qt_meta_stringdata_VideoItem_t	file:	access:public
+data	qcustomplot.h	5661;"	p	class:QCPColorMapData	access:public
+dataCount	qcustomplot.h	3822;"	p	class:QCPPlottableInterface1D	access:public	implementation:pure virtual
+dataCount	qcustomplot.h	3844;"	p	class:QCPAbstractPlottable1D	access:public	implementation:virtual
+dataCount	qcustomplot.h	5999;"	p	class:QCPErrorBars	access:public	implementation:virtual
+dataMainKey	qcustomplot.h	3823;"	p	class:QCPPlottableInterface1D	access:public	implementation:pure virtual
+dataMainKey	qcustomplot.h	3845;"	p	class:QCPAbstractPlottable1D	access:public	implementation:virtual
+dataMainKey	qcustomplot.h	6000;"	p	class:QCPErrorBars	access:public	implementation:virtual
+dataMainValue	qcustomplot.h	3825;"	p	class:QCPPlottableInterface1D	access:public	implementation:pure virtual
+dataMainValue	qcustomplot.h	3847;"	p	class:QCPAbstractPlottable1D	access:public	implementation:virtual
+dataMainValue	qcustomplot.h	6002;"	p	class:QCPErrorBars	access:public	implementation:virtual
+dataManagement	mainwindow.h	53;"	p	class:MainWindow	access:private
+dataPixelPosition	qcustomplot.h	3827;"	p	class:QCPPlottableInterface1D	access:public	implementation:pure virtual
+dataPixelPosition	qcustomplot.h	3849;"	p	class:QCPAbstractPlottable1D	access:public	implementation:virtual
+dataPixelPosition	qcustomplot.h	6004;"	p	class:QCPErrorBars	access:public	implementation:virtual
+dataPointCount	qcustomplot.h	948;"	p	class:QCPDataSelection	access:public
+dataRange	qcustomplot.h	949;"	p	class:QCPDataSelection	access:public
+dataRangeChanged	qcustomplot.h	5052;"	p	class:QCPColorScale	access:public
+dataRangeChanged	qcustomplot.h	5747;"	p	class:QCPColorMap	access:public
+dataScaleTypeChanged	qcustomplot.h	5053;"	p	class:QCPColorScale	access:public
+dataScaleTypeChanged	qcustomplot.h	5748;"	p	class:QCPColorMap	access:public
+dataSortKey	qcustomplot.h	3824;"	p	class:QCPPlottableInterface1D	access:public	implementation:pure virtual
+dataSortKey	qcustomplot.h	3846;"	p	class:QCPAbstractPlottable1D	access:public	implementation:virtual
+dataSortKey	qcustomplot.h	6001;"	p	class:QCPErrorBars	access:public	implementation:virtual
+dataToImpulseLines	qcustomplot.h	5204;"	p	class:QCPGraph	access:protected
+dataToLines	qcustomplot.h	5200;"	p	class:QCPGraph	access:protected
+dataToStepCenterLines	qcustomplot.h	5203;"	p	class:QCPGraph	access:protected
+dataToStepLeftLines	qcustomplot.h	5201;"	p	class:QCPGraph	access:protected
+dataToStepRightLines	qcustomplot.h	5202;"	p	class:QCPGraph	access:protected
+dataValueRange	qcustomplot.h	3826;"	p	class:QCPPlottableInterface1D	access:public	implementation:pure virtual
+dataValueRange	qcustomplot.h	3848;"	p	class:QCPAbstractPlottable1D	access:public	implementation:virtual
+dataValueRange	qcustomplot.h	6003;"	p	class:QCPErrorBars	access:public	implementation:virtual
+dateTimeToKey	qcustomplot.h	1590;"	p	class:QCPAxisTickerDateTime	access:public
+dateTimeToKey	qcustomplot.h	1591;"	p	class:QCPAxisTickerDateTime	access:public
+deselectAll	qcustomplot.h	3690;"	p	class:QCustomPlot	access:public
+deselectEvent	qcustomplot.h	742;"	p	class:QCPLayerable	access:protected	implementation:virtual
+disconnect	scriptlauncher.h	21;"	p	class:ScriptLauncher	access:public
+disconnectToNao	mainwindow.h	58;"	p	class:MainWindow	access:private
+distanceSquaredToLine	qcustomplot.h	409;"	p	class:QCPVector2D	access:public
+distanceSquaredToLine	qcustomplot.h	410;"	p	class:QCPVector2D	access:public
+distanceToStraightLine	qcustomplot.h	411;"	p	class:QCPVector2D	access:public
+doubleClicked	qcustomplot.h	4943;"	p	class:QCPTextElement	access:public
+draw	qcustomplot.h	1494;"	p	class:QCPLineEnding	access:public
+draw	qcustomplot.h	1495;"	p	class:QCPLineEnding	access:public
+draw	qcustomplot.h	2193;"	p	class:QCPAxisPainterPrivate	access:public	implementation:virtual
+draw	qcustomplot.h	3779;"	p	class:QCustomPlot	access:protected	implementation:virtual
+draw	qcustomplot.h	4998;"	p	class:QCPColorScaleAxisRectPrivate	access:protected	implementation:virtual
+draw	qcustomplot.h	532;"	p	class:QCPAbstractPaintBuffer	access:public	implementation:pure virtual
+draw	qcustomplot.h	677;"	p	class:QCPLayer	access:protected
+draw	qcustomplot.h	739;"	p	class:QCPLayerable	access:protected	implementation:pure virtual
+drawBackground	qcustomplot.h	3794;"	p	class:QCustomPlot	access:protected
+drawBackground	qcustomplot.h	4660;"	p	class:QCPAxisRect	access:protected
+drawBracket	qcustomplot.h	4521;"	p	class:QCPSelectionDecoratorBracket	access:public	implementation:virtual
+drawCandlestickPlot	qcustomplot.h	5904;"	p	class:QCPFinancial	access:protected
+drawCurveLine	qcustomplot.h	5317;"	p	class:QCPCurve	access:protected	implementation:virtual
+drawDecoration	qcustomplot.h	3236;"	p	class:QCPSelectionDecorator	access:public	implementation:virtual
+drawDecoration	qcustomplot.h	4524;"	p	class:QCPSelectionDecoratorBracket	access:public	implementation:virtual
+drawFill	qcustomplot.h	5188;"	p	class:QCPGraph	access:protected	implementation:virtual
+drawGridLines	qcustomplot.h	1883;"	p	class:QCPGrid	access:protected
+drawImpulsePlot	qcustomplot.h	5191;"	p	class:QCPGraph	access:protected	implementation:virtual
+drawLegendIcon	qcustomplot.h	3346;"	p	class:QCPAbstractPlottable	access:protected	implementation:pure virtual
+drawLine	qcustomplot.h	488;"	p	class:QCPPainter	access:public
+drawLinePlot	qcustomplot.h	5190;"	p	class:QCPGraph	access:protected	implementation:virtual
+drawOhlcPlot	qcustomplot.h	5903;"	p	class:QCPFinancial	access:protected
+drawPolyline	qcustomplot.h	3865;"	p	class:QCPAbstractPlottable1D	access:protected
+drawScatterPlot	qcustomplot.h	5189;"	p	class:QCPGraph	access:protected	implementation:virtual
+drawScatterPlot	qcustomplot.h	5318;"	p	class:QCPCurve	access:protected	implementation:virtual
+drawShape	qcustomplot.h	2340;"	p	class:QCPScatterStyle	access:public
+drawShape	qcustomplot.h	2341;"	p	class:QCPScatterStyle	access:public
+drawStatisticalBox	qcustomplot.h	5629;"	p	class:QCPStatisticalBox	access:protected	implementation:virtual
+drawSubGridLines	qcustomplot.h	1884;"	p	class:QCPGrid	access:protected
+drawTickLabel	qcustomplot.h	2247;"	p	class:QCPAxisPainterPrivate	access:protected	implementation:virtual
+drawToPaintBuffer	qcustomplot.h	678;"	p	class:QCPLayer	access:protected
+dsNone	qcustomplot.h	1599;"	e	enum:QCPAxisTickerDateTime::DateStrategy
+dsUniformDayInMonth	qcustomplot.h	1599;"	e	enum:QCPAxisTickerDateTime::DateStrategy
+dsUniformTimeInDay	qcustomplot.h	1599;"	e	enum:QCPAxisTickerDateTime::DateStrategy
+element	qcustomplot.h	1363;"	p	class:QCPLayoutGrid	access:public
+elementAt	qcustomplot.h	1275;"	p	class:QCPLayout	access:public	implementation:pure virtual
+elementCount	qcustomplot.h	1274;"	p	class:QCPLayout	access:public	implementation:pure virtual
+elements	qcustomplot.h	1230;"	p	class:QCPLayoutElement	access:public	implementation:virtual
+end	qcustomplot.h	6119;"	m	class:QCPItemLine	access:public
+end	qcustomplot.h	6171;"	m	class:QCPItemCurve	access:public
+endDir	qcustomplot.h	6170;"	m	class:QCPItemCurve	access:public
+endSelection	qcustomplot.h	1130;"	p	class:QCPSelectionRect	access:protected	implementation:virtual
+enforceType	qcustomplot.h	958;"	p	class:QCPDataSelection	access:public
+epAllowCosmetic	qcustomplot.h	174;"	e	enum:QCP::ExportPen
+epNoCosmetic	qcustomplot.h	173;"	e	enum:QCP::ExportPen
+errorBarVisible	qcustomplot.h	6034;"	p	class:QCPErrorBars	access:protected
+errorMinus	qcustomplot.h	5929;"	m	class:QCPErrorBarsData	access:public
+errorPlus	qcustomplot.h	5929;"	m	class:QCPErrorBarsData	access:public
+esBar	qcustomplot.h	1470;"	e	enum:QCPLineEnding::EndingStyle
+esDiamond	qcustomplot.h	1469;"	e	enum:QCPLineEnding::EndingStyle
+esDisc	qcustomplot.h	1467;"	e	enum:QCPLineEnding::EndingStyle
+esFlatArrow	qcustomplot.h	1464;"	e	enum:QCPLineEnding::EndingStyle
+esHalfBar	qcustomplot.h	1471;"	e	enum:QCPLineEnding::EndingStyle
+esLineArrow	qcustomplot.h	1466;"	e	enum:QCPLineEnding::EndingStyle
+esNone	qcustomplot.h	1463;"	e	enum:QCPLineEnding::EndingStyle
+esSkewedBar	qcustomplot.h	1472;"	e	enum:QCPLineEnding::EndingStyle
+esSpikeArrow	qcustomplot.h	1465;"	e	enum:QCPLineEnding::EndingStyle
+esSquare	qcustomplot.h	1468;"	e	enum:QCPLineEnding::EndingStyle
+etKeyError	qcustomplot.h	5969;"	e	enum:QCPErrorBars::ErrorType
+etValueError	qcustomplot.h	5970;"	e	enum:QCPErrorBars::ErrorType
+expBounds	qcustomplot.h	2236;"	m	struct:QCPAxisPainterPrivate::TickLabelData	access:public
+expFont	qcustomplot.h	2237;"	m	struct:QCPAxisPainterPrivate::TickLabelData	access:public
+expPart	qcustomplot.h	2235;"	m	struct:QCPAxisPainterPrivate::TickLabelData	access:public
+expand	qcustomplot.h	795;"	p	class:QCPRange	access:public
+expand	qcustomplot.h	796;"	p	class:QCPRange	access:public
+expandTo	qcustomplot.h	1367;"	p	class:QCPLayoutGrid	access:public
+expanded	qcustomplot.h	797;"	p	class:QCPRange	access:public
+expanded	qcustomplot.h	798;"	p	class:QCPRange	access:public
+expanded	qcustomplot.h	911;"	p	class:QCPDataRange	access:public
+fill	qcustomplot.h	5680;"	p	class:QCPColorMapData	access:public
+fillAlpha	qcustomplot.h	5681;"	p	class:QCPColorMapData	access:public
+findBegin	qcustomplot.h	2409;"	p	class:QCPDataContainer	access:public
+findBegin	qcustomplot.h	3830;"	p	class:QCPPlottableInterface1D	access:public	implementation:pure virtual
+findBegin	qcustomplot.h	3852;"	p	class:QCPAbstractPlottable1D	access:public	implementation:virtual
+findBegin	qcustomplot.h	6007;"	p	class:QCPErrorBars	access:public	implementation:virtual
+findEnd	qcustomplot.h	2410;"	p	class:QCPDataContainer	access:public
+findEnd	qcustomplot.h	3831;"	p	class:QCPPlottableInterface1D	access:public	implementation:pure virtual
+findEnd	qcustomplot.h	3853;"	p	class:QCPAbstractPlottable1D	access:public	implementation:virtual
+findEnd	qcustomplot.h	6008;"	p	class:QCPErrorBars	access:public	implementation:virtual
+findIndexAboveX	qcustomplot.h	5211;"	p	class:QCPGraph	access:protected
+findIndexAboveY	qcustomplot.h	5213;"	p	class:QCPGraph	access:protected
+findIndexBelowX	qcustomplot.h	5210;"	p	class:QCPGraph	access:protected
+findIndexBelowY	qcustomplot.h	5212;"	p	class:QCPGraph	access:protected
+float_pair	utilities.h	26;"	s
+float_pair	utilities.h	30;"	t	typeref:struct:float_pair
+foColumnsFirst	qcustomplot.h	1324;"	e	enum:QCPLayoutGrid::FillOrder
+foRowsFirst	qcustomplot.h	1323;"	e	enum:QCPLayoutGrid::FillOrder
+force_repaint	plotitem.h	16;"	p	class:PlotItem	access:public
+force_repaint	videoitem.h	35;"	p	class:VideoItem	access:public
+fractionToString	qcustomplot.h	1793;"	p	class:QCPAxisTickerPi	access:protected
+freeOpenGl	qcustomplot.h	3799;"	p	class:QCustomPlot	access:protected
+fsAsciiFractions	qcustomplot.h	1757;"	e	enum:QCPAxisTickerPi::FractionStyle
+fsFloatingPoint	qcustomplot.h	1756;"	e	enum:QCPAxisTickerPi::FractionStyle
+fsUnicodeFractions	qcustomplot.h	1758;"	e	enum:QCPAxisTickerPi::FractionStyle
+generate	qcustomplot.h	1542;"	p	class:QCPAxisTicker	access:public	implementation:virtual
+generateLabelParameterHash	qcustomplot.h	2244;"	p	class:QCPAxisPainterPrivate	access:protected	implementation:virtual
+getAlpha	oscillator.h	17;"	p	class:Oscillator	access:public
+getBGR	streamcatcher.h	23;"	p	class:StreamCatcher	access:public
+getBarRect	qcustomplot.h	5513;"	p	class:QCPBars	access:protected
+getBasePen	qcustomplot.h	2164;"	p	class:QCPAxis	access:protected
+getBeta	oscillator.h	18;"	p	class:Oscillator	access:public
+getBorderPen	qcustomplot.h	4876;"	p	class:QCPLegend	access:protected
+getBrush	qcustomplot.h	4877;"	p	class:QCPLegend	access:protected
+getCapture	streamcatcher.h	20;"	p	class:StreamCatcher	access:public
+getChannelFillPolygon	qcustomplot.h	5209;"	p	class:QCPGraph	access:protected
+getChoosenOscillator	scriptlauncher.h	41;"	p	class:ScriptLauncher	access:public
+getCouple	oscillator.h	19;"	p	class:Oscillator	access:public
+getCurveLines	qcustomplot.h	5321;"	p	class:QCPCurve	access:protected
+getDataSegments	qcustomplot.h	3864;"	p	class:QCPAbstractPlottable1D	access:protected
+getDataSegments	qcustomplot.h	6033;"	p	class:QCPErrorBars	access:protected
+getError	scriptlauncher.h	37;"	p	class:ScriptLauncher	access:public
+getErrorBarLines	qcustomplot.h	6029;"	p	class:QCPErrorBars	access:protected
+getFinalRect	qcustomplot.h	6468;"	p	class:QCPItemPixmap	access:protected
+getFinalScatterStyle	qcustomplot.h	3232;"	p	class:QCPSelectionDecorator	access:public
+getFont	qcustomplot.h	4760;"	p	class:QCPPlottableLegendItem	access:protected
+getFramePtr	streamcatcher.h	19;"	p	class:StreamCatcher	access:public
+getGRAY	streamcatcher.h	25;"	p	class:StreamCatcher	access:public
+getHeight	streamcatcher.h	22;"	p	class:StreamCatcher	access:public
+getIconBorderPen	qcustomplot.h	4758;"	p	class:QCPPlottableLegendItem	access:protected
+getInstance	scriptlauncher.h	18;"	p	class:ScriptLauncher	access:public
+getInstance	streamcatcher.h	16;"	p	class:StreamCatcher	access:public
+getIp	scriptlauncher.h	35;"	p	class:ScriptLauncher	access:public
+getJoint	scriptlauncher.h	43;"	p	class:ScriptLauncher	access:public
+getKeyRange	qcustomplot.h	3304;"	p	class:QCPAbstractPlottable	access:public	implementation:pure virtual
+getLabelColor	qcustomplot.h	2170;"	p	class:QCPAxis	access:protected
+getLabelFont	qcustomplot.h	2168;"	p	class:QCPAxis	access:protected
+getLines	qcustomplot.h	5198;"	p	class:QCPGraph	access:protected
+getMainScriptPath	scriptlauncher.h	39;"	p	class:ScriptLauncher	access:public
+getMantissa	qcustomplot.h	1561;"	p	class:QCPAxisTicker	access:protected
+getMaxTickLabelSize	qcustomplot.h	2250;"	p	class:QCPAxisPainterPrivate	access:protected	implementation:virtual
+getMaximumRowColSizes	qcustomplot.h	1384;"	p	class:QCPLayoutGrid	access:protected
+getMinimumRowColSizes	qcustomplot.h	1383;"	p	class:QCPLayoutGrid	access:protected
+getNaoqiPath	scriptlauncher.h	38;"	p	class:ScriptLauncher	access:public
+getNextImage_args	utilities.h	32;"	s
+getNextImage_args	utilities.h	35;"	t	typeref:struct:getNextImage_args
+getOptimizedCornerPoints	qcustomplot.h	5325;"	p	class:QCPCurve	access:protected
+getOptimizedLineData	qcustomplot.h	5193;"	p	class:QCPGraph	access:protected	implementation:virtual
+getOptimizedPoint	qcustomplot.h	5324;"	p	class:QCPCurve	access:protected
+getOptimizedScatterData	qcustomplot.h	5194;"	p	class:QCPGraph	access:protected	implementation:virtual
+getOut	oscillator.h	15;"	p	class:Oscillator	access:public
+getPartAt	qcustomplot.h	2088;"	p	class:QCPAxis	access:public
+getPid	scriptlauncher.h	34;"	p	class:ScriptLauncher	access:public
+getPixelCoordinates	qcustomplot.h	4538;"	p	class:QCPSelectionDecoratorBracket	access:protected
+getPixelSpacing	qcustomplot.h	5397;"	p	class:QCPBarsGroup	access:protected
+getPixelWidth	qcustomplot.h	5514;"	p	class:QCPBars	access:protected
+getPixelWidth	qcustomplot.h	5905;"	p	class:QCPFinancial	access:protected
+getPort	scriptlauncher.h	36;"	p	class:ScriptLauncher	access:public
+getPythonPath	scriptlauncher.h	40;"	p	class:ScriptLauncher	access:public
+getQuartileBox	qcustomplot.h	5633;"	p	class:QCPStatisticalBox	access:protected
+getRGBA	streamcatcher.h	24;"	p	class:StreamCatcher	access:public
+getRectClippedLine	qcustomplot.h	6130;"	p	class:QCPItemLine	access:protected
+getRectClippedStraightLine	qcustomplot.h	6080;"	p	class:QCPItemStraightLine	access:protected
+getRegion	qcustomplot.h	5323;"	p	class:QCPCurve	access:protected
+getScatters	qcustomplot.h	5199;"	p	class:QCPGraph	access:protected
+getScatters	qcustomplot.h	5322;"	p	class:QCPCurve	access:protected
+getSectionSizes	qcustomplot.h	1293;"	p	class:QCPLayout	access:protected
+getSharedMemoryPath	scriptlauncher.h	42;"	p	class:ScriptLauncher	access:public
+getStackedBaseValue	qcustomplot.h	5515;"	p	class:QCPBars	access:protected
+getStatus	scriptlauncher.h	33;"	p	class:ScriptLauncher	access:public
+getSubTickCount	qcustomplot.h	1552;"	p	class:QCPAxisTicker	access:protected	implementation:virtual
+getSubTickPen	qcustomplot.h	2166;"	p	class:QCPAxis	access:protected
+getTangentAngle	qcustomplot.h	4537;"	p	class:QCPSelectionDecoratorBracket	access:protected
+getTextColor	qcustomplot.h	4759;"	p	class:QCPPlottableLegendItem	access:protected
+getTextDrawPoint	qcustomplot.h	6334;"	p	class:QCPItemText	access:protected
+getThread	streamcatcher.h	18;"	p	class:StreamCatcher	access:public
+getTickLabel	qcustomplot.h	1553;"	p	class:QCPAxisTicker	access:protected	implementation:virtual
+getTickLabelColor	qcustomplot.h	2169;"	p	class:QCPAxis	access:protected
+getTickLabelData	qcustomplot.h	2248;"	p	class:QCPAxisPainterPrivate	access:protected	implementation:virtual
+getTickLabelDrawOffset	qcustomplot.h	2249;"	p	class:QCPAxisPainterPrivate	access:protected	implementation:virtual
+getTickLabelFont	qcustomplot.h	2167;"	p	class:QCPAxis	access:protected
+getTickPen	qcustomplot.h	2165;"	p	class:QCPAxis	access:protected
+getTickStep	qcustomplot.h	1551;"	p	class:QCPAxisTicker	access:protected	implementation:virtual
+getTraverse	qcustomplot.h	5327;"	p	class:QCPCurve	access:protected
+getTraverseCornerPoints	qcustomplot.h	5328;"	p	class:QCPCurve	access:protected
+getVal	oscillator.h	16;"	p	class:Oscillator	access:public
+getValueRange	qcustomplot.h	3305;"	p	class:QCPAbstractPlottable	access:public	implementation:pure virtual
+getVisibleDataBounds	qcustomplot.h	5197;"	p	class:QCPGraph	access:protected
+getVisibleDataBounds	qcustomplot.h	5512;"	p	class:QCPBars	access:protected
+getVisibleDataBounds	qcustomplot.h	5632;"	p	class:QCPStatisticalBox	access:protected
+getVisibleDataBounds	qcustomplot.h	5908;"	p	class:QCPFinancial	access:protected
+getVisibleDataBounds	qcustomplot.h	6030;"	p	class:QCPErrorBars	access:protected
+getWhiskerBackboneLines	qcustomplot.h	5634;"	p	class:QCPStatisticalBox	access:protected
+getWhiskerBarLines	qcustomplot.h	5635;"	p	class:QCPStatisticalBox	access:protected
+getWidth	streamcatcher.h	21;"	p	class:StreamCatcher	access:public
+get_bgr_buffer	streamcatcher.h	32;"	p	class:StreamCatcher	access:private
+get_buffer_selector	streamcatcher.h	30;"	p	class:StreamCatcher	access:private
+global_Streamcatcher	main.cpp	30;"	v	file:
+gpCandy	qcustomplot.h	4419;"	e	enum:QCPColorGradient::GradientPreset
+gpCold	qcustomplot.h	4417;"	e	enum:QCPColorGradient::GradientPreset
+gpGeography	qcustomplot.h	4420;"	e	enum:QCPColorGradient::GradientPreset
+gpGrayscale	qcustomplot.h	4415;"	e	enum:QCPColorGradient::GradientPreset
+gpHot	qcustomplot.h	4416;"	e	enum:QCPColorGradient::GradientPreset
+gpHues	qcustomplot.h	4426;"	e	enum:QCPColorGradient::GradientPreset
+gpIon	qcustomplot.h	4421;"	e	enum:QCPColorGradient::GradientPreset
+gpJet	qcustomplot.h	4425;"	e	enum:QCPColorGradient::GradientPreset
+gpNight	qcustomplot.h	4418;"	e	enum:QCPColorGradient::GradientPreset
+gpPolar	qcustomplot.h	4423;"	e	enum:QCPColorGradient::GradientPreset
+gpSpectrum	qcustomplot.h	4424;"	e	enum:QCPColorGradient::GradientPreset
+gpThermal	qcustomplot.h	4422;"	e	enum:QCPColorGradient::GradientPreset
+gradientChanged	qcustomplot.h	5054;"	p	class:QCPColorScale	access:public
+gradientChanged	qcustomplot.h	5749;"	p	class:QCPColorMap	access:public
+graph	qcustomplot.h	3649;"	p	class:QCustomPlot	access:public
+graph	qcustomplot.h	3650;"	p	class:QCustomPlot	access:public
+graphCount	qcustomplot.h	3655;"	p	class:QCustomPlot	access:public
+graphs	qcustomplot.h	2090;"	p	class:QCPAxis	access:public
+graphs	qcustomplot.h	4607;"	p	class:QCPAxisRect	access:public
+hasAnchor	qcustomplot.h	3508;"	p	class:QCPAbstractItem	access:public
+hasElement	qcustomplot.h	1366;"	p	class:QCPLayoutGrid	access:public
+hasInvalidatedPaintBuffers	qcustomplot.h	3797;"	p	class:QCustomPlot	access:protected
+hasItem	qcustomplot.h	3667;"	p	class:QCustomPlot	access:public
+hasItem	qcustomplot.h	4840;"	p	class:QCPLegend	access:public
+hasItemWithPlottable	qcustomplot.h	4841;"	p	class:QCPLegend	access:public
+hasPlottable	qcustomplot.h	3646;"	p	class:QCustomPlot	access:public
+high	qcustomplot.h	5798;"	m	class:QCPFinancialData	access:public
+iMultiSelect	qcustomplot.h	251;"	e	enum:QCP::Interaction
+iRangeDrag	qcustomplot.h	249;"	e	enum:QCP::Interaction
+iRangeZoom	qcustomplot.h	250;"	e	enum:QCP::Interaction
+iSelectAxes	qcustomplot.h	253;"	e	enum:QCP::Interaction
+iSelectItems	qcustomplot.h	255;"	e	enum:QCP::Interaction
+iSelectLegend	qcustomplot.h	254;"	e	enum:QCP::Interaction
+iSelectOther	qcustomplot.h	256;"	e	enum:QCP::Interaction
+iSelectPlottables	qcustomplot.h	252;"	e	enum:QCP::Interaction
+indexToRowCol	qcustomplot.h	1371;"	p	class:QCPLayoutGrid	access:public
+initializeParentPlot	qcustomplot.h	751;"	p	class:QCPLayerable	access:protected
+insert	qcustomplot.h	5381;"	p	class:QCPBarsGroup	access:public
+insertColumn	qcustomplot.h	1369;"	p	class:QCPLayoutGrid	access:public
+insertRow	qcustomplot.h	1368;"	p	class:QCPLayoutGrid	access:public
+insetAlignment	qcustomplot.h	1409;"	p	class:QCPLayoutInset	access:public
+insetPlacement	qcustomplot.h	1408;"	p	class:QCPLayoutInset	access:public
+insetRect	qcustomplot.h	1410;"	p	class:QCPLayoutInset	access:public
+intensity_to_rgba	utilities.h	45;"	p
+intersection	qcustomplot.h	912;"	p	class:QCPDataRange	access:public
+intersection	qcustomplot.h	960;"	p	class:QCPDataSelection	access:public
+intersection	qcustomplot.h	961;"	p	class:QCPDataSelection	access:public
+intersects	qcustomplot.h	914;"	p	class:QCPDataRange	access:public
+inverse	qcustomplot.h	962;"	p	class:QCPDataSelection	access:public
+inverted	qcustomplot.h	4454;"	p	class:QCPColorGradient	access:public
+ipBorderAligned	qcustomplot.h	1400;"	e	enum:QCPLayoutInset::InsetPlacement
+ipFree	qcustomplot.h	1399;"	e	enum:QCPLayoutInset::InsetPlacement
+isClosed	main.cpp	31;"	v
+isEmpty	qcustomplot.h	1155;"	p	class:QCPMarginGroup	access:public
+item	qcustomplot.h	3659;"	p	class:QCustomPlot	access:public
+item	qcustomplot.h	3660;"	p	class:QCustomPlot	access:public
+item	qcustomplot.h	4837;"	p	class:QCPLegend	access:public
+itemAt	qcustomplot.h	3666;"	p	class:QCustomPlot	access:public
+itemClick	qcustomplot.h	3713;"	p	class:QCustomPlot	access:public
+itemCount	qcustomplot.h	3664;"	p	class:QCustomPlot	access:public
+itemCount	qcustomplot.h	4839;"	p	class:QCPLegend	access:public
+itemDoubleClick	qcustomplot.h	3714;"	p	class:QCustomPlot	access:public
+itemWithPlottable	qcustomplot.h	4838;"	p	class:QCPLegend	access:public
+items	qcustomplot.h	2091;"	p	class:QCPAxis	access:public
+items	qcustomplot.h	4608;"	p	class:QCPAxisRect	access:public
+iterator	qcustomplot.h	2379;"	t	class:QCPDataContainer	access:public
+key	qcustomplot.h	5104;"	m	class:QCPGraphData	access:public
+key	qcustomplot.h	5242;"	m	class:QCPCurveData	access:public
+key	qcustomplot.h	5422;"	m	class:QCPBarsData	access:public
+key	qcustomplot.h	5551;"	m	class:QCPStatisticalBoxData	access:public
+key	qcustomplot.h	5798;"	m	class:QCPFinancialData	access:public
+keyPixelOffset	qcustomplot.h	5396;"	p	class:QCPBarsGroup	access:protected
+keyPressEvent	qcustomplot.h	1131;"	p	class:QCPSelectionRect	access:protected	implementation:virtual
+keyRange	qcustomplot.h	2412;"	p	class:QCPDataContainer	access:public
+keyToDateTime	qcustomplot.h	1589;"	p	class:QCPAxisTickerDateTime	access:public
+killInstance	scriptlauncher.h	19;"	p	class:ScriptLauncher	access:public
+killInstance	streamcatcher.h	17;"	p	class:StreamCatcher	access:public
+label	qcustomplot.h	2208;"	m	class:QCPAxisPainterPrivate	access:public
+label	qcustomplot.h	5029;"	p	class:QCPColorScale	access:public
+labelColor	qcustomplot.h	2207;"	m	class:QCPAxisPainterPrivate	access:public
+labelFont	qcustomplot.h	2206;"	m	class:QCPAxisPainterPrivate	access:public
+labelPadding	qcustomplot.h	2013;"	p	class:QCPAxis	access:public
+labelPadding	qcustomplot.h	2205;"	m	class:QCPAxisPainterPrivate	access:public
+launchView	launchView.h	21;"	p
+layer	qcustomplot.h	3670;"	p	class:QCustomPlot	access:public
+layer	qcustomplot.h	3671;"	p	class:QCustomPlot	access:public
+layerChanged	qcustomplot.h	724;"	p	class:QCPLayerable	access:public
+layerCount	qcustomplot.h	3675;"	p	class:QCustomPlot	access:public
+layerableAt	qcustomplot.h	3792;"	p	class:QCustomPlot	access:protected
+layerableListAt	qcustomplot.h	3793;"	p	class:QCustomPlot	access:protected
+layoutChanged	qcustomplot.h	1246;"	p	class:QCPLayoutElement	access:protected	implementation:virtual
+layoutElementAt	qcustomplot.h	3684;"	p	class:QCustomPlot	access:public
+left	qcustomplot.h	6226;"	m	class:QCPItemRect	access:public
+left	qcustomplot.h	6313;"	m	class:QCPItemText	access:public
+left	qcustomplot.h	6384;"	m	class:QCPItemEllipse	access:public
+left	qcustomplot.h	6448;"	m	class:QCPItemPixmap	access:public
+left	qcustomplot.h	6605;"	m	class:QCPItemBracket	access:public
+legend	qcustomplot.h	3702;"	m	class:QCustomPlot	access:public
+legendClick	qcustomplot.h	3717;"	p	class:QCustomPlot	access:public
+legendDoubleClick	qcustomplot.h	3718;"	p	class:QCustomPlot	access:public
+legendRemoved	qcustomplot.h	3782;"	p	class:QCustomPlot	access:protected	implementation:virtual
+limAbove	qcustomplot.h	3574;"	e	enum:QCustomPlot::LayerInsertMode
+limBelow	qcustomplot.h	3573;"	e	enum:QCustomPlot::LayerInsertMode
+limitIteratorsToDataRange	qcustomplot.h	2415;"	p	class:QCPDataContainer	access:public
+lmBuffered	qcustomplot.h	642;"	e	enum:QCPLayer::LayerMode
+lmLogical	qcustomplot.h	641;"	e	enum:QCPLayer::LayerMode
+loadPreset	qcustomplot.h	4452;"	p	class:QCPColorGradient	access:public
+loop	streamcatcher.h	29;"	p	class:StreamCatcher	access:private
+low	qcustomplot.h	5798;"	m	class:QCPFinancialData	access:public
+lower	qcustomplot.h	773;"	m	class:QCPRange	access:public
+lowerEnding	qcustomplot.h	2025;"	p	class:QCPAxis	access:public
+lowerEnding	qcustomplot.h	2204;"	m	class:QCPAxisPainterPrivate	access:public
+lowerFillBasePoint	qcustomplot.h	5207;"	p	class:QCPGraph	access:protected
+lowerQuartile	qcustomplot.h	5551;"	m	class:QCPStatisticalBoxData	access:public
+lsImpulse	qcustomplot.h	5142;"	e	enum:QCPGraph::LineStyle
+lsInside	qcustomplot.h	1956;"	e	enum:QCPAxis::LabelSide
+lsLine	qcustomplot.h	5138;"	e	enum:QCPGraph::LineStyle
+lsLine	qcustomplot.h	5274;"	e	enum:QCPCurve::LineStyle
+lsNone	qcustomplot.h	5136;"	e	enum:QCPGraph::LineStyle
+lsNone	qcustomplot.h	5273;"	e	enum:QCPCurve::LineStyle
+lsOutside	qcustomplot.h	1957;"	e	enum:QCPAxis::LabelSide
+lsStepCenter	qcustomplot.h	5141;"	e	enum:QCPGraph::LineStyle
+lsStepLeft	qcustomplot.h	5139;"	e	enum:QCPGraph::LineStyle
+lsStepRight	qcustomplot.h	5140;"	e	enum:QCPGraph::LineStyle
+mAADragBackup	qcustomplot.h	4643;"	m	class:QCPAxisRect	access:protected
+mActive	qcustomplot.h	1125;"	m	class:QCPSelectionRect	access:protected
+mAdaptiveSampling	qcustomplot.h	5181;"	m	class:QCPGraph	access:protected
+mAlpha	qcustomplot.h	5694;"	m	class:QCPColorMapData	access:protected
+mAnchorId	qcustomplot.h	3385;"	m	class:QCPItemAnchor	access:protected
+mAnchors	qcustomplot.h	3519;"	m	class:QCPAbstractItem	access:protected
+mAntialiased	qcustomplot.h	732;"	m	class:QCPLayerable	access:protected
+mAntialiasedElements	qcustomplot.h	3734;"	m	class:QCustomPlot	access:protected
+mAntialiasedFill	qcustomplot.h	3328;"	m	class:QCPAbstractPlottable	access:protected
+mAntialiasedScatters	qcustomplot.h	3328;"	m	class:QCPAbstractPlottable	access:protected
+mAntialiasedSubGrid	qcustomplot.h	1872;"	m	class:QCPGrid	access:protected
+mAntialiasedZeroLine	qcustomplot.h	1872;"	m	class:QCPGrid	access:protected
+mAntialiasingStack	qcustomplot.h	502;"	m	class:QCPPainter	access:protected
+mAspectRatioMode	qcustomplot.h	6458;"	m	class:QCPItemPixmap	access:protected
+mAutoAddPlottableToLegend	qcustomplot.h	3729;"	m	class:QCustomPlot	access:protected
+mAutoMargins	qcustomplot.h	1241;"	m	class:QCPLayoutElement	access:protected
+mAutoSqueeze	qcustomplot.h	2419;"	m	class:QCPDataContainer	access:protected
+mAxes	qcustomplot.h	4646;"	m	class:QCPAxisRect	access:protected
+mAxisPainter	qcustomplot.h	2143;"	m	class:QCPAxis	access:protected
+mAxisRect	qcustomplot.h	2108;"	m	class:QCPAxis	access:protected
+mAxisRect	qcustomplot.h	3461;"	m	class:QCPItemPosition	access:protected
+mAxisRect	qcustomplot.h	5065;"	m	class:QCPColorScale	access:protected
+mAxisSelectionBox	qcustomplot.h	2242;"	m	class:QCPAxisPainterPrivate	access:protected
+mAxisType	qcustomplot.h	2107;"	m	class:QCPAxis	access:protected
+mBackgroundBrush	qcustomplot.h	3738;"	m	class:QCustomPlot	access:protected
+mBackgroundBrush	qcustomplot.h	4630;"	m	class:QCPAxisRect	access:protected
+mBackgroundPixmap	qcustomplot.h	3739;"	m	class:QCustomPlot	access:protected
+mBackgroundPixmap	qcustomplot.h	4631;"	m	class:QCPAxisRect	access:protected
+mBackgroundScaled	qcustomplot.h	3741;"	m	class:QCustomPlot	access:protected
+mBackgroundScaled	qcustomplot.h	4633;"	m	class:QCPAxisRect	access:protected
+mBackgroundScaledMode	qcustomplot.h	3742;"	m	class:QCustomPlot	access:protected
+mBackgroundScaledMode	qcustomplot.h	4634;"	m	class:QCPAxisRect	access:protected
+mBarAbove	qcustomplot.h	5505;"	m	class:QCPBars	access:protected
+mBarBelow	qcustomplot.h	5505;"	m	class:QCPBars	access:protected
+mBarWidth	qcustomplot.h	5062;"	m	class:QCPColorScale	access:protected
+mBars	qcustomplot.h	5389;"	m	class:QCPBarsGroup	access:protected
+mBarsGroup	qcustomplot.h	5502;"	m	class:QCPBars	access:protected
+mBasePen	qcustomplot.h	2113;"	m	class:QCPAxis	access:protected
+mBaseValue	qcustomplot.h	5503;"	m	class:QCPBars	access:protected
+mBegin	qcustomplot.h	919;"	m	class:QCPDataRange	access:private
+mBiggestUnit	qcustomplot.h	1647;"	m	class:QCPAxisTickerTime	access:protected
+mBorderPen	qcustomplot.h	4854;"	m	class:QCPLegend	access:protected
+mBracketBrush	qcustomplot.h	4529;"	m	class:QCPSelectionDecoratorBracket	access:protected
+mBracketHeight	qcustomplot.h	4531;"	m	class:QCPSelectionDecoratorBracket	access:protected
+mBracketPen	qcustomplot.h	4528;"	m	class:QCPSelectionDecoratorBracket	access:protected
+mBracketStyle	qcustomplot.h	4532;"	m	class:QCPSelectionDecoratorBracket	access:protected
+mBracketWidth	qcustomplot.h	4530;"	m	class:QCPSelectionDecoratorBracket	access:protected
+mBrush	qcustomplot.h	1123;"	m	class:QCPSelectionRect	access:protected
+mBrush	qcustomplot.h	2348;"	m	class:QCPScatterStyle	access:protected
+mBrush	qcustomplot.h	3241;"	m	class:QCPSelectionDecorator	access:protected
+mBrush	qcustomplot.h	3330;"	m	class:QCPAbstractPlottable	access:protected
+mBrush	qcustomplot.h	4855;"	m	class:QCPLegend	access:protected
+mBrush	qcustomplot.h	6233;"	m	class:QCPItemRect	access:protected
+mBrush	qcustomplot.h	6321;"	m	class:QCPItemText	access:protected
+mBrush	qcustomplot.h	6392;"	m	class:QCPItemEllipse	access:protected
+mBrush	qcustomplot.h	6542;"	m	class:QCPItemTracer	access:protected
+mBrushNegative	qcustomplot.h	5895;"	m	class:QCPFinancial	access:protected
+mBrushPositive	qcustomplot.h	5895;"	m	class:QCPFinancial	access:protected
+mBuffer	qcustomplot.h	561;"	m	class:QCPPaintBufferPixmap	access:protected
+mBufferDevicePixelRatio	qcustomplot.h	3727;"	m	class:QCustomPlot	access:protected
+mCachedMargin	qcustomplot.h	2149;"	m	class:QCPAxis	access:protected
+mCachedMarginValid	qcustomplot.h	2148;"	m	class:QCPAxis	access:protected
+mChannelFillGraph	qcustomplot.h	5180;"	m	class:QCPGraph	access:protected
+mChartStyle	qcustomplot.h	5891;"	m	class:QCPFinancial	access:protected
+mChildren	qcustomplot.h	1161;"	m	class:QCPMarginGroup	access:protected
+mChildren	qcustomplot.h	669;"	m	class:QCPLayer	access:protected
+mChildrenX	qcustomplot.h	3386;"	m	class:QCPItemAnchor	access:protected
+mChildrenY	qcustomplot.h	3386;"	m	class:QCPItemAnchor	access:protected
+mClipAxisRect	qcustomplot.h	3517;"	m	class:QCPAbstractItem	access:protected
+mClipToAxisRect	qcustomplot.h	3516;"	m	class:QCPAbstractItem	access:protected
+mColor	qcustomplot.h	6319;"	m	class:QCPItemText	access:protected
+mColorAxis	qcustomplot.h	5066;"	m	class:QCPColorScale	access:protected
+mColorBuffer	qcustomplot.h	4464;"	m	class:QCPColorGradient	access:protected
+mColorBufferInvalidated	qcustomplot.h	4465;"	m	class:QCPColorGradient	access:protected
+mColorInterpolation	qcustomplot.h	4460;"	m	class:QCPColorGradient	access:protected
+mColorScale	qcustomplot.h	5759;"	m	class:QCPColorMap	access:protected
+mColorStops	qcustomplot.h	4459;"	m	class:QCPColorGradient	access:protected
+mColumnSpacing	qcustomplot.h	1378;"	m	class:QCPLayoutGrid	access:protected
+mColumnStretchFactors	qcustomplot.h	1376;"	m	class:QCPLayoutGrid	access:protected
+mCurrentLayer	qcustomplot.h	3743;"	m	class:QCustomPlot	access:protected
+mCustomPath	qcustomplot.h	2350;"	m	class:QCPScatterStyle	access:protected
+mData	qcustomplot.h	2422;"	m	class:QCPDataContainer	access:protected
+mData	qcustomplot.h	5693;"	m	class:QCPColorMapData	access:protected
+mDataBounds	qcustomplot.h	5695;"	m	class:QCPColorMapData	access:protected
+mDataContainer	qcustomplot.h	3861;"	m	class:QCPAbstractPlottable1D	access:protected
+mDataContainer	qcustomplot.h	6016;"	m	class:QCPErrorBars	access:protected
+mDataModified	qcustomplot.h	5696;"	m	class:QCPColorMapData	access:protected
+mDataPlottable	qcustomplot.h	6017;"	m	class:QCPErrorBars	access:protected
+mDataRange	qcustomplot.h	5059;"	m	class:QCPColorScale	access:protected
+mDataRange	qcustomplot.h	5753;"	m	class:QCPColorMap	access:protected
+mDataRanges	qcustomplot.h	966;"	m	class:QCPDataSelection	access:private
+mDataScaleType	qcustomplot.h	5060;"	m	class:QCPColorScale	access:protected
+mDataScaleType	qcustomplot.h	5754;"	m	class:QCPColorMap	access:protected
+mDateStrategy	qcustomplot.h	1599;"	m	class:QCPAxisTickerDateTime	typeref:enum:QCPAxisTickerDateTime::DateStrategy	access:protected
+mDateTimeFormat	qcustomplot.h	1595;"	m	class:QCPAxisTickerDateTime	access:protected
+mDateTimeSpec	qcustomplot.h	1596;"	m	class:QCPAxisTickerDateTime	access:protected
+mDevicePixelRatio	qcustomplot.h	538;"	m	class:QCPAbstractPaintBuffer	access:protected
+mDragStart	qcustomplot.h	4644;"	m	class:QCPAxisRect	access:protected
+mDragStartHorzRange	qcustomplot.h	4642;"	m	class:QCPAxisRect	access:protected
+mDragStartVertRange	qcustomplot.h	4642;"	m	class:QCPAxisRect	access:protected
+mDragging	qcustomplot.h	4645;"	m	class:QCPAxisRect	access:protected
+mElements	qcustomplot.h	1375;"	m	class:QCPLayoutGrid	access:protected
+mElements	qcustomplot.h	1432;"	m	class:QCPLayoutInset	access:protected
+mEnd	qcustomplot.h	919;"	m	class:QCPDataRange	access:private
+mErrorType	qcustomplot.h	6018;"	m	class:QCPErrorBars	access:protected
+mFieldWidth	qcustomplot.h	1644;"	m	class:QCPAxisTickerTime	access:protected
+mFillOrder	qcustomplot.h	1380;"	m	class:QCPLayoutGrid	access:protected
+mFont	qcustomplot.h	4718;"	m	class:QCPAbstractLegendItem	access:protected
+mFont	qcustomplot.h	4856;"	m	class:QCPLegend	access:protected
+mFont	qcustomplot.h	4949;"	m	class:QCPTextElement	access:protected
+mFont	qcustomplot.h	6322;"	m	class:QCPItemText	access:protected
+mFormatPattern	qcustomplot.h	1648;"	m	class:QCPAxisTickerTime	access:protected
+mFractionStyle	qcustomplot.h	1781;"	m	class:QCPAxisTickerPi	access:protected
+mGlContext	qcustomplot.h	3762;"	m	class:QCustomPlot	access:protected
+mGlContext	qcustomplot.h	606;"	m	class:QCPPaintBufferGlFbo	access:protected
+mGlFrameBuffer	qcustomplot.h	608;"	m	class:QCPPaintBufferGlFbo	access:protected
+mGlPBuffer	qcustomplot.h	582;"	m	class:QCPPaintBufferGlPbuffer	access:protected
+mGlPaintDevice	qcustomplot.h	3764;"	m	class:QCustomPlot	access:protected
+mGlPaintDevice	qcustomplot.h	607;"	m	class:QCPPaintBufferGlFbo	access:protected
+mGlSurface	qcustomplot.h	3763;"	m	class:QCustomPlot	access:protected
+mGradient	qcustomplot.h	5061;"	m	class:QCPColorScale	access:protected
+mGradient	qcustomplot.h	5756;"	m	class:QCPColorMap	access:protected
+mGradientImage	qcustomplot.h	4989;"	m	class:QCPColorScaleAxisRectPrivate	access:protected
+mGradientImageInvalidated	qcustomplot.h	4990;"	m	class:QCPColorScaleAxisRectPrivate	access:protected
+mGraph	qcustomplot.h	6545;"	m	class:QCPItemTracer	access:protected
+mGraphKey	qcustomplot.h	6546;"	m	class:QCPItemTracer	access:protected
+mGraphs	qcustomplot.h	3731;"	m	class:QCustomPlot	access:protected
+mGrid	qcustomplot.h	2142;"	m	class:QCPAxis	access:protected
+mHead	qcustomplot.h	6124;"	m	class:QCPItemLine	access:protected
+mHead	qcustomplot.h	6176;"	m	class:QCPItemCurve	access:protected
+mIconBorderPen	qcustomplot.h	4854;"	m	class:QCPLegend	access:protected
+mIconSize	qcustomplot.h	4858;"	m	class:QCPLegend	access:protected
+mIconTextPadding	qcustomplot.h	4859;"	m	class:QCPLegend	access:protected
+mIndex	qcustomplot.h	668;"	m	class:QCPLayer	access:protected
+mInsetAlignment	qcustomplot.h	1434;"	m	class:QCPLayoutInset	access:protected
+mInsetLayout	qcustomplot.h	4635;"	m	class:QCPAxisRect	access:protected
+mInsetPlacement	qcustomplot.h	1433;"	m	class:QCPLayoutInset	access:protected
+mInsetRect	qcustomplot.h	1435;"	m	class:QCPLayoutInset	access:protected
+mInteractions	qcustomplot.h	3735;"	m	class:QCustomPlot	access:protected
+mInterpolate	qcustomplot.h	5757;"	m	class:QCPColorMap	access:protected
+mInterpolating	qcustomplot.h	6547;"	m	class:QCPItemTracer	access:protected
+mInvalidated	qcustomplot.h	541;"	m	class:QCPAbstractPaintBuffer	access:protected
+mInverted	qcustomplot.h	1501;"	m	class:QCPLineEnding	access:protected
+mIsAntialiasing	qcustomplot.h	499;"	m	class:QCPPainter	access:protected
+mIsEmpty	qcustomplot.h	5690;"	m	class:QCPColorMapData	access:protected
+mItems	qcustomplot.h	3732;"	m	class:QCustomPlot	access:protected
+mKey	qcustomplot.h	3462;"	m	class:QCPItemPosition	access:protected
+mKeyAxis	qcustomplot.h	3331;"	m	class:QCPAbstractPlottable	access:protected
+mKeyAxis	qcustomplot.h	3460;"	m	class:QCPItemPosition	access:protected
+mKeyRange	qcustomplot.h	5689;"	m	class:QCPColorMapData	access:protected
+mKeySize	qcustomplot.h	5688;"	m	class:QCPColorMapData	access:protected
+mLabel	qcustomplot.h	2117;"	m	class:QCPAxis	access:protected
+mLabelCache	qcustomplot.h	2241;"	m	class:QCPAxisPainterPrivate	access:protected
+mLabelColor	qcustomplot.h	2119;"	m	class:QCPAxis	access:protected
+mLabelFont	qcustomplot.h	2118;"	m	class:QCPAxis	access:protected
+mLabelParameterHash	qcustomplot.h	2240;"	m	class:QCPAxisPainterPrivate	access:protected
+mLabelSelectionBox	qcustomplot.h	2242;"	m	class:QCPAxisPainterPrivate	access:protected
+mLayer	qcustomplot.h	731;"	m	class:QCPLayerable	access:protected
+mLayers	qcustomplot.h	3733;"	m	class:QCustomPlot	access:protected
+mLegendIcon	qcustomplot.h	5763;"	m	class:QCPColorMap	access:protected
+mLength	qcustomplot.h	1500;"	m	class:QCPLineEnding	access:protected
+mLength	qcustomplot.h	6613;"	m	class:QCPItemBracket	access:protected
+mLevelCount	qcustomplot.h	4458;"	m	class:QCPColorGradient	access:protected
+mLineStyle	qcustomplot.h	5177;"	m	class:QCPGraph	access:protected
+mLineStyle	qcustomplot.h	5310;"	m	class:QCPCurve	access:protected
+mLogBase	qcustomplot.h	1821;"	m	class:QCPAxisTickerLog	access:protected
+mLogBaseLnInv	qcustomplot.h	1825;"	m	class:QCPAxisTickerLog	access:protected
+mMapData	qcustomplot.h	5755;"	m	class:QCPColorMap	access:protected
+mMapImage	qcustomplot.h	5762;"	m	class:QCPColorMap	access:protected
+mMapImageInvalidated	qcustomplot.h	5764;"	m	class:QCPColorMap	access:protected
+mMarginGroups	qcustomplot.h	1242;"	m	class:QCPLayoutElement	access:protected
+mMargins	qcustomplot.h	1240;"	m	class:QCPLayoutElement	access:protected
+mMaximumSize	qcustomplot.h	1238;"	m	class:QCPLayoutElement	access:protected
+mMedianPen	qcustomplot.h	5621;"	m	class:QCPStatisticalBox	access:protected
+mMinimumMargins	qcustomplot.h	1240;"	m	class:QCPLayoutElement	access:protected
+mMinimumSize	qcustomplot.h	1238;"	m	class:QCPLayoutElement	access:protected
+mMode	qcustomplot.h	671;"	m	class:QCPLayer	access:protected
+mModes	qcustomplot.h	498;"	m	class:QCPPainter	access:protected
+mMouseEventLayerable	qcustomplot.h	3754;"	m	class:QCustomPlot	access:protected
+mMouseEventLayerableDetails	qcustomplot.h	3755;"	m	class:QCustomPlot	access:protected
+mMouseHasMoved	qcustomplot.h	3753;"	m	class:QCustomPlot	access:protected
+mMousePressPos	qcustomplot.h	3752;"	m	class:QCustomPlot	access:protected
+mMultiSelectModifier	qcustomplot.h	3745;"	m	class:QCustomPlot	access:protected
+mMultisamples	qcustomplot.h	583;"	m	class:QCPPaintBufferGlPbuffer	access:protected
+mName	qcustomplot.h	3327;"	m	class:QCPAbstractPlottable	access:protected
+mName	qcustomplot.h	3380;"	m	class:QCPItemAnchor	access:protected
+mName	qcustomplot.h	667;"	m	class:QCPLayer	access:protected
+mNoAntialiasingOnDrag	qcustomplot.h	3737;"	m	class:QCustomPlot	access:protected
+mNotAADragBackup	qcustomplot.h	4643;"	m	class:QCPAxisRect	access:protected
+mNotAntialiasedElements	qcustomplot.h	3734;"	m	class:QCustomPlot	access:protected
+mNumberBeautifulPowers	qcustomplot.h	2128;"	m	class:QCPAxis	access:protected
+mNumberFormatChar	qcustomplot.h	2127;"	m	class:QCPAxis	access:protected
+mNumberPrecision	qcustomplot.h	2126;"	m	class:QCPAxis	access:protected
+mOpenGl	qcustomplot.h	3748;"	m	class:QCustomPlot	access:protected
+mOpenGlAntialiasedElementsBackup	qcustomplot.h	3759;"	m	class:QCustomPlot	access:protected
+mOpenGlCacheLabelsBackup	qcustomplot.h	3760;"	m	class:QCustomPlot	access:protected
+mOpenGlMultisamples	qcustomplot.h	3758;"	m	class:QCustomPlot	access:protected
+mOrientation	qcustomplot.h	2111;"	m	class:QCPAxis	access:protected
+mOuterRect	qcustomplot.h	1239;"	m	class:QCPLayoutElement	access:protected
+mOutlierStyle	qcustomplot.h	5622;"	m	class:QCPStatisticalBox	access:protected
+mPadding	qcustomplot.h	2110;"	m	class:QCPAxis	access:protected
+mPadding	qcustomplot.h	6327;"	m	class:QCPItemText	access:protected
+mPaintBuffer	qcustomplot.h	674;"	m	class:QCPLayer	access:protected
+mPaintBuffers	qcustomplot.h	3751;"	m	class:QCustomPlot	access:protected
+mParentAnchorX	qcustomplot.h	3463;"	m	class:QCPItemPosition	access:protected
+mParentAnchorY	qcustomplot.h	3463;"	m	class:QCPItemPosition	access:protected
+mParentAxis	qcustomplot.h	1876;"	m	class:QCPGrid	access:protected
+mParentColorScale	qcustomplot.h	4988;"	m	class:QCPColorScaleAxisRectPrivate	access:protected
+mParentItem	qcustomplot.h	3384;"	m	class:QCPItemAnchor	access:protected
+mParentLayerable	qcustomplot.h	730;"	m	class:QCPLayerable	access:protected
+mParentLayout	qcustomplot.h	1237;"	m	class:QCPLayoutElement	access:protected
+mParentLegend	qcustomplot.h	4717;"	m	class:QCPAbstractLegendItem	access:protected
+mParentPlot	qcustomplot.h	1160;"	m	class:QCPMarginGroup	access:protected
+mParentPlot	qcustomplot.h	2239;"	m	class:QCPAxisPainterPrivate	access:protected
+mParentPlot	qcustomplot.h	3383;"	m	class:QCPItemAnchor	access:protected
+mParentPlot	qcustomplot.h	5386;"	m	class:QCPBarsGroup	access:protected
+mParentPlot	qcustomplot.h	666;"	m	class:QCPLayer	access:protected
+mParentPlot	qcustomplot.h	729;"	m	class:QCPLayerable	access:protected
+mPen	qcustomplot.h	1122;"	m	class:QCPSelectionRect	access:protected
+mPen	qcustomplot.h	1873;"	m	class:QCPGrid	access:protected
+mPen	qcustomplot.h	2347;"	m	class:QCPScatterStyle	access:protected
+mPen	qcustomplot.h	3240;"	m	class:QCPSelectionDecorator	access:protected
+mPen	qcustomplot.h	3329;"	m	class:QCPAbstractPlottable	access:protected
+mPen	qcustomplot.h	6074;"	m	class:QCPItemStraightLine	access:protected
+mPen	qcustomplot.h	6123;"	m	class:QCPItemLine	access:protected
+mPen	qcustomplot.h	6175;"	m	class:QCPItemCurve	access:protected
+mPen	qcustomplot.h	6232;"	m	class:QCPItemRect	access:protected
+mPen	qcustomplot.h	6320;"	m	class:QCPItemText	access:protected
+mPen	qcustomplot.h	6391;"	m	class:QCPItemEllipse	access:protected
+mPen	qcustomplot.h	6460;"	m	class:QCPItemPixmap	access:protected
+mPen	qcustomplot.h	6541;"	m	class:QCPItemTracer	access:protected
+mPen	qcustomplot.h	6612;"	m	class:QCPItemBracket	access:protected
+mPenDefined	qcustomplot.h	2353;"	m	class:QCPScatterStyle	access:protected
+mPenNegative	qcustomplot.h	5896;"	m	class:QCPFinancial	access:protected
+mPenPositive	qcustomplot.h	5896;"	m	class:QCPFinancial	access:protected
+mPeriodic	qcustomplot.h	4461;"	m	class:QCPColorGradient	access:protected
+mPeriodicity	qcustomplot.h	1780;"	m	class:QCPAxisTickerPi	access:protected
+mPiSymbol	qcustomplot.h	1778;"	m	class:QCPAxisTickerPi	access:protected
+mPiTickStep	qcustomplot.h	1784;"	m	class:QCPAxisTickerPi	access:protected
+mPiValue	qcustomplot.h	1779;"	m	class:QCPAxisTickerPi	access:protected
+mPixmap	qcustomplot.h	2349;"	m	class:QCPScatterStyle	access:protected
+mPixmap	qcustomplot.h	6454;"	m	class:QCPItemPixmap	access:protected
+mPlotLayout	qcustomplot.h	3728;"	m	class:QCustomPlot	access:protected
+mPlottable	qcustomplot.h	3245;"	m	class:QCPSelectionDecorator	access:protected
+mPlottable	qcustomplot.h	4751;"	m	class:QCPPlottableLegendItem	access:protected
+mPlottables	qcustomplot.h	3730;"	m	class:QCustomPlot	access:protected
+mPlottingHints	qcustomplot.h	3744;"	m	class:QCustomPlot	access:protected
+mPositionAlignment	qcustomplot.h	6324;"	m	class:QCPItemText	access:protected
+mPositionTypeX	qcustomplot.h	3459;"	m	class:QCPItemPosition	access:protected
+mPositionTypeY	qcustomplot.h	3459;"	m	class:QCPItemPosition	access:protected
+mPositions	qcustomplot.h	3518;"	m	class:QCPAbstractItem	access:protected
+mPreallocIteration	qcustomplot.h	2424;"	m	class:QCPDataContainer	access:protected
+mPreallocSize	qcustomplot.h	2423;"	m	class:QCPDataContainer	access:protected
+mRange	qcustomplot.h	2137;"	m	class:QCPAxis	access:protected
+mRangeDrag	qcustomplot.h	4636;"	m	class:QCPAxisRect	access:protected
+mRangeDragHorzAxis	qcustomplot.h	4637;"	m	class:QCPAxisRect	access:protected
+mRangeDragVertAxis	qcustomplot.h	4637;"	m	class:QCPAxisRect	access:protected
+mRangeReversed	qcustomplot.h	2138;"	m	class:QCPAxis	access:protected
+mRangeZoom	qcustomplot.h	4636;"	m	class:QCPAxisRect	access:protected
+mRangeZoomFactorHorz	qcustomplot.h	4639;"	m	class:QCPAxisRect	access:protected
+mRangeZoomFactorVert	qcustomplot.h	4639;"	m	class:QCPAxisRect	access:protected
+mRangeZoomHorzAxis	qcustomplot.h	4638;"	m	class:QCPAxisRect	access:protected
+mRangeZoomVertAxis	qcustomplot.h	4638;"	m	class:QCPAxisRect	access:protected
+mRect	qcustomplot.h	1121;"	m	class:QCPSelectionRect	access:protected
+mRect	qcustomplot.h	1239;"	m	class:QCPLayoutElement	access:protected
+mReplotQueued	qcustomplot.h	3757;"	m	class:QCustomPlot	access:protected
+mReplotting	qcustomplot.h	3756;"	m	class:QCustomPlot	access:protected
+mRotation	qcustomplot.h	6326;"	m	class:QCPItemText	access:protected
+mRowSpacing	qcustomplot.h	1378;"	m	class:QCPLayoutGrid	access:protected
+mRowStretchFactors	qcustomplot.h	1377;"	m	class:QCPLayoutGrid	access:protected
+mScaleStrategy	qcustomplot.h	1695;"	m	class:QCPAxisTickerFixed	access:protected
+mScaleType	qcustomplot.h	2139;"	m	class:QCPAxis	access:protected
+mScaled	qcustomplot.h	6456;"	m	class:QCPItemPixmap	access:protected
+mScaledBackgroundPixmap	qcustomplot.h	3740;"	m	class:QCustomPlot	access:protected
+mScaledBackgroundPixmap	qcustomplot.h	4632;"	m	class:QCPAxisRect	access:protected
+mScaledPixmap	qcustomplot.h	6455;"	m	class:QCPItemPixmap	access:protected
+mScaledPixmapInvalidated	qcustomplot.h	6457;"	m	class:QCPItemPixmap	access:protected
+mScatterSkip	qcustomplot.h	5179;"	m	class:QCPGraph	access:protected
+mScatterSkip	qcustomplot.h	5309;"	m	class:QCPCurve	access:protected
+mScatterStyle	qcustomplot.h	3242;"	m	class:QCPSelectionDecorator	access:protected
+mScatterStyle	qcustomplot.h	5178;"	m	class:QCPGraph	access:protected
+mScatterStyle	qcustomplot.h	5308;"	m	class:QCPCurve	access:protected
+mSelectable	qcustomplot.h	3332;"	m	class:QCPAbstractPlottable	access:protected
+mSelectable	qcustomplot.h	3520;"	m	class:QCPAbstractItem	access:protected
+mSelectable	qcustomplot.h	4722;"	m	class:QCPAbstractLegendItem	access:protected
+mSelectable	qcustomplot.h	4954;"	m	class:QCPTextElement	access:protected
+mSelectableParts	qcustomplot.h	2112;"	m	class:QCPAxis	access:protected
+mSelectableParts	qcustomplot.h	4860;"	m	class:QCPLegend	access:protected
+mSelected	qcustomplot.h	3520;"	m	class:QCPAbstractItem	access:protected
+mSelected	qcustomplot.h	4722;"	m	class:QCPAbstractLegendItem	access:protected
+mSelected	qcustomplot.h	4954;"	m	class:QCPTextElement	access:protected
+mSelectedBasePen	qcustomplot.h	2113;"	m	class:QCPAxis	access:protected
+mSelectedBorderPen	qcustomplot.h	4861;"	m	class:QCPLegend	access:protected
+mSelectedBrush	qcustomplot.h	4862;"	m	class:QCPLegend	access:protected
+mSelectedBrush	qcustomplot.h	6233;"	m	class:QCPItemRect	access:protected
+mSelectedBrush	qcustomplot.h	6321;"	m	class:QCPItemText	access:protected
+mSelectedBrush	qcustomplot.h	6392;"	m	class:QCPItemEllipse	access:protected
+mSelectedBrush	qcustomplot.h	6542;"	m	class:QCPItemTracer	access:protected
+mSelectedColor	qcustomplot.h	6319;"	m	class:QCPItemText	access:protected
+mSelectedFont	qcustomplot.h	4720;"	m	class:QCPAbstractLegendItem	access:protected
+mSelectedFont	qcustomplot.h	4863;"	m	class:QCPLegend	access:protected
+mSelectedFont	qcustomplot.h	4951;"	m	class:QCPTextElement	access:protected
+mSelectedFont	qcustomplot.h	6322;"	m	class:QCPItemText	access:protected
+mSelectedIconBorderPen	qcustomplot.h	4861;"	m	class:QCPLegend	access:protected
+mSelectedLabelColor	qcustomplot.h	2119;"	m	class:QCPAxis	access:protected
+mSelectedLabelFont	qcustomplot.h	2118;"	m	class:QCPAxis	access:protected
+mSelectedParts	qcustomplot.h	2112;"	m	class:QCPAxis	access:protected
+mSelectedParts	qcustomplot.h	4860;"	m	class:QCPLegend	access:protected
+mSelectedPen	qcustomplot.h	6074;"	m	class:QCPItemStraightLine	access:protected
+mSelectedPen	qcustomplot.h	6123;"	m	class:QCPItemLine	access:protected
+mSelectedPen	qcustomplot.h	6175;"	m	class:QCPItemCurve	access:protected
+mSelectedPen	qcustomplot.h	6232;"	m	class:QCPItemRect	access:protected
+mSelectedPen	qcustomplot.h	6320;"	m	class:QCPItemText	access:protected
+mSelectedPen	qcustomplot.h	6391;"	m	class:QCPItemEllipse	access:protected
+mSelectedPen	qcustomplot.h	6460;"	m	class:QCPItemPixmap	access:protected
+mSelectedPen	qcustomplot.h	6541;"	m	class:QCPItemTracer	access:protected
+mSelectedPen	qcustomplot.h	6612;"	m	class:QCPItemBracket	access:protected
+mSelectedSubTickPen	qcustomplot.h	2135;"	m	class:QCPAxis	access:protected
+mSelectedTextColor	qcustomplot.h	4721;"	m	class:QCPAbstractLegendItem	access:protected
+mSelectedTextColor	qcustomplot.h	4864;"	m	class:QCPLegend	access:protected
+mSelectedTextColor	qcustomplot.h	4952;"	m	class:QCPTextElement	access:protected
+mSelectedTickLabelColor	qcustomplot.h	2125;"	m	class:QCPAxis	access:protected
+mSelectedTickLabelFont	qcustomplot.h	2124;"	m	class:QCPAxis	access:protected
+mSelectedTickPen	qcustomplot.h	2134;"	m	class:QCPAxis	access:protected
+mSelection	qcustomplot.h	3333;"	m	class:QCPAbstractPlottable	access:protected
+mSelectionDecorator	qcustomplot.h	3334;"	m	class:QCPAbstractPlottable	access:protected
+mSelectionRect	qcustomplot.h	3747;"	m	class:QCustomPlot	access:protected
+mSelectionRectMode	qcustomplot.h	3746;"	m	class:QCustomPlot	access:protected
+mSelectionTolerance	qcustomplot.h	3736;"	m	class:QCustomPlot	access:protected
+mShape	qcustomplot.h	2346;"	m	class:QCPScatterStyle	access:protected
+mSize	qcustomplot.h	2345;"	m	class:QCPScatterStyle	access:protected
+mSize	qcustomplot.h	537;"	m	class:QCPAbstractPaintBuffer	access:protected
+mSize	qcustomplot.h	6543;"	m	class:QCPItemTracer	access:protected
+mSmallestUnit	qcustomplot.h	1647;"	m	class:QCPAxisTickerTime	access:protected
+mSpacing	qcustomplot.h	5388;"	m	class:QCPBarsGroup	access:protected
+mSpacingType	qcustomplot.h	5387;"	m	class:QCPBarsGroup	access:protected
+mStackingGap	qcustomplot.h	5504;"	m	class:QCPBars	access:protected
+mStyle	qcustomplot.h	1499;"	m	class:QCPLineEnding	access:protected
+mStyle	qcustomplot.h	6544;"	m	class:QCPItemTracer	access:protected
+mStyle	qcustomplot.h	6614;"	m	class:QCPItemBracket	access:protected
+mSubGridPen	qcustomplot.h	1873;"	m	class:QCPGrid	access:protected
+mSubGridVisible	qcustomplot.h	1871;"	m	class:QCPGrid	access:protected
+mSubTickCount	qcustomplot.h	1731;"	m	class:QCPAxisTickerText	access:protected
+mSubTickCount	qcustomplot.h	1822;"	m	class:QCPAxisTickerLog	access:protected
+mSubTickPen	qcustomplot.h	2135;"	m	class:QCPAxis	access:protected
+mSubTickVector	qcustomplot.h	2147;"	m	class:QCPAxis	access:protected
+mSubTicks	qcustomplot.h	2132;"	m	class:QCPAxis	access:protected
+mSymbolGap	qcustomplot.h	6020;"	m	class:QCPErrorBars	access:protected
+mTail	qcustomplot.h	6124;"	m	class:QCPItemLine	access:protected
+mTail	qcustomplot.h	6176;"	m	class:QCPItemCurve	access:protected
+mTangentAverage	qcustomplot.h	4534;"	m	class:QCPSelectionDecoratorBracket	access:protected
+mTangentToData	qcustomplot.h	4533;"	m	class:QCPSelectionDecoratorBracket	access:protected
+mText	qcustomplot.h	4947;"	m	class:QCPTextElement	access:protected
+mText	qcustomplot.h	6323;"	m	class:QCPItemText	access:protected
+mTextAlignment	qcustomplot.h	6325;"	m	class:QCPItemText	access:protected
+mTextBoundingRect	qcustomplot.h	4953;"	m	class:QCPTextElement	access:protected
+mTextColor	qcustomplot.h	4719;"	m	class:QCPAbstractLegendItem	access:protected
+mTextColor	qcustomplot.h	4857;"	m	class:QCPLegend	access:protected
+mTextColor	qcustomplot.h	4950;"	m	class:QCPTextElement	access:protected
+mTextFlags	qcustomplot.h	4948;"	m	class:QCPTextElement	access:protected
+mTickCount	qcustomplot.h	1547;"	m	class:QCPAxisTicker	access:protected
+mTickLabelColor	qcustomplot.h	2125;"	m	class:QCPAxis	access:protected
+mTickLabelFont	qcustomplot.h	2124;"	m	class:QCPAxis	access:protected
+mTickLabels	qcustomplot.h	2122;"	m	class:QCPAxis	access:protected
+mTickLabelsSelectionBox	qcustomplot.h	2242;"	m	class:QCPAxisPainterPrivate	access:protected
+mTickOrigin	qcustomplot.h	1548;"	m	class:QCPAxisTicker	access:protected
+mTickPen	qcustomplot.h	2134;"	m	class:QCPAxis	access:protected
+mTickStep	qcustomplot.h	1694;"	m	class:QCPAxisTickerFixed	access:protected
+mTickStepStrategy	qcustomplot.h	1546;"	m	class:QCPAxisTicker	access:protected
+mTickVector	qcustomplot.h	2145;"	m	class:QCPAxis	access:protected
+mTickVectorLabels	qcustomplot.h	2146;"	m	class:QCPAxis	access:protected
+mTicker	qcustomplot.h	2144;"	m	class:QCPAxis	access:protected
+mTicks	qcustomplot.h	1730;"	m	class:QCPAxisTickerText	access:protected
+mTicks	qcustomplot.h	2131;"	m	class:QCPAxis	access:protected
+mTightBoundary	qcustomplot.h	5758;"	m	class:QCPColorMap	access:protected
+mTimeFormat	qcustomplot.h	1643;"	m	class:QCPAxisTickerTime	access:protected
+mTransformationMode	qcustomplot.h	6459;"	m	class:QCPItemPixmap	access:protected
+mTwoColored	qcustomplot.h	5894;"	m	class:QCPFinancial	access:protected
+mType	qcustomplot.h	5058;"	m	class:QCPColorScale	access:protected
+mUndersampledMapImage	qcustomplot.h	5762;"	m	class:QCPColorMap	access:protected
+mUsedScatterProperties	qcustomplot.h	3243;"	m	class:QCPSelectionDecorator	access:protected
+mValue	qcustomplot.h	3462;"	m	class:QCPItemPosition	access:protected
+mValueAxis	qcustomplot.h	3331;"	m	class:QCPAbstractPlottable	access:protected
+mValueAxis	qcustomplot.h	3460;"	m	class:QCPItemPosition	access:protected
+mValueRange	qcustomplot.h	5689;"	m	class:QCPColorMapData	access:protected
+mValueSize	qcustomplot.h	5688;"	m	class:QCPColorMapData	access:protected
+mViewport	qcustomplot.h	3726;"	m	class:QCustomPlot	access:protected
+mVisible	qcustomplot.h	670;"	m	class:QCPLayer	access:protected
+mVisible	qcustomplot.h	728;"	m	class:QCPLayerable	access:protected
+mWhiskerAntialiased	qcustomplot.h	5620;"	m	class:QCPStatisticalBox	access:protected
+mWhiskerBarPen	qcustomplot.h	5619;"	m	class:QCPStatisticalBox	access:protected
+mWhiskerPen	qcustomplot.h	5619;"	m	class:QCPStatisticalBox	access:protected
+mWhiskerWidth	qcustomplot.h	5618;"	m	class:QCPStatisticalBox	access:protected
+mWhiskerWidth	qcustomplot.h	6019;"	m	class:QCPErrorBars	access:protected
+mWidth	qcustomplot.h	1500;"	m	class:QCPLineEnding	access:protected
+mWidth	qcustomplot.h	5500;"	m	class:QCPBars	access:protected
+mWidth	qcustomplot.h	5617;"	m	class:QCPStatisticalBox	access:protected
+mWidth	qcustomplot.h	5892;"	m	class:QCPFinancial	access:protected
+mWidthType	qcustomplot.h	5501;"	m	class:QCPBars	access:protected
+mWidthType	qcustomplot.h	5893;"	m	class:QCPFinancial	access:protected
+mWrap	qcustomplot.h	1379;"	m	class:QCPLayoutGrid	access:protected
+mX	qcustomplot.h	420;"	m	class:QCPVector2D	access:private
+mY	qcustomplot.h	420;"	m	class:QCPVector2D	access:private
+mZeroLinePen	qcustomplot.h	1873;"	m	class:QCPGrid	access:protected
+mainBrush	qcustomplot.h	6241;"	p	class:QCPItemRect	access:protected
+mainBrush	qcustomplot.h	6338;"	p	class:QCPItemText	access:protected
+mainBrush	qcustomplot.h	6400;"	p	class:QCPItemEllipse	access:protected
+mainBrush	qcustomplot.h	6554;"	p	class:QCPItemTracer	access:protected
+mainColor	qcustomplot.h	6336;"	p	class:QCPItemText	access:protected
+mainFont	qcustomplot.h	4966;"	p	class:QCPTextElement	access:protected
+mainFont	qcustomplot.h	6335;"	p	class:QCPItemText	access:protected
+mainPen	qcustomplot.h	6081;"	p	class:QCPItemStraightLine	access:protected
+mainPen	qcustomplot.h	6131;"	p	class:QCPItemLine	access:protected
+mainPen	qcustomplot.h	6182;"	p	class:QCPItemCurve	access:protected
+mainPen	qcustomplot.h	6240;"	p	class:QCPItemRect	access:protected
+mainPen	qcustomplot.h	6337;"	p	class:QCPItemText	access:protected
+mainPen	qcustomplot.h	6399;"	p	class:QCPItemEllipse	access:protected
+mainPen	qcustomplot.h	6469;"	p	class:QCPItemPixmap	access:protected
+mainPen	qcustomplot.h	6553;"	p	class:QCPItemTracer	access:protected
+mainPen	qcustomplot.h	6621;"	p	class:QCPItemBracket	access:protected
+mainTextColor	qcustomplot.h	4967;"	p	class:QCPTextElement	access:protected
+mainToolBar	ui_mainwindow.h	33;"	m	class:Ui_MainWindow	access:public
+makeNonCosmetic	qcustomplot.h	494;"	p	class:QCPPainter	access:public
+marginSideToAxisType	qcustomplot.h	2093;"	p	class:QCPAxis	access:public
+maxRange	qcustomplot.cpp	1889;"	m	class:QCPRange	file:
+maxRange	qcustomplot.h	807;"	m	class:QCPRange	access:public
+maximum	qcustomplot.h	5551;"	m	class:QCPStatisticalBoxData	access:public
+maximumSizeHint	qcustomplot.h	1229;"	p	class:QCPLayoutElement	access:public	implementation:virtual
+mayTraverse	qcustomplot.h	5326;"	p	class:QCPCurve	access:protected
+median	qcustomplot.h	5551;"	m	class:QCPStatisticalBoxData	access:public
+menuBar	ui_mainwindow.h	32;"	m	class:Ui_MainWindow	access:public
+minRange	qcustomplot.cpp	1876;"	m	class:QCPRange	file:
+minRange	qcustomplot.h	806;"	m	class:QCPRange	access:public
+minimum	qcustomplot.h	5551;"	m	class:QCPStatisticalBoxData	access:public
+minimumSizeHint	qcustomplot.h	1228;"	p	class:QCPLayoutElement	access:public	implementation:virtual
+mouseDoubleClick	qcustomplot.h	3705;"	p	class:QCustomPlot	access:public
+mouseDoubleClickEvent	qcustomplot.h	747;"	p	class:QCPLayerable	access:protected	implementation:virtual
+mouseMove	qcustomplot.h	3707;"	p	class:QCustomPlot	access:public
+mouseMoveEvent	qcustomplot.h	745;"	p	class:QCPLayerable	access:protected	implementation:virtual
+mousePress	qcustomplot.h	3706;"	p	class:QCustomPlot	access:public
+mousePressEvent	qcustomplot.h	744;"	p	class:QCPLayerable	access:protected	implementation:virtual
+mouseRelease	qcustomplot.h	3708;"	p	class:QCustomPlot	access:public
+mouseReleaseEvent	qcustomplot.h	746;"	p	class:QCPLayerable	access:protected	implementation:virtual
+mouseWheel	qcustomplot.h	3709;"	p	class:QCustomPlot	access:public
+moveAbove	qcustomplot.h	5489;"	p	class:QCPBars	access:public
+moveBelow	qcustomplot.h	5488;"	p	class:QCPBars	access:public
+moveLayer	qcustomplot.h	3678;"	p	class:QCustomPlot	access:public
+moveRange	qcustomplot.h	2081;"	p	class:QCPAxis	access:public
+moveSelection	qcustomplot.h	1129;"	p	class:QCPSelectionRect	access:protected	implementation:virtual
+moveToLayer	qcustomplot.h	753;"	p	class:QCPLayerable	access:protected
+movieManagement	mainwindow.h	48;"	p	class:MainWindow	access:private
+msAll	qcustomplot.h	198;"	e	enum:QCP::MarginSide
+msBottom	qcustomplot.h	197;"	e	enum:QCP::MarginSide
+msLeft	qcustomplot.h	194;"	e	enum:QCP::MarginSide
+msNone	qcustomplot.h	199;"	e	enum:QCP::MarginSide
+msRight	qcustomplot.h	195;"	e	enum:QCP::MarginSide
+msTop	qcustomplot.h	196;"	e	enum:QCP::MarginSide
+normalize	qcustomplot.h	405;"	p	class:QCPVector2D	access:public
+normalized	qcustomplot.h	406;"	p	class:QCPVector2D	access:public
+numberFormat	qcustomplot.h	1998;"	p	class:QCPAxis	access:public
+numberMultiplyCross	qcustomplot.h	2213;"	m	class:QCPAxisPainterPrivate	access:public
+offset	qcustomplot.h	2015;"	p	class:QCPAxis	access:public
+offset	qcustomplot.h	2219;"	m	class:QCPAxisPainterPrivate	access:public
+offset	qcustomplot.h	2230;"	m	struct:QCPAxisPainterPrivate::CachedLabel	access:public
+ohlcSelectTest	qcustomplot.h	5906;"	p	class:QCPFinancial	access:protected
+open	qcustomplot.h	5798;"	m	class:QCPFinancialData	access:public
+operator ()	oscillator.h	14;"	p	class:Oscillator	access:public
+operator *	qcustomplot.h	422;"	p	class:QCPVector2D	access:friend
+operator *	qcustomplot.h	423;"	p	class:QCPVector2D	access:friend
+operator *	qcustomplot.h	788;"	p	class:QCPRange	access:friend
+operator *	qcustomplot.h	789;"	p	class:QCPRange	access:friend
+operator *=	qcustomplot.h	413;"	p	class:QCPVector2D	access:public
+operator +	qcustomplot.h	425;"	p	class:QCPVector2D	access:friend
+operator +	qcustomplot.h	785;"	p	class:QCPRange	access:friend
+operator +	qcustomplot.h	786;"	p	class:QCPRange	access:friend
+operator +	qcustomplot.h	937;"	p	class:QCPDataSelection	access:friend
+operator +	qcustomplot.h	938;"	p	class:QCPDataSelection	access:friend
+operator +	qcustomplot.h	939;"	p	class:QCPDataSelection	access:friend
+operator +	qcustomplot.h	940;"	p	class:QCPDataSelection	access:friend
+operator +=	qcustomplot.h	415;"	p	class:QCPVector2D	access:public
+operator +=	qcustomplot.h	933;"	p	class:QCPDataSelection	access:public
+operator +=	qcustomplot.h	934;"	p	class:QCPDataSelection	access:public
+operator -	qcustomplot.h	426;"	p	class:QCPVector2D	access:friend
+operator -	qcustomplot.h	427;"	p	class:QCPVector2D	access:friend
+operator -	qcustomplot.h	787;"	p	class:QCPRange	access:friend
+operator -	qcustomplot.h	941;"	p	class:QCPDataSelection	access:friend
+operator -	qcustomplot.h	942;"	p	class:QCPDataSelection	access:friend
+operator -	qcustomplot.h	943;"	p	class:QCPDataSelection	access:friend
+operator -	qcustomplot.h	944;"	p	class:QCPDataSelection	access:friend
+operator -=	qcustomplot.h	416;"	p	class:QCPVector2D	access:public
+operator -=	qcustomplot.h	935;"	p	class:QCPDataSelection	access:public
+operator -=	qcustomplot.h	936;"	p	class:QCPDataSelection	access:public
+operator /	qcustomplot.h	424;"	p	class:QCPVector2D	access:friend
+operator /	qcustomplot.h	790;"	p	class:QCPRange	access:friend
+operator /=	qcustomplot.h	414;"	p	class:QCPVector2D	access:public
+operator =	qcustomplot.h	5653;"	p	class:QCPColorMapData	access:public
+operator ==	qcustomplot.h	4432;"	p	class:QCPColorGradient	access:public
+operator ==	qcustomplot.h	931;"	p	class:QCPDataSelection	access:public
+opposite	qcustomplot.h	2095;"	p	class:QCPAxis	access:public
+outliers	qcustomplot.h	5552;"	m	class:QCPStatisticalBoxData	access:public
+paint	videoitem.h	22;"	p	class:VideoItem	access:public
+parentPlotInitialized	qcustomplot.h	735;"	p	class:QCPLayerable	access:protected	implementation:virtual
+performAutoSqueeze	qcustomplot.h	2428;"	p	class:QCPDataContainer	access:protected
+phCacheLabels	qcustomplot.h	238;"	e	enum:QCP::PlottingHint
+phFastPolylines	qcustomplot.h	234;"	e	enum:QCP::PlottingHint
+phImmediateRefresh	qcustomplot.h	236;"	e	enum:QCP::PlottingHint
+phNone	qcustomplot.h	233;"	e	enum:QCP::PlottingHint
+pickClosest	qcustomplot.h	1560;"	p	class:QCPAxisTicker	access:protected
+pixelPosition	qcustomplot.h	3376;"	p	class:QCPItemAnchor	access:public	implementation:virtual
+pixelPosition	qcustomplot.h	3442;"	p	class:QCPItemPosition	access:public	implementation:virtual
+pixelToCoord	qcustomplot.h	2086;"	p	class:QCPAxis	access:public
+pixelsToCoords	qcustomplot.h	3310;"	p	class:QCPAbstractPlottable	access:public
+pixelsToCoords	qcustomplot.h	3311;"	p	class:QCPAbstractPlottable	access:public
+pixmap	qcustomplot.h	2231;"	m	struct:QCPAxisPainterPrivate::CachedLabel	access:public
+placeTickLabel	qcustomplot.h	2246;"	p	class:QCPAxisPainterPrivate	access:protected	implementation:virtual
+play	mainwindow.h	64;"	m	class:MainWindow	access:private
+plottable	qcustomplot.h	3638;"	p	class:QCustomPlot	access:public
+plottable	qcustomplot.h	3639;"	p	class:QCustomPlot	access:public
+plottableAt	qcustomplot.h	3645;"	p	class:QCustomPlot	access:public
+plottableClick	qcustomplot.h	3711;"	p	class:QCustomPlot	access:public
+plottableCount	qcustomplot.h	3643;"	p	class:QCustomPlot	access:public
+plottableDoubleClick	qcustomplot.h	3712;"	p	class:QCustomPlot	access:public
+plottables	qcustomplot.h	2089;"	p	class:QCPAxis	access:public
+plottables	qcustomplot.h	4606;"	p	class:QCPAxisRect	access:public
+pmDefault	qcustomplot.h	462;"	e	enum:QCPPainter::PainterMode
+pmNoCaching	qcustomplot.h	464;"	e	enum:QCPPainter::PainterMode
+pmNonCosmetic	qcustomplot.h	465;"	e	enum:QCPPainter::PainterMode
+pmVectorized	qcustomplot.h	463;"	e	enum:QCPPainter::PainterMode
+point1	qcustomplot.h	6069;"	m	class:QCPItemStraightLine	access:public
+point2	qcustomplot.h	6070;"	m	class:QCPItemStraightLine	access:public
+pointDistance	qcustomplot.h	5214;"	p	class:QCPGraph	access:protected
+pointDistance	qcustomplot.h	5329;"	p	class:QCPCurve	access:protected
+pointDistance	qcustomplot.h	6031;"	p	class:QCPErrorBars	access:protected
+position	qcustomplot.h	3506;"	p	class:QCPAbstractItem	access:public
+position	qcustomplot.h	6305;"	m	class:QCPItemText	access:public
+position	qcustomplot.h	6537;"	m	class:QCPItemTracer	access:public
+preallocateGrow	qcustomplot.h	2427;"	p	class:QCPDataContainer	access:protected
+processPointSelection	qcustomplot.h	3785;"	p	class:QCustomPlot	access:protected	implementation:virtual
+processRectSelection	qcustomplot.h	3783;"	p	class:QCustomPlot	access:protected	implementation:virtual
+processRectZoom	qcustomplot.h	3784;"	p	class:QCustomPlot	access:protected	implementation:virtual
+ptAbsolute	qcustomplot.h	3415;"	e	enum:QCPItemPosition::PositionType
+ptAxisRectRatio	qcustomplot.h	3419;"	e	enum:QCPItemPosition::PositionType
+ptPlotCoords	qcustomplot.h	3422;"	e	enum:QCPItemPosition::PositionType
+ptViewportRatio	qcustomplot.h	3416;"	e	enum:QCPItemPosition::PositionType
+pushButton	ui_mainwindow.h	30;"	m	class:Ui_MainWindow	access:public
+pushButton_2	ui_mainwindow.h	31;"	m	class:Ui_MainWindow	access:public
+qt_meta_data_MainWindow	moc_mainwindow.cpp	46;"	v	file:
+qt_meta_data_PlotItem	moc_plotitem.cpp	40;"	v	file:
+qt_meta_data_QCP	moc_qcustomplot.cpp	121;"	v	file:
+qt_meta_data_QCPAbstractItem	moc_qcustomplot.cpp	2851;"	v	file:
+qt_meta_data_QCPAbstractLegendItem	moc_qcustomplot.cpp	3921;"	v	file:
+qt_meta_data_QCPAbstractPlottable	moc_qcustomplot.cpp	2477;"	v	file:
+qt_meta_data_QCPAxis	moc_qcustomplot.cpp	1858;"	v	file:
+qt_meta_data_QCPAxisRect	moc_qcustomplot.cpp	3788;"	v	file:
+qt_meta_data_QCPAxisTicker	moc_qcustomplot.cpp	1417;"	v	file:
+qt_meta_data_QCPAxisTickerFixed	moc_qcustomplot.cpp	1522;"	v	file:
+qt_meta_data_QCPAxisTickerPi	moc_qcustomplot.cpp	1574;"	v	file:
+qt_meta_data_QCPAxisTickerTime	moc_qcustomplot.cpp	1469;"	v	file:
+qt_meta_data_QCPBars	moc_qcustomplot.cpp	5478;"	v	file:
+qt_meta_data_QCPBarsGroup	moc_qcustomplot.cpp	5347;"	v	file:
+qt_meta_data_QCPColorGradient	moc_qcustomplot.cpp	3665;"	v	file:
+qt_meta_data_QCPColorMap	moc_qcustomplot.cpp	5779;"	v	file:
+qt_meta_data_QCPColorScale	moc_qcustomplot.cpp	4818;"	v	file:
+qt_meta_data_QCPColorScaleAxisRectPrivate	moc_qcustomplot.cpp	4701;"	v	file:
+qt_meta_data_QCPCurve	moc_qcustomplot.cpp	5222;"	v	file:
+qt_meta_data_QCPErrorBars	moc_qcustomplot.cpp	6194;"	v	file:
+qt_meta_data_QCPFinancial	moc_qcustomplot.cpp	6044;"	v	file:
+qt_meta_data_QCPGraph	moc_qcustomplot.cpp	5081;"	v	file:
+qt_meta_data_QCPGrid	moc_qcustomplot.cpp	1628;"	v	file:
+qt_meta_data_QCPItemAnchor	moc_qcustomplot.cpp	2746;"	v	file:
+qt_meta_data_QCPItemBracket	moc_qcustomplot.cpp	7367;"	v	file:
+qt_meta_data_QCPItemCurve	moc_qcustomplot.cpp	6558;"	v	file:
+qt_meta_data_QCPItemEllipse	moc_qcustomplot.cpp	6953;"	v	file:
+qt_meta_data_QCPItemLine	moc_qcustomplot.cpp	6439;"	v	file:
+qt_meta_data_QCPItemPixmap	moc_qcustomplot.cpp	7076;"	v	file:
+qt_meta_data_QCPItemPosition	moc_qcustomplot.cpp	2791;"	v	file:
+qt_meta_data_QCPItemRect	moc_qcustomplot.cpp	6676;"	v	file:
+qt_meta_data_QCPItemStraightLine	moc_qcustomplot.cpp	6326;"	v	file:
+qt_meta_data_QCPItemText	moc_qcustomplot.cpp	6808;"	v	file:
+qt_meta_data_QCPItemTracer	moc_qcustomplot.cpp	7213;"	v	file:
+qt_meta_data_QCPLayer	moc_qcustomplot.cpp	329;"	v	file:
+qt_meta_data_QCPLayerable	moc_qcustomplot.cpp	473;"	v	file:
+qt_meta_data_QCPLayout	moc_qcustomplot.cpp	1049;"	v	file:
+qt_meta_data_QCPLayoutElement	moc_qcustomplot.cpp	916;"	v	file:
+qt_meta_data_QCPLayoutGrid	moc_qcustomplot.cpp	1132;"	v	file:
+qt_meta_data_QCPLayoutInset	moc_qcustomplot.cpp	1272;"	v	file:
+qt_meta_data_QCPLegend	moc_qcustomplot.cpp	4220;"	v	file:
+qt_meta_data_QCPLineEnding	moc_qcustomplot.cpp	1360;"	v	file:
+qt_meta_data_QCPMarginGroup	moc_qcustomplot.cpp	832;"	v	file:
+qt_meta_data_QCPPainter	moc_qcustomplot.cpp	263;"	v	file:
+qt_meta_data_QCPPlottableLegendItem	moc_qcustomplot.cpp	4117;"	v	file:
+qt_meta_data_QCPScatterStyle	moc_qcustomplot.cpp	2338;"	v	file:
+qt_meta_data_QCPSelectionDecorator	moc_qcustomplot.cpp	2413;"	v	file:
+qt_meta_data_QCPSelectionDecoratorBracket	moc_qcustomplot.cpp	3731;"	v	file:
+qt_meta_data_QCPSelectionRect	moc_qcustomplot.cpp	676;"	v	file:
+qt_meta_data_QCPStatisticalBox	moc_qcustomplot.cpp	5624;"	v	file:
+qt_meta_data_QCPTextElement	moc_qcustomplot.cpp	4470;"	v	file:
+qt_meta_data_QCustomPlot	moc_qcustomplot.cpp	3123;"	v	file:
+qt_meta_data_SliderItem	moc_slideritem.cpp	40;"	v	file:
+qt_meta_data_VideoItem	moc_videoitem.cpp	40;"	v	file:
+qt_meta_extradata_QCPAbstractPlottable	moc_qcustomplot.cpp	2617;"	v	file:
+qt_meta_extradata_QCPColorMap	moc_qcustomplot.cpp	5904;"	v	file:
+qt_meta_extradata_QCPColorScale	moc_qcustomplot.cpp	4938;"	v	file:
+qt_meta_stringdata_MainWindow	moc_mainwindow.cpp	30;"	v	file:
+qt_meta_stringdata_MainWindow_t	moc_mainwindow.cpp	21;"	s	file:
+qt_meta_stringdata_PlotItem	moc_plotitem.cpp	30;"	v	file:
+qt_meta_stringdata_PlotItem_t	moc_plotitem.cpp	21;"	s	file:
+qt_meta_stringdata_QCP	moc_qcustomplot.cpp	33;"	v	file:
+qt_meta_stringdata_QCPAbstractItem	moc_qcustomplot.cpp	2830;"	v	file:
+qt_meta_stringdata_QCPAbstractItem_t	moc_qcustomplot.cpp	2821;"	s	file:
+qt_meta_stringdata_QCPAbstractLegendItem	moc_qcustomplot.cpp	3896;"	v	file:
+qt_meta_stringdata_QCPAbstractLegendItem_t	moc_qcustomplot.cpp	3887;"	s	file:
+qt_meta_stringdata_QCPAbstractPlottable	moc_qcustomplot.cpp	2443;"	v	file:
+qt_meta_stringdata_QCPAbstractPlottable_t	moc_qcustomplot.cpp	2434;"	s	file:
+qt_meta_stringdata_QCPAxis	moc_qcustomplot.cpp	1739;"	v	file:
+qt_meta_stringdata_QCPAxisRect	moc_qcustomplot.cpp	3771;"	v	file:
+qt_meta_stringdata_QCPAxisRect_t	moc_qcustomplot.cpp	3762;"	s	file:
+qt_meta_stringdata_QCPAxisTicker	moc_qcustomplot.cpp	1405;"	v	file:
+qt_meta_stringdata_QCPAxisTickerFixed	moc_qcustomplot.cpp	1509;"	v	file:
+qt_meta_stringdata_QCPAxisTickerFixed_t	moc_qcustomplot.cpp	1500;"	s	file:
+qt_meta_stringdata_QCPAxisTickerPi	moc_qcustomplot.cpp	1560;"	v	file:
+qt_meta_stringdata_QCPAxisTickerPi_t	moc_qcustomplot.cpp	1551;"	s	file:
+qt_meta_stringdata_QCPAxisTickerTime	moc_qcustomplot.cpp	1454;"	v	file:
+qt_meta_stringdata_QCPAxisTickerTime_t	moc_qcustomplot.cpp	1445;"	s	file:
+qt_meta_stringdata_QCPAxisTicker_t	moc_qcustomplot.cpp	1396;"	s	file:
+qt_meta_stringdata_QCPAxis_t	moc_qcustomplot.cpp	1730;"	s	file:
+qt_meta_stringdata_QCPBars	moc_qcustomplot.cpp	5454;"	v	file:
+qt_meta_stringdata_QCPBarsGroup	moc_qcustomplot.cpp	5331;"	v	file:
+qt_meta_stringdata_QCPBarsGroup_t	moc_qcustomplot.cpp	5322;"	s	file:
+qt_meta_stringdata_QCPBars_t	moc_qcustomplot.cpp	5445;"	s	file:
+qt_meta_stringdata_QCPColorGradient	moc_qcustomplot.cpp	3637;"	v	file:
+qt_meta_stringdata_QCPColorGradient_t	moc_qcustomplot.cpp	3628;"	s	file:
+qt_meta_stringdata_QCPColorMap	moc_qcustomplot.cpp	5738;"	v	file:
+qt_meta_stringdata_QCPColorMap_t	moc_qcustomplot.cpp	5729;"	s	file:
+qt_meta_stringdata_QCPColorScale	moc_qcustomplot.cpp	4781;"	v	file:
+qt_meta_stringdata_QCPColorScaleAxisRectPrivate	moc_qcustomplot.cpp	4684;"	v	file:
+qt_meta_stringdata_QCPColorScaleAxisRectPrivate_t	moc_qcustomplot.cpp	4675;"	s	file:
+qt_meta_stringdata_QCPColorScale_t	moc_qcustomplot.cpp	4772;"	s	file:
+qt_meta_stringdata_QCPCurve	moc_qcustomplot.cpp	5205;"	v	file:
+qt_meta_stringdata_QCPCurve_t	moc_qcustomplot.cpp	5196;"	s	file:
+qt_meta_stringdata_QCPErrorBars	moc_qcustomplot.cpp	6172;"	v	file:
+qt_meta_stringdata_QCPErrorBars_t	moc_qcustomplot.cpp	6163;"	s	file:
+qt_meta_stringdata_QCPFinancial	moc_qcustomplot.cpp	6017;"	v	file:
+qt_meta_stringdata_QCPFinancial_t	moc_qcustomplot.cpp	6008;"	s	file:
+qt_meta_stringdata_QCPGraph	moc_qcustomplot.cpp	5055;"	v	file:
+qt_meta_stringdata_QCPGraph_t	moc_qcustomplot.cpp	5046;"	s	file:
+qt_meta_stringdata_QCPGrid	moc_qcustomplot.cpp	1612;"	v	file:
+qt_meta_stringdata_QCPGrid_t	moc_qcustomplot.cpp	1603;"	s	file:
+qt_meta_stringdata_QCPItemAnchor	moc_qcustomplot.cpp	2738;"	v	file:
+qt_meta_stringdata_QCPItemAnchor_t	moc_qcustomplot.cpp	2729;"	s	file:
+qt_meta_stringdata_QCPItemBracket	moc_qcustomplot.cpp	7348;"	v	file:
+qt_meta_stringdata_QCPItemBracket_t	moc_qcustomplot.cpp	7339;"	s	file:
+qt_meta_stringdata_QCPItemCurve	moc_qcustomplot.cpp	6544;"	v	file:
+qt_meta_stringdata_QCPItemCurve_t	moc_qcustomplot.cpp	6535;"	s	file:
+qt_meta_stringdata_QCPItemEllipse	moc_qcustomplot.cpp	6940;"	v	file:
+qt_meta_stringdata_QCPItemEllipse_t	moc_qcustomplot.cpp	6931;"	s	file:
+qt_meta_stringdata_QCPItemLine	moc_qcustomplot.cpp	6425;"	v	file:
+qt_meta_stringdata_QCPItemLine_t	moc_qcustomplot.cpp	6416;"	s	file:
+qt_meta_stringdata_QCPItemPixmap	moc_qcustomplot.cpp	7058;"	v	file:
+qt_meta_stringdata_QCPItemPixmap_t	moc_qcustomplot.cpp	7049;"	s	file:
+qt_meta_stringdata_QCPItemPosition	moc_qcustomplot.cpp	2776;"	v	file:
+qt_meta_stringdata_QCPItemPosition_t	moc_qcustomplot.cpp	2767;"	s	file:
+qt_meta_stringdata_QCPItemRect	moc_qcustomplot.cpp	6663;"	v	file:
+qt_meta_stringdata_QCPItemRect_t	moc_qcustomplot.cpp	6654;"	s	file:
+qt_meta_stringdata_QCPItemStraightLine	moc_qcustomplot.cpp	6316;"	v	file:
+qt_meta_stringdata_QCPItemStraightLine_t	moc_qcustomplot.cpp	6307;"	s	file:
+qt_meta_stringdata_QCPItemText	moc_qcustomplot.cpp	6781;"	v	file:
+qt_meta_stringdata_QCPItemText_t	moc_qcustomplot.cpp	6772;"	s	file:
+qt_meta_stringdata_QCPItemTracer	moc_qcustomplot.cpp	7185;"	v	file:
+qt_meta_stringdata_QCPItemTracer_t	moc_qcustomplot.cpp	7176;"	s	file:
+qt_meta_stringdata_QCPLayer	moc_qcustomplot.cpp	307;"	v	file:
+qt_meta_stringdata_QCPLayer_t	moc_qcustomplot.cpp	298;"	s	file:
+qt_meta_stringdata_QCPLayerable	moc_qcustomplot.cpp	450;"	v	file:
+qt_meta_stringdata_QCPLayerable_t	moc_qcustomplot.cpp	441;"	s	file:
+qt_meta_stringdata_QCPLayout	moc_qcustomplot.cpp	1041;"	v	file:
+qt_meta_stringdata_QCPLayoutElement	moc_qcustomplot.cpp	891;"	v	file:
+qt_meta_stringdata_QCPLayoutElement_t	moc_qcustomplot.cpp	882;"	s	file:
+qt_meta_stringdata_QCPLayoutGrid	moc_qcustomplot.cpp	1108;"	v	file:
+qt_meta_stringdata_QCPLayoutGrid_t	moc_qcustomplot.cpp	1099;"	s	file:
+qt_meta_stringdata_QCPLayoutInset	moc_qcustomplot.cpp	1260;"	v	file:
+qt_meta_stringdata_QCPLayoutInset_t	moc_qcustomplot.cpp	1251;"	s	file:
+qt_meta_stringdata_QCPLayout_t	moc_qcustomplot.cpp	1032;"	s	file:
+qt_meta_stringdata_QCPLegend	moc_qcustomplot.cpp	4176;"	v	file:
+qt_meta_stringdata_QCPLegend_t	moc_qcustomplot.cpp	4167;"	s	file:
+qt_meta_stringdata_QCPLineEnding	moc_qcustomplot.cpp	1338;"	v	file:
+qt_meta_stringdata_QCPLineEnding_t	moc_qcustomplot.cpp	1329;"	s	file:
+qt_meta_stringdata_QCPMarginGroup	moc_qcustomplot.cpp	824;"	v	file:
+qt_meta_stringdata_QCPMarginGroup_t	moc_qcustomplot.cpp	815;"	s	file:
+qt_meta_stringdata_QCPPainter	moc_qcustomplot.cpp	247;"	v	file:
+qt_meta_stringdata_QCPPainter_t	moc_qcustomplot.cpp	238;"	s	file:
+qt_meta_stringdata_QCPPlottableLegendItem	moc_qcustomplot.cpp	4109;"	v	file:
+qt_meta_stringdata_QCPPlottableLegendItem_t	moc_qcustomplot.cpp	4100;"	s	file:
+qt_meta_stringdata_QCPScatterStyle	moc_qcustomplot.cpp	2296;"	v	file:
+qt_meta_stringdata_QCPScatterStyle_t	moc_qcustomplot.cpp	2287;"	s	file:
+qt_meta_stringdata_QCPSelectionDecorator	moc_qcustomplot.cpp	2405;"	v	file:
+qt_meta_stringdata_QCPSelectionDecoratorBracket	moc_qcustomplot.cpp	3715;"	v	file:
+qt_meta_stringdata_QCPSelectionDecoratorBracket_t	moc_qcustomplot.cpp	3706;"	s	file:
+qt_meta_stringdata_QCPSelectionDecorator_t	moc_qcustomplot.cpp	2396;"	s	file:
+qt_meta_stringdata_QCPSelectionRect	moc_qcustomplot.cpp	656;"	v	file:
+qt_meta_stringdata_QCPSelectionRect_t	moc_qcustomplot.cpp	647;"	s	file:
+qt_meta_stringdata_QCPStatisticalBox	moc_qcustomplot.cpp	5606;"	v	file:
+qt_meta_stringdata_QCPStatisticalBox_t	moc_qcustomplot.cpp	5597;"	s	file:
+qt_meta_stringdata_QCPTextElement	moc_qcustomplot.cpp	4442;"	v	file:
+qt_meta_stringdata_QCPTextElement_t	moc_qcustomplot.cpp	4433;"	s	file:
+qt_meta_stringdata_QCP_t	moc_qcustomplot.cpp	24;"	s	file:
+qt_meta_stringdata_QCustomPlot	moc_qcustomplot.cpp	3028;"	v	file:
+qt_meta_stringdata_QCustomPlot_t	moc_qcustomplot.cpp	3019;"	s	file:
+qt_meta_stringdata_SliderItem	moc_slideritem.cpp	30;"	v	file:
+qt_meta_stringdata_SliderItem_t	moc_slideritem.cpp	21;"	s	file:
+qt_meta_stringdata_VideoItem	moc_videoitem.cpp	30;"	v	file:
+qt_meta_stringdata_VideoItem_t	moc_videoitem.cpp	21;"	s	file:
+range	qcustomplot.h	1101;"	p	class:QCPSelectionRect	access:public
+rangeChanged	qcustomplot.h	2098;"	p	class:QCPAxis	access:public
+rangeChanged	qcustomplot.h	2099;"	p	class:QCPAxis	access:public
+rangeDrag	qcustomplot.h	5031;"	p	class:QCPColorScale	access:public
+rangeDragAxes	qcustomplot.h	4572;"	p	class:QCPAxisRect	access:public
+rangeDragAxis	qcustomplot.h	4570;"	p	class:QCPAxisRect	access:public
+rangeZoom	qcustomplot.h	5032;"	p	class:QCPColorScale	access:public
+rangeZoomAxes	qcustomplot.h	4573;"	p	class:QCPAxisRect	access:public
+rangeZoomAxis	qcustomplot.h	4571;"	p	class:QCPAxisRect	access:public
+rangeZoomFactor	qcustomplot.h	4574;"	p	class:QCPAxisRect	access:public
+realLength	qcustomplot.h	1493;"	p	class:QCPLineEnding	access:public
+realVisibility	qcustomplot.h	721;"	p	class:QCPLayerable	access:public
+reallocateBuffer	qcustomplot.h	544;"	p	class:QCPAbstractPaintBuffer	access:protected	implementation:pure virtual
+recalculateDataBounds	qcustomplot.h	5677;"	p	class:QCPColorMapData	access:public
+rectDistance	qcustomplot.h	3535;"	p	class:QCPAbstractItem	access:protected
+rectIntersectsLine	qcustomplot.h	6035;"	p	class:QCPErrorBars	access:protected
+registerBars	qcustomplot.h	5392;"	p	class:QCPBarsGroup	access:protected
+registerGraph	qcustomplot.h	3789;"	p	class:QCustomPlot	access:protected
+registerItem	qcustomplot.h	3790;"	p	class:QCustomPlot	access:protected
+registerPlottable	qcustomplot.h	3788;"	p	class:QCustomPlot	access:protected
+registerWithPlottable	qcustomplot.h	3248;"	p	class:QCPSelectionDecorator	access:protected	implementation:virtual
+releaseElement	qcustomplot.h	1292;"	p	class:QCPLayout	access:protected
+remove	qcustomplot.h	1282;"	p	class:QCPLayout	access:public
+remove	qcustomplot.h	2399;"	p	class:QCPDataContainer	access:public
+remove	qcustomplot.h	2400;"	p	class:QCPDataContainer	access:public
+remove	qcustomplot.h	5382;"	p	class:QCPBarsGroup	access:public
+removeAfter	qcustomplot.h	2398;"	p	class:QCPDataContainer	access:public
+removeAt	qcustomplot.h	1281;"	p	class:QCPLayout	access:public
+removeAxis	qcustomplot.h	4600;"	p	class:QCPAxisRect	access:public
+removeBefore	qcustomplot.h	2397;"	p	class:QCPDataContainer	access:public
+removeChild	qcustomplot.h	1168;"	p	class:QCPMarginGroup	access:protected
+removeChild	qcustomplot.h	680;"	p	class:QCPLayer	access:protected
+removeChildX	qcustomplot.h	3393;"	p	class:QCPItemAnchor	access:protected
+removeChildY	qcustomplot.h	3395;"	p	class:QCPItemAnchor	access:protected
+removeFillBasePoints	qcustomplot.h	5206;"	p	class:QCPGraph	access:protected
+removeFromLegend	qcustomplot.h	3317;"	p	class:QCPAbstractPlottable	access:public
+removeFromLegend	qcustomplot.h	3318;"	p	class:QCPAbstractPlottable	access:public
+removeGraph	qcustomplot.h	3652;"	p	class:QCustomPlot	access:public
+removeGraph	qcustomplot.h	3653;"	p	class:QCustomPlot	access:public
+removeItem	qcustomplot.h	3661;"	p	class:QCustomPlot	access:public
+removeItem	qcustomplot.h	3662;"	p	class:QCustomPlot	access:public
+removeItem	qcustomplot.h	4843;"	p	class:QCPLegend	access:public
+removeItem	qcustomplot.h	4844;"	p	class:QCPLegend	access:public
+removeLayer	qcustomplot.h	3677;"	p	class:QCustomPlot	access:public
+removePlottable	qcustomplot.h	3640;"	p	class:QCustomPlot	access:public
+removePlottable	qcustomplot.h	3641;"	p	class:QCustomPlot	access:public
+replaceUnit	qcustomplot.h	1656;"	p	class:QCPAxisTickerTime	access:protected
+replot	qcustomplot.h	3699;"	p	class:QCustomPlot	access:public
+replot	qcustomplot.h	662;"	p	class:QCPLayer	access:public
+rescale	qcustomplot.h	2085;"	p	class:QCPAxis	access:public
+rescaleAxes	qcustomplot.h	3312;"	p	class:QCPAbstractPlottable	access:public
+rescaleAxes	qcustomplot.h	3686;"	p	class:QCustomPlot	access:public
+rescaleDataRange	qcustomplot.h	5046;"	p	class:QCPColorScale	access:public
+rescaleDataRange	qcustomplot.h	5738;"	p	class:QCPColorMap	access:public
+rescaleKeyAxis	qcustomplot.h	3313;"	p	class:QCPAbstractPlottable	access:public
+rescaleValueAxis	qcustomplot.h	3314;"	p	class:QCPAbstractPlottable	access:public
+restore	qcustomplot.h	491;"	p	class:QCPPainter	access:public
+reversedEndings	qcustomplot.h	2221;"	m	class:QCPAxisPainterPrivate	access:public
+rgba_to_gray	utilities.h	41;"	p
+rgba_to_intensity	utilities.h	44;"	p
+right	qcustomplot.h	6223;"	m	class:QCPItemRect	access:public
+right	qcustomplot.h	6309;"	m	class:QCPItemText	access:public
+right	qcustomplot.h	6380;"	m	class:QCPItemEllipse	access:public
+right	qcustomplot.h	6445;"	m	class:QCPItemPixmap	access:public
+right	qcustomplot.h	6606;"	m	class:QCPItemBracket	access:public
+rotatedTotalBounds	qcustomplot.h	2236;"	m	struct:QCPAxisPainterPrivate::TickLabelData	access:public
+rowColToIndex	qcustomplot.h	1370;"	p	class:QCPLayoutGrid	access:public
+rpImmediateRefresh	qcustomplot.h	3583;"	e	enum:QCustomPlot::RefreshPriority
+rpQueuedRefresh	qcustomplot.h	3584;"	e	enum:QCustomPlot::RefreshPriority
+rpQueuedReplot	qcustomplot.h	3586;"	e	enum:QCustomPlot::RefreshPriority
+rpRefreshHint	qcustomplot.h	3585;"	e	enum:QCustomPlot::RefreshPriority
+ruDotsPerCentimeter	qcustomplot.h	164;"	e	enum:QCP::ResolutionUnit
+ruDotsPerInch	qcustomplot.h	165;"	e	enum:QCP::ResolutionUnit
+ruDotsPerMeter	qcustomplot.h	163;"	e	enum:QCP::ResolutionUnit
+running	sharedmemory.h	34;"	m	class:SharedMemory	access:private
+runningData	mainwindow.h	77;"	m	class:MainWindow	access:private
+runningVideo	mainwindow.h	66;"	m	class:MainWindow	access:private
+sanitizedForLinScale	qcustomplot.h	801;"	p	class:QCPRange	access:public
+sanitizedForLogScale	qcustomplot.h	800;"	p	class:QCPRange	access:public
+save	qcustomplot.h	490;"	p	class:QCPPainter	access:public
+save	savedata.h	20;"	p	class:Savedata	access:public
+saveBmp	qcustomplot.h	3695;"	p	class:QCustomPlot	access:public
+saveJpg	qcustomplot.h	3694;"	p	class:QCustomPlot	access:public
+savePdf	qcustomplot.h	3692;"	p	class:QCustomPlot	access:public
+savePng	qcustomplot.h	3693;"	p	class:QCustomPlot	access:public
+saveRastered	qcustomplot.h	3696;"	p	class:QCustomPlot	access:public
+scaleRange	qcustomplot.h	2082;"	p	class:QCPAxis	access:public
+scaleRange	qcustomplot.h	2083;"	p	class:QCPAxis	access:public
+scaleTypeChanged	qcustomplot.h	2100;"	p	class:QCPAxis	access:public
+sdBoth	qcustomplot.h	185;"	e	enum:QCP::SignDomain
+sdNegative	qcustomplot.h	184;"	e	enum:QCP::SignDomain
+sdPositive	qcustomplot.h	186;"	e	enum:QCP::SignDomain
+selectEvent	qcustomplot.h	741;"	p	class:QCPLayerable	access:protected	implementation:virtual
+selectTest	qcustomplot.h	3302;"	p	class:QCPAbstractPlottable	access:public	implementation:pure virtual
+selectTest	qcustomplot.h	3856;"	p	class:QCPAbstractPlottable1D	access:public	implementation:virtual
+selectTest	qcustomplot.h	718;"	p	class:QCPLayerable	access:public	implementation:virtual
+selectTestRect	qcustomplot.h	3829;"	p	class:QCPPlottableInterface1D	access:public	implementation:pure virtual
+selectTestRect	qcustomplot.h	3851;"	p	class:QCPAbstractPlottable1D	access:public	implementation:virtual
+selectTestRect	qcustomplot.h	6006;"	p	class:QCPErrorBars	access:public	implementation:virtual
+selectableChanged	qcustomplot.h	2102;"	p	class:QCPAxis	access:public
+selectableChanged	qcustomplot.h	3323;"	p	class:QCPAbstractPlottable	access:public
+selectableChanged	qcustomplot.h	3512;"	p	class:QCPAbstractItem	access:public
+selectableChanged	qcustomplot.h	4713;"	p	class:QCPAbstractLegendItem	access:public
+selectableChanged	qcustomplot.h	4850;"	p	class:QCPLegend	access:public
+selectableChanged	qcustomplot.h	4941;"	p	class:QCPTextElement	access:public
+selectedAxes	qcustomplot.h	3688;"	p	class:QCustomPlot	access:public
+selectedGraphs	qcustomplot.h	3656;"	p	class:QCustomPlot	access:public
+selectedItems	qcustomplot.h	3665;"	p	class:QCustomPlot	access:public
+selectedItems	qcustomplot.h	4846;"	p	class:QCPLegend	access:public
+selectedLegends	qcustomplot.h	3689;"	p	class:QCustomPlot	access:public
+selectedParts	qcustomplot.h	4809;"	p	class:QCPLegend	access:public
+selectedPlottables	qcustomplot.h	3644;"	p	class:QCustomPlot	access:public
+selectionCategory	qcustomplot.h	736;"	p	class:QCPLayerable	access:protected	implementation:virtual
+selectionChanged	qcustomplot.h	2101;"	p	class:QCPAxis	access:public
+selectionChanged	qcustomplot.h	3321;"	p	class:QCPAbstractPlottable	access:public
+selectionChanged	qcustomplot.h	3322;"	p	class:QCPAbstractPlottable	access:public
+selectionChanged	qcustomplot.h	3511;"	p	class:QCPAbstractItem	access:public
+selectionChanged	qcustomplot.h	4712;"	p	class:QCPAbstractLegendItem	access:public
+selectionChanged	qcustomplot.h	4849;"	p	class:QCPLegend	access:public
+selectionChanged	qcustomplot.h	4940;"	p	class:QCPTextElement	access:public
+selectionChangedByUser	qcustomplot.h	3720;"	p	class:QCustomPlot	access:public
+selectionHitBox	qcustomplot.h	5909;"	p	class:QCPFinancial	access:protected
+set	qcustomplot.h	2392;"	p	class:QCPDataContainer	access:public
+set	qcustomplot.h	2393;"	p	class:QCPDataContainer	access:public
+setAdaptiveSampling	qcustomplot.h	5164;"	p	class:QCPGraph	access:public
+setAlpha	oscillator.h	21;"	p	class:Oscillator	access:public
+setAlpha	qcustomplot.h	5674;"	p	class:QCPColorMapData	access:public
+setAntialiased	qcustomplot.h	715;"	p	class:QCPLayerable	access:public
+setAntialiasedElement	qcustomplot.h	3621;"	p	class:QCustomPlot	access:public
+setAntialiasedElements	qcustomplot.h	3620;"	p	class:QCustomPlot	access:public
+setAntialiasedFill	qcustomplot.h	3291;"	p	class:QCPAbstractPlottable	access:public
+setAntialiasedScatters	qcustomplot.h	3292;"	p	class:QCPAbstractPlottable	access:public
+setAntialiasedSubGrid	qcustomplot.h	1863;"	p	class:QCPGrid	access:public
+setAntialiasedZeroLine	qcustomplot.h	1864;"	p	class:QCPGrid	access:public
+setAntialiasing	qcustomplot.h	479;"	p	class:QCPPainter	access:public
+setAutoAddPlottableToLegend	qcustomplot.h	3624;"	p	class:QCustomPlot	access:public
+setAutoMargins	qcustomplot.h	1219;"	p	class:QCPLayoutElement	access:public
+setAutoSqueeze	qcustomplot.h	2389;"	p	class:QCPDataContainer	access:public
+setAxes	qcustomplot.h	3453;"	p	class:QCPItemPosition	access:public
+setAxisRect	qcustomplot.h	3454;"	p	class:QCPItemPosition	access:public
+setBackground	qcustomplot.h	3615;"	p	class:QCustomPlot	access:public
+setBackground	qcustomplot.h	3616;"	p	class:QCustomPlot	access:public
+setBackground	qcustomplot.h	3617;"	p	class:QCustomPlot	access:public
+setBackground	qcustomplot.h	4577;"	p	class:QCPAxisRect	access:public
+setBackground	qcustomplot.h	4578;"	p	class:QCPAxisRect	access:public
+setBackground	qcustomplot.h	4579;"	p	class:QCPAxisRect	access:public
+setBackgroundScaled	qcustomplot.h	3618;"	p	class:QCustomPlot	access:public
+setBackgroundScaled	qcustomplot.h	4580;"	p	class:QCPAxisRect	access:public
+setBackgroundScaledMode	qcustomplot.h	3619;"	p	class:QCustomPlot	access:public
+setBackgroundScaledMode	qcustomplot.h	4581;"	p	class:QCPAxisRect	access:public
+setBarWidth	qcustomplot.h	5040;"	p	class:QCPColorScale	access:public
+setBarsGroup	qcustomplot.h	5481;"	p	class:QCPBars	access:public
+setBasePen	qcustomplot.h	2054;"	p	class:QCPAxis	access:public
+setBaseValue	qcustomplot.h	5482;"	p	class:QCPBars	access:public
+setBeta	oscillator.h	22;"	p	class:Oscillator	access:public
+setBorderPen	qcustomplot.h	4817;"	p	class:QCPLegend	access:public
+setBracketBrush	qcustomplot.h	4513;"	p	class:QCPSelectionDecoratorBracket	access:public
+setBracketHeight	qcustomplot.h	4515;"	p	class:QCPSelectionDecoratorBracket	access:public
+setBracketPen	qcustomplot.h	4512;"	p	class:QCPSelectionDecoratorBracket	access:public
+setBracketStyle	qcustomplot.h	4516;"	p	class:QCPSelectionDecoratorBracket	access:public
+setBracketWidth	qcustomplot.h	4514;"	p	class:QCPSelectionDecoratorBracket	access:public
+setBrush	qcustomplot.h	1108;"	p	class:QCPSelectionRect	access:public
+setBrush	qcustomplot.h	2331;"	p	class:QCPScatterStyle	access:public
+setBrush	qcustomplot.h	3225;"	p	class:QCPSelectionDecorator	access:public
+setBrush	qcustomplot.h	3294;"	p	class:QCPAbstractPlottable	access:public
+setBrush	qcustomplot.h	4818;"	p	class:QCPLegend	access:public
+setBrush	qcustomplot.h	6213;"	p	class:QCPItemRect	access:public
+setBrush	qcustomplot.h	6292;"	p	class:QCPItemText	access:public
+setBrush	qcustomplot.h	6369;"	p	class:QCPItemEllipse	access:public
+setBrush	qcustomplot.h	6523;"	p	class:QCPItemTracer	access:public
+setBrushNegative	qcustomplot.h	5872;"	p	class:QCPFinancial	access:public
+setBrushPositive	qcustomplot.h	5871;"	p	class:QCPFinancial	access:public
+setBufferDevicePixelRatio	qcustomplot.h	3614;"	p	class:QCustomPlot	access:public
+setCell	qcustomplot.h	5673;"	p	class:QCPColorMapData	access:public
+setChannelFillGraph	qcustomplot.h	5163;"	p	class:QCPGraph	access:public
+setChartStyle	qcustomplot.h	5867;"	p	class:QCPFinancial	access:public
+setClipAxisRect	qcustomplot.h	3496;"	p	class:QCPAbstractItem	access:public
+setClipToAxisRect	qcustomplot.h	3495;"	p	class:QCPAbstractItem	access:public
+setColor	qcustomplot.h	6288;"	p	class:QCPItemText	access:public
+setColorInterpolation	qcustomplot.h	4445;"	p	class:QCPColorGradient	access:public
+setColorScale	qcustomplot.h	5735;"	p	class:QCPColorMap	access:public
+setColorStopAt	qcustomplot.h	4444;"	p	class:QCPColorGradient	access:public
+setColorStops	qcustomplot.h	4443;"	p	class:QCPColorGradient	access:public
+setColumnSpacing	qcustomplot.h	1346;"	p	class:QCPLayoutGrid	access:public
+setColumnStretchFactor	qcustomplot.h	1342;"	p	class:QCPLayoutGrid	access:public
+setColumnStretchFactors	qcustomplot.h	1343;"	p	class:QCPLayoutGrid	access:public
+setCoords	qcustomplot.h	3451;"	p	class:QCPItemPosition	access:public
+setCoords	qcustomplot.h	3452;"	p	class:QCPItemPosition	access:public
+setCouple	oscillator.h	23;"	p	class:Oscillator	access:public
+setCurrentLayer	qcustomplot.h	3673;"	p	class:QCustomPlot	access:public
+setCurrentLayer	qcustomplot.h	3674;"	p	class:QCustomPlot	access:public
+setCustomPath	qcustomplot.h	2333;"	p	class:QCPScatterStyle	access:public
+setData	qcustomplot.h	5158;"	p	class:QCPGraph	access:public
+setData	qcustomplot.h	5159;"	p	class:QCPGraph	access:public
+setData	qcustomplot.h	5288;"	p	class:QCPCurve	access:public
+setData	qcustomplot.h	5289;"	p	class:QCPCurve	access:public
+setData	qcustomplot.h	5290;"	p	class:QCPCurve	access:public
+setData	qcustomplot.h	5477;"	p	class:QCPBars	access:public
+setData	qcustomplot.h	5478;"	p	class:QCPBars	access:public
+setData	qcustomplot.h	5595;"	p	class:QCPStatisticalBox	access:public
+setData	qcustomplot.h	5596;"	p	class:QCPStatisticalBox	access:public
+setData	qcustomplot.h	5672;"	p	class:QCPColorMapData	access:public
+setData	qcustomplot.h	5729;"	p	class:QCPColorMap	access:public
+setData	qcustomplot.h	5865;"	p	class:QCPFinancial	access:public
+setData	qcustomplot.h	5866;"	p	class:QCPFinancial	access:public
+setData	qcustomplot.h	5984;"	p	class:QCPErrorBars	access:public
+setData	qcustomplot.h	5985;"	p	class:QCPErrorBars	access:public
+setData	qcustomplot.h	5986;"	p	class:QCPErrorBars	access:public
+setDataPlottable	qcustomplot.h	5987;"	p	class:QCPErrorBars	access:public
+setDataRange	qcustomplot.h	5036;"	p	class:QCPColorScale	access:public
+setDataRange	qcustomplot.h	5730;"	p	class:QCPColorMap	access:public
+setDataScaleType	qcustomplot.h	5037;"	p	class:QCPColorScale	access:public
+setDataScaleType	qcustomplot.h	5731;"	p	class:QCPColorMap	access:public
+setDateTimeFormat	qcustomplot.h	1583;"	p	class:QCPAxisTickerDateTime	access:public
+setDateTimeSpec	qcustomplot.h	1584;"	p	class:QCPAxisTickerDateTime	access:public
+setDevicePixelRatio	qcustomplot.h	527;"	p	class:QCPAbstractPaintBuffer	access:public
+setErrorType	qcustomplot.h	5988;"	p	class:QCPErrorBars	access:public
+setFieldWidth	qcustomplot.h	1639;"	p	class:QCPAxisTickerTime	access:public
+setFillOrder	qcustomplot.h	1349;"	p	class:QCPLayoutGrid	access:public
+setFont	qcustomplot.h	4701;"	p	class:QCPAbstractLegendItem	access:public
+setFont	qcustomplot.h	4819;"	p	class:QCPLegend	access:public
+setFont	qcustomplot.h	4926;"	p	class:QCPTextElement	access:public
+setFont	qcustomplot.h	6294;"	p	class:QCPItemText	access:public
+setFractionStyle	qcustomplot.h	1774;"	p	class:QCPAxisTickerPi	access:public
+setFromOther	qcustomplot.h	2327;"	p	class:QCPScatterStyle	access:public
+setGradient	qcustomplot.h	5038;"	p	class:QCPColorScale	access:public
+setGradient	qcustomplot.h	5732;"	p	class:QCPColorMap	access:public
+setGraph	qcustomplot.h	6527;"	p	class:QCPItemTracer	access:public
+setGraphKey	qcustomplot.h	6528;"	p	class:QCPItemTracer	access:public
+setHead	qcustomplot.h	6112;"	p	class:QCPItemLine	access:public
+setHead	qcustomplot.h	6162;"	p	class:QCPItemCurve	access:public
+setIconBorderPen	qcustomplot.h	4824;"	p	class:QCPLegend	access:public
+setIconSize	qcustomplot.h	4821;"	p	class:QCPLegend	access:public
+setIconSize	qcustomplot.h	4822;"	p	class:QCPLegend	access:public
+setIconTextPadding	qcustomplot.h	4823;"	p	class:QCPLegend	access:public
+setInsetAlignment	qcustomplot.h	1414;"	p	class:QCPLayoutInset	access:public
+setInsetPlacement	qcustomplot.h	1413;"	p	class:QCPLayoutInset	access:public
+setInsetRect	qcustomplot.h	1415;"	p	class:QCPLayoutInset	access:public
+setInteraction	qcustomplot.h	3626;"	p	class:QCustomPlot	access:public
+setInteractions	qcustomplot.h	3625;"	p	class:QCustomPlot	access:public
+setInterpolate	qcustomplot.h	5733;"	p	class:QCPColorMap	access:public
+setInterpolating	qcustomplot.h	6529;"	p	class:QCPItemTracer	access:public
+setInvalidated	qcustomplot.h	526;"	p	class:QCPAbstractPaintBuffer	access:public
+setInverted	qcustomplot.h	1489;"	p	class:QCPLineEnding	access:public
+setIp	scriptlauncher.h	23;"	p	class:ScriptLauncher	access:public
+setJoint	scriptlauncher.h	28;"	p	class:ScriptLauncher	access:public
+setKeyAxis	qcustomplot.h	3295;"	p	class:QCPAbstractPlottable	access:public
+setKeyRange	qcustomplot.h	5670;"	p	class:QCPColorMapData	access:public
+setKeySize	qcustomplot.h	5667;"	p	class:QCPColorMapData	access:public
+setLabel	qcustomplot.h	2059;"	p	class:QCPAxis	access:public
+setLabel	qcustomplot.h	5039;"	p	class:QCPColorScale	access:public
+setLabelColor	qcustomplot.h	2058;"	p	class:QCPAxis	access:public
+setLabelFont	qcustomplot.h	2057;"	p	class:QCPAxis	access:public
+setLabelPadding	qcustomplot.h	2060;"	p	class:QCPAxis	access:public
+setLayer	qcustomplot.h	713;"	p	class:QCPLayerable	access:public
+setLayer	qcustomplot.h	714;"	p	class:QCPLayerable	access:public
+setLength	qcustomplot.h	1488;"	p	class:QCPLineEnding	access:public
+setLength	qcustomplot.h	6599;"	p	class:QCPItemBracket	access:public
+setLevelCount	qcustomplot.h	4442;"	p	class:QCPColorGradient	access:public
+setLineStyle	qcustomplot.h	5160;"	p	class:QCPGraph	access:public
+setLineStyle	qcustomplot.h	5293;"	p	class:QCPCurve	access:public
+setLogBase	qcustomplot.h	1816;"	p	class:QCPAxisTickerLog	access:public
+setLowerEnding	qcustomplot.h	2072;"	p	class:QCPAxis	access:public
+setMainScriptPath	scriptlauncher.h	26;"	p	class:ScriptLauncher	access:public
+setMarginGroup	qcustomplot.h	1224;"	p	class:QCPLayoutElement	access:public
+setMargins	qcustomplot.h	1217;"	p	class:QCPLayoutElement	access:public
+setMaximumSize	qcustomplot.h	1222;"	p	class:QCPLayoutElement	access:public
+setMaximumSize	qcustomplot.h	1223;"	p	class:QCPLayoutElement	access:public
+setMedianPen	qcustomplot.h	5602;"	p	class:QCPStatisticalBox	access:public
+setMinimumMargins	qcustomplot.h	1218;"	p	class:QCPLayoutElement	access:public
+setMinimumSize	qcustomplot.h	1220;"	p	class:QCPLayoutElement	access:public
+setMinimumSize	qcustomplot.h	1221;"	p	class:QCPLayoutElement	access:public
+setMode	qcustomplot.h	480;"	p	class:QCPPainter	access:public
+setMode	qcustomplot.h	659;"	p	class:QCPLayer	access:public
+setModes	qcustomplot.h	481;"	p	class:QCPPainter	access:public
+setMultiSelectModifier	qcustomplot.h	3631;"	p	class:QCustomPlot	access:public
+setName	qcustomplot.h	3290;"	p	class:QCPAbstractPlottable	access:public
+setNaoqiPath	scriptlauncher.h	25;"	p	class:ScriptLauncher	access:public
+setNoAntialiasingOnDrag	qcustomplot.h	3628;"	p	class:QCustomPlot	access:public
+setNotAntialiasedElement	qcustomplot.h	3623;"	p	class:QCustomPlot	access:public
+setNotAntialiasedElements	qcustomplot.h	3622;"	p	class:QCustomPlot	access:public
+setNumberFormat	qcustomplot.h	2045;"	p	class:QCPAxis	access:public
+setNumberPrecision	qcustomplot.h	2046;"	p	class:QCPAxis	access:public
+setOffset	qcustomplot.h	2062;"	p	class:QCPAxis	access:public
+setOpenGl	qcustomplot.h	3634;"	p	class:QCustomPlot	access:public
+setOscillators	scriptlauncher.h	29;"	p	class:ScriptLauncher	access:public
+setOuterRect	qcustomplot.h	1216;"	p	class:QCPLayoutElement	access:public
+setOutlierStyle	qcustomplot.h	5603;"	p	class:QCPStatisticalBox	access:public
+setPadding	qcustomplot.h	2061;"	p	class:QCPAxis	access:public
+setPadding	qcustomplot.h	6300;"	p	class:QCPItemText	access:public
+setParentAnchor	qcustomplot.h	3448;"	p	class:QCPItemPosition	access:public
+setParentAnchorX	qcustomplot.h	3449;"	p	class:QCPItemPosition	access:public
+setParentAnchorY	qcustomplot.h	3450;"	p	class:QCPItemPosition	access:public
+setParentLayerable	qcustomplot.h	752;"	p	class:QCPLayerable	access:protected
+setPen	qcustomplot.h	1107;"	p	class:QCPSelectionRect	access:public
+setPen	qcustomplot.h	1865;"	p	class:QCPGrid	access:public
+setPen	qcustomplot.h	2330;"	p	class:QCPScatterStyle	access:public
+setPen	qcustomplot.h	3224;"	p	class:QCPSelectionDecorator	access:public
+setPen	qcustomplot.h	3293;"	p	class:QCPAbstractPlottable	access:public
+setPen	qcustomplot.h	485;"	p	class:QCPPainter	access:public
+setPen	qcustomplot.h	486;"	p	class:QCPPainter	access:public
+setPen	qcustomplot.h	487;"	p	class:QCPPainter	access:public
+setPen	qcustomplot.h	6063;"	p	class:QCPItemStraightLine	access:public
+setPen	qcustomplot.h	6110;"	p	class:QCPItemLine	access:public
+setPen	qcustomplot.h	6160;"	p	class:QCPItemCurve	access:public
+setPen	qcustomplot.h	6211;"	p	class:QCPItemRect	access:public
+setPen	qcustomplot.h	6290;"	p	class:QCPItemText	access:public
+setPen	qcustomplot.h	6367;"	p	class:QCPItemEllipse	access:public
+setPen	qcustomplot.h	6435;"	p	class:QCPItemPixmap	access:public
+setPen	qcustomplot.h	6521;"	p	class:QCPItemTracer	access:public
+setPen	qcustomplot.h	6597;"	p	class:QCPItemBracket	access:public
+setPenNegative	qcustomplot.h	5874;"	p	class:QCPFinancial	access:public
+setPenPositive	qcustomplot.h	5873;"	p	class:QCPFinancial	access:public
+setPeriodic	qcustomplot.h	4446;"	p	class:QCPColorGradient	access:public
+setPeriodicity	qcustomplot.h	1773;"	p	class:QCPAxisTickerPi	access:public
+setPiSymbol	qcustomplot.h	1771;"	p	class:QCPAxisTickerPi	access:public
+setPiValue	qcustomplot.h	1772;"	p	class:QCPAxisTickerPi	access:public
+setPixelPosition	qcustomplot.h	3455;"	p	class:QCPItemPosition	access:public
+setPixmap	qcustomplot.h	2332;"	p	class:QCPScatterStyle	access:public
+setPixmap	qcustomplot.h	6433;"	p	class:QCPItemPixmap	access:public
+setPlottingHint	qcustomplot.h	3630;"	p	class:QCustomPlot	access:public
+setPlottingHints	qcustomplot.h	3629;"	p	class:QCustomPlot	access:public
+setPort	scriptlauncher.h	24;"	p	class:ScriptLauncher	access:public
+setPositionAlignment	qcustomplot.h	6297;"	p	class:QCPItemText	access:public
+setPythonPath	scriptlauncher.h	27;"	p	class:ScriptLauncher	access:public
+setRange	qcustomplot.h	2031;"	p	class:QCPAxis	access:public
+setRange	qcustomplot.h	2032;"	p	class:QCPAxis	access:public
+setRange	qcustomplot.h	2033;"	p	class:QCPAxis	access:public
+setRange	qcustomplot.h	5669;"	p	class:QCPColorMapData	access:public
+setRangeDrag	qcustomplot.h	4582;"	p	class:QCPAxisRect	access:public
+setRangeDrag	qcustomplot.h	5041;"	p	class:QCPColorScale	access:public
+setRangeDragAxes	qcustomplot.h	4584;"	p	class:QCPAxisRect	access:public
+setRangeDragAxes	qcustomplot.h	4585;"	p	class:QCPAxisRect	access:public
+setRangeDragAxes	qcustomplot.h	4586;"	p	class:QCPAxisRect	access:public
+setRangeLower	qcustomplot.h	2034;"	p	class:QCPAxis	access:public
+setRangeReversed	qcustomplot.h	2036;"	p	class:QCPAxis	access:public
+setRangeUpper	qcustomplot.h	2035;"	p	class:QCPAxis	access:public
+setRangeZoom	qcustomplot.h	4583;"	p	class:QCPAxisRect	access:public
+setRangeZoom	qcustomplot.h	5042;"	p	class:QCPColorScale	access:public
+setRangeZoomAxes	qcustomplot.h	4587;"	p	class:QCPAxisRect	access:public
+setRangeZoomAxes	qcustomplot.h	4588;"	p	class:QCPAxisRect	access:public
+setRangeZoomAxes	qcustomplot.h	4589;"	p	class:QCPAxisRect	access:public
+setRangeZoomFactor	qcustomplot.h	4590;"	p	class:QCPAxisRect	access:public
+setRangeZoomFactor	qcustomplot.h	4591;"	p	class:QCPAxisRect	access:public
+setRotation	qcustomplot.h	6299;"	p	class:QCPItemText	access:public
+setRowSpacing	qcustomplot.h	1347;"	p	class:QCPLayoutGrid	access:public
+setRowStretchFactor	qcustomplot.h	1344;"	p	class:QCPLayoutGrid	access:public
+setRowStretchFactors	qcustomplot.h	1345;"	p	class:QCPLayoutGrid	access:public
+setScaleRatio	qcustomplot.h	2084;"	p	class:QCPAxis	access:public
+setScaleStrategy	qcustomplot.h	1690;"	p	class:QCPAxisTickerFixed	access:public
+setScaleType	qcustomplot.h	2030;"	p	class:QCPAxis	access:public
+setScaled	qcustomplot.h	6434;"	p	class:QCPItemPixmap	access:public
+setScatterSkip	qcustomplot.h	5162;"	p	class:QCPGraph	access:public
+setScatterSkip	qcustomplot.h	5292;"	p	class:QCPCurve	access:public
+setScatterStyle	qcustomplot.h	3226;"	p	class:QCPSelectionDecorator	access:public
+setScatterStyle	qcustomplot.h	5161;"	p	class:QCPGraph	access:public
+setScatterStyle	qcustomplot.h	5291;"	p	class:QCPCurve	access:public
+setSelectable	qcustomplot.h	3297;"	p	class:QCPAbstractPlottable	access:public
+setSelectable	qcustomplot.h	3497;"	p	class:QCPAbstractItem	access:public
+setSelectable	qcustomplot.h	4705;"	p	class:QCPAbstractLegendItem	access:public
+setSelectable	qcustomplot.h	4930;"	p	class:QCPTextElement	access:public
+setSelectableParts	qcustomplot.h	2070;"	p	class:QCPAxis	access:public
+setSelectableParts	qcustomplot.h	4825;"	p	class:QCPLegend	access:public
+setSelected	qcustomplot.h	3498;"	p	class:QCPAbstractItem	access:public
+setSelected	qcustomplot.h	4706;"	p	class:QCPAbstractLegendItem	access:public
+setSelected	qcustomplot.h	4931;"	p	class:QCPTextElement	access:public
+setSelectedBasePen	qcustomplot.h	2067;"	p	class:QCPAxis	access:public
+setSelectedBorderPen	qcustomplot.h	4827;"	p	class:QCPLegend	access:public
+setSelectedBrush	qcustomplot.h	4829;"	p	class:QCPLegend	access:public
+setSelectedBrush	qcustomplot.h	6214;"	p	class:QCPItemRect	access:public
+setSelectedBrush	qcustomplot.h	6293;"	p	class:QCPItemText	access:public
+setSelectedBrush	qcustomplot.h	6370;"	p	class:QCPItemEllipse	access:public
+setSelectedBrush	qcustomplot.h	6524;"	p	class:QCPItemTracer	access:public
+setSelectedColor	qcustomplot.h	6289;"	p	class:QCPItemText	access:public
+setSelectedFont	qcustomplot.h	4703;"	p	class:QCPAbstractLegendItem	access:public
+setSelectedFont	qcustomplot.h	4830;"	p	class:QCPLegend	access:public
+setSelectedFont	qcustomplot.h	4928;"	p	class:QCPTextElement	access:public
+setSelectedFont	qcustomplot.h	6295;"	p	class:QCPItemText	access:public
+setSelectedIconBorderPen	qcustomplot.h	4828;"	p	class:QCPLegend	access:public
+setSelectedLabelColor	qcustomplot.h	2066;"	p	class:QCPAxis	access:public
+setSelectedLabelFont	qcustomplot.h	2064;"	p	class:QCPAxis	access:public
+setSelectedParts	qcustomplot.h	2071;"	p	class:QCPAxis	access:public
+setSelectedParts	qcustomplot.h	4826;"	p	class:QCPLegend	access:public
+setSelectedPen	qcustomplot.h	6064;"	p	class:QCPItemStraightLine	access:public
+setSelectedPen	qcustomplot.h	6111;"	p	class:QCPItemLine	access:public
+setSelectedPen	qcustomplot.h	6161;"	p	class:QCPItemCurve	access:public
+setSelectedPen	qcustomplot.h	6212;"	p	class:QCPItemRect	access:public
+setSelectedPen	qcustomplot.h	6291;"	p	class:QCPItemText	access:public
+setSelectedPen	qcustomplot.h	6368;"	p	class:QCPItemEllipse	access:public
+setSelectedPen	qcustomplot.h	6436;"	p	class:QCPItemPixmap	access:public
+setSelectedPen	qcustomplot.h	6522;"	p	class:QCPItemTracer	access:public
+setSelectedPen	qcustomplot.h	6598;"	p	class:QCPItemBracket	access:public
+setSelectedSubTickPen	qcustomplot.h	2069;"	p	class:QCPAxis	access:public
+setSelectedTextColor	qcustomplot.h	4704;"	p	class:QCPAbstractLegendItem	access:public
+setSelectedTextColor	qcustomplot.h	4831;"	p	class:QCPLegend	access:public
+setSelectedTextColor	qcustomplot.h	4929;"	p	class:QCPTextElement	access:public
+setSelectedTickLabelColor	qcustomplot.h	2065;"	p	class:QCPAxis	access:public
+setSelectedTickLabelFont	qcustomplot.h	2063;"	p	class:QCPAxis	access:public
+setSelectedTickPen	qcustomplot.h	2068;"	p	class:QCPAxis	access:public
+setSelection	qcustomplot.h	3298;"	p	class:QCPAbstractPlottable	access:public
+setSelectionDecorator	qcustomplot.h	3299;"	p	class:QCPAbstractPlottable	access:public
+setSelectionRect	qcustomplot.h	3633;"	p	class:QCustomPlot	access:public
+setSelectionRectMode	qcustomplot.h	3632;"	p	class:QCustomPlot	access:public
+setSelectionTolerance	qcustomplot.h	3627;"	p	class:QCustomPlot	access:public
+setShape	qcustomplot.h	2329;"	p	class:QCPScatterStyle	access:public
+setSharedMemoryPath	scriptlauncher.h	31;"	p	class:ScriptLauncher	access:public
+setSize	qcustomplot.h	2328;"	p	class:QCPScatterStyle	access:public
+setSize	qcustomplot.h	525;"	p	class:QCPAbstractPaintBuffer	access:public
+setSize	qcustomplot.h	5666;"	p	class:QCPColorMapData	access:public
+setSize	qcustomplot.h	6525;"	p	class:QCPItemTracer	access:public
+setSpacing	qcustomplot.h	5371;"	p	class:QCPBarsGroup	access:public
+setSpacingType	qcustomplot.h	5370;"	p	class:QCPBarsGroup	access:public
+setStackingGap	qcustomplot.h	5483;"	p	class:QCPBars	access:public
+setStyle	qcustomplot.h	1486;"	p	class:QCPLineEnding	access:public
+setStyle	qcustomplot.h	6526;"	p	class:QCPItemTracer	access:public
+setStyle	qcustomplot.h	6600;"	p	class:QCPItemBracket	access:public
+setSubGridPen	qcustomplot.h	1866;"	p	class:QCPGrid	access:public
+setSubGridVisible	qcustomplot.h	1862;"	p	class:QCPGrid	access:public
+setSubTickCount	qcustomplot.h	1720;"	p	class:QCPAxisTickerText	access:public
+setSubTickCount	qcustomplot.h	1817;"	p	class:QCPAxisTickerLog	access:public
+setSubTickLength	qcustomplot.h	2051;"	p	class:QCPAxis	access:public
+setSubTickLengthIn	qcustomplot.h	2052;"	p	class:QCPAxis	access:public
+setSubTickLengthOut	qcustomplot.h	2053;"	p	class:QCPAxis	access:public
+setSubTickPen	qcustomplot.h	2056;"	p	class:QCPAxis	access:public
+setSubTicks	qcustomplot.h	2050;"	p	class:QCPAxis	access:public
+setSymbolGap	qcustomplot.h	5990;"	p	class:QCPErrorBars	access:public
+setTail	qcustomplot.h	6113;"	p	class:QCPItemLine	access:public
+setTail	qcustomplot.h	6163;"	p	class:QCPItemCurve	access:public
+setTangentAverage	qcustomplot.h	4518;"	p	class:QCPSelectionDecoratorBracket	access:public
+setTangentToData	qcustomplot.h	4517;"	p	class:QCPSelectionDecoratorBracket	access:public
+setText	qcustomplot.h	4924;"	p	class:QCPTextElement	access:public
+setText	qcustomplot.h	6296;"	p	class:QCPItemText	access:public
+setTextAlignment	qcustomplot.h	6298;"	p	class:QCPItemText	access:public
+setTextColor	qcustomplot.h	4702;"	p	class:QCPAbstractLegendItem	access:public
+setTextColor	qcustomplot.h	4820;"	p	class:QCPLegend	access:public
+setTextColor	qcustomplot.h	4927;"	p	class:QCPTextElement	access:public
+setTextFlags	qcustomplot.h	4925;"	p	class:QCPTextElement	access:public
+setTickCount	qcustomplot.h	1538;"	p	class:QCPAxisTicker	access:public
+setTickLabelColor	qcustomplot.h	2042;"	p	class:QCPAxis	access:public
+setTickLabelFont	qcustomplot.h	2041;"	p	class:QCPAxis	access:public
+setTickLabelPadding	qcustomplot.h	2040;"	p	class:QCPAxis	access:public
+setTickLabelRotation	qcustomplot.h	2043;"	p	class:QCPAxis	access:public
+setTickLabelSide	qcustomplot.h	2044;"	p	class:QCPAxis	access:public
+setTickLabels	qcustomplot.h	2039;"	p	class:QCPAxis	access:public
+setTickLength	qcustomplot.h	2047;"	p	class:QCPAxis	access:public
+setTickLengthIn	qcustomplot.h	2048;"	p	class:QCPAxis	access:public
+setTickLengthOut	qcustomplot.h	2049;"	p	class:QCPAxis	access:public
+setTickOrigin	qcustomplot.h	1539;"	p	class:QCPAxisTicker	access:public
+setTickOrigin	qcustomplot.h	1585;"	p	class:QCPAxisTickerDateTime	access:public
+setTickOrigin	qcustomplot.h	1586;"	p	class:QCPAxisTickerDateTime	access:public
+setTickPen	qcustomplot.h	2055;"	p	class:QCPAxis	access:public
+setTickStep	qcustomplot.h	1689;"	p	class:QCPAxisTickerFixed	access:public
+setTickStepStrategy	qcustomplot.h	1537;"	p	class:QCPAxisTicker	access:public
+setTicker	qcustomplot.h	2037;"	p	class:QCPAxis	access:public
+setTicks	qcustomplot.h	1718;"	p	class:QCPAxisTickerText	access:public
+setTicks	qcustomplot.h	1719;"	p	class:QCPAxisTickerText	access:public
+setTicks	qcustomplot.h	2038;"	p	class:QCPAxis	access:public
+setTightBoundary	qcustomplot.h	5734;"	p	class:QCPColorMap	access:public
+setTimeFormat	qcustomplot.h	1638;"	p	class:QCPAxisTickerTime	access:public
+setTwoColored	qcustomplot.h	5870;"	p	class:QCPFinancial	access:public
+setType	qcustomplot.h	3445;"	p	class:QCPItemPosition	access:public
+setType	qcustomplot.h	5035;"	p	class:QCPColorScale	access:public
+setTypeX	qcustomplot.h	3446;"	p	class:QCPItemPosition	access:public
+setTypeY	qcustomplot.h	3447;"	p	class:QCPItemPosition	access:public
+setUpperEnding	qcustomplot.h	2073;"	p	class:QCPAxis	access:public
+setUsedScatterProperties	qcustomplot.h	3227;"	p	class:QCPSelectionDecorator	access:public
+setVal	oscillator.h	20;"	p	class:Oscillator	access:public
+setValueAxis	qcustomplot.h	3296;"	p	class:QCPAbstractPlottable	access:public
+setValueRange	qcustomplot.h	5671;"	p	class:QCPColorMapData	access:public
+setValueSize	qcustomplot.h	5668;"	p	class:QCPColorMapData	access:public
+setViewport	qcustomplot.h	3613;"	p	class:QCustomPlot	access:public
+setVisible	qcustomplot.h	658;"	p	class:QCPLayer	access:public
+setVisible	qcustomplot.h	712;"	p	class:QCPLayerable	access:public
+setWhiskerAntialiased	qcustomplot.h	5601;"	p	class:QCPStatisticalBox	access:public
+setWhiskerBarPen	qcustomplot.h	5600;"	p	class:QCPStatisticalBox	access:public
+setWhiskerPen	qcustomplot.h	5599;"	p	class:QCPStatisticalBox	access:public
+setWhiskerWidth	qcustomplot.h	5598;"	p	class:QCPStatisticalBox	access:public
+setWhiskerWidth	qcustomplot.h	5989;"	p	class:QCPErrorBars	access:public
+setWidth	qcustomplot.h	1487;"	p	class:QCPLineEnding	access:public
+setWidth	qcustomplot.h	5479;"	p	class:QCPBars	access:public
+setWidth	qcustomplot.h	5597;"	p	class:QCPStatisticalBox	access:public
+setWidth	qcustomplot.h	5868;"	p	class:QCPFinancial	access:public
+setWidthType	qcustomplot.h	5480;"	p	class:QCPBars	access:public
+setWidthType	qcustomplot.h	5869;"	p	class:QCPFinancial	access:public
+setWrap	qcustomplot.h	1348;"	p	class:QCPLayoutGrid	access:public
+setZeroLinePen	qcustomplot.h	1867;"	p	class:QCPGrid	access:public
+set_buffer_selector	streamcatcher.h	31;"	p	class:StreamCatcher	access:private
+setupFullAxesBox	qcustomplot.h	4605;"	p	class:QCPAxisRect	access:public
+setupOpenGl	qcustomplot.h	3798;"	p	class:QCustomPlot	access:protected
+setupPaintBuffers	qcustomplot.h	3795;"	p	class:QCustomPlot	access:protected
+setupTickVectors	qcustomplot.h	2163;"	p	class:QCPAxis	access:protected
+share	sharedmemory.h	27;"	p	class:SharedMemory	access:private
+simplify	qcustomplot.h	1278;"	p	class:QCPLayout	access:public	implementation:virtual
+simplify	qcustomplot.h	957;"	p	class:QCPDataSelection	access:public
+simplifyFraction	qcustomplot.h	1792;"	p	class:QCPAxisTickerPi	access:protected
+size	qcustomplot.h	2194;"	p	class:QCPAxisPainterPrivate	access:public	implementation:virtual
+sizeConstraintsChanged	qcustomplot.h	1290;"	p	class:QCPLayout	access:protected
+sort	qcustomplot.h	2402;"	p	class:QCPDataContainer	access:public
+sortKeyIsMainKey	qcustomplot.h	3828;"	p	class:QCPPlottableInterface1D	access:public	implementation:pure virtual
+sortKeyIsMainKey	qcustomplot.h	3850;"	p	class:QCPAbstractPlottable1D	access:public	implementation:virtual
+sortKeyIsMainKey	qcustomplot.h	6005;"	p	class:QCPErrorBars	access:public	implementation:virtual
+spAll	qcustomplot.h	2276;"	e	enum:QCPScatterStyle::ScatterProperty
+spAxis	qcustomplot.h	1973;"	e	enum:QCPAxis::SelectablePart
+spAxisLabel	qcustomplot.h	1975;"	e	enum:QCPAxis::SelectablePart
+spBrush	qcustomplot.h	2273;"	e	enum:QCPScatterStyle::ScatterProperty
+spItems	qcustomplot.h	4791;"	e	enum:QCPLegend::SelectablePart
+spLegendBox	qcustomplot.h	4790;"	e	enum:QCPLegend::SelectablePart
+spNone	qcustomplot.h	1972;"	e	enum:QCPAxis::SelectablePart
+spNone	qcustomplot.h	2271;"	e	enum:QCPScatterStyle::ScatterProperty
+spNone	qcustomplot.h	4789;"	e	enum:QCPLegend::SelectablePart
+spPen	qcustomplot.h	2272;"	e	enum:QCPScatterStyle::ScatterProperty
+spShape	qcustomplot.h	2275;"	e	enum:QCPScatterStyle::ScatterProperty
+spSize	qcustomplot.h	2274;"	e	enum:QCPScatterStyle::ScatterProperty
+spTickLabels	qcustomplot.h	1974;"	e	enum:QCPAxis::SelectablePart
+span	qcustomplot.h	951;"	p	class:QCPDataSelection	access:public
+squeeze	qcustomplot.h	2403;"	p	class:QCPDataContainer	access:public
+srmCustom	qcustomplot.h	268;"	e	enum:QCP::SelectionRectMode
+srmNone	qcustomplot.h	265;"	e	enum:QCP::SelectionRectMode
+srmSelect	qcustomplot.h	267;"	e	enum:QCP::SelectionRectMode
+srmZoom	qcustomplot.h	266;"	e	enum:QCP::SelectionRectMode
+ssCircle	qcustomplot.h	2293;"	e	enum:QCPScatterStyle::ScatterShape
+ssCross	qcustomplot.h	2291;"	e	enum:QCPScatterStyle::ScatterShape
+ssCrossCircle	qcustomplot.h	2302;"	e	enum:QCPScatterStyle::ScatterShape
+ssCrossSquare	qcustomplot.h	2300;"	e	enum:QCPScatterStyle::ScatterShape
+ssCustom	qcustomplot.h	2306;"	e	enum:QCPScatterStyle::ScatterShape
+ssDiamond	qcustomplot.h	2296;"	e	enum:QCPScatterStyle::ScatterShape
+ssDisc	qcustomplot.h	2294;"	e	enum:QCPScatterStyle::ScatterShape
+ssDot	qcustomplot.h	2290;"	e	enum:QCPScatterStyle::ScatterShape
+ssMultiples	qcustomplot.h	1677;"	e	enum:QCPAxisTickerFixed::ScaleStrategy
+ssNone	qcustomplot.h	1676;"	e	enum:QCPAxisTickerFixed::ScaleStrategy
+ssNone	qcustomplot.h	2289;"	e	enum:QCPScatterStyle::ScatterShape
+ssPeace	qcustomplot.h	2304;"	e	enum:QCPScatterStyle::ScatterShape
+ssPixmap	qcustomplot.h	2305;"	e	enum:QCPScatterStyle::ScatterShape
+ssPlus	qcustomplot.h	2292;"	e	enum:QCPScatterStyle::ScatterShape
+ssPlusCircle	qcustomplot.h	2303;"	e	enum:QCPScatterStyle::ScatterShape
+ssPlusSquare	qcustomplot.h	2301;"	e	enum:QCPScatterStyle::ScatterShape
+ssPowers	qcustomplot.h	1678;"	e	enum:QCPAxisTickerFixed::ScaleStrategy
+ssSquare	qcustomplot.h	2295;"	e	enum:QCPScatterStyle::ScatterShape
+ssStar	qcustomplot.h	2297;"	e	enum:QCPScatterStyle::ScatterShape
+ssTriangle	qcustomplot.h	2298;"	e	enum:QCPScatterStyle::ScatterShape
+ssTriangleInverted	qcustomplot.h	2299;"	e	enum:QCPScatterStyle::ScatterShape
+stAbsolute	qcustomplot.h	5356;"	e	enum:QCPBarsGroup::SpacingType
+stAxisRectRatio	qcustomplot.h	5357;"	e	enum:QCPBarsGroup::SpacingType
+stDataRange	qcustomplot.h	292;"	e	enum:QCP::SelectionType
+stLinear	qcustomplot.h	1964;"	e	enum:QCPAxis::ScaleType
+stLogarithmic	qcustomplot.h	1965;"	e	enum:QCPAxis::ScaleType
+stMultipleDataRanges	qcustomplot.h	293;"	e	enum:QCP::SelectionType
+stNone	qcustomplot.h	289;"	e	enum:QCP::SelectionType
+stPlotCoords	qcustomplot.h	5358;"	e	enum:QCPBarsGroup::SpacingType
+stSingleData	qcustomplot.h	291;"	e	enum:QCP::SelectionType
+stWhole	qcustomplot.h	290;"	e	enum:QCP::SelectionType
+start	qcustomplot.h	6118;"	m	class:QCPItemLine	access:public
+start	qcustomplot.h	6168;"	m	class:QCPItemCurve	access:public
+startCapture	movie.h	22;"	p	class:Movie	access:public
+startDir	qcustomplot.h	6169;"	m	class:QCPItemCurve	access:public
+startPainting	qcustomplot.h	530;"	p	class:QCPAbstractPaintBuffer	access:public	implementation:pure virtual
+startSave	savedata.h	19;"	p	class:Savedata	access:public
+startSelection	qcustomplot.h	1128;"	p	class:QCPSelectionRect	access:protected	implementation:virtual
+startShare	sharedmemory.h	23;"	p	class:SharedMemory	access:public
+started	qcustomplot.h	1114;"	p	class:QCPSelectionRect	access:public
+staticMetaObject	moc_mainwindow.cpp	92;"	m	class:MainWindow	file:
+staticMetaObject	moc_plotitem.cpp	74;"	m	class:PlotItem	file:
+staticMetaObject	moc_qcustomplot.cpp	1073;"	m	class:QCPLayout	file:
+staticMetaObject	moc_qcustomplot.cpp	1179;"	m	class:QCPLayoutGrid	file:
+staticMetaObject	moc_qcustomplot.cpp	1303;"	m	class:QCPLayoutInset	file:
+staticMetaObject	moc_qcustomplot.cpp	1391;"	m	class:QCPLineEnding	file:
+staticMetaObject	moc_qcustomplot.cpp	1440;"	m	class:QCPAxisTicker	file:
+staticMetaObject	moc_qcustomplot.cpp	1495;"	m	class:QCPAxisTickerTime	file:
+staticMetaObject	moc_qcustomplot.cpp	1546;"	m	class:QCPAxisTickerFixed	file:
+staticMetaObject	moc_qcustomplot.cpp	1598;"	m	class:QCPAxisTickerPi	file:
+staticMetaObject	moc_qcustomplot.cpp	1660;"	m	class:QCPGrid	file:
+staticMetaObject	moc_qcustomplot.cpp	2105;"	m	class:QCPAxis	file:
+staticMetaObject	moc_qcustomplot.cpp	233;"	m	class:QCP	file:
+staticMetaObject	moc_qcustomplot.cpp	2391;"	m	class:QCPScatterStyle	file:
+staticMetaObject	moc_qcustomplot.cpp	2429;"	m	class:QCPSelectionDecorator	file:
+staticMetaObject	moc_qcustomplot.cpp	2622;"	m	class:QCPAbstractPlottable	file:
+staticMetaObject	moc_qcustomplot.cpp	2762;"	m	class:QCPItemAnchor	file:
+staticMetaObject	moc_qcustomplot.cpp	2816;"	m	class:QCPItemPosition	file:
+staticMetaObject	moc_qcustomplot.cpp	2931;"	m	class:QCPAbstractItem	file:
+staticMetaObject	moc_qcustomplot.cpp	293;"	m	class:QCPPainter	file:
+staticMetaObject	moc_qcustomplot.cpp	3434;"	m	class:QCustomPlot	file:
+staticMetaObject	moc_qcustomplot.cpp	3701;"	m	class:QCPColorGradient	file:
+staticMetaObject	moc_qcustomplot.cpp	3757;"	m	class:QCPSelectionDecoratorBracket	file:
+staticMetaObject	moc_qcustomplot.cpp	375;"	m	class:QCPLayer	file:
+staticMetaObject	moc_qcustomplot.cpp	3819;"	m	class:QCPAxisRect	file:
+staticMetaObject	moc_qcustomplot.cpp	4007;"	m	class:QCPAbstractLegendItem	file:
+staticMetaObject	moc_qcustomplot.cpp	4141;"	m	class:QCPPlottableLegendItem	file:
+staticMetaObject	moc_qcustomplot.cpp	4325;"	m	class:QCPLegend	file:
+staticMetaObject	moc_qcustomplot.cpp	4567;"	m	class:QCPTextElement	file:
+staticMetaObject	moc_qcustomplot.cpp	4737;"	m	class:QCPColorScaleAxisRectPrivate	file:
+staticMetaObject	moc_qcustomplot.cpp	4943;"	m	class:QCPColorScale	file:
+staticMetaObject	moc_qcustomplot.cpp	5128;"	m	class:QCPGraph	file:
+staticMetaObject	moc_qcustomplot.cpp	5258;"	m	class:QCPCurve	file:
+staticMetaObject	moc_qcustomplot.cpp	5383;"	m	class:QCPBarsGroup	file:
+staticMetaObject	moc_qcustomplot.cpp	5527;"	m	class:QCPBars	file:
+staticMetaObject	moc_qcustomplot.cpp	5657;"	m	class:QCPStatisticalBox	file:
+staticMetaObject	moc_qcustomplot.cpp	566;"	m	class:QCPLayerable	file:
+staticMetaObject	moc_qcustomplot.cpp	5909;"	m	class:QCPColorMap	file:
+staticMetaObject	moc_qcustomplot.cpp	6089;"	m	class:QCPFinancial	file:
+staticMetaObject	moc_qcustomplot.cpp	6237;"	m	class:QCPErrorBars	file:
+staticMetaObject	moc_qcustomplot.cpp	6354;"	m	class:QCPItemStraightLine	file:
+staticMetaObject	moc_qcustomplot.cpp	6469;"	m	class:QCPItemLine	file:
+staticMetaObject	moc_qcustomplot.cpp	6588;"	m	class:QCPItemCurve	file:
+staticMetaObject	moc_qcustomplot.cpp	6706;"	m	class:QCPItemRect	file:
+staticMetaObject	moc_qcustomplot.cpp	6847;"	m	class:QCPItemText	file:
+staticMetaObject	moc_qcustomplot.cpp	6983;"	m	class:QCPItemEllipse	file:
+staticMetaObject	moc_qcustomplot.cpp	7108;"	m	class:QCPItemPixmap	file:
+staticMetaObject	moc_qcustomplot.cpp	7263;"	m	class:QCPItemTracer	file:
+staticMetaObject	moc_qcustomplot.cpp	7406;"	m	class:QCPItemBracket	file:
+staticMetaObject	moc_qcustomplot.cpp	752;"	m	class:QCPSelectionRect	file:
+staticMetaObject	moc_qcustomplot.cpp	856;"	m	class:QCPMarginGroup	file:
+staticMetaObject	moc_qcustomplot.cpp	962;"	m	class:QCPLayoutElement	file:
+staticMetaObject	moc_slideritem.cpp	74;"	m	class:SliderItem	file:
+staticMetaObject	moc_videoitem.cpp	74;"	m	class:VideoItem	file:
+statusBar	ui_mainwindow.h	34;"	m	class:Ui_MainWindow	access:public
+stopCapture	movie.h	24;"	p	class:Movie	access:public
+stopSave	savedata.h	21;"	p	class:Savedata	access:public
+stopShare	sharedmemory.h	24;"	p	class:SharedMemory	access:public
+stopsUseAlpha	qcustomplot.h	4468;"	p	class:QCPColorGradient	access:protected
+stringdata	moc_mainwindow.cpp	23;"	m	struct:qt_meta_stringdata_MainWindow_t	file:	access:public
+stringdata	moc_plotitem.cpp	23;"	m	struct:qt_meta_stringdata_PlotItem_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	1034;"	m	struct:qt_meta_stringdata_QCPLayout_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	1101;"	m	struct:qt_meta_stringdata_QCPLayoutGrid_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	1253;"	m	struct:qt_meta_stringdata_QCPLayoutInset_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	1331;"	m	struct:qt_meta_stringdata_QCPLineEnding_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	1398;"	m	struct:qt_meta_stringdata_QCPAxisTicker_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	1447;"	m	struct:qt_meta_stringdata_QCPAxisTickerTime_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	1502;"	m	struct:qt_meta_stringdata_QCPAxisTickerFixed_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	1553;"	m	struct:qt_meta_stringdata_QCPAxisTickerPi_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	1605;"	m	struct:qt_meta_stringdata_QCPGrid_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	1732;"	m	struct:qt_meta_stringdata_QCPAxis_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	2289;"	m	struct:qt_meta_stringdata_QCPScatterStyle_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	2398;"	m	struct:qt_meta_stringdata_QCPSelectionDecorator_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	240;"	m	struct:qt_meta_stringdata_QCPPainter_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	2436;"	m	struct:qt_meta_stringdata_QCPAbstractPlottable_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	26;"	m	struct:qt_meta_stringdata_QCP_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	2731;"	m	struct:qt_meta_stringdata_QCPItemAnchor_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	2769;"	m	struct:qt_meta_stringdata_QCPItemPosition_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	2823;"	m	struct:qt_meta_stringdata_QCPAbstractItem_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	300;"	m	struct:qt_meta_stringdata_QCPLayer_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	3021;"	m	struct:qt_meta_stringdata_QCustomPlot_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	3630;"	m	struct:qt_meta_stringdata_QCPColorGradient_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	3708;"	m	struct:qt_meta_stringdata_QCPSelectionDecoratorBracket_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	3764;"	m	struct:qt_meta_stringdata_QCPAxisRect_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	3889;"	m	struct:qt_meta_stringdata_QCPAbstractLegendItem_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	4102;"	m	struct:qt_meta_stringdata_QCPPlottableLegendItem_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	4169;"	m	struct:qt_meta_stringdata_QCPLegend_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	4435;"	m	struct:qt_meta_stringdata_QCPTextElement_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	443;"	m	struct:qt_meta_stringdata_QCPLayerable_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	4677;"	m	struct:qt_meta_stringdata_QCPColorScaleAxisRectPrivate_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	4774;"	m	struct:qt_meta_stringdata_QCPColorScale_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	5048;"	m	struct:qt_meta_stringdata_QCPGraph_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	5198;"	m	struct:qt_meta_stringdata_QCPCurve_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	5324;"	m	struct:qt_meta_stringdata_QCPBarsGroup_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	5447;"	m	struct:qt_meta_stringdata_QCPBars_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	5599;"	m	struct:qt_meta_stringdata_QCPStatisticalBox_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	5731;"	m	struct:qt_meta_stringdata_QCPColorMap_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	6010;"	m	struct:qt_meta_stringdata_QCPFinancial_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	6165;"	m	struct:qt_meta_stringdata_QCPErrorBars_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	6309;"	m	struct:qt_meta_stringdata_QCPItemStraightLine_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	6418;"	m	struct:qt_meta_stringdata_QCPItemLine_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	649;"	m	struct:qt_meta_stringdata_QCPSelectionRect_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	6537;"	m	struct:qt_meta_stringdata_QCPItemCurve_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	6656;"	m	struct:qt_meta_stringdata_QCPItemRect_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	6774;"	m	struct:qt_meta_stringdata_QCPItemText_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	6933;"	m	struct:qt_meta_stringdata_QCPItemEllipse_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	7051;"	m	struct:qt_meta_stringdata_QCPItemPixmap_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	7178;"	m	struct:qt_meta_stringdata_QCPItemTracer_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	7341;"	m	struct:qt_meta_stringdata_QCPItemBracket_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	817;"	m	struct:qt_meta_stringdata_QCPMarginGroup_t	file:	access:public
+stringdata	moc_qcustomplot.cpp	884;"	m	struct:qt_meta_stringdata_QCPLayoutElement_t	file:	access:public
+stringdata	moc_slideritem.cpp	23;"	m	struct:qt_meta_stringdata_SliderItem_t	file:	access:public
+stringdata	moc_videoitem.cpp	23;"	m	struct:qt_meta_stringdata_VideoItem_t	file:	access:public
+subTickLengthIn	qcustomplot.h	2005;"	p	class:QCPAxis	access:public
+subTickLengthIn	qcustomplot.h	2214;"	m	class:QCPAxisPainterPrivate	access:public
+subTickLengthOut	qcustomplot.h	2006;"	p	class:QCPAxis	access:public
+subTickLengthOut	qcustomplot.h	2214;"	m	class:QCPAxisPainterPrivate	access:public
+subTickPen	qcustomplot.h	2215;"	m	class:QCPAxisPainterPrivate	access:public
+subTickPositions	qcustomplot.h	2223;"	m	class:QCPAxisPainterPrivate	access:public
+substituteExponent	qcustomplot.h	2212;"	m	class:QCPAxisPainterPrivate	access:public
+suffixBounds	qcustomplot.h	2236;"	m	struct:QCPAxisPainterPrivate::TickLabelData	access:public
+suffixPart	qcustomplot.h	2235;"	m	struct:QCPAxisPainterPrivate::TickLabelData	access:public
+t	qcustomplot.h	5242;"	m	class:QCPCurveData	access:public
+take	qcustomplot.h	1277;"	p	class:QCPLayout	access:public	implementation:pure virtual
+takeAt	qcustomplot.h	1276;"	p	class:QCPLayout	access:public	implementation:pure virtual
+tickLabelColor	qcustomplot.h	2217;"	m	class:QCPAxisPainterPrivate	access:public
+tickLabelFont	qcustomplot.h	2216;"	m	class:QCPAxisPainterPrivate	access:public
+tickLabelPadding	qcustomplot.h	1993;"	p	class:QCPAxis	access:public
+tickLabelPadding	qcustomplot.h	2209;"	m	class:QCPAxisPainterPrivate	access:public
+tickLabelRotation	qcustomplot.h	1996;"	p	class:QCPAxis	access:public
+tickLabelRotation	qcustomplot.h	2210;"	m	class:QCPAxisPainterPrivate	access:public
+tickLabelSide	qcustomplot.h	1997;"	p	class:QCPAxis	access:public
+tickLabelSide	qcustomplot.h	2211;"	m	class:QCPAxisPainterPrivate	access:public
+tickLabels	qcustomplot.h	2225;"	m	class:QCPAxisPainterPrivate	access:public
+tickLengthIn	qcustomplot.h	2002;"	p	class:QCPAxis	access:public
+tickLengthIn	qcustomplot.h	2214;"	m	class:QCPAxisPainterPrivate	access:public
+tickLengthOut	qcustomplot.h	2003;"	p	class:QCPAxis	access:public
+tickLengthOut	qcustomplot.h	2214;"	m	class:QCPAxisPainterPrivate	access:public
+tickPen	qcustomplot.h	2215;"	m	class:QCPAxisPainterPrivate	access:public
+tickPositions	qcustomplot.h	2224;"	m	class:QCPAxisPainterPrivate	access:public
+timeSeriesToOhlc	qcustomplot.h	5887;"	p	class:QCPFinancial	access:public
+toPainter	qcustomplot.h	3698;"	p	class:QCustomPlot	access:public
+toPixmap	qcustomplot.h	3697;"	p	class:QCustomPlot	access:public
+top	qcustomplot.h	6221;"	m	class:QCPItemRect	access:public
+top	qcustomplot.h	6307;"	m	class:QCPItemText	access:public
+top	qcustomplot.h	6378;"	m	class:QCPItemEllipse	access:public
+top	qcustomplot.h	6443;"	m	class:QCPItemPixmap	access:public
+topLeft	qcustomplot.h	6219;"	m	class:QCPItemRect	access:public
+topLeft	qcustomplot.h	6306;"	m	class:QCPItemText	access:public
+topLeft	qcustomplot.h	6375;"	m	class:QCPItemEllipse	access:public
+topLeft	qcustomplot.h	6441;"	m	class:QCPItemPixmap	access:public
+topLeftRim	qcustomplot.h	6377;"	m	class:QCPItemEllipse	access:public
+topRight	qcustomplot.h	6222;"	m	class:QCPItemRect	access:public
+topRight	qcustomplot.h	6308;"	m	class:QCPItemText	access:public
+topRight	qcustomplot.h	6444;"	m	class:QCPItemPixmap	access:public
+topRightRim	qcustomplot.h	6379;"	m	class:QCPItemEllipse	access:public
+totalBounds	qcustomplot.h	2236;"	m	struct:QCPAxisPainterPrivate::TickLabelData	access:public
+trimTicks	qcustomplot.h	1559;"	p	class:QCPAxisTicker	access:protected
+tsCircle	qcustomplot.h	6501;"	e	enum:QCPItemTracer::TracerStyle
+tsCrosshair	qcustomplot.h	6500;"	e	enum:QCPItemTracer::TracerStyle
+tsNone	qcustomplot.h	6498;"	e	enum:QCPItemTracer::TracerStyle
+tsPlus	qcustomplot.h	6499;"	e	enum:QCPItemTracer::TracerStyle
+tsSquare	qcustomplot.h	6502;"	e	enum:QCPItemTracer::TracerStyle
+tssMeetTickCount	qcustomplot.h	1524;"	e	enum:QCPAxisTicker::TickStepStrategy
+tssReadability	qcustomplot.h	1523;"	e	enum:QCPAxisTicker::TickStepStrategy
+tuDays	qcustomplot.h	1627;"	e	enum:QCPAxisTickerTime::TimeUnit
+tuHours	qcustomplot.h	1626;"	e	enum:QCPAxisTickerTime::TimeUnit
+tuMilliseconds	qcustomplot.h	1623;"	e	enum:QCPAxisTickerTime::TimeUnit
+tuMinutes	qcustomplot.h	1625;"	e	enum:QCPAxisTickerTime::TimeUnit
+tuSeconds	qcustomplot.h	1624;"	e	enum:QCPAxisTickerTime::TimeUnit
+type	qcustomplot.h	2202;"	m	class:QCPAxisPainterPrivate	access:public
+ui	mainwindow.h	61;"	m	class:MainWindow	access:private
+undefinePen	qcustomplot.h	2338;"	p	class:QCPScatterStyle	access:public
+unicodeFraction	qcustomplot.h	1794;"	p	class:QCPAxisTickerPi	access:protected
+unicodeSubscript	qcustomplot.h	1796;"	p	class:QCPAxisTickerPi	access:protected
+unicodeSuperscript	qcustomplot.h	1795;"	p	class:QCPAxisTickerPi	access:protected
+unregisterBars	qcustomplot.h	5393;"	p	class:QCPBarsGroup	access:protected
+upLayout	qcustomplot.h	1196;"	e	enum:QCPLayoutElement::UpdatePhase
+upMargins	qcustomplot.h	1195;"	e	enum:QCPLayoutElement::UpdatePhase
+upPreparation	qcustomplot.h	1194;"	e	enum:QCPLayoutElement::UpdatePhase
+update	qcustomplot.h	1227;"	p	class:QCPLayoutElement	access:public	implementation:virtual
+updateAxesOffset	qcustomplot.h	4661;"	p	class:QCPAxisRect	access:protected
+updateColorBuffer	qcustomplot.h	4469;"	p	class:QCPColorGradient	access:protected
+updateGradientImage	qcustomplot.h	4999;"	p	class:QCPColorScaleAxisRectPrivate	access:protected
+updateLayerIndices	qcustomplot.h	3791;"	p	class:QCustomPlot	access:protected
+updateLayout	qcustomplot.h	1287;"	p	class:QCPLayout	access:protected	implementation:virtual
+updateLayout	qcustomplot.h	3780;"	p	class:QCustomPlot	access:protected	implementation:virtual
+updateLegendIcon	qcustomplot.h	5739;"	p	class:QCPColorMap	access:public
+updateMapImage	qcustomplot.h	5767;"	p	class:QCPColorMap	access:protected	implementation:virtual
+updateOscillator	slideritem.h	24;"	p	class:SliderItem	access:private
+updatePosition	qcustomplot.h	6535;"	p	class:QCPItemTracer	access:public
+updateScaledPixmap	qcustomplot.h	6467;"	p	class:QCPItemPixmap	access:protected
+upper	qcustomplot.h	773;"	m	class:QCPRange	access:public
+upperEnding	qcustomplot.h	2026;"	p	class:QCPAxis	access:public
+upperEnding	qcustomplot.h	2204;"	m	class:QCPAxisPainterPrivate	access:public
+upperFillBasePoint	qcustomplot.h	5208;"	p	class:QCPGraph	access:protected
+upperQuartile	qcustomplot.h	5551;"	m	class:QCPStatisticalBoxData	access:public
+validRange	qcustomplot.h	804;"	p	class:QCPRange	access:public
+validRange	qcustomplot.h	805;"	p	class:QCPRange	access:public
+value	qcustomplot.h	5104;"	m	class:QCPGraphData	access:public
+value	qcustomplot.h	5242;"	m	class:QCPCurveData	access:public
+value	qcustomplot.h	5422;"	m	class:QCPBarsData	access:public
+valueRange	qcustomplot.h	2413;"	p	class:QCPDataContainer	access:public
+viewportRect	qcustomplot.h	2218;"	m	class:QCPAxisPainterPrivate	access:public
+wheelEvent	qcustomplot.h	748;"	p	class:QCPLayerable	access:protected	implementation:virtual
+wtAbsolute	qcustomplot.h	5457;"	e	enum:QCPBars::WidthType
+wtAbsolute	qcustomplot.h	5834;"	e	enum:QCPFinancial::WidthType
+wtAxisRectRatio	qcustomplot.h	5458;"	e	enum:QCPBars::WidthType
+wtAxisRectRatio	qcustomplot.h	5835;"	e	enum:QCPFinancial::WidthType
+wtPlotCoords	qcustomplot.h	5459;"	e	enum:QCPBars::WidthType
+wtPlotCoords	qcustomplot.h	5836;"	e	enum:QCPFinancial::WidthType
+x	utilities.h	28;"	m	struct:float_pair	access:public
+xAxis	qcustomplot.h	3701;"	m	class:QCustomPlot	access:public
+xAxis2	qcustomplot.h	3701;"	m	class:QCustomPlot	access:public
+y	utilities.h	29;"	m	struct:float_pair	access:public
+yAxis	qcustomplot.h	3701;"	m	class:QCustomPlot	access:public
+yAxis2	qcustomplot.h	3701;"	m	class:QCustomPlot	access:public
+zoom	qcustomplot.h	4603;"	p	class:QCPAxisRect	access:public
+zoom	qcustomplot.h	4604;"	p	class:QCPAxisRect	access:public
+~MainWindow	mainwindow.h	45;"	p	class:MainWindow	access:public
+~QCPAbstractItem	qcustomplot.h	3486;"	p	class:QCPAbstractItem	access:public	implementation:virtual
+~QCPAbstractPaintBuffer	qcustomplot.h	517;"	p	class:QCPAbstractPaintBuffer	access:public	implementation:virtual
+~QCPAbstractPlottable	qcustomplot.h	3274;"	p	class:QCPAbstractPlottable	access:public	implementation:virtual
+~QCPAbstractPlottable1D	qcustomplot.h	3841;"	p	class:QCPAbstractPlottable1D	access:public	implementation:virtual
+~QCPAxis	qcustomplot.h	1982;"	p	class:QCPAxis	access:public	implementation:virtual
+~QCPAxisPainterPrivate	qcustomplot.h	2191;"	p	class:QCPAxisPainterPrivate	access:public	implementation:virtual
+~QCPAxisRect	qcustomplot.h	4561;"	p	class:QCPAxisRect	access:public	implementation:virtual
+~QCPAxisTicker	qcustomplot.h	1529;"	p	class:QCPAxisTicker	access:public	implementation:virtual
+~QCPBars	qcustomplot.h	5464;"	p	class:QCPBars	access:public	implementation:virtual
+~QCPBarsGroup	qcustomplot.h	5363;"	p	class:QCPBarsGroup	access:public	implementation:virtual
+~QCPColorMap	qcustomplot.h	5717;"	p	class:QCPColorMap	access:public	implementation:virtual
+~QCPColorMapData	qcustomplot.h	5651;"	p	class:QCPColorMapData	access:public
+~QCPColorScale	qcustomplot.h	5021;"	p	class:QCPColorScale	access:public	implementation:virtual
+~QCPCurve	qcustomplot.h	5279;"	p	class:QCPCurve	access:public	implementation:virtual
+~QCPErrorBars	qcustomplot.h	5975;"	p	class:QCPErrorBars	access:public	implementation:virtual
+~QCPFinancial	qcustomplot.h	5851;"	p	class:QCPFinancial	access:public	implementation:virtual
+~QCPGraph	qcustomplot.h	5147;"	p	class:QCPGraph	access:public	implementation:virtual
+~QCPItemAnchor	qcustomplot.h	3372;"	p	class:QCPItemAnchor	access:public	implementation:virtual
+~QCPItemBracket	qcustomplot.h	6588;"	p	class:QCPItemBracket	access:public	implementation:virtual
+~QCPItemCurve	qcustomplot.h	6151;"	p	class:QCPItemCurve	access:public	implementation:virtual
+~QCPItemEllipse	qcustomplot.h	6358;"	p	class:QCPItemEllipse	access:public	implementation:virtual
+~QCPItemLine	qcustomplot.h	6101;"	p	class:QCPItemLine	access:public	implementation:virtual
+~QCPItemPixmap	qcustomplot.h	6422;"	p	class:QCPItemPixmap	access:public	implementation:virtual
+~QCPItemPosition	qcustomplot.h	3427;"	p	class:QCPItemPosition	access:public	implementation:virtual
+~QCPItemRect	qcustomplot.h	6202;"	p	class:QCPItemRect	access:public	implementation:virtual
+~QCPItemStraightLine	qcustomplot.h	6056;"	p	class:QCPItemStraightLine	access:public	implementation:virtual
+~QCPItemText	qcustomplot.h	6270;"	p	class:QCPItemText	access:public	implementation:virtual
+~QCPItemTracer	qcustomplot.h	6507;"	p	class:QCPItemTracer	access:public	implementation:virtual
+~QCPLayer	qcustomplot.h	647;"	p	class:QCPLayer	access:public	implementation:virtual
+~QCPLayerable	qcustomplot.h	702;"	p	class:QCPLayerable	access:public	implementation:virtual
+~QCPLayoutElement	qcustomplot.h	1201;"	p	class:QCPLayoutElement	access:public	implementation:virtual
+~QCPLayoutGrid	qcustomplot.h	1329;"	p	class:QCPLayoutGrid	access:public	implementation:virtual
+~QCPLayoutInset	qcustomplot.h	1405;"	p	class:QCPLayoutInset	access:public	implementation:virtual
+~QCPLegend	qcustomplot.h	4798;"	p	class:QCPLegend	access:public	implementation:virtual
+~QCPMarginGroup	qcustomplot.h	1151;"	p	class:QCPMarginGroup	access:public	implementation:virtual
+~QCPPaintBufferGlFbo	qcustomplot.h	596;"	p	class:QCPPaintBufferGlFbo	access:public	implementation:virtual
+~QCPPaintBufferGlPbuffer	qcustomplot.h	573;"	p	class:QCPPaintBufferGlPbuffer	access:public	implementation:virtual
+~QCPPaintBufferPixmap	qcustomplot.h	552;"	p	class:QCPPaintBufferPixmap	access:public	implementation:virtual
+~QCPSelectionDecorator	qcustomplot.h	3215;"	p	class:QCPSelectionDecorator	access:public	implementation:virtual
+~QCPSelectionDecoratorBracket	qcustomplot.h	4500;"	p	class:QCPSelectionDecoratorBracket	access:public	implementation:virtual
+~QCPSelectionRect	qcustomplot.h	1097;"	p	class:QCPSelectionRect	access:public	implementation:virtual
+~QCustomPlot	qcustomplot.h	3591;"	p	class:QCustomPlot	access:public	implementation:virtual
+~SharedMemory	sharedmemory.h	22;"	p	class:SharedMemory	access:public

@@ -7,6 +7,7 @@
 
 #include "utilities.h"
 #include "streamcatcher.h"
+#include "scriptlauncher.h"
 #include "mainwindow.h"
 #include "videoitem.h"
 #include "oscillator.h"
@@ -17,6 +18,6 @@
 #include "oscillator.h"
 #include "slideritem.h"
 
-void launchView(int argc, char **argv, bool* isClosed, StreamCatcher *sc, Oscillator* osc, Oscillator* osc2);
+void launchView(int argc, char **argv, bool* isClosed, StreamCatcher *sc, ScriptLauncher* sl, Oscillator* osc, Oscillator* osc2);
 
 #endif //LAUNCHVIEW_H_INCLUDED

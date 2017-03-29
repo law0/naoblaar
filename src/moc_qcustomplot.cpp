@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'qcustomplot.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.2.1)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.3.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -15,7 +15,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'qcustomplot.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.2.1. It"
+#error "This file was generated using the moc from 5.3.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -23,12 +23,12 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_QCP_t {
     QByteArrayData data[62];
-    char stringdata[714];
+    char stringdata[713];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCP_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCP_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCP_t qt_meta_stringdata_QCP = {
     {
@@ -114,7 +114,7 @@ QT_MOC_LITERAL(61, 692, 20)
     "Interactions\0SelectionRectMode\0srmNone\0"
     "srmZoom\0srmSelect\0srmCustom\0SelectionType\0"
     "stNone\0stWhole\0stSingleData\0stDataRange\0"
-    "stMultipleDataRanges\0"
+    "stMultipleDataRanges"
 };
 #undef QT_MOC_LITERAL
 
@@ -237,12 +237,12 @@ const QMetaObject QCP::staticMetaObject = {
 
 struct qt_meta_stringdata_QCPPainter_t {
     QByteArrayData data[7];
-    char stringdata[86];
+    char stringdata[85];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPPainter_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPPainter_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPPainter_t qt_meta_stringdata_QCPPainter = {
     {
@@ -256,7 +256,7 @@ QT_MOC_LITERAL(6, 72, 12)
     },
     "QCPPainter\0PainterMode\0pmDefault\0"
     "pmVectorized\0pmNoCaching\0pmNonCosmetic\0"
-    "PainterModes\0"
+    "PainterModes"
 };
 #undef QT_MOC_LITERAL
 
@@ -297,12 +297,12 @@ const QMetaObject QCPPainter::staticMetaObject = {
 
 struct qt_meta_stringdata_QCPLayer_t {
     QByteArrayData data[12];
-    char stringdata[119];
+    char stringdata[118];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPLayer_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPLayer_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPLayer_t qt_meta_stringdata_QCPLayer = {
     {
@@ -322,7 +322,7 @@ QT_MOC_LITERAL(11, 107, 10)
     "QCPLayer\0parentPlot\0QCustomPlot*\0name\0"
     "index\0children\0QList<QCPLayerable*>\0"
     "visible\0mode\0LayerMode\0lmLogical\0"
-    "lmBuffered\0"
+    "lmBuffered"
 };
 #undef QT_MOC_LITERAL
 
@@ -407,6 +407,7 @@ int QCPLayer::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 3: *reinterpret_cast< QList<QCPLayerable*>*>(_v) = children(); break;
         case 4: *reinterpret_cast< bool*>(_v) = visible(); break;
         case 5: *reinterpret_cast< LayerMode*>(_v) = mode(); break;
+        default: break;
         }
         _id -= 6;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -414,6 +415,7 @@ int QCPLayer::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         switch (_id) {
         case 4: setVisible(*reinterpret_cast< bool*>(_v)); break;
         case 5: setMode(*reinterpret_cast< LayerMode*>(_v)); break;
+        default: break;
         }
         _id -= 6;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -438,12 +440,12 @@ int QCPLayer::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPLayerable_t {
     QByteArrayData data[13];
-    char stringdata[136];
+    char stringdata[135];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPLayerable_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPLayerable_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPLayerable_t qt_meta_stringdata_QCPLayerable = {
     {
@@ -464,7 +466,7 @@ QT_MOC_LITERAL(12, 123, 11)
     "QCPLayerable\0layerChanged\0\0QCPLayer*\0"
     "newLayer\0setLayer\0layer\0visible\0"
     "parentPlot\0QCustomPlot*\0parentLayerable\0"
-    "QCPLayerable*\0antialiased\0"
+    "QCPLayerable*\0antialiased"
 };
 #undef QT_MOC_LITERAL
 
@@ -482,10 +484,10 @@ static const uint qt_meta_data_QCPLayerable[] = {
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   24,    2, 0x06,
+       1,    1,   24,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       5,    1,   27,    2, 0x0a,
+       5,    1,   27,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -603,6 +605,7 @@ int QCPLayerable::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 2: *reinterpret_cast< QCPLayerable**>(_v) = parentLayerable(); break;
         case 3: *reinterpret_cast< QCPLayer**>(_v) = layer(); break;
         case 4: *reinterpret_cast< bool*>(_v) = antialiased(); break;
+        default: break;
         }
         _id -= 5;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -611,6 +614,7 @@ int QCPLayerable::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 0: setVisible(*reinterpret_cast< bool*>(_v)); break;
         case 3: setLayer(*reinterpret_cast< QCPLayer**>(_v)); break;
         case 4: setAntialiased(*reinterpret_cast< bool*>(_v)); break;
+        default: break;
         }
         _id -= 5;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -642,12 +646,12 @@ void QCPLayerable::layerChanged(QCPLayer * _t1)
 }
 struct qt_meta_stringdata_QCPSelectionRect_t {
     QByteArrayData data[11];
-    char stringdata[97];
+    char stringdata[96];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPSelectionRect_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPSelectionRect_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPSelectionRect_t qt_meta_stringdata_QCPSelectionRect = {
     {
@@ -665,7 +669,7 @@ QT_MOC_LITERAL(10, 89, 6)
     },
     "QCPSelectionRect\0started\0\0QMouseEvent*\0"
     "event\0changed\0rect\0canceled\0QInputEvent*\0"
-    "accepted\0cancel\0"
+    "accepted\0cancel"
 };
 #undef QT_MOC_LITERAL
 
@@ -683,13 +687,13 @@ static const uint qt_meta_data_QCPSelectionRect[] = {
        4,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   39,    2, 0x06,
-       5,    2,   42,    2, 0x06,
-       7,    2,   47,    2, 0x06,
-       9,    2,   52,    2, 0x06,
+       1,    1,   39,    2, 0x06 /* Public */,
+       5,    2,   42,    2, 0x06 /* Public */,
+       7,    2,   47,    2, 0x06 /* Public */,
+       9,    2,   52,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      10,    0,   57,    2, 0x0a,
+      10,    0,   57,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -810,18 +814,18 @@ void QCPSelectionRect::accepted(const QRect & _t1, QMouseEvent * _t2)
 }
 struct qt_meta_stringdata_QCPMarginGroup_t {
     QByteArrayData data[1];
-    char stringdata[16];
+    char stringdata[15];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPMarginGroup_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPMarginGroup_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPMarginGroup_t qt_meta_stringdata_QCPMarginGroup = {
     {
 QT_MOC_LITERAL(0, 0, 14)
     },
-    "QCPMarginGroup\0"
+    "QCPMarginGroup"
 };
 #undef QT_MOC_LITERAL
 
@@ -877,12 +881,12 @@ int QCPMarginGroup::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPLayoutElement_t {
     QByteArrayData data[14];
-    char stringdata[152];
+    char stringdata[151];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPLayoutElement_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPLayoutElement_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPLayoutElement_t qt_meta_stringdata_QCPLayoutElement = {
     {
@@ -905,7 +909,7 @@ QT_MOC_LITERAL(13, 142, 8)
     "rect\0outerRect\0margins\0QMargins\0"
     "minimumMargins\0minimumSize\0maximumSize\0"
     "UpdatePhase\0upPreparation\0upMargins\0"
-    "upLayout\0"
+    "upLayout"
 };
 #undef QT_MOC_LITERAL
 
@@ -991,6 +995,7 @@ int QCPLayoutElement::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 4: *reinterpret_cast< QMargins*>(_v) = minimumMargins(); break;
         case 5: *reinterpret_cast< QSize*>(_v) = minimumSize(); break;
         case 6: *reinterpret_cast< QSize*>(_v) = maximumSize(); break;
+        default: break;
         }
         _id -= 7;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -1001,6 +1006,7 @@ int QCPLayoutElement::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 4: setMinimumMargins(*reinterpret_cast< QMargins*>(_v)); break;
         case 5: setMinimumSize(*reinterpret_cast< QSize*>(_v)); break;
         case 6: setMaximumSize(*reinterpret_cast< QSize*>(_v)); break;
+        default: break;
         }
         _id -= 7;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -1025,18 +1031,18 @@ int QCPLayoutElement::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPLayout_t {
     QByteArrayData data[1];
-    char stringdata[11];
+    char stringdata[10];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPLayout_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPLayout_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPLayout_t qt_meta_stringdata_QCPLayout = {
     {
 QT_MOC_LITERAL(0, 0, 9)
     },
-    "QCPLayout\0"
+    "QCPLayout"
 };
 #undef QT_MOC_LITERAL
 
@@ -1092,12 +1098,12 @@ int QCPLayout::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPLayoutGrid_t {
     QByteArrayData data[13];
-    char stringdata[166];
+    char stringdata[165];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPLayoutGrid_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPLayoutGrid_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPLayoutGrid_t qt_meta_stringdata_QCPLayoutGrid = {
     {
@@ -1119,7 +1125,7 @@ QT_MOC_LITERAL(12, 150, 14)
     "columnStretchFactors\0QList<double>\0"
     "rowStretchFactors\0columnSpacing\0"
     "rowSpacing\0fillOrder\0FillOrder\0wrap\0"
-    "foRowsFirst\0foColumnsFirst\0"
+    "foRowsFirst\0foColumnsFirst"
 };
 #undef QT_MOC_LITERAL
 
@@ -1207,6 +1213,7 @@ int QCPLayoutGrid::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 5: *reinterpret_cast< int*>(_v) = rowSpacing(); break;
         case 6: *reinterpret_cast< FillOrder*>(_v) = fillOrder(); break;
         case 7: *reinterpret_cast< int*>(_v) = wrap(); break;
+        default: break;
         }
         _id -= 8;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -1218,6 +1225,7 @@ int QCPLayoutGrid::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 5: setRowSpacing(*reinterpret_cast< int*>(_v)); break;
         case 6: setFillOrder(*reinterpret_cast< FillOrder*>(_v)); break;
         case 7: setWrap(*reinterpret_cast< int*>(_v)); break;
+        default: break;
         }
         _id -= 8;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -1242,12 +1250,12 @@ int QCPLayoutGrid::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPLayoutInset_t {
     QByteArrayData data[4];
-    char stringdata[54];
+    char stringdata[53];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPLayoutInset_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPLayoutInset_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPLayoutInset_t qt_meta_stringdata_QCPLayoutInset = {
     {
@@ -1257,7 +1265,7 @@ QT_MOC_LITERAL(2, 30, 6),
 QT_MOC_LITERAL(3, 37, 15)
     },
     "QCPLayoutInset\0InsetPlacement\0ipFree\0"
-    "ipBorderAligned\0"
+    "ipBorderAligned"
 };
 #undef QT_MOC_LITERAL
 
@@ -1320,12 +1328,12 @@ int QCPLayoutInset::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPLineEnding_t {
     QByteArrayData data[12];
-    char stringdata[125];
+    char stringdata[124];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPLineEnding_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPLineEnding_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPLineEnding_t qt_meta_stringdata_QCPLineEnding = {
     {
@@ -1345,7 +1353,7 @@ QT_MOC_LITERAL(11, 112, 11)
     "QCPLineEnding\0EndingStyle\0esNone\0"
     "esFlatArrow\0esSpikeArrow\0esLineArrow\0"
     "esDisc\0esSquare\0esDiamond\0esBar\0"
-    "esHalfBar\0esSkewedBar\0"
+    "esHalfBar\0esSkewedBar"
 };
 #undef QT_MOC_LITERAL
 
@@ -1387,12 +1395,12 @@ const QMetaObject QCPLineEnding::staticMetaObject = {
 
 struct qt_meta_stringdata_QCPAxisTicker_t {
     QByteArrayData data[4];
-    char stringdata[64];
+    char stringdata[63];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPAxisTicker_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPAxisTicker_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPAxisTicker_t qt_meta_stringdata_QCPAxisTicker = {
     {
@@ -1402,7 +1410,7 @@ QT_MOC_LITERAL(2, 31, 14),
 QT_MOC_LITERAL(3, 46, 16)
     },
     "QCPAxisTicker\0TickStepStrategy\0"
-    "tssReadability\0tssMeetTickCount\0"
+    "tssReadability\0tssMeetTickCount"
 };
 #undef QT_MOC_LITERAL
 
@@ -1436,12 +1444,12 @@ const QMetaObject QCPAxisTicker::staticMetaObject = {
 
 struct qt_meta_stringdata_QCPAxisTickerTime_t {
     QByteArrayData data[7];
-    char stringdata[78];
+    char stringdata[77];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPAxisTickerTime_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPAxisTickerTime_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPAxisTickerTime_t qt_meta_stringdata_QCPAxisTickerTime = {
     {
@@ -1454,7 +1462,7 @@ QT_MOC_LITERAL(5, 62, 7),
 QT_MOC_LITERAL(6, 70, 6)
     },
     "QCPAxisTickerTime\0TimeUnit\0tuMilliseconds\0"
-    "tuSeconds\0tuMinutes\0tuHours\0tuDays\0"
+    "tuSeconds\0tuMinutes\0tuHours\0tuDays"
 };
 #undef QT_MOC_LITERAL
 
@@ -1491,12 +1499,12 @@ const QMetaObject QCPAxisTickerTime::staticMetaObject = {
 
 struct qt_meta_stringdata_QCPAxisTickerFixed_t {
     QByteArrayData data[5];
-    char stringdata[62];
+    char stringdata[61];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPAxisTickerFixed_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPAxisTickerFixed_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPAxisTickerFixed_t qt_meta_stringdata_QCPAxisTickerFixed = {
     {
@@ -1507,7 +1515,7 @@ QT_MOC_LITERAL(3, 40, 11),
 QT_MOC_LITERAL(4, 52, 8)
     },
     "QCPAxisTickerFixed\0ScaleStrategy\0"
-    "ssNone\0ssMultiples\0ssPowers\0"
+    "ssNone\0ssMultiples\0ssPowers"
 };
 #undef QT_MOC_LITERAL
 
@@ -1542,12 +1550,12 @@ const QMetaObject QCPAxisTickerFixed::staticMetaObject = {
 
 struct qt_meta_stringdata_QCPAxisTickerPi_t {
     QByteArrayData data[5];
-    char stringdata[83];
+    char stringdata[82];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPAxisTickerPi_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPAxisTickerPi_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPAxisTickerPi_t qt_meta_stringdata_QCPAxisTickerPi = {
     {
@@ -1559,7 +1567,7 @@ QT_MOC_LITERAL(4, 63, 18)
     },
     "QCPAxisTickerPi\0FractionStyle\0"
     "fsFloatingPoint\0fsAsciiFractions\0"
-    "fsUnicodeFractions\0"
+    "fsUnicodeFractions"
 };
 #undef QT_MOC_LITERAL
 
@@ -1594,12 +1602,12 @@ const QMetaObject QCPAxisTickerPi::staticMetaObject = {
 
 struct qt_meta_stringdata_QCPGrid_t {
     QByteArrayData data[7];
-    char stringdata[90];
+    char stringdata[89];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPGrid_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPGrid_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPGrid_t qt_meta_stringdata_QCPGrid = {
     {
@@ -1613,7 +1621,7 @@ QT_MOC_LITERAL(6, 77, 11)
     },
     "QCPGrid\0subGridVisible\0antialiasedSubGrid\0"
     "antialiasedZeroLine\0pen\0subGridPen\0"
-    "zeroLinePen\0"
+    "zeroLinePen"
 };
 #undef QT_MOC_LITERAL
 
@@ -1684,6 +1692,7 @@ int QCPGrid::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 3: *reinterpret_cast< QPen*>(_v) = pen(); break;
         case 4: *reinterpret_cast< QPen*>(_v) = subGridPen(); break;
         case 5: *reinterpret_cast< QPen*>(_v) = zeroLinePen(); break;
+        default: break;
         }
         _id -= 6;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -1695,6 +1704,7 @@ int QCPGrid::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 3: setPen(*reinterpret_cast< QPen*>(_v)); break;
         case 4: setSubGridPen(*reinterpret_cast< QPen*>(_v)); break;
         case 5: setZeroLinePen(*reinterpret_cast< QPen*>(_v)); break;
+        default: break;
         }
         _id -= 6;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -1719,12 +1729,12 @@ int QCPGrid::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPAxis_t {
     QByteArrayData data[84];
-    char stringdata[1045];
+    char stringdata[1044];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPAxis_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPAxis_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPAxis_t qt_meta_stringdata_QCPAxis = {
     {
@@ -1841,7 +1851,7 @@ QT_MOC_LITERAL(83, 1032, 11)
     "atLeft\0atRight\0atTop\0atBottom\0AxisTypes\0"
     "lsInside\0lsOutside\0stLinear\0stLogarithmic\0"
     "SelectablePart\0spNone\0spAxis\0spTickLabels\0"
-    "spAxisLabel\0"
+    "spAxisLabel"
 };
 #undef QT_MOC_LITERAL
 
@@ -1859,17 +1869,17 @@ static const uint qt_meta_data_QCPAxis[] = {
        5,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   59,    2, 0x06,
-       1,    2,   62,    2, 0x06,
-       6,    1,   67,    2, 0x06,
-       9,    1,   70,    2, 0x06,
-      12,    1,   73,    2, 0x06,
+       1,    1,   59,    2, 0x06 /* Public */,
+       1,    2,   62,    2, 0x06 /* Public */,
+       6,    1,   67,    2, 0x06 /* Public */,
+       9,    1,   70,    2, 0x06 /* Public */,
+      12,    1,   73,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      13,    1,   76,    2, 0x0a,
-      15,    1,   79,    2, 0x0a,
-      17,    1,   82,    2, 0x0a,
-      19,    1,   85,    2, 0x0a,
+      13,    1,   76,    2, 0x0a /* Public */,
+      15,    1,   79,    2, 0x0a /* Public */,
+      17,    1,   82,    2, 0x0a /* Public */,
+      19,    1,   85,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -2172,6 +2182,7 @@ int QCPAxis::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 40: *reinterpret_cast< QCPLineEnding*>(_v) = lowerEnding(); break;
         case 41: *reinterpret_cast< QCPLineEnding*>(_v) = upperEnding(); break;
         case 42: *reinterpret_cast< QCPGrid**>(_v) = grid(); break;
+        default: break;
         }
         _id -= 43;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -2215,6 +2226,7 @@ int QCPAxis::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 39: setSelectedSubTickPen(*reinterpret_cast< QPen*>(_v)); break;
         case 40: setLowerEnding(*reinterpret_cast< QCPLineEnding*>(_v)); break;
         case 41: setUpperEnding(*reinterpret_cast< QCPLineEnding*>(_v)); break;
+        default: break;
         }
         _id -= 43;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -2274,12 +2286,12 @@ void QCPAxis::selectableChanged(const QCPAxis::SelectableParts & _t1)
 }
 struct qt_meta_stringdata_QCPScatterStyle_t {
     QByteArrayData data[28];
-    char stringdata[286];
+    char stringdata[285];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPScatterStyle_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPScatterStyle_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPScatterStyle_t qt_meta_stringdata_QCPScatterStyle = {
     {
@@ -2319,7 +2331,7 @@ QT_MOC_LITERAL(27, 276, 8)
     "ssSquare\0ssDiamond\0ssStar\0ssTriangle\0"
     "ssTriangleInverted\0ssCrossSquare\0"
     "ssPlusSquare\0ssCrossCircle\0ssPlusCircle\0"
-    "ssPeace\0ssPixmap\0ssCustom\0"
+    "ssPeace\0ssPixmap\0ssCustom"
 };
 #undef QT_MOC_LITERAL
 
@@ -2383,18 +2395,18 @@ const QMetaObject QCPScatterStyle::staticMetaObject = {
 
 struct qt_meta_stringdata_QCPSelectionDecorator_t {
     QByteArrayData data[1];
-    char stringdata[23];
+    char stringdata[22];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPSelectionDecorator_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPSelectionDecorator_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPSelectionDecorator_t qt_meta_stringdata_QCPSelectionDecorator = {
     {
 QT_MOC_LITERAL(0, 0, 21)
     },
-    "QCPSelectionDecorator\0"
+    "QCPSelectionDecorator"
 };
 #undef QT_MOC_LITERAL
 
@@ -2421,12 +2433,12 @@ const QMetaObject QCPSelectionDecorator::staticMetaObject = {
 
 struct qt_meta_stringdata_QCPAbstractPlottable_t {
     QByteArrayData data[21];
-    char stringdata[271];
+    char stringdata[270];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPAbstractPlottable_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPAbstractPlottable_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPAbstractPlottable_t qt_meta_stringdata_QCPAbstractPlottable = {
     {
@@ -2458,7 +2470,7 @@ QT_MOC_LITERAL(20, 247, 22)
     "selectable\0setSelectable\0setSelection\0"
     "name\0antialiasedFill\0antialiasedScatters\0"
     "pen\0brush\0keyAxis\0QCPAxis*\0valueAxis\0"
-    "selectionDecorator\0QCPSelectionDecorator*\0"
+    "selectionDecorator\0QCPSelectionDecorator*"
 };
 #undef QT_MOC_LITERAL
 
@@ -2476,13 +2488,13 @@ static const uint qt_meta_data_QCPAbstractPlottable[] = {
        3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   39,    2, 0x06,
-       1,    1,   42,    2, 0x06,
-       6,    1,   45,    2, 0x06,
+       1,    1,   39,    2, 0x06 /* Public */,
+       1,    1,   42,    2, 0x06 /* Public */,
+       6,    1,   45,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       9,    1,   48,    2, 0x0a,
-      10,    1,   51,    2, 0x0a,
+       9,    1,   48,    2, 0x0a /* Public */,
+      10,    1,   51,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Bool,    3,
@@ -2602,9 +2614,14 @@ void QCPAbstractPlottable::qt_static_metacall(QObject *_o, QMetaObject::Call _c,
 
 }
 
+static const QMetaObject * const qt_meta_extradata_QCPAbstractPlottable[] = {
+        &QCP::staticMetaObject,
+    0
+};
+
 const QMetaObject QCPAbstractPlottable::staticMetaObject = {
     { &QCPLayerable::staticMetaObject, qt_meta_stringdata_QCPAbstractPlottable.data,
-      qt_meta_data_QCPAbstractPlottable,  qt_static_metacall, 0, 0}
+      qt_meta_data_QCPAbstractPlottable,  qt_static_metacall, qt_meta_extradata_QCPAbstractPlottable, 0}
 };
 
 
@@ -2649,6 +2666,7 @@ int QCPAbstractPlottable::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 7: *reinterpret_cast< QCP::SelectionType*>(_v) = selectable(); break;
         case 8: *reinterpret_cast< QCPDataSelection*>(_v) = selection(); break;
         case 9: *reinterpret_cast< QCPSelectionDecorator**>(_v) = selectionDecorator(); break;
+        default: break;
         }
         _id -= 10;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -2664,6 +2682,7 @@ int QCPAbstractPlottable::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 7: setSelectable(*reinterpret_cast< QCP::SelectionType*>(_v)); break;
         case 8: setSelection(*reinterpret_cast< QCPDataSelection*>(_v)); break;
         case 9: setSelectionDecorator(*reinterpret_cast< QCPSelectionDecorator**>(_v)); break;
+        default: break;
         }
         _id -= 10;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -2709,18 +2728,18 @@ void QCPAbstractPlottable::selectableChanged(QCP::SelectionType _t1)
 }
 struct qt_meta_stringdata_QCPItemAnchor_t {
     QByteArrayData data[1];
-    char stringdata[15];
+    char stringdata[14];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPItemAnchor_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPItemAnchor_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPItemAnchor_t qt_meta_stringdata_QCPItemAnchor = {
     {
 QT_MOC_LITERAL(0, 0, 13)
     },
-    "QCPItemAnchor\0"
+    "QCPItemAnchor"
 };
 #undef QT_MOC_LITERAL
 
@@ -2747,12 +2766,12 @@ const QMetaObject QCPItemAnchor::staticMetaObject = {
 
 struct qt_meta_stringdata_QCPItemPosition_t {
     QByteArrayData data[6];
-    char stringdata[86];
+    char stringdata[85];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPItemPosition_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPItemPosition_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPItemPosition_t qt_meta_stringdata_QCPItemPosition = {
     {
@@ -2765,7 +2784,7 @@ QT_MOC_LITERAL(5, 72, 12)
     },
     "QCPItemPosition\0PositionType\0ptAbsolute\0"
     "ptViewportRatio\0ptAxisRectRatio\0"
-    "ptPlotCoords\0"
+    "ptPlotCoords"
 };
 #undef QT_MOC_LITERAL
 
@@ -2801,12 +2820,12 @@ const QMetaObject QCPItemPosition::staticMetaObject = {
 
 struct qt_meta_stringdata_QCPAbstractItem_t {
     QByteArrayData data[11];
-    char stringdata[140];
+    char stringdata[139];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPAbstractItem_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPAbstractItem_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPAbstractItem_t qt_meta_stringdata_QCPAbstractItem = {
     {
@@ -2825,7 +2844,7 @@ QT_MOC_LITERAL(10, 126, 12)
     "QCPAbstractItem\0selectionChanged\0\0"
     "selected\0selectableChanged\0selectable\0"
     "setSelectable\0setSelected\0clipToAxisRect\0"
-    "clipAxisRect\0QCPAxisRect*\0"
+    "clipAxisRect\0QCPAxisRect*"
 };
 #undef QT_MOC_LITERAL
 
@@ -2843,12 +2862,12 @@ static const uint qt_meta_data_QCPAbstractItem[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   34,    2, 0x06,
-       4,    1,   37,    2, 0x06,
+       1,    1,   34,    2, 0x06 /* Public */,
+       4,    1,   37,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       6,    1,   40,    2, 0x0a,
-       7,    1,   43,    2, 0x0a,
+       6,    1,   40,    2, 0x0a /* Public */,
+       7,    1,   43,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Bool,    3,
@@ -2950,6 +2969,7 @@ int QCPAbstractItem::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: *reinterpret_cast< QCPAxisRect**>(_v) = clipAxisRect(); break;
         case 2: *reinterpret_cast< bool*>(_v) = selectable(); break;
         case 3: *reinterpret_cast< bool*>(_v) = selected(); break;
+        default: break;
         }
         _id -= 4;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -2959,6 +2979,7 @@ int QCPAbstractItem::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: setClipAxisRect(*reinterpret_cast< QCPAxisRect**>(_v)); break;
         case 2: setSelectable(*reinterpret_cast< bool*>(_v)); break;
         case 3: setSelected(*reinterpret_cast< bool*>(_v)); break;
+        default: break;
         }
         _id -= 4;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -2997,12 +3018,12 @@ void QCPAbstractItem::selectableChanged(bool _t1)
 }
 struct qt_meta_stringdata_QCustomPlot_t {
     QByteArrayData data[64];
-    char stringdata[915];
+    char stringdata[914];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCustomPlot_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCustomPlot_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCustomPlot_t qt_meta_stringdata_QCustomPlot = {
     {
@@ -3095,7 +3116,7 @@ QT_MOC_LITERAL(63, 899, 14)
     "Qt::KeyboardModifier\0openGl\0LayerInsertMode\0"
     "limBelow\0limAbove\0RefreshPriority\0"
     "rpImmediateRefresh\0rpQueuedRefresh\0"
-    "rpRefreshHint\0rpQueuedReplot\0"
+    "rpRefreshHint\0rpQueuedReplot"
 };
 #undef QT_MOC_LITERAL
 
@@ -3113,32 +3134,32 @@ static const uint qt_meta_data_QCustomPlot[] = {
       16,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,  134,    2, 0x06,
-       5,    1,  137,    2, 0x06,
-       6,    1,  140,    2, 0x06,
-       7,    1,  143,    2, 0x06,
-       8,    1,  146,    2, 0x06,
-      10,    3,  149,    2, 0x06,
-      14,    3,  156,    2, 0x06,
-      15,    2,  163,    2, 0x06,
-      18,    2,  168,    2, 0x06,
-      19,    3,  173,    2, 0x06,
-      24,    3,  180,    2, 0x06,
-      25,    3,  187,    2, 0x06,
-      29,    3,  194,    2, 0x06,
-      30,    0,  201,    2, 0x06,
-      31,    0,  202,    2, 0x06,
-      32,    0,  203,    2, 0x06,
+       1,    1,  134,    2, 0x06 /* Public */,
+       5,    1,  137,    2, 0x06 /* Public */,
+       6,    1,  140,    2, 0x06 /* Public */,
+       7,    1,  143,    2, 0x06 /* Public */,
+       8,    1,  146,    2, 0x06 /* Public */,
+      10,    3,  149,    2, 0x06 /* Public */,
+      14,    3,  156,    2, 0x06 /* Public */,
+      15,    2,  163,    2, 0x06 /* Public */,
+      18,    2,  168,    2, 0x06 /* Public */,
+      19,    3,  173,    2, 0x06 /* Public */,
+      24,    3,  180,    2, 0x06 /* Public */,
+      25,    3,  187,    2, 0x06 /* Public */,
+      29,    3,  194,    2, 0x06 /* Public */,
+      30,    0,  201,    2, 0x06 /* Public */,
+      31,    0,  202,    2, 0x06 /* Public */,
+      32,    0,  203,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      33,    1,  204,    2, 0x0a,
-      33,    0,  207,    2, 0x2a,
-      35,    0,  208,    2, 0x0a,
-      36,    1,  209,    2, 0x0a,
-      36,    0,  212,    2, 0x2a,
-      39,    2,  213,    2, 0x09,
-      41,    2,  218,    2, 0x09,
-      42,    1,  223,    2, 0x09,
+      33,    1,  204,    2, 0x0a /* Public */,
+      33,    0,  207,    2, 0x2a /* Public | MethodCloned */,
+      35,    0,  208,    2, 0x0a /* Public */,
+      36,    1,  209,    2, 0x0a /* Public */,
+      36,    0,  212,    2, 0x2a /* Public | MethodCloned */,
+      39,    2,  213,    2, 0x09 /* Protected */,
+      41,    2,  218,    2, 0x09 /* Protected */,
+      42,    1,  223,    2, 0x09 /* Protected */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -3457,6 +3478,7 @@ int QCustomPlot::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 7: *reinterpret_cast< bool*>(_v) = noAntialiasingOnDrag(); break;
         case 8: *reinterpret_cast< Qt::KeyboardModifier*>(_v) = multiSelectModifier(); break;
         case 9: *reinterpret_cast< bool*>(_v) = openGl(); break;
+        default: break;
         }
         _id -= 10;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -3471,6 +3493,7 @@ int QCustomPlot::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 7: setNoAntialiasingOnDrag(*reinterpret_cast< bool*>(_v)); break;
         case 8: setMultiSelectModifier(*reinterpret_cast< Qt::KeyboardModifier*>(_v)); break;
         case 9: setOpenGl(*reinterpret_cast< bool*>(_v)); break;
+        default: break;
         }
         _id -= 10;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -3604,12 +3627,12 @@ void QCustomPlot::afterReplot()
 }
 struct qt_meta_stringdata_QCPColorGradient_t {
     QByteArrayData data[17];
-    char stringdata[165];
+    char stringdata[164];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPColorGradient_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPColorGradient_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPColorGradient_t qt_meta_stringdata_QCPColorGradient = {
     {
@@ -3635,7 +3658,7 @@ QT_MOC_LITERAL(16, 157, 6)
     "ciRGB\0ciHSV\0GradientPreset\0gpGrayscale\0"
     "gpHot\0gpCold\0gpNight\0gpCandy\0gpGeography\0"
     "gpIon\0gpThermal\0gpPolar\0gpSpectrum\0"
-    "gpJet\0gpHues\0"
+    "gpJet\0gpHues"
 };
 #undef QT_MOC_LITERAL
 
@@ -3682,12 +3705,12 @@ const QMetaObject QCPColorGradient::staticMetaObject = {
 
 struct qt_meta_stringdata_QCPSelectionDecoratorBracket_t {
     QByteArrayData data[7];
-    char stringdata[102];
+    char stringdata[101];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPSelectionDecoratorBracket_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPSelectionDecoratorBracket_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPSelectionDecoratorBracket_t qt_meta_stringdata_QCPSelectionDecoratorBracket = {
     {
@@ -3701,7 +3724,7 @@ QT_MOC_LITERAL(6, 89, 11)
     },
     "QCPSelectionDecoratorBracket\0BracketStyle\0"
     "bsSquareBracket\0bsHalfEllipse\0bsEllipse\0"
-    "bsPlus\0bsUserStyle\0"
+    "bsPlus\0bsUserStyle"
 };
 #undef QT_MOC_LITERAL
 
@@ -3738,12 +3761,12 @@ const QMetaObject QCPSelectionDecoratorBracket::staticMetaObject = {
 
 struct qt_meta_stringdata_QCPAxisRect_t {
     QByteArrayData data[8];
-    char stringdata[119];
+    char stringdata[118];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPAxisRect_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPAxisRect_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPAxisRect_t qt_meta_stringdata_QCPAxisRect = {
     {
@@ -3758,7 +3781,7 @@ QT_MOC_LITERAL(7, 108, 9)
     },
     "QCPAxisRect\0background\0backgroundScaled\0"
     "backgroundScaledMode\0Qt::AspectRatioMode\0"
-    "rangeDrag\0Qt::Orientations\0rangeZoom\0"
+    "rangeDrag\0Qt::Orientations\0rangeZoom"
 };
 #undef QT_MOC_LITERAL
 
@@ -3827,6 +3850,7 @@ int QCPAxisRect::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 2: *reinterpret_cast< Qt::AspectRatioMode*>(_v) = backgroundScaledMode(); break;
         case 3: *reinterpret_cast< Qt::Orientations*>(_v) = rangeDrag(); break;
         case 4: *reinterpret_cast< Qt::Orientations*>(_v) = rangeZoom(); break;
+        default: break;
         }
         _id -= 5;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -3837,6 +3861,7 @@ int QCPAxisRect::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 2: setBackgroundScaledMode(*reinterpret_cast< Qt::AspectRatioMode*>(_v)); break;
         case 3: setRangeDrag(*reinterpret_cast< Qt::Orientations*>(_v)); break;
         case 4: setRangeZoom(*reinterpret_cast< Qt::Orientations*>(_v)); break;
+        default: break;
         }
         _id -= 5;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -3861,12 +3886,12 @@ int QCPAxisRect::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPAbstractLegendItem_t {
     QByteArrayData data[14];
-    char stringdata[175];
+    char stringdata[174];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPAbstractLegendItem_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPAbstractLegendItem_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPAbstractLegendItem_t qt_meta_stringdata_QCPAbstractLegendItem = {
     {
@@ -3889,7 +3914,7 @@ QT_MOC_LITERAL(13, 156, 17)
     "\0selected\0selectableChanged\0selectable\0"
     "setSelectable\0setSelected\0parentLegend\0"
     "QCPLegend*\0font\0textColor\0selectedFont\0"
-    "selectedTextColor\0"
+    "selectedTextColor"
 };
 #undef QT_MOC_LITERAL
 
@@ -3907,12 +3932,12 @@ static const uint qt_meta_data_QCPAbstractLegendItem[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   34,    2, 0x06,
-       4,    1,   37,    2, 0x06,
+       1,    1,   34,    2, 0x06 /* Public */,
+       4,    1,   37,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       6,    1,   40,    2, 0x0a,
-       7,    1,   43,    2, 0x0a,
+       6,    1,   40,    2, 0x0a /* Public */,
+       7,    1,   43,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Bool,    3,
@@ -4023,6 +4048,7 @@ int QCPAbstractLegendItem::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 4: *reinterpret_cast< QColor*>(_v) = selectedTextColor(); break;
         case 5: *reinterpret_cast< bool*>(_v) = selectable(); break;
         case 6: *reinterpret_cast< bool*>(_v) = selected(); break;
+        default: break;
         }
         _id -= 7;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -4034,6 +4060,7 @@ int QCPAbstractLegendItem::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 4: setSelectedTextColor(*reinterpret_cast< QColor*>(_v)); break;
         case 5: setSelectable(*reinterpret_cast< bool*>(_v)); break;
         case 6: setSelected(*reinterpret_cast< bool*>(_v)); break;
+        default: break;
         }
         _id -= 7;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -4072,18 +4099,18 @@ void QCPAbstractLegendItem::selectableChanged(bool _t1)
 }
 struct qt_meta_stringdata_QCPPlottableLegendItem_t {
     QByteArrayData data[1];
-    char stringdata[24];
+    char stringdata[23];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPPlottableLegendItem_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPPlottableLegendItem_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPPlottableLegendItem_t qt_meta_stringdata_QCPPlottableLegendItem = {
     {
 QT_MOC_LITERAL(0, 0, 22)
     },
-    "QCPPlottableLegendItem\0"
+    "QCPPlottableLegendItem"
 };
 #undef QT_MOC_LITERAL
 
@@ -4139,12 +4166,12 @@ int QCPPlottableLegendItem::qt_metacall(QMetaObject::Call _c, int _id, void **_a
 }
 struct qt_meta_stringdata_QCPLegend_t {
     QByteArrayData data[27];
-    char stringdata[359];
+    char stringdata[358];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPLegend_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPLegend_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPLegend_t qt_meta_stringdata_QCPLegend = {
     {
@@ -4186,7 +4213,7 @@ QT_MOC_LITERAL(26, 350, 7)
     "selectedBorderPen\0selectedIconBorderPen\0"
     "selectedBrush\0selectedFont\0selectedTextColor\0"
     "SelectablePart\0spNone\0spLegendBox\0"
-    "spItems\0"
+    "spItems"
 };
 #undef QT_MOC_LITERAL
 
@@ -4204,12 +4231,12 @@ static const uint qt_meta_data_QCPLegend[] = {
        2,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   34,    2, 0x06,
-       5,    1,   37,    2, 0x06,
+       1,    1,   34,    2, 0x06 /* Public */,
+       5,    1,   37,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       6,    1,   40,    2, 0x0a,
-       9,    1,   43,    2, 0x0a,
+       6,    1,   40,    2, 0x0a /* Public */,
+       9,    1,   43,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -4346,6 +4373,7 @@ int QCPLegend::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 11: *reinterpret_cast< QBrush*>(_v) = selectedBrush(); break;
         case 12: *reinterpret_cast< QFont*>(_v) = selectedFont(); break;
         case 13: *reinterpret_cast< QColor*>(_v) = selectedTextColor(); break;
+        default: break;
         }
         _id -= 14;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -4365,6 +4393,7 @@ int QCPLegend::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 11: setSelectedBrush(*reinterpret_cast< QBrush*>(_v)); break;
         case 12: setSelectedFont(*reinterpret_cast< QFont*>(_v)); break;
         case 13: setSelectedTextColor(*reinterpret_cast< QColor*>(_v)); break;
+        default: break;
         }
         _id -= 14;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -4403,12 +4432,12 @@ void QCPLegend::selectableChanged(QCPLegend::SelectableParts _t1)
 }
 struct qt_meta_stringdata_QCPTextElement_t {
     QByteArrayData data[17];
-    char stringdata[190];
+    char stringdata[189];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPTextElement_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPTextElement_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPTextElement_t qt_meta_stringdata_QCPTextElement = {
     {
@@ -4434,7 +4463,7 @@ QT_MOC_LITERAL(16, 171, 17)
     "selected\0selectableChanged\0selectable\0"
     "clicked\0QMouseEvent*\0event\0doubleClicked\0"
     "setSelectable\0setSelected\0text\0font\0"
-    "textColor\0selectedFont\0selectedTextColor\0"
+    "textColor\0selectedFont\0selectedTextColor"
 };
 #undef QT_MOC_LITERAL
 
@@ -4452,14 +4481,14 @@ static const uint qt_meta_data_QCPTextElement[] = {
        4,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   44,    2, 0x06,
-       4,    1,   47,    2, 0x06,
-       6,    1,   50,    2, 0x06,
-       9,    1,   53,    2, 0x06,
+       1,    1,   44,    2, 0x06 /* Public */,
+       4,    1,   47,    2, 0x06 /* Public */,
+       6,    1,   50,    2, 0x06 /* Public */,
+       9,    1,   53,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      10,    1,   56,    2, 0x0a,
-      11,    1,   59,    2, 0x0a,
+      10,    1,   56,    2, 0x0a /* Public */,
+      11,    1,   59,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, QMetaType::Bool,    3,
@@ -4579,6 +4608,7 @@ int QCPTextElement::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 4: *reinterpret_cast< QColor*>(_v) = selectedTextColor(); break;
         case 5: *reinterpret_cast< bool*>(_v) = selectable(); break;
         case 6: *reinterpret_cast< bool*>(_v) = selected(); break;
+        default: break;
         }
         _id -= 7;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -4591,6 +4621,7 @@ int QCPTextElement::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 4: setSelectedTextColor(*reinterpret_cast< QColor*>(_v)); break;
         case 5: setSelectable(*reinterpret_cast< bool*>(_v)); break;
         case 6: setSelected(*reinterpret_cast< bool*>(_v)); break;
+        default: break;
         }
         _id -= 7;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -4643,12 +4674,12 @@ void QCPTextElement::doubleClicked(QMouseEvent * _t1)
 }
 struct qt_meta_stringdata_QCPColorScaleAxisRectPrivate_t {
     QByteArrayData data[7];
-    char stringdata[129];
+    char stringdata[128];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPColorScaleAxisRectPrivate_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPColorScaleAxisRectPrivate_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPColorScaleAxisRectPrivate_t qt_meta_stringdata_QCPColorScaleAxisRectPrivate = {
     {
@@ -4663,7 +4694,7 @@ QT_MOC_LITERAL(6, 112, 15)
     "QCPColorScaleAxisRectPrivate\0"
     "axisSelectionChanged\0\0QCPAxis::SelectableParts\0"
     "selectedParts\0axisSelectableChanged\0"
-    "selectableParts\0"
+    "selectableParts"
 };
 #undef QT_MOC_LITERAL
 
@@ -4681,8 +4712,8 @@ static const uint qt_meta_data_QCPColorScaleAxisRectPrivate[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   24,    2, 0x09,
-       5,    1,   27,    2, 0x09,
+       1,    1,   24,    2, 0x09 /* Protected */,
+       5,    1,   27,    2, 0x09 /* Protected */,
 
  // slots: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -4740,12 +4771,12 @@ int QCPColorScaleAxisRectPrivate::qt_metacall(QMetaObject::Call _c, int _id, voi
 }
 struct qt_meta_stringdata_QCPColorScale_t {
     QByteArrayData data[23];
-    char stringdata[279];
+    char stringdata[278];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPColorScale_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPColorScale_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPColorScale_t qt_meta_stringdata_QCPColorScale = {
     {
@@ -4780,7 +4811,7 @@ QT_MOC_LITERAL(22, 268, 9)
     "newGradient\0setDataRange\0dataRange\0"
     "setDataScaleType\0setGradient\0gradient\0"
     "type\0QCPAxis::AxisType\0dataScaleType\0"
-    "label\0barWidth\0rangeDrag\0rangeZoom\0"
+    "label\0barWidth\0rangeDrag\0rangeZoom"
 };
 #undef QT_MOC_LITERAL
 
@@ -4798,14 +4829,14 @@ static const uint qt_meta_data_QCPColorScale[] = {
        3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   44,    2, 0x06,
-       5,    1,   47,    2, 0x06,
-       8,    1,   50,    2, 0x06,
+       1,    1,   44,    2, 0x06 /* Public */,
+       5,    1,   47,    2, 0x06 /* Public */,
+       8,    1,   50,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      11,    1,   53,    2, 0x0a,
-      13,    1,   56,    2, 0x0a,
-      14,    1,   59,    2, 0x0a,
+      11,    1,   53,    2, 0x0a /* Public */,
+      13,    1,   56,    2, 0x0a /* Public */,
+      14,    1,   59,    2, 0x0a /* Public */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -4904,9 +4935,14 @@ void QCPColorScale::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
 
 }
 
+static const QMetaObject * const qt_meta_extradata_QCPColorScale[] = {
+        &QCPAxis::staticMetaObject,
+    0
+};
+
 const QMetaObject QCPColorScale::staticMetaObject = {
     { &QCPLayoutElement::staticMetaObject, qt_meta_stringdata_QCPColorScale.data,
-      qt_meta_data_QCPColorScale,  qt_static_metacall, 0, 0}
+      qt_meta_data_QCPColorScale,  qt_static_metacall, qt_meta_extradata_QCPColorScale, 0}
 };
 
 
@@ -4949,6 +4985,7 @@ int QCPColorScale::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 5: *reinterpret_cast< int*>(_v) = barWidth(); break;
         case 6: *reinterpret_cast< bool*>(_v) = rangeDrag(); break;
         case 7: *reinterpret_cast< bool*>(_v) = rangeZoom(); break;
+        default: break;
         }
         _id -= 8;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -4962,6 +4999,7 @@ int QCPColorScale::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 5: setBarWidth(*reinterpret_cast< int*>(_v)); break;
         case 6: setRangeDrag(*reinterpret_cast< bool*>(_v)); break;
         case 7: setRangeZoom(*reinterpret_cast< bool*>(_v)); break;
+        default: break;
         }
         _id -= 8;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -5007,12 +5045,12 @@ void QCPColorScale::gradientChanged(const QCPColorGradient & _t1)
 }
 struct qt_meta_stringdata_QCPGraph_t {
     QByteArrayData data[15];
-    char stringdata[175];
+    char stringdata[174];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPGraph_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPGraph_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPGraph_t qt_meta_stringdata_QCPGraph = {
     {
@@ -5036,7 +5074,7 @@ QT_MOC_LITERAL(14, 164, 9)
     "QCPScatterStyle\0scatterSkip\0"
     "channelFillGraph\0QCPGraph*\0adaptiveSampling\0"
     "lsNone\0lsLine\0lsStepLeft\0lsStepRight\0"
-    "lsStepCenter\0lsImpulse\0"
+    "lsStepCenter\0lsImpulse"
 };
 #undef QT_MOC_LITERAL
 
@@ -5121,6 +5159,7 @@ int QCPGraph::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 2: *reinterpret_cast< int*>(_v) = scatterSkip(); break;
         case 3: *reinterpret_cast< QCPGraph**>(_v) = channelFillGraph(); break;
         case 4: *reinterpret_cast< bool*>(_v) = adaptiveSampling(); break;
+        default: break;
         }
         _id -= 5;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -5131,6 +5170,7 @@ int QCPGraph::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 2: setScatterSkip(*reinterpret_cast< int*>(_v)); break;
         case 3: setChannelFillGraph(*reinterpret_cast< QCPGraph**>(_v)); break;
         case 4: setAdaptiveSampling(*reinterpret_cast< bool*>(_v)); break;
+        default: break;
         }
         _id -= 5;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -5155,12 +5195,12 @@ int QCPGraph::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPCurve_t {
     QByteArrayData data[8];
-    char stringdata[85];
+    char stringdata[84];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPCurve_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPCurve_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPCurve_t qt_meta_stringdata_QCPCurve = {
     {
@@ -5175,7 +5215,7 @@ QT_MOC_LITERAL(7, 77, 6)
     },
     "QCPCurve\0scatterStyle\0QCPScatterStyle\0"
     "scatterSkip\0lineStyle\0LineStyle\0lsNone\0"
-    "lsLine\0"
+    "lsLine"
 };
 #undef QT_MOC_LITERAL
 
@@ -5247,6 +5287,7 @@ int QCPCurve::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 0: *reinterpret_cast< QCPScatterStyle*>(_v) = scatterStyle(); break;
         case 1: *reinterpret_cast< int*>(_v) = scatterSkip(); break;
         case 2: *reinterpret_cast< LineStyle*>(_v) = lineStyle(); break;
+        default: break;
         }
         _id -= 3;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -5255,6 +5296,7 @@ int QCPCurve::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 0: setScatterStyle(*reinterpret_cast< QCPScatterStyle*>(_v)); break;
         case 1: setScatterSkip(*reinterpret_cast< int*>(_v)); break;
         case 2: setLineStyle(*reinterpret_cast< LineStyle*>(_v)); break;
+        default: break;
         }
         _id -= 3;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -5279,12 +5321,12 @@ int QCPCurve::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPBarsGroup_t {
     QByteArrayData data[7];
-    char stringdata[86];
+    char stringdata[85];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPBarsGroup_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPBarsGroup_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPBarsGroup_t qt_meta_stringdata_QCPBarsGroup = {
     {
@@ -5298,7 +5340,7 @@ QT_MOC_LITERAL(6, 72, 12)
     },
     "QCPBarsGroup\0spacingType\0SpacingType\0"
     "spacing\0stAbsolute\0stAxisRectRatio\0"
-    "stPlotCoords\0"
+    "stPlotCoords"
 };
 #undef QT_MOC_LITERAL
 
@@ -5369,6 +5411,7 @@ int QCPBarsGroup::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         switch (_id) {
         case 0: *reinterpret_cast< SpacingType*>(_v) = spacingType(); break;
         case 1: *reinterpret_cast< double*>(_v) = spacing(); break;
+        default: break;
         }
         _id -= 2;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -5376,6 +5419,7 @@ int QCPBarsGroup::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         switch (_id) {
         case 0: setSpacingType(*reinterpret_cast< SpacingType*>(_v)); break;
         case 1: setSpacing(*reinterpret_cast< double*>(_v)); break;
+        default: break;
         }
         _id -= 2;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -5400,12 +5444,12 @@ int QCPBarsGroup::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPBars_t {
     QByteArrayData data[14];
-    char stringdata[148];
+    char stringdata[147];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPBars_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPBars_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPBars_t qt_meta_stringdata_QCPBars = {
     {
@@ -5427,7 +5471,7 @@ QT_MOC_LITERAL(13, 134, 12)
     "QCPBars\0width\0widthType\0WidthType\0"
     "barsGroup\0QCPBarsGroup*\0baseValue\0"
     "stackingGap\0barBelow\0QCPBars*\0barAbove\0"
-    "wtAbsolute\0wtAxisRectRatio\0wtPlotCoords\0"
+    "wtAbsolute\0wtAxisRectRatio\0wtPlotCoords"
 };
 #undef QT_MOC_LITERAL
 
@@ -5516,6 +5560,7 @@ int QCPBars::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 4: *reinterpret_cast< double*>(_v) = stackingGap(); break;
         case 5: *reinterpret_cast< QCPBars**>(_v) = barBelow(); break;
         case 6: *reinterpret_cast< QCPBars**>(_v) = barAbove(); break;
+        default: break;
         }
         _id -= 7;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -5526,6 +5571,7 @@ int QCPBars::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 2: setBarsGroup(*reinterpret_cast< QCPBarsGroup**>(_v)); break;
         case 3: setBaseValue(*reinterpret_cast< double*>(_v)); break;
         case 4: setStackingGap(*reinterpret_cast< double*>(_v)); break;
+        default: break;
         }
         _id -= 7;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -5550,12 +5596,12 @@ int QCPBars::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPStatisticalBox_t {
     QByteArrayData data[9];
-    char stringdata[121];
+    char stringdata[120];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPStatisticalBox_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPStatisticalBox_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPStatisticalBox_t qt_meta_stringdata_QCPStatisticalBox = {
     {
@@ -5571,7 +5617,7 @@ QT_MOC_LITERAL(8, 104, 15)
     },
     "QCPStatisticalBox\0width\0whiskerWidth\0"
     "whiskerPen\0whiskerBarPen\0whiskerAntialiased\0"
-    "medianPen\0outlierStyle\0QCPScatterStyle\0"
+    "medianPen\0outlierStyle\0QCPScatterStyle"
 };
 #undef QT_MOC_LITERAL
 
@@ -5644,6 +5690,7 @@ int QCPStatisticalBox::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 4: *reinterpret_cast< bool*>(_v) = whiskerAntialiased(); break;
         case 5: *reinterpret_cast< QPen*>(_v) = medianPen(); break;
         case 6: *reinterpret_cast< QCPScatterStyle*>(_v) = outlierStyle(); break;
+        default: break;
         }
         _id -= 7;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -5656,6 +5703,7 @@ int QCPStatisticalBox::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 4: setWhiskerAntialiased(*reinterpret_cast< bool*>(_v)); break;
         case 5: setMedianPen(*reinterpret_cast< QPen*>(_v)); break;
         case 6: setOutlierStyle(*reinterpret_cast< QCPScatterStyle*>(_v)); break;
+        default: break;
         }
         _id -= 7;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -5680,12 +5728,12 @@ int QCPStatisticalBox::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPColorMap_t {
     QByteArrayData data[25];
-    char stringdata[335];
+    char stringdata[334];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPColorMap_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPColorMap_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPColorMap_t qt_meta_stringdata_QCPColorMap = {
     {
@@ -5724,7 +5772,7 @@ QT_MOC_LITERAL(24, 319, 14)
     "updateLegendIcon\0Qt::TransformationMode\0"
     "transformMode\0thumbSize\0dataScaleType\0"
     "interpolate\0tightBoundary\0colorScale\0"
-    "QCPColorScale*\0"
+    "QCPColorScale*"
 };
 #undef QT_MOC_LITERAL
 
@@ -5742,17 +5790,17 @@ static const uint qt_meta_data_QCPColorMap[] = {
        3,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
-       1,    1,   59,    2, 0x06,
-       5,    1,   62,    2, 0x06,
-       8,    1,   65,    2, 0x06,
+       1,    1,   59,    2, 0x06 /* Public */,
+       5,    1,   62,    2, 0x06 /* Public */,
+       8,    1,   65,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-      11,    1,   68,    2, 0x0a,
-      13,    1,   71,    2, 0x0a,
-      14,    1,   74,    2, 0x0a,
-      16,    2,   77,    2, 0x0a,
-      16,    1,   82,    2, 0x2a,
-      16,    0,   85,    2, 0x2a,
+      11,    1,   68,    2, 0x0a /* Public */,
+      13,    1,   71,    2, 0x0a /* Public */,
+      14,    1,   74,    2, 0x0a /* Public */,
+      16,    2,   77,    2, 0x0a /* Public */,
+      16,    1,   82,    2, 0x2a /* Public | MethodCloned */,
+      16,    0,   85,    2, 0x2a /* Public | MethodCloned */,
 
  // signals: parameters
     QMetaType::Void, 0x80000000 | 3,    4,
@@ -5853,9 +5901,14 @@ void QCPColorMap::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
 
 }
 
+static const QMetaObject * const qt_meta_extradata_QCPColorMap[] = {
+        &QCPAxis::staticMetaObject,
+    0
+};
+
 const QMetaObject QCPColorMap::staticMetaObject = {
     { &QCPAbstractPlottable::staticMetaObject, qt_meta_stringdata_QCPColorMap.data,
-      qt_meta_data_QCPColorMap,  qt_static_metacall, 0, 0}
+      qt_meta_data_QCPColorMap,  qt_static_metacall, qt_meta_extradata_QCPColorMap, 0}
 };
 
 
@@ -5896,6 +5949,7 @@ int QCPColorMap::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 3: *reinterpret_cast< bool*>(_v) = interpolate(); break;
         case 4: *reinterpret_cast< bool*>(_v) = tightBoundary(); break;
         case 5: *reinterpret_cast< QCPColorScale**>(_v) = colorScale(); break;
+        default: break;
         }
         _id -= 6;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -5907,6 +5961,7 @@ int QCPColorMap::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 3: setInterpolate(*reinterpret_cast< bool*>(_v)); break;
         case 4: setTightBoundary(*reinterpret_cast< bool*>(_v)); break;
         case 5: setColorScale(*reinterpret_cast< QCPColorScale**>(_v)); break;
+        default: break;
         }
         _id -= 6;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -5952,12 +6007,12 @@ void QCPColorMap::gradientChanged(const QCPColorGradient & _t1)
 }
 struct qt_meta_stringdata_QCPFinancial_t {
     QByteArrayData data[16];
-    char stringdata[186];
+    char stringdata[185];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPFinancial_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPFinancial_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPFinancial_t qt_meta_stringdata_QCPFinancial = {
     {
@@ -5982,7 +6037,7 @@ QT_MOC_LITERAL(15, 171, 13)
     "width\0widthType\0WidthType\0twoColored\0"
     "brushPositive\0brushNegative\0penPositive\0"
     "penNegative\0wtAbsolute\0wtAxisRectRatio\0"
-    "wtPlotCoords\0csOhlc\0csCandlestick\0"
+    "wtPlotCoords\0csOhlc\0csCandlestick"
 };
 #undef QT_MOC_LITERAL
 
@@ -6068,6 +6123,7 @@ int QCPFinancial::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 5: *reinterpret_cast< QBrush*>(_v) = brushNegative(); break;
         case 6: *reinterpret_cast< QPen*>(_v) = penPositive(); break;
         case 7: *reinterpret_cast< QPen*>(_v) = penNegative(); break;
+        default: break;
         }
         _id -= 8;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -6081,6 +6137,7 @@ int QCPFinancial::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 5: setBrushNegative(*reinterpret_cast< QBrush*>(_v)); break;
         case 6: setPenPositive(*reinterpret_cast< QPen*>(_v)); break;
         case 7: setPenNegative(*reinterpret_cast< QPen*>(_v)); break;
+        default: break;
         }
         _id -= 8;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -6105,12 +6162,12 @@ int QCPFinancial::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPErrorBars_t {
     QByteArrayData data[11];
-    char stringdata[164];
+    char stringdata[163];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPErrorBars_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPErrorBars_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPErrorBars_t qt_meta_stringdata_QCPErrorBars = {
     {
@@ -6130,7 +6187,7 @@ QT_MOC_LITERAL(10, 150, 12)
     "QSharedPointer<QCPErrorBarsDataContainer>\0"
     "dataPlottable\0QCPAbstractPlottable*\0"
     "errorType\0ErrorType\0whiskerWidth\0"
-    "symbolGap\0etKeyError\0etValueError\0"
+    "symbolGap\0etKeyError\0etValueError"
 };
 #undef QT_MOC_LITERAL
 
@@ -6213,6 +6270,7 @@ int QCPErrorBars::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 2: *reinterpret_cast< ErrorType*>(_v) = errorType(); break;
         case 3: *reinterpret_cast< double*>(_v) = whiskerWidth(); break;
         case 4: *reinterpret_cast< double*>(_v) = symbolGap(); break;
+        default: break;
         }
         _id -= 5;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -6223,6 +6281,7 @@ int QCPErrorBars::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 2: setErrorType(*reinterpret_cast< ErrorType*>(_v)); break;
         case 3: setWhiskerWidth(*reinterpret_cast< double*>(_v)); break;
         case 4: setSymbolGap(*reinterpret_cast< double*>(_v)); break;
+        default: break;
         }
         _id -= 5;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -6247,12 +6306,12 @@ int QCPErrorBars::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPItemStraightLine_t {
     QByteArrayData data[3];
-    char stringdata[37];
+    char stringdata[36];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPItemStraightLine_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPItemStraightLine_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPItemStraightLine_t qt_meta_stringdata_QCPItemStraightLine = {
     {
@@ -6260,7 +6319,7 @@ QT_MOC_LITERAL(0, 0, 19),
 QT_MOC_LITERAL(1, 20, 3),
 QT_MOC_LITERAL(2, 24, 11)
     },
-    "QCPItemStraightLine\0pen\0selectedPen\0"
+    "QCPItemStraightLine\0pen\0selectedPen"
 };
 #undef QT_MOC_LITERAL
 
@@ -6323,6 +6382,7 @@ int QCPItemStraightLine::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         switch (_id) {
         case 0: *reinterpret_cast< QPen*>(_v) = pen(); break;
         case 1: *reinterpret_cast< QPen*>(_v) = selectedPen(); break;
+        default: break;
         }
         _id -= 2;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -6330,6 +6390,7 @@ int QCPItemStraightLine::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         switch (_id) {
         case 0: setPen(*reinterpret_cast< QPen*>(_v)); break;
         case 1: setSelectedPen(*reinterpret_cast< QPen*>(_v)); break;
+        default: break;
         }
         _id -= 2;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -6354,12 +6415,12 @@ int QCPItemStraightLine::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPItemLine_t {
     QByteArrayData data[6];
-    char stringdata[53];
+    char stringdata[52];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPItemLine_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPItemLine_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPItemLine_t qt_meta_stringdata_QCPItemLine = {
     {
@@ -6371,7 +6432,7 @@ QT_MOC_LITERAL(4, 33, 13),
 QT_MOC_LITERAL(5, 47, 4)
     },
     "QCPItemLine\0pen\0selectedPen\0head\0"
-    "QCPLineEnding\0tail\0"
+    "QCPLineEnding\0tail"
 };
 #undef QT_MOC_LITERAL
 
@@ -6438,6 +6499,7 @@ int QCPItemLine::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: *reinterpret_cast< QPen*>(_v) = selectedPen(); break;
         case 2: *reinterpret_cast< QCPLineEnding*>(_v) = head(); break;
         case 3: *reinterpret_cast< QCPLineEnding*>(_v) = tail(); break;
+        default: break;
         }
         _id -= 4;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -6447,6 +6509,7 @@ int QCPItemLine::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: setSelectedPen(*reinterpret_cast< QPen*>(_v)); break;
         case 2: setHead(*reinterpret_cast< QCPLineEnding*>(_v)); break;
         case 3: setTail(*reinterpret_cast< QCPLineEnding*>(_v)); break;
+        default: break;
         }
         _id -= 4;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -6471,12 +6534,12 @@ int QCPItemLine::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPItemCurve_t {
     QByteArrayData data[6];
-    char stringdata[54];
+    char stringdata[53];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPItemCurve_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPItemCurve_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPItemCurve_t qt_meta_stringdata_QCPItemCurve = {
     {
@@ -6488,7 +6551,7 @@ QT_MOC_LITERAL(4, 34, 13),
 QT_MOC_LITERAL(5, 48, 4)
     },
     "QCPItemCurve\0pen\0selectedPen\0head\0"
-    "QCPLineEnding\0tail\0"
+    "QCPLineEnding\0tail"
 };
 #undef QT_MOC_LITERAL
 
@@ -6555,6 +6618,7 @@ int QCPItemCurve::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: *reinterpret_cast< QPen*>(_v) = selectedPen(); break;
         case 2: *reinterpret_cast< QCPLineEnding*>(_v) = head(); break;
         case 3: *reinterpret_cast< QCPLineEnding*>(_v) = tail(); break;
+        default: break;
         }
         _id -= 4;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -6564,6 +6628,7 @@ int QCPItemCurve::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: setSelectedPen(*reinterpret_cast< QPen*>(_v)); break;
         case 2: setHead(*reinterpret_cast< QCPLineEnding*>(_v)); break;
         case 3: setTail(*reinterpret_cast< QCPLineEnding*>(_v)); break;
+        default: break;
         }
         _id -= 4;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -6588,12 +6653,12 @@ int QCPItemCurve::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPItemRect_t {
     QByteArrayData data[5];
-    char stringdata[49];
+    char stringdata[48];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPItemRect_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPItemRect_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPItemRect_t qt_meta_stringdata_QCPItemRect = {
     {
@@ -6604,7 +6669,7 @@ QT_MOC_LITERAL(3, 28, 5),
 QT_MOC_LITERAL(4, 34, 13)
     },
     "QCPItemRect\0pen\0selectedPen\0brush\0"
-    "selectedBrush\0"
+    "selectedBrush"
 };
 #undef QT_MOC_LITERAL
 
@@ -6671,6 +6736,7 @@ int QCPItemRect::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: *reinterpret_cast< QPen*>(_v) = selectedPen(); break;
         case 2: *reinterpret_cast< QBrush*>(_v) = brush(); break;
         case 3: *reinterpret_cast< QBrush*>(_v) = selectedBrush(); break;
+        default: break;
         }
         _id -= 4;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -6680,6 +6746,7 @@ int QCPItemRect::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: setSelectedPen(*reinterpret_cast< QPen*>(_v)); break;
         case 2: setBrush(*reinterpret_cast< QBrush*>(_v)); break;
         case 3: setSelectedBrush(*reinterpret_cast< QBrush*>(_v)); break;
+        default: break;
         }
         _id -= 4;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -6704,12 +6771,12 @@ int QCPItemRect::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPItemText_t {
     QByteArrayData data[16];
-    char stringdata[164];
+    char stringdata[163];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPItemText_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPItemText_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPItemText_t qt_meta_stringdata_QCPItemText = {
     {
@@ -6734,7 +6801,7 @@ QT_MOC_LITERAL(15, 154, 8)
     "selectedPen\0brush\0selectedBrush\0font\0"
     "selectedFont\0text\0positionAlignment\0"
     "Qt::Alignment\0textAlignment\0rotation\0"
-    "padding\0QMargins\0"
+    "padding\0QMargins"
 };
 #undef QT_MOC_LITERAL
 
@@ -6819,6 +6886,7 @@ int QCPItemText::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 10: *reinterpret_cast< Qt::Alignment*>(_v) = textAlignment(); break;
         case 11: *reinterpret_cast< double*>(_v) = rotation(); break;
         case 12: *reinterpret_cast< QMargins*>(_v) = padding(); break;
+        default: break;
         }
         _id -= 13;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -6837,6 +6905,7 @@ int QCPItemText::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 10: setTextAlignment(*reinterpret_cast< Qt::Alignment*>(_v)); break;
         case 11: setRotation(*reinterpret_cast< double*>(_v)); break;
         case 12: setPadding(*reinterpret_cast< QMargins*>(_v)); break;
+        default: break;
         }
         _id -= 13;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -6861,12 +6930,12 @@ int QCPItemText::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPItemEllipse_t {
     QByteArrayData data[5];
-    char stringdata[52];
+    char stringdata[51];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPItemEllipse_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPItemEllipse_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPItemEllipse_t qt_meta_stringdata_QCPItemEllipse = {
     {
@@ -6877,7 +6946,7 @@ QT_MOC_LITERAL(3, 31, 5),
 QT_MOC_LITERAL(4, 37, 13)
     },
     "QCPItemEllipse\0pen\0selectedPen\0brush\0"
-    "selectedBrush\0"
+    "selectedBrush"
 };
 #undef QT_MOC_LITERAL
 
@@ -6944,6 +7013,7 @@ int QCPItemEllipse::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: *reinterpret_cast< QPen*>(_v) = selectedPen(); break;
         case 2: *reinterpret_cast< QBrush*>(_v) = brush(); break;
         case 3: *reinterpret_cast< QBrush*>(_v) = selectedBrush(); break;
+        default: break;
         }
         _id -= 4;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -6953,6 +7023,7 @@ int QCPItemEllipse::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: setSelectedPen(*reinterpret_cast< QPen*>(_v)); break;
         case 2: setBrush(*reinterpret_cast< QBrush*>(_v)); break;
         case 3: setSelectedBrush(*reinterpret_cast< QBrush*>(_v)); break;
+        default: break;
         }
         _id -= 4;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -6977,12 +7048,12 @@ int QCPItemEllipse::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPItemPixmap_t {
     QByteArrayData data[9];
-    char stringdata[123];
+    char stringdata[122];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPItemPixmap_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPItemPixmap_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPItemPixmap_t qt_meta_stringdata_QCPItemPixmap = {
     {
@@ -6998,7 +7069,7 @@ QT_MOC_LITERAL(8, 110, 11)
     },
     "QCPItemPixmap\0pixmap\0scaled\0aspectRatioMode\0"
     "Qt::AspectRatioMode\0transformationMode\0"
-    "Qt::TransformationMode\0pen\0selectedPen\0"
+    "Qt::TransformationMode\0pen\0selectedPen"
 };
 #undef QT_MOC_LITERAL
 
@@ -7069,6 +7140,7 @@ int QCPItemPixmap::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 3: *reinterpret_cast< Qt::TransformationMode*>(_v) = transformationMode(); break;
         case 4: *reinterpret_cast< QPen*>(_v) = pen(); break;
         case 5: *reinterpret_cast< QPen*>(_v) = selectedPen(); break;
+        default: break;
         }
         _id -= 6;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -7078,6 +7150,7 @@ int QCPItemPixmap::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: setScaled(*reinterpret_cast< bool*>(_v)); break;
         case 4: setPen(*reinterpret_cast< QPen*>(_v)); break;
         case 5: setSelectedPen(*reinterpret_cast< QPen*>(_v)); break;
+        default: break;
         }
         _id -= 6;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -7102,12 +7175,12 @@ int QCPItemPixmap::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPItemTracer_t {
     QByteArrayData data[17];
-    char stringdata[157];
+    char stringdata[156];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPItemTracer_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPItemTracer_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPItemTracer_t qt_meta_stringdata_QCPItemTracer = {
     {
@@ -7133,7 +7206,7 @@ QT_MOC_LITERAL(16, 147, 8)
     "selectedBrush\0size\0style\0TracerStyle\0"
     "graph\0QCPGraph*\0graphKey\0interpolating\0"
     "tsNone\0tsPlus\0tsCrosshair\0tsCircle\0"
-    "tsSquare\0"
+    "tsSquare"
 };
 #undef QT_MOC_LITERAL
 
@@ -7225,6 +7298,7 @@ int QCPItemTracer::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 6: *reinterpret_cast< QCPGraph**>(_v) = graph(); break;
         case 7: *reinterpret_cast< double*>(_v) = graphKey(); break;
         case 8: *reinterpret_cast< bool*>(_v) = interpolating(); break;
+        default: break;
         }
         _id -= 9;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -7239,6 +7313,7 @@ int QCPItemTracer::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 6: setGraph(*reinterpret_cast< QCPGraph**>(_v)); break;
         case 7: setGraphKey(*reinterpret_cast< double*>(_v)); break;
         case 8: setInterpolating(*reinterpret_cast< bool*>(_v)); break;
+        default: break;
         }
         _id -= 9;
     } else if (_c == QMetaObject::ResetProperty) {
@@ -7263,12 +7338,12 @@ int QCPItemTracer::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 struct qt_meta_stringdata_QCPItemBracket_t {
     QByteArrayData data[10];
-    char stringdata[98];
+    char stringdata[97];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    offsetof(qt_meta_stringdata_QCPItemBracket_t, stringdata) + ofs \
-        - idx * sizeof(QByteArrayData) \
+    qptrdiff(offsetof(qt_meta_stringdata_QCPItemBracket_t, stringdata) + ofs \
+        - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_QCPItemBracket_t qt_meta_stringdata_QCPItemBracket = {
     {
@@ -7285,7 +7360,7 @@ QT_MOC_LITERAL(9, 82, 14)
     },
     "QCPItemBracket\0pen\0selectedPen\0length\0"
     "style\0BracketStyle\0bsSquare\0bsRound\0"
-    "bsCurly\0bsCalligraphic\0"
+    "bsCurly\0bsCalligraphic"
 };
 #undef QT_MOC_LITERAL
 
@@ -7361,6 +7436,7 @@ int QCPItemBracket::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: *reinterpret_cast< QPen*>(_v) = selectedPen(); break;
         case 2: *reinterpret_cast< double*>(_v) = length(); break;
         case 3: *reinterpret_cast< BracketStyle*>(_v) = style(); break;
+        default: break;
         }
         _id -= 4;
     } else if (_c == QMetaObject::WriteProperty) {
@@ -7370,6 +7446,7 @@ int QCPItemBracket::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         case 1: setSelectedPen(*reinterpret_cast< QPen*>(_v)); break;
         case 2: setLength(*reinterpret_cast< double*>(_v)); break;
         case 3: setStyle(*reinterpret_cast< BracketStyle*>(_v)); break;
+        default: break;
         }
         _id -= 4;
     } else if (_c == QMetaObject::ResetProperty) {
