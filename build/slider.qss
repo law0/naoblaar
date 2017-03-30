@@ -76,6 +76,7 @@ QMainWindow::title {
     background: #ebf8fd
 }
 
+<<<<<<< HEAD
 
 QPushButton#disabled{
 	background-color : with;
@@ -88,3 +89,9 @@ QPushButton#break{
 }
 
 
+=======
+QToolBar {
+    background-color: #ebf8fd
+    border: none
+}
+>>>>>>> 402081d745019cb8bf3e6e9dab27f34f56bcc9fa

@@ -1,7 +1,7 @@
 #include "launchView.h"
 
 #define VIDEO_WIDTH 600
-#define VIDEO_HEIGHT 400
+#define VIDEO_HEIGHT 450
 
 void launchView(int argc, char **argv, bool* isClosed, ScriptLauncher* sl, Oscillator* osc, Oscillator* osc2)
 {
@@ -63,7 +63,7 @@ void launchView(int argc, char **argv, bool* isClosed, ScriptLauncher* sl, Oscil
 
 	mw.addOscillators(osc, osc2); //add oscillators has most widget contained in mw needs the oscillators
 
-	mw.setFixedSize(1300, 670);
+	mw.setFixedSize(1300, 700);
 
 	view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);

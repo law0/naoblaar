@@ -76,7 +76,7 @@ class MainWindow : public QMainWindow
 		QPushButton* data;
 		QPushButton* both;
 		QLineEdit* _title;
-		QLineEdit* _repository;
+		FileLineButton* _repository;
 		bool runningVideo;
 		//Oscillator* _oscH; //la vue ne doit pas contenir les osc, par respect d'archi
 		//Oscillator* _oscV;

@@ -20,20 +20,26 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 {
 //	setFixedSize(1300, 620);
 
-	//image camera
-	QFrame *webcam = new QFrame(this);
-	webcam -> setGeometry(0, 0, 640, 480);
 
+<<<<<<< HEAD
 	//image mouvement
 	QLabel *move = new QLabel(this);
 	move -> setGeometry(0, 650, 640, 480);
 	//QPixmap *picture = new QPixmap("BOB1.jpg");
     //
+=======
+
+
+
+	QToolBar* downToolBar = new QToolBar(this);
+	downToolBar->setAllowedAreas(Qt::BottomToolBarArea);
+>>>>>>> 402081d745019cb8bf3e6e9dab27f34f56bcc9fa
 
 	QGroupBox *groupSingle = new QGroupBox("Alone", this);
 	groupSingle -> setGeometry(530, 455, 120, 95);
 
 	play = new QPushButton("Save Movie", this);
+<<<<<<< HEAD
 	play -> setGeometry(540, 485, 100, 30);
 	play->setDefault(true);
 
@@ -49,18 +55,73 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 
 	both = new QPushButton("Save", this);
 	both -> setGeometry(670, 480, 100, 30);
+=======
+	//play -> setGeometry(540, 485, 100, 30);
 
-	QLabel *labelRepository = new QLabel("Path :", this);
-	labelRepository -> setGeometry(10, 485, 100, 30);
+	data = new QPushButton("Save Data", this);
+	//data -> setGeometry(540, 520, 100, 30);
 
-	_repository = new QLineEdit(this);
-	_repository -> setGeometry(110, 485, 300, 30);
+	QVBoxLayout *vbox_for_data_play = new QVBoxLayout;
+	vbox_for_data_play->addWidget(groupSingle);
+	vbox_for_data_play->addWidget(play);
+	vbox_for_data_play->addWidget(data);
+//	vbox_for_data_play->addStretch(1);
 
-	QLabel *labelTitle = new QLabel("Title :", this);
-	labelTitle -> setGeometry(10, 520, 100, 30);
+	QWidget *inter_data_play = new QWidget;//(downToolBar);
+	inter_data_play->setLayout(vbox_for_data_play);
+
+	//downToolBar->addWidget(inter_data_play);
+
+	QGroupBox *groupTogether = new QGroupBox("Both", this);
+//	groupTogether -> setGeometry(660, 470, 120, 95);
+	both = new QPushButton("Record data and video", this);
+//	both -> setGeometry(670, 500, 100, 30);
+
+	QVBoxLayout *vbox_both = new QVBoxLayout;
+	vbox_both->addWidget(groupTogether);
+	vbox_both->addWidget(both);
+//	vbox_both->addStretch(1);
+>>>>>>> 402081d745019cb8bf3e6e9dab27f34f56bcc9fa
+
+	QWidget *inter_both = new QWidget;//(downToolBar);
+	inter_both->setLayout(vbox_both);
+
+	both = new QPushButton("Save", this);
+	//both -> setGeometry(670, 480, 100, 30);
+
+	QFormLayout* form_rec = new QFormLayout;
+//	QLabel *labelRepository = new QLabel("Emplacement :", this);
+//	labelRepository -> setGeometry(10, 485, 100, 30);
+	QLineEdit* repository_line = new QLineEdit(this);
+	QPushButton* repository_button = new QPushButton("Explore", this);
+	_repository = new FileLineButton(repository_line, repository_button, QFileDialog::Directory);
+//	_repository -> setGeometry(110, 485, 300, 30);
+
+//	QLabel *labelTitle = new QLabel("Titre :", this);
+//	labelTitle -> setGeometry(10, 520, 100, 30);
 
 	_title = new QLineEdit(this);
-	_title -> setGeometry(110, 520, 200, 30);
+//	_title -> setGeometry(110, 520, 200, 30);
+
+	form_rec->addRow("Path :", _repository);
+	form_rec->addRow("Title :", _title);
+
+	QWidget *inter_file = new QWidget;//(downToolBar);
+	inter_file->setLayout(form_rec);
+
+	QHBoxLayout* hbox = new QHBoxLayout;
+	hbox->addWidget(inter_file);
+	hbox->addSpacing(50);
+	hbox->addWidget(inter_data_play);
+	hbox->addSpacing(10);
+	hbox->addWidget(inter_both);
+	hbox->addSpacing(500);
+
+	QWidget* last_inter = new QWidget(downToolBar);
+	last_inter->setLayout(hbox);
+	downToolBar->addWidget(last_inter);
+	this->addToolBar(Qt::BottomToolBarArea, downToolBar);
+
 
 	connect(play, SIGNAL(pressed()), this, SLOT(movieClick()));
 	connect(data, SIGNAL(pressed()), this, SLOT(dataClick()));
@@ -93,7 +154,20 @@ void MainWindow::movieManagement(string name)
 	}
 	else
 	{
+<<<<<<< HEAD
 		_movie->startCapture(name);
+=======
+		string place;
+		if (_repository->text().isEmpty())
+		{
+			place = "";
+		}
+		else
+		{
+			place = _repository->text().toStdString();
+		}
+		_movie->startCapture();
+>>>>>>> 402081d745019cb8bf3e6e9dab27f34f56bcc9fa
 		runningVideo = true;
 	}
 }
@@ -107,7 +181,21 @@ void MainWindow::dataManagement(string name)
 	}
 	else
 	{
+<<<<<<< HEAD
 		_sd->startSave(name);
+=======
+		string place;
+//		std::cout <<  _repository->text().toStdString() << std::endl;
+		if (_repository->text().isEmpty())
+		{
+			place = "";
+		}
+		else
+		{
+			place = _repository->text().toStdString();
+		}
+		_sd->startSave(place, _title->text().toStdString());
+>>>>>>> 402081d745019cb8bf3e6e9dab27f34f56bcc9fa
 		runningData = true;
 	}
 }

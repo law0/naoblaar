@@ -9,19 +9,21 @@ Savedata::Savedata(const Oscillator* osc1, const Oscillator* osc2) :
 
 }
 
-void Savedata::startSave(string name)
+void Savedata::startSave(string place, string title)
 {
+	place.append("/");
 	if (!_running)
 	{
 		_running = true;
-		_loop = new std::thread(Savedata::save, _oscH, _oscV, &_running, name);
+		_loop = new std::thread(Savedata::save, _oscH, _oscV, &_running, place, title);
 	}
 }
 
 
-void Savedata::save(const Oscillator* oscH, const Oscillator* oscV, bool* _running, string name)
+void Savedata::save(const Oscillator* oscH, const Oscillator* oscV, bool* _running, string place, string name)
 {
-	/*if (name == "")
+	//string name("test");
+	if (name == "")
 	{
 		name = "test";
 	}
@@ -55,10 +57,10 @@ void Savedata::save(const Oscillator* oscH, const Oscillator* oscV, bool* _runni
 	if (movie != NULL)
 	{
 		fclose(movie);
-	}*/
+	}
 
 
-	ofstream myfile(name, ios::app);
+	ofstream myfile(titleD, ios::app);
   	//myfile.open() ;
 
 	if (!myfile.is_open())
