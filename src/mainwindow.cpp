@@ -32,12 +32,17 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	QToolBar* downToolBar = new QToolBar(this);
 	downToolBar->setAllowedAreas(Qt::BottomToolBarArea);
 
-
 	QVBoxLayout *vbox_for_data_play = new QVBoxLayout;
 	vbox_for_data_play->addWidget(groupSingle);
 	vbox_for_data_play->addWidget(play);
 	vbox_for_data_play->addWidget(data);
 //	vbox_for_data_play->addStretch(1);
+
+	QGroupBox *groupSingle = new QGroupBox("Alone", this);
+	groupSingle -> setGeometry(530, 465, 120, 95);
+
+	play = new QPushButton("Save Movie", this);
+	//play -> setGeometry(540, 485, 100, 30);
 
 	QWidget *inter_data_play = new QWidget;//(downToolBar);
 	inter_data_play->setLayout(vbox_for_data_play);
@@ -56,6 +61,15 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 
 	QWidget *inter_both = new QWidget;//(downToolBar);
 	inter_both->setLayout(vbox_both);
+
+	data = new QPushButton("Save Data", this);
+	//data -> setGeometry(540, 520, 100, 30);
+
+	QGroupBox *groupTogether = new QGroupBox("Both", this);
+	groupTogether -> setGeometry(660, 460, 120, 95);
+
+	both = new QPushButton("Save", this);
+	//both -> setGeometry(670, 480, 100, 30);
 
 	QFormLayout* form_rec = new QFormLayout;
 //	QLabel *labelRepository = new QLabel("Emplacement :", this);
@@ -106,6 +120,7 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	connect(_save_config_action, SIGNAL(triggered()), this, SLOT(saveConfig()));
 	//printf("salut\n");
 	//this->getStream();
+	play->clearFocus();
 	clickButton(data);
 	clickButton(play);
 	clickButton(both);
@@ -165,7 +180,11 @@ void MainWindow::dataClick()
 	{		//stop to save
 		//data->setDefault(true);
 		clickButton(both);
+<<<<<<< HEAD
 		data->setText("Record data");
+=======
+		data->setText("Save Data");
+>>>>>>> 9bb5ff1999a0a8b68db90c43c1119ae133485cff
 		data->clearFocus();
 	}
 	else		//start to save
@@ -182,7 +201,11 @@ void MainWindow::movieClick()
 	if (runningVideo)
 	{		//stop to save
 		clickButton(both);
+<<<<<<< HEAD
 		play->setText("Record video");
+=======
+		play->setText("Save Movie");
+>>>>>>> 9bb5ff1999a0a8b68db90c43c1119ae133485cff
 		play->clearFocus();
 	}
 	else		//start to save
@@ -200,7 +223,11 @@ void MainWindow::bothClick()
 	{		//stop to save
 		clickButton(play);
 		clickButton(data);
+<<<<<<< HEAD
 		both->setText("Record data and video");
+=======
+		both->setText("Save");
+>>>>>>> 9bb5ff1999a0a8b68db90c43c1119ae133485cff
 		both->clearFocus();
 		runningBoth = false;
 	}
@@ -208,7 +235,11 @@ void MainWindow::bothClick()
 	{
 		breakButton(play);
 		breakButton(data);
+<<<<<<< HEAD
 		both->setText("Stop data and video recording");
+=======
+		both->setText("Stop");
+>>>>>>> 9bb5ff1999a0a8b68db90c43c1119ae133485cff
 		both->clearFocus();
 		runningBoth = true;
 	}
@@ -222,8 +253,8 @@ void MainWindow::clickButton(QPushButton * button)
 	//button->setDefault(false);
 	button->blockSignals(false);
 	button->setEnabled(true);
-	button->clearFocus();
 	button->setStyleSheet("background-color : white; border-radius : 5px;");
+	button->clearFocus();
 }
 
 void MainWindow::breakButton(QPushButton * button)
