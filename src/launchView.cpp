@@ -1,5 +1,8 @@
 #include "launchView.h"
 
+#define VIDEO_WIDTH 640
+#define VIDEO_HEIGHT 480
+
 void launchView(int argc, char **argv, bool* isClosed, StreamCatcher* sc, ScriptLauncher* sl, Oscillator* osc, Oscillator* osc2)
 {
 	QApplication a(argc, argv);
@@ -44,7 +47,9 @@ void launchView(int argc, char **argv, bool* isClosed, StreamCatcher* sc, Script
 	view.setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         view.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 
-        view.setFixedSize(sc->getWidth() + 2, sc->getHeight() + 2);
+
+        view.scale((float)VIDEO_WIDTH / (float)sc->getWidth(), (float)VIDEO_HEIGHT / (float)sc->getHeight());
+	view.setFixedSize(VIDEO_WIDTH, VIDEO_HEIGHT);
 
 	mw.show();
 
