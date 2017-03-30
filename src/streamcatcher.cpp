@@ -10,6 +10,7 @@ StreamCatcher::StreamCatcher(int device) :
 	_buffer_selector(0)
 {
 
+	printf("STREAMCATCHER DEVICE CHOOSEN  = %d\n", device);
 
 	if( _capture == NULL )
 	{
@@ -51,6 +52,22 @@ void StreamCatcher::killInstance()
 	delete _instance;
 }
 
+std::vector<int> StreamCatcher::getListCameras()
+{
+	std::vector<int> list;
+	int maxTested = 10;
+	for (int i = 0; i < maxTested; i++)
+	{
+		cv::VideoCapture temp_camera(i);
+		if(temp_camera.isOpened())
+		{
+			list.push_back(i);
+			temp_camera.release();
+		}
+	}
+	return list;
+}
+
 StreamCatcher* StreamCatcher::getInstance(int device)
 {
 	if(_instance == NULL)
@@ -58,6 +75,17 @@ StreamCatcher* StreamCatcher::getInstance(int device)
 		_instance = new StreamCatcher(device);
 	}
 	return _instance;
+}
+
+bool StreamCatcher::isInstantiated()
+{
+	//Calling static StreamCatcher::getInstance() twice
+	//won't instantiate twice as it respect singleton pattern
+	//But the user may want to know if this object
+	//has already been instantiated
+	//for other reason
+
+	return _instance != NULL;
 }
 
 std::thread * StreamCatcher::getThread()

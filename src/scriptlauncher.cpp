@@ -36,6 +36,17 @@ void ScriptLauncher::killInstance()
 	delete _instance;
 }
 
+bool ScriptLauncher::isInstantiated()
+{
+	//Calling static ScriptLauncher::getInstance() twice
+        //won't instantiate twice as it respect singleton pattern
+        //But the user may want to know if this object
+        //has already been instantiated
+        //for other reasons
+
+	return _instance != NULL;
+}
+
 int ScriptLauncher::connect()
 {
 

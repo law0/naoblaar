@@ -3,7 +3,7 @@
 #define VIDEO_WIDTH 640
 #define VIDEO_HEIGHT 480
 
-void launchView(int argc, char **argv, bool* isClosed, StreamCatcher* sc, ScriptLauncher* sl, Oscillator* osc, Oscillator* osc2)
+void launchView(int argc, char **argv, bool* isClosed, ScriptLauncher* sl, Oscillator* osc, Oscillator* osc2)
 {
 	QApplication a(argc, argv);
 
@@ -16,6 +16,27 @@ void launchView(int argc, char **argv, bool* isClosed, StreamCatcher* sc, Script
 	}
 
 	MainWindow mw(isClosed);
+
+	StreamCatcher* sc;
+
+	int choice = 0;
+
+	if( ! StreamCatcher::isInstantiated())
+	{
+		//calling StreamCatcher::getInstance(choice) is safe
+		//meaning calling it twice won't instantiate twice
+		//but here we want to know if it has already been instantiated
+		//as that would mean a camera have already been choosen
+		//and thus we don't need to pop a dialog to ask the user
+
+		choice = chooseCamera(true);
+
+		printf("Instantiating cam in gui with choice %d\n", choice);
+
+	}
+
+	sc = StreamCatcher::getInstance(choice); //if camera has already been choosen, this will only return the singleton already instantiated
+
 
 	QGraphicsScene scene;
 
@@ -54,6 +75,51 @@ void launchView(int argc, char **argv, bool* isClosed, StreamCatcher* sc, Script
 	mw.show();
 
 	a.exec();
+
+}
+
+int chooseCamera(bool gui)
+{
+	int ret = 0;
+	std::vector<int> listCams;
+	listCams = StreamCatcher::getListCameras();
+	int vsize = listCams.size();
+
+//	if(size > 1)
+//	{
+		if(gui == true)
+		{
+			std::string str = "";
+			int i;
+			int max = 0;
+			for (i = 0; i < vsize; i++)
+			{
+				str.append(std::to_string(listCams[i]) + "; ");
+				max = max < listCams[i] ? listCams[i] : max;
+			}
+			bool ok;
+			int choice = -1;
+			choice = QInputDialog::getInt(NULL, "Choose camera input",
+	                      "Choose camera : " + QString::fromStdString(str), 0, 0, max, 1, &ok);
+
+			if (ok && choice != -1)
+			{
+				ret = choice;
+			}
+		}
+		else if(gui == false)
+		{
+			printf("choose camera. Enter one the number list below\n");
+			printf("List of cameras : \n");
+			for (int i = 0; i < vsize; i++)
+			{
+				printf("Camera %d\n", listCams[i]);
+			}
+			printf("end of list\n\n\n");
+			ret = getchar() - 48;
+		}
+//	}
+	return ret;
 
 }
 
