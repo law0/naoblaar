@@ -27,7 +27,6 @@
 
 #define MAX_IMAGE_COUNT 7
 
-static StreamCatcher * global_Streamcatcher; //Singleton
 bool isClosed;
 
 /*int getNextImage(unsigned char* img)
@@ -48,10 +47,12 @@ bool isClosed;
 
 int nextImage(unsigned char* img)
 {
-	int w = global_Streamcatcher->getWidth();
-	int h = global_Streamcatcher->getHeight();
+	StreamCatcher* sc = StreamCatcher::getInstance();
 
-	global_Streamcatcher->getGRAY(img, w*h);
+	int w = sc->getWidth();
+	int h = sc->getHeight();
+
+	sc->getGRAY(img, w*h);
 	return isClosed ? 0 : 1;
 }
 
@@ -235,12 +236,12 @@ int main(int argc, char **argv)
 {
 	isClosed = false;
 
-	global_Streamcatcher = StreamCatcher::getInstance();
+	StreamCatcher * global_Streamcatcher; //Singleton
 
-	int width = global_Streamcatcher->getWidth();
-	int height = global_Streamcatcher->getHeight();
-
-	printf("w: %d, h: %d\n", width, height);
+	int camchoice = 0;
+	bool camgui = true;
+	int width;
+	int height;
 
 	Oscillator oscillator(0.07f, 0.15f);
 	Oscillator osc2(0.07f, 0.15f);
@@ -249,20 +250,41 @@ int main(int argc, char **argv)
 	sl->setOscillators(&oscillator, &osc2);
 	sl->loadConfigFromFile("config.benlaw");
 
-	std::thread view_thread(launchView, argc, argv, &isClosed, global_Streamcatcher, sl, &oscillator, &osc2);
+	if(camgui == false) //choose Camera by terminal, instantiate streamcatcher
+	{
 
-	/*SharedMemory sm(&oscillator, 2);
-	sm.startShare();*/
+		camchoice = chooseCamera(false);
+
+		global_Streamcatcher = StreamCatcher::getInstance(camchoice);
+
+	}
+	else //choose Camera bu GUI. the GUI thread below (view_thread) will instanciate global_Streamcatcher instead of this main thread
+	{
+		;//printf("sc not instantiated\n");
+	}
+
+	std::thread view_thread(launchView, argc, argv, &isClosed, sl, &oscillator, &osc2);
+
+	while( ! StreamCatcher::isInstantiated()) //in case thread instanciate StreamCatcher (which depend on an input from user) we have to wait
+	{
+		usleep(500000);
+	}
+
+	global_Streamcatcher = StreamCatcher::getInstance(); //this is not a double instantiantion streamcatcher because is singleton
+	//it has been instantiated by terminal or by thread (which ever call it first)
+
+	width = global_Streamcatcher->getWidth();
+	height = global_Streamcatcher->getHeight();
+
+	printf("w: %d, h: %d\n", width, height);
 
 	optical_flow(width, height, oscillator, osc2);
-
-//	getchar();
 
 	//view_thread.join();
 
 	StreamCatcher::killInstance();
 
-	ScriptLauncher::killInstance(); //equivalent to scriptLauncher_single->disconnect(); delete scriptLauncher_single
+	ScriptLauncher::killInstance(); //equivalent to sl->disconnect(); delete scriptLauncher_single
 
 	return 0;
 }

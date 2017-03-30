@@ -17,6 +17,7 @@ class ScriptLauncher
 	public :
 		static ScriptLauncher* getInstance();
 		static void killInstance();
+		static bool isInstantiated();
 		int connect();
 		int disconnect();
 

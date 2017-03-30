@@ -7,6 +7,7 @@
 #include <highgui.h>
 #include <thread>
 #include <mutex>
+#include <vector>
 #include "utilities.h"
 
 class StreamCatcher
@@ -15,6 +16,8 @@ class StreamCatcher
 	public :
 		static StreamCatcher* getInstance(int device = CV_CAP_ANY);
 		static void killInstance();
+		static bool isInstantiated();
+		static std::vector<int> getListCameras();
 		std::thread * getThread();
 		char* getFramePtr() const;
 		CvCapture * getCapture();

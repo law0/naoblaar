@@ -4,7 +4,6 @@ VideoItem::VideoItem(const StreamCatcher* streamcatcher) :
 	QGraphicsItem(),
 	_timer(),
 	_streamcatcher(streamcatcher),
-//	_frameptr((unsigned char* const)(_streamcatcher->getFramePtr())),
 	_width((const unsigned int)(_streamcatcher->getWidth())),
 	_height((const unsigned int)(_streamcatcher->getHeight())),
 	_size(_width * _height)
@@ -16,11 +15,6 @@ VideoItem::VideoItem(const StreamCatcher* streamcatcher) :
 void VideoItem::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget)
 {
         unsigned char out[_size * 4];
-
-/*        std::mutex mtx;
-        mtx.lock();
-        char_bgr_to_rgba(out,_frameptr, _size * 3);
-        mtx.unlock();*/
 
 	_streamcatcher->getRGBA(out, _size * 4);
 

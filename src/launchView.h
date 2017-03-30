@@ -18,6 +18,7 @@
 #include "oscillator.h"
 #include "slideritem.h"
 
-void launchView(int argc, char **argv, bool* isClosed, StreamCatcher *sc, ScriptLauncher* sl, Oscillator* osc, Oscillator* osc2);
+void launchView(int argc, char **argv, bool* isClosed, ScriptLauncher* sl, Oscillator* osc, Oscillator* osc2);
+int chooseCamera(bool gui);
 
 #endif //LAUNCHVIEW_H_INCLUDED
