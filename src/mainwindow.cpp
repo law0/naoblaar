@@ -80,6 +80,9 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	connect(_save_config_action, SIGNAL(triggered()), this, SLOT(saveConfig()));
 	//printf("salut\n");
 	//this->getStream();
+	clickButton(data);
+	clickButton(play);
+	clickButton(both);
 
 }
 
@@ -134,28 +137,32 @@ void MainWindow::dataClick()
 	if (runningData)
 	{		//stop to save
 		//data->setDefault(true);
-		both->blockSignals(false);
+		clickButton(both);
 		data->setText("Enregistrer");
+		data->clearFocus();
 	}
 	else		//start to save
 	{
-		both->blockSignals(true);
+		breakButton(both);
 		data->setText("Pause");
+		data->clearFocus();
 	}
 	dataManagement();
 }
 
 void MainWindow::movieClick()
 {
-	if (runningData)
+	if (runningVideo)
 	{		//stop to save
-		both->blockSignals(false);
+		clickButton(both);
 		play->setText("Enregistrer");
+		play->clearFocus();
 	}
 	else		//start to save
 	{
-		both->blockSignals(true);
+		breakButton(both);
 		play->setText("Pause");
+		play->clearFocus();
 	}
 	movieManagement();
 }
@@ -167,19 +174,15 @@ void MainWindow::bothClick()
 		clickButton(play);
 		clickButton(data);
 		both->setText("Enregistrer");
+		both->clearFocus();
 		runningBoth = false;
 	}
 	else		//start to save
 	{
 		breakButton(play);
-//		play->blockSignals(true);
-//		QPalette * palette = new QPalette();
-//		palette->setColor(QPalette::Button, QColor(0, 0, 0));
-//		play->setPalette(*palette);
-
 		breakButton(data);
-		data->blockSignals(true);
 		both->setText("Pause");
+		both->clearFocus();
 		runningBoth = true;
 	}
 	dataManagement();
@@ -188,23 +191,20 @@ void MainWindow::bothClick()
 
 void MainWindow::clickButton(QPushButton * button)
 {
-	button->setDefault(true);
-	button->setDefault(false);
+	//button->setDefault(true);
+	//button->setDefault(false);
 	button->blockSignals(false);
+	button->setEnabled(true);
+	button->clearFocus();
+	button->setStyleSheet("background-color : white; border-radius : 5px;");
 }
 
 void MainWindow::breakButton(QPushButton * button)
 {
 	button->blockSignals(true);
-//	QPalette * palette = new QPalette();
-//	palette = (QPalette*) &button->palette();
-//	palette->setColor(QPalette::Button, QColor(0, 0, 0));
-//	button->setAutoFillBackground(true);
-//	button->setPalette(*palette);
-	button->setStyleSheet("background-color : gray");
 	button->clearFocus();
-//	button->update();
-
+	button->setEnabled(false);
+	button->setStyleSheet("background-color : gray; border-radius : 5px;");
 }
 
 void MainWindow::closeExperience()
