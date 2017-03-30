@@ -11,6 +11,7 @@
 #include <QPushButton>
 #include <QObject>
 #include <mutex>
+#include <string>
 
 #include "scriptlauncher.h"
 #include "filelinebutton.h"
@@ -61,10 +62,11 @@ class MainWindow : public QMainWindow
 	private:
 		int connectToNao();
 		void disconnectToNao();
-		void dataManagement();
-		void movieManagement();
+		void dataManagement(string name);
+		void movieManagement(string name);
 		void clickButton(QPushButton * button);
 		void breakButton(QPushButton * button);
+		string getName(bool isData);
 
 		bool* _isClosed;
 	   	Ui::MainWindow *ui;

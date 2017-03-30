@@ -28,45 +28,27 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	QLabel *move = new QLabel(this);
 	move -> setGeometry(0, 650, 640, 480);
 	//QPixmap *picture = new QPixmap("BOB1.jpg");
-
-	move -> setPixmap(QPixmap("BOB1.jpg"));
-	move -> show();
-	update();
-
     //
 
 	QGroupBox *groupSingle = new QGroupBox("Alone", this);
-	groupSingle -> setGeometry(530, 465, 120, 95);
+	groupSingle -> setGeometry(530, 455, 120, 95);
 
-<<<<<<< HEAD
 	play = new QPushButton("Save Movie", this);
 	play -> setGeometry(540, 485, 100, 30);
-=======
-	play = new QPushButton("Enregistrer", this);
-	play -> setGeometry(540, 505, 100, 30);
->>>>>>> 5d810b3f5f66180381df86a91e3cec12d2354902
+	play->setDefault(true);
+
 
 	//QPushButton *pause = new QPushButton("stop", this);
 	//pause -> setGeometry(345, 505, 80, 30);
 
-<<<<<<< HEAD
 	data = new QPushButton("Save Data", this);
 	data -> setGeometry(540, 520, 100, 30);
-=======
-	data = new QPushButton("Data", this);
-	data -> setGeometry(540, 540, 100, 30);
->>>>>>> 5d810b3f5f66180381df86a91e3cec12d2354902
 
 	QGroupBox *groupTogether = new QGroupBox("Both", this);
-	groupTogether -> setGeometry(660, 460, 120, 95);
+	groupTogether -> setGeometry(660, 450, 120, 95);
 
-<<<<<<< HEAD
 	both = new QPushButton("Save", this);
 	both -> setGeometry(670, 480, 100, 30);
-=======
-	both = new QPushButton("Enregistrer", this);
-	both -> setGeometry(670, 500, 100, 30);
->>>>>>> 5d810b3f5f66180381df86a91e3cec12d2354902
 
 	QLabel *labelRepository = new QLabel("Path :", this);
 	labelRepository -> setGeometry(10, 485, 100, 30);
@@ -102,7 +84,7 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 
 }
 
-void MainWindow::movieManagement()
+void MainWindow::movieManagement(string name)
 {
 	if (runningVideo)
 	{
@@ -111,21 +93,12 @@ void MainWindow::movieManagement()
 	}
 	else
 	{
-		string place;
-		if (!_repository->text().isEmpty())
-		{
-			place = "";
-		}
-		else
-		{
-			place = _repository->text().toStdString();
-		}
-		_movie->startCapture();
+		_movie->startCapture(name);
 		runningVideo = true;
 	}
 }
 
-void MainWindow::dataManagement()
+void MainWindow::dataManagement(string name)
 {
 	if (runningData)
 	{
@@ -134,16 +107,7 @@ void MainWindow::dataManagement()
 	}
 	else
 	{
-		string place;
-		if (!_repository->text().isEmpty())
-		{
-			place = "";
-		}
-		else
-		{
-			place = _repository->text().toStdString();
-		}
-		_sd->startSave(place, _title->text().toStdString());
+		_sd->startSave(name);
 		runningData = true;
 	}
 }
@@ -163,7 +127,8 @@ void MainWindow::dataClick()
 		data->setText("Stop");
 		data->clearFocus();
 	}
-	dataManagement();
+	string name = getName(true);
+	dataManagement(name);
 }
 
 void MainWindow::movieClick()
@@ -180,7 +145,8 @@ void MainWindow::movieClick()
 		play->setText("Stop");
 		play->clearFocus();
 	}
-	movieManagement();
+	string name = getName(false);
+	movieManagement(name);
 }
 
 void MainWindow::bothClick()
@@ -201,8 +167,10 @@ void MainWindow::bothClick()
 		both->clearFocus();
 		runningBoth = true;
 	}
-	dataManagement();
-	movieManagement();
+	string name = getName(true);
+	dataManagement(name);
+	name = getName(false);
+	movieManagement(name);
 }
 
 void MainWindow::clickButton(QPushButton * button)
@@ -221,6 +189,58 @@ void MainWindow::breakButton(QPushButton * button)
 	button->clearFocus();
 	button->setEnabled(false);
 	button->setStyleSheet("background-color : gray; border-radius : 5px;");
+}
+
+string MainWindow::getName(bool isData)
+{
+	string place = _repository->text().toStdString();
+	string name = _title->text().toStdString();
+	if (name == "")
+	{
+		name = "test";
+	}
+	string endD(".csv");
+	string endM(".avi");
+	string titleD = place + name + endD;
+	string titleM = place + name + endM;
+	int i = 1;
+	FILE * data = fopen(titleD.c_str(), "r");
+	FILE * movie = fopen(titleM.c_str(), "r");
+	while ((data = fopen(titleD.c_str(), "r")) || (movie = fopen(titleM.c_str(), "r")))
+	{
+		if (data != NULL)
+		{
+			fclose(data);
+		}
+		if (movie != NULL)
+		{
+			fclose(movie);
+		}
+
+		titleD = place + name + to_string(i) + endD;
+		titleM = place + name + to_string(i) + endM;
+		i++;
+	}
+
+	if (data != NULL)
+	{
+		fclose(data);
+	}
+	if (movie != NULL)
+	{
+		fclose(movie);
+	}
+
+
+	if (isData)
+	{
+		return titleD;
+	}
+	else
+	{
+		return titleM;
+	}	
+	
 }
 
 void MainWindow::closeExperience()

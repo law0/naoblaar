@@ -9,6 +9,7 @@
 #include <thread>
 #include <mutex>
 #include <chrono>
+#include <string>
 
 #include "streamcatcher.h"
 
@@ -20,8 +21,8 @@ class Movie
 	public :
         	Movie(const StreamCatcher* streamcatcher);
 		~Movie();
-		void startCapture();
-		static void capture(const StreamCatcher * stream, bool* running);
+		void startCapture(string name);
+		static void capture(const StreamCatcher * stream, bool* running, string name);
 		void stopCapture();
 
 	private:
