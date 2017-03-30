@@ -38,20 +38,35 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	QGroupBox *groupSingle = new QGroupBox("Alone", this);
 	groupSingle -> setGeometry(530, 465, 120, 95);
 
+<<<<<<< HEAD
 	play = new QPushButton("Save Movie", this);
 	play -> setGeometry(540, 485, 100, 30);
+=======
+	play = new QPushButton("Enregistrer", this);
+	play -> setGeometry(540, 505, 100, 30);
+>>>>>>> 5d810b3f5f66180381df86a91e3cec12d2354902
 
 	//QPushButton *pause = new QPushButton("stop", this);
 	//pause -> setGeometry(345, 505, 80, 30);
 
+<<<<<<< HEAD
 	data = new QPushButton("Save Data", this);
 	data -> setGeometry(540, 520, 100, 30);
+=======
+	data = new QPushButton("Data", this);
+	data -> setGeometry(540, 540, 100, 30);
+>>>>>>> 5d810b3f5f66180381df86a91e3cec12d2354902
 
 	QGroupBox *groupTogether = new QGroupBox("Both", this);
 	groupTogether -> setGeometry(660, 460, 120, 95);
 
+<<<<<<< HEAD
 	both = new QPushButton("Save", this);
 	both -> setGeometry(670, 480, 100, 30);
+=======
+	both = new QPushButton("Enregistrer", this);
+	both -> setGeometry(670, 500, 100, 30);
+>>>>>>> 5d810b3f5f66180381df86a91e3cec12d2354902
 
 	QLabel *labelRepository = new QLabel("Path :", this);
 	labelRepository -> setGeometry(10, 485, 100, 30);
@@ -61,7 +76,7 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 
 	QLabel *labelTitle = new QLabel("Title :", this);
 	labelTitle -> setGeometry(10, 520, 100, 30);
-	
+
 	_title = new QLineEdit(this);
 	_title -> setGeometry(110, 520, 200, 30);
 

@@ -1,7 +1,7 @@
 #include "launchView.h"
 
-#define VIDEO_WIDTH 640
-#define VIDEO_HEIGHT 480
+#define VIDEO_WIDTH 600
+#define VIDEO_HEIGHT 400
 
 void launchView(int argc, char **argv, bool* isClosed, ScriptLauncher* sl, Oscillator* osc, Oscillator* osc2)
 {
