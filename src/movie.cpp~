@@ -3,7 +3,7 @@
 Movie::Movie(const StreamCatcher* sc) :
     _streamcatcher(sc),
 	_loop(NULL),
-    running(false),
+    _running(false),
     _width((const unsigned int)(_streamcatcher->getWidth())),
     _height((const unsigned int)(_streamcatcher->getHeight())),
     _size(_width * _height)
@@ -11,18 +11,18 @@ Movie::Movie(const StreamCatcher* sc) :
 
 }
 
-void Movie::startCapture()
+void Movie::startCapture(string name)
 {
-	if (!running)
+	if (!_running)
 	{
-		running = true;
-		_loop = new std::thread(Movie::capture, _streamcatcher, &running);
+		_running = true;
+		_loop = new std::thread(Movie::capture, _streamcatcher, &_running, name);
 	}
 }
 
 
-void Movie::capture(const StreamCatcher * stream, bool* running)
-{
+void Movie::capture(const StreamCatcher * stream, bool* _running, string name)
+{	
 	const unsigned int width = stream->getWidth();
 	const unsigned int height = stream->getHeight();
 	const unsigned int size = height * width;
@@ -33,7 +33,7 @@ void Movie::capture(const StreamCatcher * stream, bool* running)
 	const std::chrono::nanoseconds wait_fps((int)(1000000000 / fps)); //despite error correction we have a 22% error for NO REASON
 	std::chrono::nanoseconds error(0);
 
-	VideoWriter video("out.avi",CV_FOURCC('M','J','P','G'), fps, Size(width, height),true);
+	VideoWriter video(titleM, CV_FOURCC('M','J','P','G'), fps, Size(width, height),true);
     	unsigned char out[size * 3];
 	std::chrono::high_resolution_clock::time_point start = std::chrono::high_resolution_clock::now();
 	std::chrono::high_resolution_clock::time_point finish = std::chrono::high_resolution_clock::now();
@@ -44,7 +44,7 @@ void Movie::capture(const StreamCatcher * stream, bool* running)
 	start = std::chrono::high_resolution_clock::now();
 	error += std::chrono::duration_cast<std::chrono::nanoseconds>(start - finish); //overtime error of sleep_for, affectation and high_resolution_clock::now() call
 
-    	while (*running)
+    	while (*_running)
     	{
 
 		stream->getBGR(out, size * 3);
@@ -66,9 +66,16 @@ void Movie::capture(const StreamCatcher * stream, bool* running)
 
 void Movie::stopCapture()
 {
-	if (running)
+	if (_running)
 	{
-		running = false;
+		_running = false;
+		_loop->join();
+		delete _loop;
 	}
     //printf("salut");
+}
+
+Movie::~Movie()
+{
+	this->stopCapture();
 }

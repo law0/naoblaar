@@ -193,8 +193,8 @@ void MainWindow::bothClick()
 	}
 	else		//start to save
 	{
-		breakButton(play);
-		breakButton(data);
+//		breakButton(play);
+//		breakButton(data);
 		both->setText("Stop");
 		both->clearFocus();
 		runningBoth = true;
