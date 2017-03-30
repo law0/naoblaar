@@ -247,13 +247,7 @@ int main(int argc, char **argv)
 
 	ScriptLauncher* sl = ScriptLauncher::getInstance();
 	sl->setOscillators(&oscillator, &osc2);
-	sl->chooseOscillator(0);
-	int l = sl->connect(); //default parameter should fail for the moment
-
-	if( l != 0) //launch has failed. use ! WIFEEXITED(scriptLauncher_single->getStatus()) to check if process is still running
-	{
-		printf("? %s\n", sl->getError().c_str());
-	}
+	sl->loadConfigFromFile("config.benlaw");
 
 	std::thread view_thread(launchView, argc, argv, &isClosed, global_Streamcatcher, sl, &oscillator, &osc2);
 

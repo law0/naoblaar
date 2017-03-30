@@ -114,6 +114,30 @@ nao_blaar/fast:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/build
 .PHONY : nao_blaar/fast
 
+filelinebutton.o: filelinebutton.cpp.o
+.PHONY : filelinebutton.o
+
+# target to build an object file
+filelinebutton.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/filelinebutton.cpp.o
+.PHONY : filelinebutton.cpp.o
+
+filelinebutton.i: filelinebutton.cpp.i
+.PHONY : filelinebutton.i
+
+# target to preprocess a source file
+filelinebutton.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/filelinebutton.cpp.i
+.PHONY : filelinebutton.cpp.i
+
+filelinebutton.s: filelinebutton.cpp.s
+.PHONY : filelinebutton.s
+
+# target to generate assembly for a file
+filelinebutton.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/filelinebutton.cpp.s
+.PHONY : filelinebutton.cpp.s
+
 launchView.o: launchView.cpp.o
 .PHONY : launchView.o
 
@@ -185,6 +209,30 @@ mainwindow.s: mainwindow.cpp.s
 mainwindow.cpp.s:
 	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
+
+moc_filelinebutton.o: moc_filelinebutton.cpp.o
+.PHONY : moc_filelinebutton.o
+
+# target to build an object file
+moc_filelinebutton.cpp.o:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_filelinebutton.cpp.o
+.PHONY : moc_filelinebutton.cpp.o
+
+moc_filelinebutton.i: moc_filelinebutton.cpp.i
+.PHONY : moc_filelinebutton.i
+
+# target to preprocess a source file
+moc_filelinebutton.cpp.i:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_filelinebutton.cpp.i
+.PHONY : moc_filelinebutton.cpp.i
+
+moc_filelinebutton.s: moc_filelinebutton.cpp.s
+.PHONY : moc_filelinebutton.s
+
+# target to generate assembly for a file
+moc_filelinebutton.cpp.s:
+	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_filelinebutton.cpp.s
+.PHONY : moc_filelinebutton.cpp.s
 
 moc_mainwindow.o: moc_mainwindow.cpp.o
 .PHONY : moc_mainwindow.o
@@ -579,6 +627,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... nao_blaar"
 	@echo "... rebuild_cache"
+	@echo "... filelinebutton.o"
+	@echo "... filelinebutton.i"
+	@echo "... filelinebutton.s"
 	@echo "... launchView.o"
 	@echo "... launchView.i"
 	@echo "... launchView.s"
@@ -588,6 +639,9 @@ help:
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... moc_filelinebutton.o"
+	@echo "... moc_filelinebutton.i"
+	@echo "... moc_filelinebutton.s"
 	@echo "... moc_mainwindow.o"
 	@echo "... moc_mainwindow.i"
 	@echo "... moc_mainwindow.s"

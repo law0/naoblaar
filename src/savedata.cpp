@@ -88,6 +88,13 @@ void Savedata::stopSave()
 	if (_running)
 	{
 		_running = false;
+		_loop->join();
+		delete _loop;
 	}
     //printf("salut");
+}
+
+Savedata::~Savedata()
+{
+	this->stopSave();
 }

@@ -14,6 +14,7 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	_connection_menu(new QMenu("Connection")),
 	_config_menu_action(new QAction("Configuration", this)),
 	_connect_nao_action(new QAction("Connect", this)),
+	_save_config_action(new QAction("Save configuration", this)),
 	runningData(false),
 	runningBoth(false)
 {
@@ -70,11 +71,13 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 
 	_menuBar = this->menuBar(); //create menu bar
 	_connection_menu->addAction(_config_menu_action); //add action link to configNaoConnection to connection menu
+	_connection_menu->addAction(_save_config_action);
 	_connection_menu->addAction(_connect_nao_action); //add action connection to connection Menu
 	_menuBar->addMenu(_connection_menu); //add connection menu to menu bar
 
 	connect(_config_menu_action, SIGNAL(triggered()), this, SLOT(configNaoConnection()));
 	connect(_connect_nao_action, SIGNAL(triggered()), this, SLOT(connectNao()));
+	connect(_save_config_action, SIGNAL(triggered()), this, SLOT(saveConfig()));
 	//printf("salut\n");
 	//this->getStream();
 
@@ -161,21 +164,47 @@ void MainWindow::bothClick()
 {
 	if (runningBoth)
 	{		//stop to save
-		play->blockSignals(false);
-		data->blockSignals(false);
-		both->setDefault(false);
+		clickButton(play);
+		clickButton(data);
 		both->setText("Enregistrer");
 		runningBoth = false;
 	}
 	else		//start to save
 	{
-		play->blockSignals(true);
+		breakButton(play);
+//		play->blockSignals(true);
+//		QPalette * palette = new QPalette();
+//		palette->setColor(QPalette::Button, QColor(0, 0, 0));
+//		play->setPalette(*palette);
+
+		breakButton(data);
 		data->blockSignals(true);
 		both->setText("Pause");
 		runningBoth = true;
 	}
 	dataManagement();
 	movieManagement();
+}
+
+void MainWindow::clickButton(QPushButton * button)
+{
+	button->setDefault(true);
+	button->setDefault(false);
+	button->blockSignals(false);
+}
+
+void MainWindow::breakButton(QPushButton * button)
+{
+	button->blockSignals(true);
+//	QPalette * palette = new QPalette();
+//	palette = (QPalette*) &button->palette();
+//	palette->setColor(QPalette::Button, QColor(0, 0, 0));
+//	button->setAutoFillBackground(true);
+//	button->setPalette(*palette);
+	button->setStyleSheet("background-color : gray");
+	button->clearFocus();
+//	button->update();
+
 }
 
 void MainWindow::closeExperience()
@@ -496,14 +525,29 @@ void MainWindow::configNaoConnection()
 		QLineEdit* python_line = new QLineEdit(QString::fromStdString(_sl->getPythonPath()));
 		QLineEdit* shm_line = new QLineEdit(QString::fromStdString(_sl->getSharedMemoryPath()));
 
+		QPushButton* naoqi_button = new QPushButton("Explore");
+		QPushButton* mainscript_button = new QPushButton("Explore");
+		QPushButton* python_button = new QPushButton("Explore");
+		QPushButton* shm_button = new QPushButton("Explore");
+
+		FileLineButton* naoqi_filelinebutton = new FileLineButton(naoqi_line, naoqi_button, QFileDialog::Directory);
+		FileLineButton* mainscript_filelinebutton = new FileLineButton(mainscript_line, mainscript_button);
+		FileLineButton* python_filelinebutton = new FileLineButton(python_line, python_button);
+		FileLineButton* shm_filelinebutton = new FileLineButton(shm_line, shm_button);
+
+		naoqi_filelinebutton->setFixedWidth(600);
+		mainscript_filelinebutton->setFixedWidth(600);
+		python_filelinebutton->setFixedWidth(600);
+		shm_filelinebutton->setFixedWidth(600);
+
 		formLayout->addRow("Oscillator to connect to", oscillator_line);
 		formLayout->addRow("Joint (0 to 9)", joint_line);
 		formLayout->addRow("IP", ip_line);
 		formLayout->addRow("PORT", port_line);
-		formLayout->addRow("(Advanced) path to naoqi", naoqi_line);
-		formLayout->addRow("(Advanced) path to main.py", mainscript_line);
-		formLayout->addRow("(Advanced) path to python", python_line);
-		formLayout->addRow("(Advanced) Shared memory file", shm_line);
+		formLayout->addRow("(Advanced) path to naoqi", naoqi_filelinebutton);
+		formLayout->addRow("(Advanced) path to main.py", mainscript_filelinebutton);
+		formLayout->addRow("(Advanced) path to python", python_filelinebutton);
+		formLayout->addRow("(Advanced) Shared memory file", shm_filelinebutton);
 
 		page->setLayout(formLayout);
 
@@ -531,4 +575,9 @@ void MainWindow::configNaoConnection()
 			_sl->setSharedMemoryPath(shm_line->text().toUtf8().constData());
 		}
 	}
+}
+
+void MainWindow::saveConfig()
+{
+	_sl->saveConfigToFile("config.benlaw");
 }

@@ -13,6 +13,7 @@
 #include <mutex>
 
 #include "scriptlauncher.h"
+#include "filelinebutton.h"
 #include "slideritem.h"
 #include "plotitem.h"
 #include "oscillator.h"
@@ -52,6 +53,9 @@ class MainWindow : public QMainWindow
 		void dataClick();
 		void bothClick();
 		void movieClick();
+		//void dataManagement();
+		void saveConfig();
+
 		//void connectToNao();
 
 	private:
@@ -59,6 +63,8 @@ class MainWindow : public QMainWindow
 		void disconnectToNao();
 		void dataManagement();
 		void movieManagement();
+		void clickButton(QPushButton * button);
+		void breakButton(QPushButton * button);
 
 		bool* _isClosed;
 	   	Ui::MainWindow *ui;
@@ -77,6 +83,7 @@ class MainWindow : public QMainWindow
 		QMenu* _connection_menu;
 		QAction* _config_menu_action;
 		QAction* _connect_nao_action;
+		QAction* _save_config_action;
 
 		QMenuBar* _menuBar;
 
