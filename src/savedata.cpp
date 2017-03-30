@@ -11,6 +11,7 @@ Savedata::Savedata(const Oscillator* osc1, const Oscillator* osc2) :
 
 void Savedata::startSave(string place, string title)
 {
+	place.append("/");
 	if (!_running)
 	{
 		_running = true;

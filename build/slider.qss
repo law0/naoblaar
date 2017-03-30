@@ -75,3 +75,8 @@ QMainWindow {
 QMainWindow::title {
     background: #ebf8fd
 }
+
+QToolBar {
+    background-color: #ebf8fd
+    border: none
+}

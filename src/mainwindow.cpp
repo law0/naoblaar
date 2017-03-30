@@ -20,50 +20,76 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 {
 //	setFixedSize(1300, 620);
 
-	//image camera
-	QFrame *webcam = new QFrame(this);
-	webcam -> setGeometry(0, 0, 640, 480);
 
-	//image mouvement
-	QLabel *move = new QLabel(this);
-	move -> setGeometry(0, 650, 640, 480);
-	//QPixmap *picture = new QPixmap("BOB1.jpg");
+	QGroupBox *groupSingle = new QGroupBox("One at a time", this);
+//	groupSingle -> setGeometry(530, 470, 120, 95);
+	play = new QPushButton("Record Video", this);
+//	play -> setGeometry(540, 505, 100, 30);
+	data = new QPushButton("Record Data", this);
+//	data -> setGeometry(540, 540, 100, 30);
 
-	move -> setPixmap(QPixmap("BOB1.jpg"));
-	move -> show();
-	update();
 
-    //
+	QToolBar* downToolBar = new QToolBar(this);
+	downToolBar->setAllowedAreas(Qt::BottomToolBarArea);
 
-	QGroupBox *groupSingle = new QGroupBox("Seul", this);
-	groupSingle -> setGeometry(530, 470, 120, 95);
 
-	play = new QPushButton("Enregistrer", this);
-	play -> setGeometry(540, 505, 100, 30);
+	QVBoxLayout *vbox_for_data_play = new QVBoxLayout;
+	vbox_for_data_play->addWidget(groupSingle);
+	vbox_for_data_play->addWidget(play);
+	vbox_for_data_play->addWidget(data);
+//	vbox_for_data_play->addStretch(1);
 
-	//QPushButton *pause = new QPushButton("stop", this);
-	//pause -> setGeometry(345, 505, 80, 30);
+	QWidget *inter_data_play = new QWidget;//(downToolBar);
+	inter_data_play->setLayout(vbox_for_data_play);
 
-	data = new QPushButton("Data", this);
-	data -> setGeometry(540, 540, 100, 30);
+	//downToolBar->addWidget(inter_data_play);
 
-	QGroupBox *groupTogether = new QGroupBox("Ensemble", this);
-	groupTogether -> setGeometry(660, 470, 120, 95);
+	QGroupBox *groupTogether = new QGroupBox("Both", this);
+//	groupTogether -> setGeometry(660, 470, 120, 95);
+	both = new QPushButton("Record data and video", this);
+//	both -> setGeometry(670, 500, 100, 30);
 
-	both = new QPushButton("Enregistrer", this);
-	both -> setGeometry(670, 500, 100, 30);
+	QVBoxLayout *vbox_both = new QVBoxLayout;
+	vbox_both->addWidget(groupTogether);
+	vbox_both->addWidget(both);
+//	vbox_both->addStretch(1);
 
-	QLabel *labelRepository = new QLabel("Emplacement :", this);
-	labelRepository -> setGeometry(10, 485, 100, 30);
+	QWidget *inter_both = new QWidget;//(downToolBar);
+	inter_both->setLayout(vbox_both);
 
-	_repository = new QLineEdit(this);
-	_repository -> setGeometry(110, 485, 300, 30);
+	QFormLayout* form_rec = new QFormLayout;
+//	QLabel *labelRepository = new QLabel("Emplacement :", this);
+//	labelRepository -> setGeometry(10, 485, 100, 30);
+	QLineEdit* repository_line = new QLineEdit(this);
+	QPushButton* repository_button = new QPushButton("Explore", this);
+	_repository = new FileLineButton(repository_line, repository_button, QFileDialog::Directory);
+//	_repository -> setGeometry(110, 485, 300, 30);
 
-	QLabel *labelTitle = new QLabel("Titre :", this);
-	labelTitle -> setGeometry(10, 520, 100, 30);
+//	QLabel *labelTitle = new QLabel("Titre :", this);
+//	labelTitle -> setGeometry(10, 520, 100, 30);
 
 	_title = new QLineEdit(this);
-	_title -> setGeometry(110, 520, 200, 30);
+//	_title -> setGeometry(110, 520, 200, 30);
+
+	form_rec->addRow("Path :", _repository);
+	form_rec->addRow("Title :", _title);
+
+	QWidget *inter_file = new QWidget;//(downToolBar);
+	inter_file->setLayout(form_rec);
+
+	QHBoxLayout* hbox = new QHBoxLayout;
+	hbox->addWidget(inter_file);
+	hbox->addSpacing(50);
+	hbox->addWidget(inter_data_play);
+	hbox->addSpacing(10);
+	hbox->addWidget(inter_both);
+	hbox->addSpacing(500);
+
+	QWidget* last_inter = new QWidget(downToolBar);
+	last_inter->setLayout(hbox);
+	downToolBar->addWidget(last_inter);
+	this->addToolBar(Qt::BottomToolBarArea, downToolBar);
+
 
 	connect(play, SIGNAL(pressed()), this, SLOT(movieClick()));
 	connect(data, SIGNAL(pressed()), this, SLOT(dataClick()));
@@ -119,7 +145,8 @@ void MainWindow::dataManagement()
 	else
 	{
 		string place;
-		if (!_repository->text().isEmpty())
+//		std::cout <<  _repository->text().toStdString() << std::endl;
+		if (_repository->text().isEmpty())
 		{
 			place = "";
 		}
@@ -138,13 +165,13 @@ void MainWindow::dataClick()
 	{		//stop to save
 		//data->setDefault(true);
 		clickButton(both);
-		data->setText("Enregistrer");
+		data->setText("Record data");
 		data->clearFocus();
 	}
 	else		//start to save
 	{
 		breakButton(both);
-		data->setText("Pause");
+		data->setText("Stop");
 		data->clearFocus();
 	}
 	dataManagement();
@@ -155,13 +182,13 @@ void MainWindow::movieClick()
 	if (runningVideo)
 	{		//stop to save
 		clickButton(both);
-		play->setText("Enregistrer");
+		play->setText("Record video");
 		play->clearFocus();
 	}
 	else		//start to save
 	{
 		breakButton(both);
-		play->setText("Pause");
+		play->setText("Stop");
 		play->clearFocus();
 	}
 	movieManagement();
@@ -173,7 +200,7 @@ void MainWindow::bothClick()
 	{		//stop to save
 		clickButton(play);
 		clickButton(data);
-		both->setText("Enregistrer");
+		both->setText("Record data and video");
 		both->clearFocus();
 		runningBoth = false;
 	}
@@ -181,7 +208,7 @@ void MainWindow::bothClick()
 	{
 		breakButton(play);
 		breakButton(data);
-		both->setText("Pause");
+		both->setText("Stop data and video recording");
 		both->clearFocus();
 		runningBoth = true;
 	}
