@@ -75,3 +75,16 @@ QMainWindow {
 QMainWindow::title {
     background: #ebf8fd
 }
+
+
+QPushButton#disabled{
+	background-color : with;
+	border-radius : 5px
+}
+
+QPushButton#break{
+	background-color : gray;
+	border-radius : 5px
+}
+
+
