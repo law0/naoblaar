@@ -39,19 +39,19 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	groupSingle -> setGeometry(530, 470, 120, 95);
 
 	play = new QPushButton("Enregistrer", this);
-	play -> setGeometry(540, 485, 100, 30);
+	play -> setGeometry(540, 505, 100, 30);
 
 	//QPushButton *pause = new QPushButton("stop", this);
 	//pause -> setGeometry(345, 505, 80, 30);
 
 	data = new QPushButton("Data", this);
-	data -> setGeometry(540, 520, 100, 30);
+	data -> setGeometry(540, 540, 100, 30);
 
 	QGroupBox *groupTogether = new QGroupBox("Ensemble", this);
 	groupTogether -> setGeometry(660, 470, 120, 95);
 
 	both = new QPushButton("Enregistrer", this);
-	both -> setGeometry(670, 480, 100, 30);
+	both -> setGeometry(670, 500, 100, 30);
 
 	QLabel *labelRepository = new QLabel("Emplacement :", this);
 	labelRepository -> setGeometry(10, 485, 100, 30);
@@ -61,7 +61,7 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 
 	QLabel *labelTitle = new QLabel("Titre :", this);
 	labelTitle -> setGeometry(10, 520, 100, 30);
-	
+
 	_title = new QLineEdit(this);
 	_title -> setGeometry(110, 520, 200, 30);
 
