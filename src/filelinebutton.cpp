@@ -28,6 +28,11 @@ void FileLineButton::updateLine()
 
 QString FileLineButton::text()
 {
-	return _line->text();
+	QString ret = _line->text();
+	if(_filemode == QFileDialog::Directory && !ret.endsWith("/"))
+	{
+		ret.append("/");
+	}
+	return ret;
 }
 
