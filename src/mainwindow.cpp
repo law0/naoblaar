@@ -15,6 +15,7 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	_config_menu_action(new QAction("Configuration", this)),
 	_connect_nao_action(new QAction("Connect", this)),
 	_save_config_action(new QAction("Save configuration", this)),
+	_sensi_spin(NULL),
 	runningData(false),
 	runningBoth(false)
 {
@@ -109,6 +110,7 @@ MainWindow::MainWindow(bool* isClosed, QWidget *parent) :
 	clickButton(play);
 	clickButton(both);
 
+
 }
 
 void MainWindow::movieManagement(string name)
@@ -200,7 +202,7 @@ void MainWindow::bothClick()
 		runningBoth = true;
 		string name = getName(true);
 		dataManagement(name);
-		string nameM = getName(false);		
+		string nameM = getName(false);
 		movieManagement(nameM);
 	}
 
@@ -647,4 +649,30 @@ void MainWindow::configNaoConnection()
 void MainWindow::saveConfig()
 {
 	_sl->saveConfigToFile("config.benlaw");
+}
+
+void MainWindow::setSensibilityPtr(float* sensibility)
+{
+	_sensibility = sensibility;
+	if(_sensi_spin == NULL)
+	{
+		_sensi_spin = new QDoubleSpinBox(this);
+		_sensi_spin->setGeometry(660, 300, 120, 25);
+		QLabel* label = new QLabel("Optical flow sensibility", this);
+		label->setGeometry(660, 280, 300, 25);
+	}
+	_sensi_spin->setMinimum(0.000001);
+	_sensi_spin->setMaximum(0.000050);
+	_sensi_spin->setDecimals(8);
+	_sensi_spin->setSingleStep(0.0000001);
+	_sensi_spin->setValue((double)(*_sensibility));
+	connect(_sensi_spin, SIGNAL(valueChanged(double)), this, SLOT(sensiChanged(double)));
+}
+
+void MainWindow::sensiChanged(double value)
+{
+	std::mutex mtx;
+	mtx.lock();
+	*_sensibility = (float)(value);
+	mtx.unlock();
 }

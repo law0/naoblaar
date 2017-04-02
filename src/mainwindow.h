@@ -46,6 +46,8 @@ class MainWindow : public QMainWindow
 		void chooseSharedMemoryPath(QString path);
 		~MainWindow();
 
+		void setSensibilityPtr(float* sensibility);
+
 	private slots :
 		void closeExperience();
 		void configNaoConnection();
@@ -56,6 +58,8 @@ class MainWindow : public QMainWindow
 		void movieClick();
 		//void dataManagement();
 		void saveConfig();
+
+		void sensiChanged(double value);
 
 		//void connectToNao();
 
@@ -89,6 +93,8 @@ class MainWindow : public QMainWindow
 
 		QMenuBar* _menuBar;
 
+		float* _sensibility;
+		QDoubleSpinBox* _sensi_spin;
 		bool runningData;
 		bool runningBoth;
 //		Oscillator* _oscH;

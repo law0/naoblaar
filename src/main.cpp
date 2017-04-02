@@ -58,7 +58,7 @@ int nextImage(unsigned char* img)
 
 
 //float_pair optical_flow(unsigned int* out, int (*getNextImage)(unsigned char*))
-void optical_flow(int width, int height, Oscillator& oscillator1, Oscillator& oscillator2, int (*getNextImage)(unsigned char*) = nextImage)
+void optical_flow(int width, int height, Oscillator& oscillator1, Oscillator& oscillator2, float* sensibility, int (*getNextImage)(unsigned char*) = nextImage)
 {
 
 	int p;
@@ -190,10 +190,12 @@ void optical_flow(int width, int height, Oscillator& oscillator1, Oscillator& os
 		auto finish = std::chrono::high_resolution_clock::now();
 
 		float h = fp.x;
-		h *= 0.000001f;
+		//h *= 0.000001f;
+		h *= *sensibility;
 
 		float v = fp.y;
-		v *= 0.000001f;
+		//v *= 0.000001f;
+		v *= *sensibility;
 		if(std::chrono::duration_cast<std::chrono::nanoseconds>(finish - start).count() > 30000000)
 		{
 			//printf("            \r");
@@ -234,6 +236,9 @@ void optical_flow(int width, int height, Oscillator& oscillator1, Oscillator& os
 
 int main(int argc, char **argv)
 {
+
+	float sensibility = 0.000001f;
+
 	isClosed = false;
 
 	StreamCatcher * global_Streamcatcher; //Singleton
@@ -263,7 +268,7 @@ int main(int argc, char **argv)
 		;//printf("sc not instantiated\n");
 	}
 
-	std::thread view_thread(launchView, argc, argv, &isClosed, sl, &oscillator, &osc2);
+	std::thread view_thread(launchView, argc, argv, &isClosed, sl, &oscillator, &osc2, &sensibility);
 
 	while( ! StreamCatcher::isInstantiated()) //in case thread instanciate StreamCatcher (which depend on an input from user) we have to wait
 	{
@@ -278,7 +283,7 @@ int main(int argc, char **argv)
 
 	printf("w: %d, h: %d\n", width, height);
 
-	optical_flow(width, height, oscillator, osc2);
+	optical_flow(width, height, oscillator, osc2, &sensibility);
 
 	//view_thread.join();
 
