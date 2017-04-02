@@ -1,0 +1,27 @@
+Plan
+
+Intro
+	Context 
+	Présentation de l'ETIS
+	Présentation des derniers projets
+		(INDÉPENDANCE pROMETHÉE)
+		(gestion intuitive du robot)
+		(...)
+Fonctionnement de l'app
+	Cahier des charges
+	Diagramme cas d'utilisation  \\DONE
+	Diagramme d'exigence
+	Diagramme de classe			\\NOT TO DO
+	Diagramme de bloc
+ 	Diagramme d'activité		\\TO DO
+	Diagramme de séquence
+	Diagramme d'état transition
+Implémentation et outil
+	NAO
+	Capture d'image
+	Flux optique
+	Oscillateur
+	Transimition
+	Librairie
+Conclusion
+Remerciement
