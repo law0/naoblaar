@@ -121,19 +121,19 @@ void optical_flow(int width, int height, Oscillator& oscillator1, Oscillator& os
 			plargeur = p <= wh_1 - largeur ? p + largeur : p;
 			p1largeur = p <= wh_1 - largeur - 1 ? p + largeur + 1 : p;
 
-			pt_c = (float)(It1[p]);
-			pt_d = (float)(It1[p1]);
-			pt_b = (float)(It1[plargeur]);
-			pt_bd = (float)(It1[p1largeur]);
+			pt_c = (float)(It1[p]); //centre
+			pt_d = (float)(It1[p1]); //droite
+			pt_b = (float)(It1[plargeur]); //bas
+			pt_bd = (float)(It1[p1largeur]); //bas droite
 
 
-			pt1_c = (float)(It2[p]);
-			pt1_d = (float)(It2[p1]);
-			pt1_b = (float)(It2[plargeur]);
-			pt1_bd = (float)(It2[p1largeur]);
+			pt1_c = (float)(It2[p]); //image 2 centre...
+			pt1_d = (float)(It2[p1]); //droite
+			pt1_b = (float)(It2[plargeur]); //bas
+			pt1_bd = (float)(It2[p1largeur]); //bas droite
 
 
-			//dérivées
+			//dérivées variation par rapport au point adjacent
 
 			Iy[p] = ((pt_bd + pt_b - pt_c - pt_d) + (pt1_bd + pt1_b - pt1_c - pt1_d)) * div_coeff;
 
