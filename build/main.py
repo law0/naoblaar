@@ -23,16 +23,16 @@ class NaoCaller:
 
         "RShoulderRoll" : [-2, -0.3],
         "LShoulderRoll" : [0, 1],
-        "RShoulderPitch": [-1, 2],
-        "LShoulderPitch": [-1, 2],
+        "RShoulderPitch": [-.2, 0.4],
+        "LShoulderPitch": [-.2, 0.4],
 
         "RElbowRoll" : [0, 2],
         "LElbowRoll" : [-2, 0],
         "RElbowYaw" : [-2.5, 0.4],
         "LElbowYaw" : [-2.5, -0.4],
 
-        "RWristYaw" : [-1.8, 1.8],
-        "LWristYaw" : [-1.8, 1.8],
+        "RWristYaw" : [-1., 1.],
+        "LWristYaw" : [-1., 1.],
 
         #"RHand" : [0, 1],
         #"LHand" : [0, 1],
@@ -87,12 +87,12 @@ class NaoCaller:
         return name in self.MOTORS and self.MOTORS[name][0] <= val <= self.MOTORS[name][1]
 
     def _unnormalize_pos(self, name, raw_pos):
-        # Raw pos between 0 and 1
+        # Raw pos between -1 and 1
 
         pos_min = self.MOTORS[name][0]
         pos_max = self.MOTORS[name][1]
 
-        return raw_pos * (pos_max - pos_min) + pos_min
+        return ((raw_pos / 2.) + .5) * (pos_max - pos_min) + pos_min
 
     def _init_position(self):
         #self.services['motion'].wakeUp()
@@ -122,7 +122,7 @@ class NaoCaller:
 
     def listen_shared_memory(self):
 
-        speed = 0.3
+        speed = 0.1
         print "Listening shared memory..."
         while True:
             try:
@@ -130,7 +130,7 @@ class NaoCaller:
                 for i in xrange(0, 10):
                     #time.sleep(2)
                     if float(data[i]) != 0 :
-	                    self.move(self.MOTORS_ORDER[i], float(data[i]), speed, True)
+	                    self.move(self.MOTORS_ORDER[i], float(data[i]), speed)
                     #print self.MOTORS_ORDER[i]
                     #print float(data[i])
             except IOError:
@@ -145,8 +145,8 @@ class NaoCaller:
             real_position = position
         if self._check_motor(name, real_position):
             self.services['motion'].setAngles(name, real_position, speed)
-#        else:
- #           print "Invalid move " + name + ": " + str(real_position)
+        else:
+           print "Invalid move " + name + ": " + str(real_position)
 
 if __name__ == '__main__':
     app = qi.Application(sys.argv)
