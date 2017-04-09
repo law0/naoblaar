@@ -1,14 +1,13 @@
 cmake_minimum_required(VERSION 2.8.11)
-project(nao_blaar)
+project(nao_app)
 
-find_package(blc_image REQUIRED)
 find_package(OpenCV REQUIRED)
 find_package(Qt5Widgets)
 find_package(Qt5Core)
 
-add_definitions(-Wall ${BL_DEFINITIONS})
+add_definitions(-Wall)
 
-include_directories(${BL_INCLUDE_DIRS} ${CMAKE_SOURCE_DIR})
+include_directories(${CMAKE_SOURCE_DIR})
 
 add_executable(
 	${PROJECT_NAME} 
@@ -35,7 +34,7 @@ add_executable(
 	savedata.cpp
 	)
 
-target_link_libraries(${PROJECT_NAME} ${BL_LIBRARIES} z -lsfml-system -lsfml-graphics -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_stitching Qt5::Widgets)
+target_link_libraries(${PROJECT_NAME} z -lpthread -lsfml-system -lsfml-graphics -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_ml -lopencv_video -lopencv_features2d -lopencv_calib3d -lopencv_objdetect -lopencv_contrib -lopencv_legacy -lopencv_stitching Qt5::Widgets)
 
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -g -O2 -fno-inline -std=c++11")
 

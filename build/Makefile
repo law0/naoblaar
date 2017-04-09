@@ -103,24 +103,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named nao_blaar
+# Target rules for targets named nao_app
 
 # Build rule for target.
-nao_blaar: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 nao_blaar
-.PHONY : nao_blaar
+nao_app: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 nao_app
+.PHONY : nao_app
 
 # fast build rule for target.
-nao_blaar/fast:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/build
-.PHONY : nao_blaar/fast
+nao_app/fast:
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/build
+.PHONY : nao_app/fast
 
 filelinebutton.o: filelinebutton.cpp.o
 .PHONY : filelinebutton.o
 
 # target to build an object file
 filelinebutton.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/filelinebutton.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/filelinebutton.cpp.o
 .PHONY : filelinebutton.cpp.o
 
 filelinebutton.i: filelinebutton.cpp.i
@@ -128,7 +128,7 @@ filelinebutton.i: filelinebutton.cpp.i
 
 # target to preprocess a source file
 filelinebutton.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/filelinebutton.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/filelinebutton.cpp.i
 .PHONY : filelinebutton.cpp.i
 
 filelinebutton.s: filelinebutton.cpp.s
@@ -136,7 +136,7 @@ filelinebutton.s: filelinebutton.cpp.s
 
 # target to generate assembly for a file
 filelinebutton.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/filelinebutton.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/filelinebutton.cpp.s
 .PHONY : filelinebutton.cpp.s
 
 launchView.o: launchView.cpp.o
@@ -144,7 +144,7 @@ launchView.o: launchView.cpp.o
 
 # target to build an object file
 launchView.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/launchView.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/launchView.cpp.o
 .PHONY : launchView.cpp.o
 
 launchView.i: launchView.cpp.i
@@ -152,7 +152,7 @@ launchView.i: launchView.cpp.i
 
 # target to preprocess a source file
 launchView.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/launchView.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/launchView.cpp.i
 .PHONY : launchView.cpp.i
 
 launchView.s: launchView.cpp.s
@@ -160,7 +160,7 @@ launchView.s: launchView.cpp.s
 
 # target to generate assembly for a file
 launchView.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/launchView.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/launchView.cpp.s
 .PHONY : launchView.cpp.s
 
 main.o: main.cpp.o
@@ -168,7 +168,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -176,7 +176,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -184,7 +184,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 mainwindow.o: mainwindow.cpp.o
@@ -192,7 +192,7 @@ mainwindow.o: mainwindow.cpp.o
 
 # target to build an object file
 mainwindow.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/mainwindow.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/mainwindow.cpp.o
 .PHONY : mainwindow.cpp.o
 
 mainwindow.i: mainwindow.cpp.i
@@ -200,7 +200,7 @@ mainwindow.i: mainwindow.cpp.i
 
 # target to preprocess a source file
 mainwindow.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/mainwindow.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/mainwindow.cpp.i
 .PHONY : mainwindow.cpp.i
 
 mainwindow.s: mainwindow.cpp.s
@@ -208,7 +208,7 @@ mainwindow.s: mainwindow.cpp.s
 
 # target to generate assembly for a file
 mainwindow.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/mainwindow.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
 moc_filelinebutton.o: moc_filelinebutton.cpp.o
@@ -216,7 +216,7 @@ moc_filelinebutton.o: moc_filelinebutton.cpp.o
 
 # target to build an object file
 moc_filelinebutton.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_filelinebutton.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_filelinebutton.cpp.o
 .PHONY : moc_filelinebutton.cpp.o
 
 moc_filelinebutton.i: moc_filelinebutton.cpp.i
@@ -224,7 +224,7 @@ moc_filelinebutton.i: moc_filelinebutton.cpp.i
 
 # target to preprocess a source file
 moc_filelinebutton.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_filelinebutton.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_filelinebutton.cpp.i
 .PHONY : moc_filelinebutton.cpp.i
 
 moc_filelinebutton.s: moc_filelinebutton.cpp.s
@@ -232,7 +232,7 @@ moc_filelinebutton.s: moc_filelinebutton.cpp.s
 
 # target to generate assembly for a file
 moc_filelinebutton.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_filelinebutton.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_filelinebutton.cpp.s
 .PHONY : moc_filelinebutton.cpp.s
 
 moc_mainwindow.o: moc_mainwindow.cpp.o
@@ -240,7 +240,7 @@ moc_mainwindow.o: moc_mainwindow.cpp.o
 
 # target to build an object file
 moc_mainwindow.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_mainwindow.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_mainwindow.cpp.o
 .PHONY : moc_mainwindow.cpp.o
 
 moc_mainwindow.i: moc_mainwindow.cpp.i
@@ -248,7 +248,7 @@ moc_mainwindow.i: moc_mainwindow.cpp.i
 
 # target to preprocess a source file
 moc_mainwindow.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_mainwindow.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_mainwindow.cpp.i
 .PHONY : moc_mainwindow.cpp.i
 
 moc_mainwindow.s: moc_mainwindow.cpp.s
@@ -256,7 +256,7 @@ moc_mainwindow.s: moc_mainwindow.cpp.s
 
 # target to generate assembly for a file
 moc_mainwindow.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_mainwindow.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_mainwindow.cpp.s
 .PHONY : moc_mainwindow.cpp.s
 
 moc_plotitem.o: moc_plotitem.cpp.o
@@ -264,7 +264,7 @@ moc_plotitem.o: moc_plotitem.cpp.o
 
 # target to build an object file
 moc_plotitem.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_plotitem.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_plotitem.cpp.o
 .PHONY : moc_plotitem.cpp.o
 
 moc_plotitem.i: moc_plotitem.cpp.i
@@ -272,7 +272,7 @@ moc_plotitem.i: moc_plotitem.cpp.i
 
 # target to preprocess a source file
 moc_plotitem.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_plotitem.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_plotitem.cpp.i
 .PHONY : moc_plotitem.cpp.i
 
 moc_plotitem.s: moc_plotitem.cpp.s
@@ -280,7 +280,7 @@ moc_plotitem.s: moc_plotitem.cpp.s
 
 # target to generate assembly for a file
 moc_plotitem.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_plotitem.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_plotitem.cpp.s
 .PHONY : moc_plotitem.cpp.s
 
 moc_qcustomplot.o: moc_qcustomplot.cpp.o
@@ -288,7 +288,7 @@ moc_qcustomplot.o: moc_qcustomplot.cpp.o
 
 # target to build an object file
 moc_qcustomplot.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_qcustomplot.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_qcustomplot.cpp.o
 .PHONY : moc_qcustomplot.cpp.o
 
 moc_qcustomplot.i: moc_qcustomplot.cpp.i
@@ -296,7 +296,7 @@ moc_qcustomplot.i: moc_qcustomplot.cpp.i
 
 # target to preprocess a source file
 moc_qcustomplot.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_qcustomplot.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_qcustomplot.cpp.i
 .PHONY : moc_qcustomplot.cpp.i
 
 moc_qcustomplot.s: moc_qcustomplot.cpp.s
@@ -304,7 +304,7 @@ moc_qcustomplot.s: moc_qcustomplot.cpp.s
 
 # target to generate assembly for a file
 moc_qcustomplot.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_qcustomplot.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_qcustomplot.cpp.s
 .PHONY : moc_qcustomplot.cpp.s
 
 moc_slideritem.o: moc_slideritem.cpp.o
@@ -312,7 +312,7 @@ moc_slideritem.o: moc_slideritem.cpp.o
 
 # target to build an object file
 moc_slideritem.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_slideritem.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_slideritem.cpp.o
 .PHONY : moc_slideritem.cpp.o
 
 moc_slideritem.i: moc_slideritem.cpp.i
@@ -320,7 +320,7 @@ moc_slideritem.i: moc_slideritem.cpp.i
 
 # target to preprocess a source file
 moc_slideritem.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_slideritem.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_slideritem.cpp.i
 .PHONY : moc_slideritem.cpp.i
 
 moc_slideritem.s: moc_slideritem.cpp.s
@@ -328,7 +328,7 @@ moc_slideritem.s: moc_slideritem.cpp.s
 
 # target to generate assembly for a file
 moc_slideritem.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_slideritem.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_slideritem.cpp.s
 .PHONY : moc_slideritem.cpp.s
 
 moc_videoitem.o: moc_videoitem.cpp.o
@@ -336,7 +336,7 @@ moc_videoitem.o: moc_videoitem.cpp.o
 
 # target to build an object file
 moc_videoitem.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_videoitem.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_videoitem.cpp.o
 .PHONY : moc_videoitem.cpp.o
 
 moc_videoitem.i: moc_videoitem.cpp.i
@@ -344,7 +344,7 @@ moc_videoitem.i: moc_videoitem.cpp.i
 
 # target to preprocess a source file
 moc_videoitem.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_videoitem.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_videoitem.cpp.i
 .PHONY : moc_videoitem.cpp.i
 
 moc_videoitem.s: moc_videoitem.cpp.s
@@ -352,7 +352,7 @@ moc_videoitem.s: moc_videoitem.cpp.s
 
 # target to generate assembly for a file
 moc_videoitem.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/moc_videoitem.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/moc_videoitem.cpp.s
 .PHONY : moc_videoitem.cpp.s
 
 movie.o: movie.cpp.o
@@ -360,7 +360,7 @@ movie.o: movie.cpp.o
 
 # target to build an object file
 movie.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/movie.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/movie.cpp.o
 .PHONY : movie.cpp.o
 
 movie.i: movie.cpp.i
@@ -368,7 +368,7 @@ movie.i: movie.cpp.i
 
 # target to preprocess a source file
 movie.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/movie.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/movie.cpp.i
 .PHONY : movie.cpp.i
 
 movie.s: movie.cpp.s
@@ -376,7 +376,7 @@ movie.s: movie.cpp.s
 
 # target to generate assembly for a file
 movie.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/movie.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/movie.cpp.s
 .PHONY : movie.cpp.s
 
 oscillator.o: oscillator.cpp.o
@@ -384,7 +384,7 @@ oscillator.o: oscillator.cpp.o
 
 # target to build an object file
 oscillator.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/oscillator.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/oscillator.cpp.o
 .PHONY : oscillator.cpp.o
 
 oscillator.i: oscillator.cpp.i
@@ -392,7 +392,7 @@ oscillator.i: oscillator.cpp.i
 
 # target to preprocess a source file
 oscillator.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/oscillator.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/oscillator.cpp.i
 .PHONY : oscillator.cpp.i
 
 oscillator.s: oscillator.cpp.s
@@ -400,7 +400,7 @@ oscillator.s: oscillator.cpp.s
 
 # target to generate assembly for a file
 oscillator.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/oscillator.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/oscillator.cpp.s
 .PHONY : oscillator.cpp.s
 
 plotitem.o: plotitem.cpp.o
@@ -408,7 +408,7 @@ plotitem.o: plotitem.cpp.o
 
 # target to build an object file
 plotitem.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/plotitem.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/plotitem.cpp.o
 .PHONY : plotitem.cpp.o
 
 plotitem.i: plotitem.cpp.i
@@ -416,7 +416,7 @@ plotitem.i: plotitem.cpp.i
 
 # target to preprocess a source file
 plotitem.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/plotitem.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/plotitem.cpp.i
 .PHONY : plotitem.cpp.i
 
 plotitem.s: plotitem.cpp.s
@@ -424,7 +424,7 @@ plotitem.s: plotitem.cpp.s
 
 # target to generate assembly for a file
 plotitem.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/plotitem.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/plotitem.cpp.s
 .PHONY : plotitem.cpp.s
 
 qcustomplot.o: qcustomplot.cpp.o
@@ -432,7 +432,7 @@ qcustomplot.o: qcustomplot.cpp.o
 
 # target to build an object file
 qcustomplot.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/qcustomplot.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/qcustomplot.cpp.o
 .PHONY : qcustomplot.cpp.o
 
 qcustomplot.i: qcustomplot.cpp.i
@@ -440,7 +440,7 @@ qcustomplot.i: qcustomplot.cpp.i
 
 # target to preprocess a source file
 qcustomplot.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/qcustomplot.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/qcustomplot.cpp.i
 .PHONY : qcustomplot.cpp.i
 
 qcustomplot.s: qcustomplot.cpp.s
@@ -448,7 +448,7 @@ qcustomplot.s: qcustomplot.cpp.s
 
 # target to generate assembly for a file
 qcustomplot.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/qcustomplot.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/qcustomplot.cpp.s
 .PHONY : qcustomplot.cpp.s
 
 savedata.o: savedata.cpp.o
@@ -456,7 +456,7 @@ savedata.o: savedata.cpp.o
 
 # target to build an object file
 savedata.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/savedata.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/savedata.cpp.o
 .PHONY : savedata.cpp.o
 
 savedata.i: savedata.cpp.i
@@ -464,7 +464,7 @@ savedata.i: savedata.cpp.i
 
 # target to preprocess a source file
 savedata.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/savedata.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/savedata.cpp.i
 .PHONY : savedata.cpp.i
 
 savedata.s: savedata.cpp.s
@@ -472,7 +472,7 @@ savedata.s: savedata.cpp.s
 
 # target to generate assembly for a file
 savedata.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/savedata.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/savedata.cpp.s
 .PHONY : savedata.cpp.s
 
 scriptlauncher.o: scriptlauncher.cpp.o
@@ -480,7 +480,7 @@ scriptlauncher.o: scriptlauncher.cpp.o
 
 # target to build an object file
 scriptlauncher.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/scriptlauncher.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/scriptlauncher.cpp.o
 .PHONY : scriptlauncher.cpp.o
 
 scriptlauncher.i: scriptlauncher.cpp.i
@@ -488,7 +488,7 @@ scriptlauncher.i: scriptlauncher.cpp.i
 
 # target to preprocess a source file
 scriptlauncher.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/scriptlauncher.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/scriptlauncher.cpp.i
 .PHONY : scriptlauncher.cpp.i
 
 scriptlauncher.s: scriptlauncher.cpp.s
@@ -496,7 +496,7 @@ scriptlauncher.s: scriptlauncher.cpp.s
 
 # target to generate assembly for a file
 scriptlauncher.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/scriptlauncher.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/scriptlauncher.cpp.s
 .PHONY : scriptlauncher.cpp.s
 
 sharedmemory.o: sharedmemory.cpp.o
@@ -504,7 +504,7 @@ sharedmemory.o: sharedmemory.cpp.o
 
 # target to build an object file
 sharedmemory.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/sharedmemory.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/sharedmemory.cpp.o
 .PHONY : sharedmemory.cpp.o
 
 sharedmemory.i: sharedmemory.cpp.i
@@ -512,7 +512,7 @@ sharedmemory.i: sharedmemory.cpp.i
 
 # target to preprocess a source file
 sharedmemory.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/sharedmemory.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/sharedmemory.cpp.i
 .PHONY : sharedmemory.cpp.i
 
 sharedmemory.s: sharedmemory.cpp.s
@@ -520,7 +520,7 @@ sharedmemory.s: sharedmemory.cpp.s
 
 # target to generate assembly for a file
 sharedmemory.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/sharedmemory.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/sharedmemory.cpp.s
 .PHONY : sharedmemory.cpp.s
 
 slideritem.o: slideritem.cpp.o
@@ -528,7 +528,7 @@ slideritem.o: slideritem.cpp.o
 
 # target to build an object file
 slideritem.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/slideritem.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/slideritem.cpp.o
 .PHONY : slideritem.cpp.o
 
 slideritem.i: slideritem.cpp.i
@@ -536,7 +536,7 @@ slideritem.i: slideritem.cpp.i
 
 # target to preprocess a source file
 slideritem.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/slideritem.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/slideritem.cpp.i
 .PHONY : slideritem.cpp.i
 
 slideritem.s: slideritem.cpp.s
@@ -544,7 +544,7 @@ slideritem.s: slideritem.cpp.s
 
 # target to generate assembly for a file
 slideritem.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/slideritem.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/slideritem.cpp.s
 .PHONY : slideritem.cpp.s
 
 streamcatcher.o: streamcatcher.cpp.o
@@ -552,7 +552,7 @@ streamcatcher.o: streamcatcher.cpp.o
 
 # target to build an object file
 streamcatcher.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/streamcatcher.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/streamcatcher.cpp.o
 .PHONY : streamcatcher.cpp.o
 
 streamcatcher.i: streamcatcher.cpp.i
@@ -560,7 +560,7 @@ streamcatcher.i: streamcatcher.cpp.i
 
 # target to preprocess a source file
 streamcatcher.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/streamcatcher.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/streamcatcher.cpp.i
 .PHONY : streamcatcher.cpp.i
 
 streamcatcher.s: streamcatcher.cpp.s
@@ -568,7 +568,7 @@ streamcatcher.s: streamcatcher.cpp.s
 
 # target to generate assembly for a file
 streamcatcher.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/streamcatcher.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/streamcatcher.cpp.s
 .PHONY : streamcatcher.cpp.s
 
 utilities.o: utilities.cpp.o
@@ -576,7 +576,7 @@ utilities.o: utilities.cpp.o
 
 # target to build an object file
 utilities.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/utilities.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/utilities.cpp.o
 .PHONY : utilities.cpp.o
 
 utilities.i: utilities.cpp.i
@@ -584,7 +584,7 @@ utilities.i: utilities.cpp.i
 
 # target to preprocess a source file
 utilities.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/utilities.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/utilities.cpp.i
 .PHONY : utilities.cpp.i
 
 utilities.s: utilities.cpp.s
@@ -592,7 +592,7 @@ utilities.s: utilities.cpp.s
 
 # target to generate assembly for a file
 utilities.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/utilities.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/utilities.cpp.s
 .PHONY : utilities.cpp.s
 
 videoitem.o: videoitem.cpp.o
@@ -600,7 +600,7 @@ videoitem.o: videoitem.cpp.o
 
 # target to build an object file
 videoitem.cpp.o:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/videoitem.cpp.o
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/videoitem.cpp.o
 .PHONY : videoitem.cpp.o
 
 videoitem.i: videoitem.cpp.i
@@ -608,7 +608,7 @@ videoitem.i: videoitem.cpp.i
 
 # target to preprocess a source file
 videoitem.cpp.i:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/videoitem.cpp.i
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/videoitem.cpp.i
 .PHONY : videoitem.cpp.i
 
 videoitem.s: videoitem.cpp.s
@@ -616,7 +616,7 @@ videoitem.s: videoitem.cpp.s
 
 # target to generate assembly for a file
 videoitem.cpp.s:
-	$(MAKE) -f CMakeFiles/nao_blaar.dir/build.make CMakeFiles/nao_blaar.dir/videoitem.cpp.s
+	$(MAKE) -f CMakeFiles/nao_app.dir/build.make CMakeFiles/nao_app.dir/videoitem.cpp.s
 .PHONY : videoitem.cpp.s
 
 # Help Target
@@ -626,7 +626,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... nao_blaar"
+	@echo "... nao_app"
 	@echo "... rebuild_cache"
 	@echo "... filelinebutton.o"
 	@echo "... filelinebutton.i"
