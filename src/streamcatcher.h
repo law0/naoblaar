@@ -1,3 +1,18 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * This class is used to capture the images from the choosen camera
+ * As only one stream must be used at a time this class respect
+ * the singleton pattern
+ * This class handle (launch, control, kill) an intern thread (unique)
+ * image public getters (such as getRGBA, getBGR, getGRAY) are thread safe
+ * as they use mutexes and a double buffer.
+ * getFramePtr return a direct pointer to the memory place where images
+ * are refreshed
+ * but, of course, this is not thread safe, use getRGBA getBGR or getGRAY instead
+ * This class is instanciated in main.cpp or in launchView.cpp
+ * This class use OpenCV
+ */
+
+
 #ifndef STREAMCATCHER_H_INCLUDED
 #define STREAMCATCHER_H_INCLUDED
 

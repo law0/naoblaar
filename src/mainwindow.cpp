@@ -1,3 +1,7 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * see mainwindow.h
+ */
+
 #include <mutex>
 
 #include "mainwindow.h"

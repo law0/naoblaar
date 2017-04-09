@@ -1,3 +1,9 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * contains various utilities
+ * mostly to convert an image to another format
+ */
+
+
 #ifndef UTILITIES_H_INCLUDED
 #define UTILITIES_H_INCLUDED
 

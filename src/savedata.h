@@ -1,3 +1,12 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * This class is used to record data.
+ * It records, in a csv file, the following data (in order in 4 columns):
+ * Horizontal optical flow, Horizontal oscillator output, Vertical
+ * optical flow, Vertical oscillator output
+ * Instanciated in launchview.cpp
+ */
+
+
 #ifndef SAVEDATA_H
 #define SAVEDATA_H
 
@@ -6,7 +15,7 @@
 #include <thread>
 #include <fstream>
 #include <unistd.h>
-#include <string> 
+#include <string>
 
 #include "oscillator.h"
 

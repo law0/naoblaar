@@ -1,3 +1,8 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * see filelinebutton.h
+ */
+
+
 #include "filelinebutton.h"
 
 FileLineButton::FileLineButton(QLineEdit* line, QPushButton* button, QFileDialog::FileMode mode) :

@@ -1,3 +1,17 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * This class is used by the scriptlauncher class
+ * The external script use a shared memory file from
+ * which it takes the variables to make NAO moves.
+ * the shared memory file is created via open fallocate and mmap
+ * the script reads 10 float values from the shared memory file,
+ * corresponding to the 10 joint (from 0 to 9) that is possible to move
+ * from the script.
+ * So the shared memory file must be at least of 40 bytes of length.
+ * In our application we fallocate a 80 bytes long shared memory file.
+ * Instantiated in scriptlauncher.cpp
+ */
+
+
 #ifndef SHAREDMEMORY_H_INCLUDED
 #define SHAREDMEMORY_H_INCLUDED
 

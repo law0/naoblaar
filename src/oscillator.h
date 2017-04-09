@@ -1,3 +1,19 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * This class represent the oscillator such as described in
+ * the "rapport final" of our end of studies project.
+ * For convenience this class is also a functor,
+ * thus, it can be used as a simple function
+ * This class is also used as an interface for a several number of
+ * widgets, because it contains most of the data that needs to
+ * shown on screen and controled.
+ * (Some objects using this one are designed in such manner that
+ * they can "choose" which getter or setter they will control.
+ * For such aim, we provided two enumeration Oscillator::Getter
+ * and Oscillator::Setter, to make things more clear.)
+ * Instantiated in main.cpp
+ */
+
+
 #ifndef OSCILLATOR_H_INCLUDED
 #define OSCILLATOR_H_INCLUDED
 

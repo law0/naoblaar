@@ -1,3 +1,7 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * see plotitem.h
+ */
+
 #include "plotitem.h"
 
 //Oscillator::Getter is an enum with values : GetOut, GetVal...

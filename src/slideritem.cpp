@@ -1,3 +1,7 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * see slideritem.h
+ */
+
 #include "slideritem.h"
 
 SliderItem::SliderItem(Oscillator * osc, Oscillator::Setter choice) : _osc(osc), _choice(choice)

@@ -1,3 +1,8 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * see utilities.h
+ */
+
+
 #include "utilities.h"
 
 //unsigned int global_WIDTH;

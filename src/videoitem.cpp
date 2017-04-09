@@ -1,3 +1,7 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * see videoitem.h
+ */
+
 #include "videoitem.h"
 
 VideoItem::VideoItem(const StreamCatcher* streamcatcher) :

@@ -1,3 +1,11 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * This class inherits QObject and QGraphicsItem
+ * this class is used to display the video, live.
+ * This class is instanciated in launchview
+ * This class use Qt
+ */
+
+
 #ifndef VIDEOITEM_H_INCLUDED
 #define VIDEOITEM_H_INCLUDED
 

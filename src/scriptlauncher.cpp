@@ -1,3 +1,7 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * see scriptlaunch.h"
+ */
+
 #include "scriptlauncher.h"
 
 ScriptLauncher* ScriptLauncher::_instance = NULL;

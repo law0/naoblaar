@@ -1,3 +1,8 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * This function is used to launch the Graphics Interface
+ * it instanciate most of the graphical component
+*/
+
 #ifndef LAUNCHVIEW_H_INCLUDED
 #define LAUNCHVIEW_H_INCLUDED
 

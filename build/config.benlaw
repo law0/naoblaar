@@ -1,5 +1,5 @@
-IP=172.16.13.191
-PORT=9559
+IP=127.0.0.1
+PORT=34523
 JOINT=9
 NAOQIPATH=/home/law/Documents/EISTI_stuff/NAO/pynaoqi-python2.7-2.1.4.13-linux64
 MAINSCRIPTPATH=main.py

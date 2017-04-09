@@ -1,3 +1,8 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * see oscillator.h
+ */
+
+
 #include "oscillator.h"
 
 Oscillator::Oscillator() : _out1(0.f), _out2(0.f), _alpha(0.07f), _beta(0.15f), _couple(0.2f)

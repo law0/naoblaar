@@ -1,3 +1,10 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * This class is a subclass of QMainWindow
+ * it is in charge of the main window of the application
+ * Instanciated in launchview.cpp
+ * Use Qt
+ */
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 

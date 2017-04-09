@@ -1,3 +1,8 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * see movie.h"
+ */
+
+
 #include "movie.h"
 
 Movie::Movie(const StreamCatcher* sc) :
@@ -22,7 +27,7 @@ void Movie::startCapture(string name)
 
 
 void Movie::capture(const StreamCatcher * stream, bool* _running, string name)
-{	
+{
 	const unsigned int width = stream->getWidth();
 	const unsigned int height = stream->getHeight();
 	const unsigned int size = height * width;

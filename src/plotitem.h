@@ -1,3 +1,15 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * this class is a subclass (inherits) of QCustomPlot
+ * As such, it is used to trace plots.
+ * More precisely, we use this class to trace data of the optical flows
+ * and oscillators outputs
+ * QCustomPlot is an external library, contained entirely in the
+ * two file qcustomplot.h and qcustomplot.cpp.
+ * See http://www.qcustomplot.com/
+ * Is instantiated in mainwindow.cpp
+ * Using QCustomPlot lib
+ */
+
 #ifndef PLOTITEM_H_INCLUDED
 #define PLOTITEM_H_INCLUDED
 

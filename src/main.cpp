@@ -1,3 +1,10 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * This is the main file
+ * it contains the main function, launching everything (including launchview)
+ * contains the main algorithm: optical_flow
+ */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

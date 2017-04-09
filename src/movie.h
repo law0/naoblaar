@@ -1,3 +1,11 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * this class is used to record video
+ * it handle (launch, control, and kill) a separate thread
+ * It has been made sure that only thread is running at a time
+ * This class is instanciated in launchView.cpp
+ * This class use OpenCV
+ */
+
 #ifndef MOVIE_H
 #define MOVIE_H
 

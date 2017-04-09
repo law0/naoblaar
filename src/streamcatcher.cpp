@@ -1,3 +1,7 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * see streamcatcher.h
+ */
+
 #include "streamcatcher.h"
 
 StreamCatcher* StreamCatcher::_instance = NULL;

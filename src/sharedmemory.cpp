@@ -1,3 +1,7 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * see sharedmemory.h
+ */
+
 #include "sharedmemory.h"
 
 SharedMemory::SharedMemory(const Oscillator* osc, unsigned int joint_choice, std::string path) :
@@ -31,7 +35,7 @@ SharedMemory::SharedMemory(const Oscillator* osc, unsigned int joint_choice, std
 	}
 
 
-    	_data = (float*)mmap((caddr_t)0, _size, PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
+    	_data = (float*)mmap((caddr_t)0, _size * sizeof(float), PROT_READ | PROT_WRITE, MAP_SHARED, fd, 0);
 
 	if ((char*)_data == (caddr_t)(-1))
 	{
@@ -46,7 +50,7 @@ SharedMemory::SharedMemory(const Oscillator* osc, unsigned int joint_choice, std
 SharedMemory::~SharedMemory()
 {
 	this->stopShare();
-	munmap(_data, _size);
+	munmap(_data, _size * sizeof(float));
 	close(*_fd);
 	free(_fd);
 }

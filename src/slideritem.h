@@ -1,3 +1,14 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * This class inherits from QSlider
+ * We use slider in our application to control those following variables :
+ *	- oscillator coupling factor
+ *	- oscillator alpha
+ * 	- oscillator beta
+ * (for each oscillator of course)
+ * This class use Qt
+ * Instantiated in mainwindow.cpp
+ */
+
 #ifndef SLIDERITEM_H_INCLUDED
 #define SLIDERITEM_H_INCLUDED
 

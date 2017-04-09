@@ -1,3 +1,21 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * This class control the external python script,
+ * which is used to control NAO's movements.
+ * This class has full control of the script (launch, get errors, and kill)
+ * It uses a fork to launch and control it.
+ * ALSO, this class is used to load and save configuration for the script.
+ * Configurable aspects are :
+ * 	- place of the script
+ *	- place of the naoqi lib
+ * 	- place of python (the executable, such as /usr/bin/python)
+ * 	- place of the sharedmemory file, see sharedmemory.h
+ * Only one script process must be launched at a time and
+ * only one configuration must be load or saved at a time,
+ * thus this class respect the singleton design patern
+ * Instanciated in main.cpp
+ */
+
+
 #ifndef SCRIPTLAUNCHER_H_INCLUDED
 #define SCRIPTLAUNCHER_H_INCLUDED
 

@@ -1,3 +1,7 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * see launchview.h
+ */
+
 #include "launchView.h"
 
 #define VIDEO_WIDTH 600

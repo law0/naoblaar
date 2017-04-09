@@ -1,3 +1,8 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * see savedata.h
+ */
+
+
 #include "savedata.h"
 
 Savedata::Savedata(const Oscillator* osc1, const Oscillator* osc2) :

@@ -1,3 +1,19 @@
+/* Author Lawrencio Rasamoelison, Demailly Benjamin
+ * this class inherits QWidget but is basically a wrapper
+ * of a QLineEdit and QPushButton
+ * It display a QLineEdit and QPushButton aside.
+ * Its main use is to provide a widget on which you can see
+ * and edit a path to a file or directory by typing or by clicking
+ * on an "explore" button (which provided an file explorer dialog)
+ * (Also it may takes a QFileDialog option (enum), specified in Qt.
+ * if QFileDialog is set to QFileDialog::Directory, then the file explorer
+ * dialog will only allow selection of directories and a trailing "/" will be
+ * Internally added at the end of the path if not already present)
+ * This class is instanciated in mainwindow.cpp
+ * This class use Qt
+ */
+
+
 #ifndef FILELINEBUTTON_H_INCLUDED
 #define FILELINEBUTTON_H_INCLUDED
 
